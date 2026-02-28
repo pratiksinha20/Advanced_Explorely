@@ -1,35 +1,34 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const cors = require("cors");
+
+// Import routes
+const stateRoutes = require("./routes/states");
+const cityRoutes = require("./routes/cities");
+const spotRoutes = require("./routes/spots");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/explorely', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+// API Routes
+app.use("/api/states", stateRoutes);
+app.use("/api/cities", cityRoutes);
+app.use("/api/spots", spotRoutes);
 
-// Routes
-
-app.use('/api/states', require('./routes/states'));
-app.use('/api/cities', require('./routes/cities'));
-app.use('/api/spots', require('./routes/spots'));
-app.use('/api/counter', require('./routes/counter'));
-
-app.get('/', (req, res) => {
-  res.send('Explorely Backend');
+// Health check
+app.get("/", (req, res) => {
+  res.json({ message: "Explorely API is running 🚀" });
 });
 
-// Start server
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: "Something went wrong!" });
+});
+
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Explorely backend running on http://localhost:${PORT}`);
 });

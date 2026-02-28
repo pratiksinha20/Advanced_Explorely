@@ -1,46 +1,30 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const City = require('../models/City');
+const path = require("path");
 
+// Load cities data from JSON file
+const cities = require(path.join(__dirname, "..", "data", "cities.json"));
 
-// GET cities by state
-router.get('/', async (req, res) => {
+/**
+ * GET /api/cities?state=StateName
+ * Returns cities filtered by state name
+ */
+router.get("/", (req, res) => {
   try {
     const { state } = req.query;
-    const cities = await City.find({ state }).populate('state');
-    res.json(cities);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
 
-// SEARCH cities by name and state (case-insensitive, partial match)
-router.get('/search', async (req, res) => {
-  const { q, state } = req.query;
-  if (!q || !state) return res.json([]);
-  try {
-    const regex = new RegExp(q, 'i');
-    const cities = await City.find({
-      name: regex,
-      state
-    }).populate('state');
-    res.json(cities);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+    if (!state) {
+      return res.status(400).json({ error: "State query parameter is required" });
+    }
 
-// POST a new city
-router.post('/', async (req, res) => {
-  const city = new City({
-    name: req.body.name,
-    state: req.body.state,
-  });
-  try {
-    const newCity = await city.save();
-    res.status(201).json(newCity);
+    // Filter cities by state (case-insensitive)
+    const filtered = cities.filter(
+      (city) => city.state.toLowerCase() === state.toLowerCase()
+    );
+
+    res.json(filtered);
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(500).json({ error: "Failed to fetch cities" });
   }
 });
 
