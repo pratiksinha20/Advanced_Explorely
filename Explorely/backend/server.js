@@ -9,7 +9,12 @@ const spotRoutes = require("./routes/spots");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST"],
+  })
+);
 app.use(express.json());
 
 // API Routes
