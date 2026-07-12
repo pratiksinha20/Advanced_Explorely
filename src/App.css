@@ -75,6 +75,76 @@ nav {
 }
 
 /* ===========================
+   LUCIDE ICON STYLES
+   =========================== */
+.lucide-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.section-title-icon,
+.page-title-icon,
+.filter-label-icon,
+.results-title-icon {
+  color: var(--accent);
+  margin-right: 6px;
+  vertical-align: -3px;
+}
+
+.nav-icon .lucide-icon {
+  vertical-align: -2px;
+}
+
+.category-icon .lucide-icon {
+  color: var(--accent);
+}
+
+.category-icon-lg .lucide-icon {
+  color: var(--accent);
+}
+
+.spot-rating .lucide-icon,
+.hotel-rating .lucide-icon {
+  vertical-align: -2px;
+  margin-right: 2px;
+}
+
+.spot-location .lucide-icon,
+.hotel-location .lucide-icon {
+  vertical-align: -2px;
+  margin-right: 3px;
+  color: var(--accent);
+}
+
+.map-link .lucide-icon,
+.booking-link .lucide-icon {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.heart-filled {
+  color: #e74c3c;
+}
+
+.tab-btn .lucide-icon {
+  vertical-align: -2px;
+  margin-right: 4px;
+}
+
+.location-icon-lg .lucide-icon {
+  color: var(--accent);
+}
+
+.search-icon-header .lucide-icon {
+  color: var(--muted);
+}
+
+.suggestion-icon .lucide-icon {
+  color: var(--accent);
+}
+
+/* ===========================
    THEMES
    =========================== */
 .app {
@@ -419,6 +489,25 @@ nav {
   height: 36px;
   border: 3px solid rgba(255, 126, 95, 0.2);
   border-top: 3px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  gap: 12px;
+  width: 100%;
+}
+
+.loading-spinner-small {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 126, 95, 0.2);
+  border-top: 2px solid var(--accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -1981,4 +2070,106 @@ nav {
   .hotel-image-wrapper {
     height: 170px;
   }
+}
+
+/* =========================================
+   POPULARITY TIERS & TABS CSS
+   ========================================= */
+
+.spot-tier-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  backdrop-filter: blur(8px);
+  z-index: 4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+}
+
+.spot-tier-badge.tier-most-famous {
+  background: linear-gradient(135deg, rgba(243, 156, 18, 0.9), rgba(241, 196, 15, 0.9));
+  color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.spot-tier-badge.tier-famous {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(46, 204, 113, 0.9));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.spot-tier-badge.tier-hidden {
+  background: linear-gradient(135deg, rgba(155, 89, 182, 0.9), rgba(52, 73, 94, 0.9));
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tier Filter Tabs */
+.tier-filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding: 4px 2px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tier-filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tier-tab {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition);
+  color: var(--text-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.tier-tab:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  background: rgba(255, 126, 95, 0.05);
+}
+
+.tier-tab.active {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.3);
+}
+
+/* Dark mode compatibility fixes for tabs */
+.dark-mode .tier-tab,
+.dark-theme .tier-tab {
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .tier-tab:hover,
+.dark-theme .tier-tab:hover {
+  background: rgba(255, 126, 95, 0.15);
+  border-color: var(--accent);
+}
+
+.dark-mode .tier-tab.active,
+.dark-theme .tier-tab.active {
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { MapPin, Star, ExternalLink } from 'lucide-react';
 
 export default function HotelCard({ hotel }) {
     return (
@@ -12,9 +13,9 @@ export default function HotelCard({ hotel }) {
             <div className="hotel-content">
                 <div className="hotel-header-row">
                     <h3 className="hotel-name">{hotel.name}</h3>
-                    <span className="hotel-rating">⭐ {hotel.rating}</span>
+                    <span className="hotel-rating"><Star size={14} fill="#f39c12" color="#f39c12" /> {hotel.rating}</span>
                 </div>
-                <p className="hotel-location">📍 {hotel.city}, {hotel.state}</p>
+                <p className="hotel-location"><MapPin size={14} /> {hotel.city}, {hotel.state}</p>
                 <div className="hotel-amenities">
                     {hotel.amenities.slice(0, 5).map((a, i) => (
                         <span key={i} className="amenity-chip">{a}</span>
@@ -23,11 +24,11 @@ export default function HotelCard({ hotel }) {
                 </div>
                 <div className="hotel-actions">
                     <a href={hotel.mapLink} target="_blank" rel="noopener noreferrer" className="map-link">
-                        📍 Maps
+                        <MapPin size={14} /> Maps
                     </a>
                     {hotel.bookingLink && (
                         <a href={hotel.bookingLink} target="_blank" rel="noopener noreferrer" className="booking-link">
-                            🔗 Book Now
+                            <ExternalLink size={14} /> Book Now
                         </a>
                     )}
                 </div>

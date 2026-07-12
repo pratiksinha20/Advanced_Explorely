@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import Icon from './Icon';
 
 export default function Header() {
     const { darkMode, toggleDarkMode, wishlist, setShowWishlist, allSpots, allHotels, states, cities } = useApp();
@@ -28,13 +29,13 @@ export default function Header() {
         const ql = q.toLowerCase();
         const results = [];
         states.filter(s => s.name.toLowerCase().includes(ql)).slice(0, 3)
-            .forEach(s => results.push({ type: 'State', name: s.name, icon: '🗺️' }));
+            .forEach(s => results.push({ type: 'State', name: s.name, iconName: 'map' }));
         cities.filter(c => c.name.toLowerCase().includes(ql)).slice(0, 3)
-            .forEach(c => results.push({ type: 'City', name: c.name, sub: c.state, icon: '🏙️' }));
+            .forEach(c => results.push({ type: 'City', name: c.name, sub: c.state, iconName: 'building' }));
         allSpots.filter(s => s.name.toLowerCase().includes(ql)).slice(0, 4)
-            .forEach(s => results.push({ type: 'Place', name: s.name, sub: s.city, icon: '📍' }));
+            .forEach(s => results.push({ type: 'Place', name: s.name, sub: s.city, iconName: 'map-pin' }));
         allHotels.filter(h => h.name.toLowerCase().includes(ql)).slice(0, 3)
-            .forEach(h => results.push({ type: 'Hotel', name: h.name, sub: h.city, icon: '🏨' }));
+            .forEach(h => results.push({ type: 'Hotel', name: h.name, sub: h.city, iconName: 'hotel' }));
         setSuggestions(results);
         setShowSuggestions(results.length > 0);
     };
@@ -57,11 +58,11 @@ export default function Header() {
     };
 
     const navLinks = [
-        { path: '/', label: 'Home', icon: '🏠' },
-        { path: '/explore', label: 'Explore', icon: '🧭' },
-        { path: '/categories', label: 'Categories', icon: '📂' },
-        { path: '/hotels', label: 'Hotels', icon: '🏨' },
-        { path: '/near-me', label: 'Near Me', icon: '📍' },
+        { path: '/', label: 'Home', iconName: 'home' },
+        { path: '/explore', label: 'Explore', iconName: 'compass' },
+        { path: '/categories', label: 'Categories', iconName: 'folder-open' },
+        { path: '/hotels', label: 'Hotels', iconName: 'hotel' },
+        { path: '/near-me', label: 'Near Me', iconName: 'map-pin' },
     ];
 
     return (
@@ -78,7 +79,7 @@ export default function Header() {
                     <Link key={l.path} to={l.path}
                         className={`nav-link ${location.pathname === l.path ? 'active' : ''}`}
                         onClick={() => setMobileNav(false)}>
-                        <span className="nav-icon">{l.icon}</span>
+                        <span className="nav-icon"><Icon name={l.iconName} size={16} /></span>
                         <span className="nav-label">{l.label}</span>
                     </Link>
                 ))}
@@ -86,7 +87,7 @@ export default function Header() {
 
             <div className="header-center" ref={searchRef}>
                 <form onSubmit={handleSearchSubmit} className="search-form">
-                    <span className="search-icon-header">🔍</span>
+                    <span className="search-icon-header"><Icon name="search" size={16} /></span>
                     <input
                         type="text"
                         className="global-search"
@@ -100,7 +101,7 @@ export default function Header() {
                     <div className="search-suggestions">
                         {suggestions.map((s, i) => (
                             <div key={i} className="suggestion-item" onClick={() => handleSuggestionClick(s)}>
-                                <span className="suggestion-icon">{s.icon}</span>
+                                <span className="suggestion-icon"><Icon name={s.iconName} size={16} /></span>
                                 <div className="suggestion-text">
                                     <span className="suggestion-name">{s.name}</span>
                                     {s.sub && <span className="suggestion-sub">{s.sub}</span>}
@@ -115,14 +116,14 @@ export default function Header() {
             <div className="header-right">
                 <button className={`header-icon-btn wishlist-btn ${wishlist.length > 0 ? 'has-items' : ''}`}
                     onClick={() => setShowWishlist(v => !v)} title="Wishlist">
-                    ❤️
+                    <Icon name="heart" size={18} className={wishlist.length > 0 ? 'heart-filled' : ''} />
                     {wishlist.length > 0 && <span className="wishlist-badge">{wishlist.length}</span>}
                 </button>
                 <button className="header-icon-btn theme-btn" onClick={toggleDarkMode} title="Toggle Theme">
-                    {darkMode ? '☀️' : '🌙'}
+                    <Icon name={darkMode ? 'sun' : 'moon'} size={18} />
                 </button>
                 <button className="header-icon-btn mobile-nav-btn" onClick={() => setMobileNav(v => !v)}>
-                    {mobileNav ? '✕' : '☰'}
+                    <Icon name={mobileNav ? 'x' : 'menu'} size={20} />
                 </button>
             </div>
         </header>

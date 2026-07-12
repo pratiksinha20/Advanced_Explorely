@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Heart } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -25,7 +26,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>© 2026 Explorely · Made with ❤️ for travelers 🇮🇳</p>
+                <p>© 2026 Explorely · Made with <Heart size={14} fill="#e74c3c" color="#e74c3c" style={{ verticalAlign: 'middle', display: 'inline' }} /> for travelers</p>
             </div>
         </footer>
     );

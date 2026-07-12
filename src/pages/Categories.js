@@ -1,13 +1,17 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import SpotCard from '../components/SpotCard';
+import Icon from '../components/Icon';
 
 export default function Categories() {
     const { allSpots, categories, dataLoaded } = useApp();
     const [searchParams, setSearchParams] = useSearchParams();
     const [activeCategory, setActiveCategory] = useState(searchParams.get('cat') || '');
-    const [sortBy, setSortBy] = useState('rating');
+    const [sortBy, setSortBy] = useState('recommended');
+    
+    // Pagination state
+    const [visibleCount, setVisibleCount] = useState(24);
 
     const spots = useMemo(() => {
         if (!activeCategory) return [];
@@ -17,6 +21,30 @@ export default function Categories() {
         else if (sortBy === 'state') filtered = [...filtered].sort((a, b) => (a.state || '').localeCompare(b.state || ''));
         return filtered;
     }, [allSpots, activeCategory, sortBy]);
+
+    // Slice spots for rendering
+    const visibleSpots = useMemo(() => {
+        return spots.slice(0, visibleCount);
+    }, [spots, visibleCount]);
+
+    // Reset pagination on filter change
+    useEffect(() => {
+        setVisibleCount(24);
+    }, [activeCategory, sortBy]);
+
+    // Infinite scroll handler
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                setVisibleCount(prev => {
+                    if (prev >= spots.length) return prev;
+                    return prev + 24;
+                });
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [spots.length]);
 
     const handleCategoryClick = (catName) => {
         setActiveCategory(catName);
@@ -28,7 +56,7 @@ export default function Categories() {
     return (
         <div className="categories-page">
             <div className="page-header">
-                <h1 className="page-title">📂 Explore by Category</h1>
+                <h1 className="page-title"><Icon name="layout-grid" size={26} className="page-title-icon" /> Explore by Category</h1>
                 <p className="page-subtitle">Discover places across India by category</p>
             </div>
 
@@ -39,7 +67,7 @@ export default function Categories() {
                         <button key={i}
                             className={`category-card-full ${activeCategory === cat.name ? 'active' : ''}`}
                             onClick={() => handleCategoryClick(cat.name)}>
-                            <span className="category-icon-lg">{cat.icon}</span>
+                            <span className="category-icon-lg"><Icon name={cat.icon} size={32} /></span>
                             <span className="category-name-lg">{cat.name}</span>
                             <span className="category-count-lg">{count} places</span>
                         </button>
@@ -51,11 +79,12 @@ export default function Categories() {
                 <div className="category-results fade-in">
                     <div className="results-header">
                         <h2 className="results-title">
-                            {categories.find(c => c.name === activeCategory)?.icon} {activeCategory} in India
+                            <Icon name={categories.find(c => c.name === activeCategory)?.icon} size={22} className="results-title-icon" /> {activeCategory} in India
                         </h2>
                         <div className="results-controls">
                             <span className="results-count">{spots.length} places</span>
                             <select className="sort-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+                                <option value="recommended">Featured</option>
                                 <option value="rating">Top Rated</option>
                                 <option value="name">Name A–Z</option>
                                 <option value="state">By State</option>
@@ -63,17 +92,23 @@ export default function Categories() {
                         </div>
                     </div>
                     <div className="spots-grid">
-                        {spots.map((spot, i) => (
+                        {visibleSpots.map((spot, i) => (
                             <SpotCard key={`${spot.name}-${i}`} spot={spot}
                                 style={{ animationDelay: `${Math.min(i, 8) * 0.05}s` }} />
                         ))}
                     </div>
+                    {visibleCount < spots.length && (
+                        <div className="loading-more">
+                            <div className="loading-spinner-small" />
+                            <p>Loading more places...</p>
+                        </div>
+                    )}
                 </div>
             )}
 
             {!activeCategory && (
                 <div className="empty-state">
-                    <span className="empty-icon">👆</span>
+                    <span className="empty-icon"><Icon name="compass" size={40} /></span>
                     <p>Select a category above to discover places across India</p>
                 </div>
             )}

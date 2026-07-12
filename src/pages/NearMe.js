@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { useApp } from '../context/AppContext';
 import SpotCard from '../components/SpotCard';
 import HotelCard from '../components/HotelCard';
+import Icon from '../components/Icon';
 
 function getDistance(lat1, lng1, lat2, lng2) {
     const R = 6371;
@@ -56,25 +57,56 @@ export default function NearMe() {
             .sort((a, b) => a.distance - b.distance);
     }, [allHotels, userLat, userLng, maxDistance]);
 
+    // Pagination state
+    const [visibleCount, setVisibleCount] = useState(24);
+
+    const visibleSpots = useMemo(() => {
+        return nearbySpots.slice(0, visibleCount);
+    }, [nearbySpots, visibleCount]);
+
+    const visibleHotels = useMemo(() => {
+        return nearbyHotels.slice(0, visibleCount);
+    }, [nearbyHotels, visibleCount]);
+
+    // Reset pagination on filter or tab change
+    useEffect(() => {
+        setVisibleCount(24);
+    }, [maxDistance, tab]);
+
+    // Infinite scroll handler
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                const totalLength = tab === 'places' ? nearbySpots.length : nearbyHotels.length;
+                setVisibleCount(prev => {
+                    if (prev >= totalLength) return prev;
+                    return prev + 24;
+                });
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [nearbySpots.length, nearbyHotels.length, tab]);
+
     if (!dataLoaded) return <div className="page-loading"><div className="loading-spinner" /><p>Loading...</p></div>;
 
     return (
         <div className="nearme-page">
             <div className="page-header">
-                <h1 className="page-title">📍 Near Me</h1>
+                <h1 className="page-title"><Icon name="map-pin" size={26} className="page-title-icon" /> Near Me</h1>
                 <p className="page-subtitle">Discover attractions and hotels near your location</p>
             </div>
 
             {locationStatus === 'idle' || locationStatus === 'loading' ? (
                 <div className="location-prompt">
-                    <div className="location-icon-lg">📍</div>
+                    <div className="location-icon-lg"><Icon name="map-pinned" size={48} /></div>
                     <h2>Detecting your location...</h2>
                     <div className="loading-spinner" />
                     <p>Please allow location access to see nearby attractions</p>
                 </div>
             ) : locationStatus === 'denied' || locationStatus === 'unsupported' ? (
                 <div className="location-prompt">
-                    <div className="location-icon-lg">🚫</div>
+                    <div className="location-icon-lg"><Icon name="ban" size={48} /></div>
                     <h2>Location access required</h2>
                     <p>Please enable location permissions in your browser to use this feature.</p>
                     <button className="retry-btn" onClick={requestLocation}>Try Again</button>
@@ -89,43 +121,59 @@ export default function NearMe() {
                         </div>
                         <div className="nearme-tabs">
                             <button className={`tab-btn ${tab === 'places' ? 'active' : ''}`} onClick={() => setTab('places')}>
-                                📍 Places ({nearbySpots.length})
+                                <Icon name="map-pin" size={16} /> Places ({nearbySpots.length})
                             </button>
                             <button className={`tab-btn ${tab === 'hotels' ? 'active' : ''}`} onClick={() => setTab('hotels')}>
-                                🏨 Hotels ({nearbyHotels.length})
+                                <Icon name="hotel" size={16} /> Hotels ({nearbyHotels.length})
                             </button>
                         </div>
                     </div>
 
                     {tab === 'places' ? (
                         nearbySpots.length > 0 ? (
-                            <div className="spots-grid">
-                                {nearbySpots.map((spot, i) => (
-                                    <div key={i} className="near-card-wrapper">
-                                        <div className="distance-badge">{spot.distance < 1 ? `${(spot.distance * 1000).toFixed(0)} m` : `${spot.distance.toFixed(1)} km`} away</div>
-                                        <SpotCard spot={spot} style={{ animationDelay: `${Math.min(i, 8) * 0.05}s` }} />
+                            <>
+                                <div className="spots-grid">
+                                    {visibleSpots.map((spot, i) => (
+                                        <div key={i} className="near-card-wrapper">
+                                            <div className="distance-badge">{spot.distance < 1 ? `${(spot.distance * 1000).toFixed(0)} m` : `${spot.distance.toFixed(1)} km`} away</div>
+                                            <SpotCard spot={spot} style={{ animationDelay: `${Math.min(i, 8) * 0.05}s` }} />
+                                        </div>
+                                    ))}
+                                </div>
+                                {visibleCount < nearbySpots.length && (
+                                    <div className="loading-more">
+                                        <div className="loading-spinner-small" />
+                                        <p>Loading more places...</p>
                                     </div>
-                                ))}
-                            </div>
+                                )}
+                            </>
                         ) : (
                             <div className="empty-state">
-                                <span className="empty-icon">🗺️</span>
+                                <span className="empty-icon"><Icon name="map" size={40} /></span>
                                 <p>No places found within {maxDistance} km. Try increasing the distance.</p>
                             </div>
                         )
                     ) : (
                         nearbyHotels.length > 0 ? (
-                            <div className="hotels-grid">
-                                {nearbyHotels.map((hotel, i) => (
-                                    <div key={i} className="near-card-wrapper">
-                                        <div className="distance-badge">{hotel.distance < 1 ? `${(hotel.distance * 1000).toFixed(0)} m` : `${hotel.distance.toFixed(1)} km`} away</div>
-                                        <HotelCard hotel={hotel} />
+                            <>
+                                <div className="hotels-grid">
+                                    {visibleHotels.map((hotel, i) => (
+                                        <div key={i} className="near-card-wrapper">
+                                            <div className="distance-badge">{hotel.distance < 1 ? `${(hotel.distance * 1000).toFixed(0)} m` : `${hotel.distance.toFixed(1)} km`} away</div>
+                                            <HotelCard hotel={hotel} />
+                                        </div>
+                                    ))}
+                                </div>
+                                {visibleCount < nearbyHotels.length && (
+                                    <div className="loading-more">
+                                        <div className="loading-spinner-small" />
+                                        <p>Loading more hotels...</p>
                                     </div>
-                                ))}
-                            </div>
+                                )}
+                            </>
                         ) : (
                             <div className="empty-state">
-                                <span className="empty-icon">🏨</span>
+                                <span className="empty-icon"><Icon name="hotel" size={40} /></span>
                                 <p>No hotels found within {maxDistance} km. Try increasing the distance.</p>
                             </div>
                         )

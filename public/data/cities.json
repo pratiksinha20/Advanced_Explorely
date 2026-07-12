@@ -1,78 +1,446 @@
 [
   {
-    "name": "Ranchi",
-    "state": "Jharkhand"
+    "name": "Aerial Bay",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Jamshedpur",
-    "state": "Jharkhand"
+    "name": "Bambooflat",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Dhanbad",
-    "state": "Jharkhand"
+    "name": "Baratang Island",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Hazaribagh",
-    "state": "Jharkhand"
+    "name": "Bharatpur",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Deoghar",
-    "state": "Jharkhand"
+    "name": "Campbell Bay",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Bokaro",
-    "state": "Jharkhand"
+    "name": "Car Nicobar",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Giridih",
-    "state": "Jharkhand"
+    "name": "Chidiya Tapu",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Netarhat",
-    "state": "Jharkhand"
+    "name": "Diglipur",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Palamu",
-    "state": "Jharkhand"
+    "name": "Ferrargunj",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Chaibasa",
-    "state": "Jharkhand"
+    "name": "Garacharma",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Dumka",
-    "state": "Jharkhand"
+    "name": "Govind Nagar",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Medininagar",
-    "state": "Jharkhand"
+    "name": "Great Nicobar Island",
+    "state": "Andaman and Nicobar Islands"
   },
   {
-    "name": "Patna",
+    "name": "Havelock Island (Swaraj Dweep)",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Kalapathar",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Kamorta",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Katchal Island",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Lalaji Bay",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Laxmanpur",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Little Andaman (Hut Bay)",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Little Nicobar",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Long Island",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Mayabunder",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Nancowry",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Neil Island (Shaheed Dweep)",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "North Bay Island",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Port Blair",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Radhanagar",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Rangat",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Ross and Smith Islands",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Ross Island (Netaji Subhas Chandra Bose Dweep)",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Sitapur",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Smith Island",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Teressa Island",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Vijaynagar",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Wandoor",
+    "state": "Andaman and Nicobar Islands"
+  },
+  {
+    "name": "Tirupati",
+    "state": "Andhra Pradesh"
+  },
+  {
+    "name": "Visakhapatnam",
+    "state": "Andhra Pradesh"
+  },
+  {
+    "name": "Aalo (Along)",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Anini",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Bhalukpong",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Bomdila",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Changlang",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Daporijo",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Dirang",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Hayuliang",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Itanagar",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Jang",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Khonsa",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Likabali",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Lumla",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Mandala Top",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Mayodia",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Mechuka",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Miao",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Namdapha",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Namsai",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Pakke (Pakhui)",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Pangin",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Parshuram Kund",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Pasighat",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Roing",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Rupa",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Sangti Valley",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Sela Pass",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Seppa",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Shergaon",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Tawang",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Tezu",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Tuting",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Walong",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Yingkiong",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Ziro",
+    "state": "Arunachal Pradesh"
+  },
+  {
+    "name": "Barpeta",
+    "state": "Assam"
+  },
+  {
+    "name": "Bogamati",
+    "state": "Assam"
+  },
+  {
+    "name": "Bokakhat",
+    "state": "Assam"
+  },
+  {
+    "name": "Bongaigaon",
+    "state": "Assam"
+  },
+  {
+    "name": "Chandubi",
+    "state": "Assam"
+  },
+  {
+    "name": "Dhemaji",
+    "state": "Assam"
+  },
+  {
+    "name": "Dhubri",
+    "state": "Assam"
+  },
+  {
+    "name": "Dibrugarh",
+    "state": "Assam"
+  },
+  {
+    "name": "Digboi",
+    "state": "Assam"
+  },
+  {
+    "name": "Diphu",
+    "state": "Assam"
+  },
+  {
+    "name": "Doomdooma",
+    "state": "Assam"
+  },
+  {
+    "name": "Goalpara",
+    "state": "Assam"
+  },
+  {
+    "name": "Golaghat",
+    "state": "Assam"
+  },
+  {
+    "name": "Guwahati",
+    "state": "Assam"
+  },
+  {
+    "name": "Haflong",
+    "state": "Assam"
+  },
+  {
+    "name": "Hojai",
+    "state": "Assam"
+  },
+  {
+    "name": "Jorhat",
+    "state": "Assam"
+  },
+  {
+    "name": "Karbi Anglong",
+    "state": "Assam"
+  },
+  {
+    "name": "Karimganj",
+    "state": "Assam"
+  },
+  {
+    "name": "Kaziranga",
+    "state": "Assam"
+  },
+  {
+    "name": "Kokrajhar",
+    "state": "Assam"
+  },
+  {
+    "name": "Majuli",
+    "state": "Assam"
+  },
+  {
+    "name": "Manas",
+    "state": "Assam"
+  },
+  {
+    "name": "Margherita",
+    "state": "Assam"
+  },
+  {
+    "name": "Morigaon",
+    "state": "Assam"
+  },
+  {
+    "name": "Nagaon",
+    "state": "Assam"
+  },
+  {
+    "name": "North Lakhimpur",
+    "state": "Assam"
+  },
+  {
+    "name": "Orang",
+    "state": "Assam"
+  },
+  {
+    "name": "Pobitora",
+    "state": "Assam"
+  },
+  {
+    "name": "Silchar",
+    "state": "Assam"
+  },
+  {
+    "name": "Sivasagar",
+    "state": "Assam"
+  },
+  {
+    "name": "Sonitpur",
+    "state": "Assam"
+  },
+  {
+    "name": "Sualkuchi",
+    "state": "Assam"
+  },
+  {
+    "name": "Tezpur",
+    "state": "Assam"
+  },
+  {
+    "name": "Tinsukia",
+    "state": "Assam"
+  },
+  {
+    "name": "Arrah",
     "state": "Bihar"
   },
   {
-    "name": "Gaya",
+    "name": "Aurangabad",
     "state": "Bihar"
   },
   {
-    "name": "Bodh Gaya",
+    "name": "Begusarai",
     "state": "Bihar"
   },
   {
-    "name": "Nalanda",
-    "state": "Bihar"
-  },
-  {
-    "name": "Rajgir",
-    "state": "Bihar"
-  },
-  {
-    "name": "Vaishali",
-    "state": "Bihar"
-  },
-  {
-    "name": "Muzaffarpur",
+    "name": "Bettiah",
     "state": "Bihar"
   },
   {
@@ -80,15 +448,63 @@
     "state": "Bihar"
   },
   {
+    "name": "Bihar Sharif",
+    "state": "Bihar"
+  },
+  {
+    "name": "Bodh Gaya",
+    "state": "Bihar"
+  },
+  {
+    "name": "Buxar",
+    "state": "Bihar"
+  },
+  {
     "name": "Darbhanga",
     "state": "Bihar"
   },
   {
-    "name": "Sitamarhi",
+    "name": "Gaya",
     "state": "Bihar"
   },
   {
-    "name": "Sasaram",
+    "name": "Hajipur",
+    "state": "Bihar"
+  },
+  {
+    "name": "Jamui",
+    "state": "Bihar"
+  },
+  {
+    "name": "Jehanabad",
+    "state": "Bihar"
+  },
+  {
+    "name": "Kaimur",
+    "state": "Bihar"
+  },
+  {
+    "name": "Kakolat",
+    "state": "Bihar"
+  },
+  {
+    "name": "Katihar",
+    "state": "Bihar"
+  },
+  {
+    "name": "Kesaria",
+    "state": "Bihar"
+  },
+  {
+    "name": "Lakhisarai",
+    "state": "Bihar"
+  },
+  {
+    "name": "Madhubani",
+    "state": "Bihar"
+  },
+  {
+    "name": "Motihari",
     "state": "Bihar"
   },
   {
@@ -96,79 +512,351 @@
     "state": "Bihar"
   },
   {
-    "name": "Amritsar",
-    "state": "Punjab"
+    "name": "Muzaffarpur",
+    "state": "Bihar"
   },
   {
-    "name": "Ludhiana",
-    "state": "Punjab"
+    "name": "Nalanda",
+    "state": "Bihar"
   },
   {
-    "name": "Jalandhar",
-    "state": "Punjab"
+    "name": "Nawada",
+    "state": "Bihar"
   },
   {
-    "name": "Patiala",
-    "state": "Punjab"
+    "name": "Patna",
+    "state": "Bihar"
   },
   {
-    "name": "Chandigarh",
-    "state": "Punjab"
+    "name": "Pawapuri",
+    "state": "Bihar"
   },
   {
-    "name": "Anandpur Sahib",
-    "state": "Punjab"
+    "name": "Purnia",
+    "state": "Bihar"
   },
   {
-    "name": "Bathinda",
-    "state": "Punjab"
+    "name": "Rajgir",
+    "state": "Bihar"
   },
   {
-    "name": "Pathankot",
-    "state": "Punjab"
+    "name": "Rohtas",
+    "state": "Bihar"
   },
   {
-    "name": "Kapurthala",
-    "state": "Punjab"
+    "name": "Samastipur",
+    "state": "Bihar"
   },
   {
-    "name": "Firozpur",
-    "state": "Punjab"
+    "name": "Sasaram",
+    "state": "Bihar"
   },
   {
-    "name": "Hoshiarpur",
-    "state": "Punjab"
+    "name": "Sitamarhi",
+    "state": "Bihar"
   },
   {
-    "name": "Rupnagar",
-    "state": "Punjab"
+    "name": "Siwan",
+    "state": "Bihar"
   },
   {
-    "name": "New Delhi",
+    "name": "Vaishali",
+    "state": "Bihar"
+  },
+  {
+    "name": "Valmikinagar",
+    "state": "Bihar"
+  },
+  {
+    "name": "Ambikapur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Balod",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Balrampur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Bastar",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Bemetara",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Bhilai",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Bijapur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Bilaspur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Chitrakote",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Dantewada",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Dhamtari",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Dongargarh",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Durg",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Gariaband",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Jagdalpur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Janjgir-Champa",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Jashpur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Kabirdham",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Kanger Valley",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Kanker",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Kawardha",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Kondagaon",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Korba",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Koriya",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Mahasamund",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Mainpat",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Mungeli",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Narayanpur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Raigarh",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Raipur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Rajnandgaon",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Sirpur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Sukma",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Surajpur",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Tirathgarh",
+    "state": "Chhattisgarh"
+  },
+  {
+    "name": "Amboli",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Bindrabin",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Bucharwada",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Daman",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Devka",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Dholar",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Diu",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Dudhani",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Dunetha",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Fudam",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Galonda",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Ghoghla",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Jampore",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Kachigam",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Kadaya",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Khanvel",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Kherdi",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Kilvani",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Luhari",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Magarwada",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Marwad",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Masat",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Moti Daman",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Nagoa",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Nani Daman",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Naroli",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Piparia",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Rakholi",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Saily",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Samarvarni",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Silvassa",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Tokarkhada",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Vanakbara",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Vasona",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Velugam",
+    "state": "Dadra and Nagar Haveli and Daman and Diu"
+  },
+  {
+    "name": "Chanakyapuri",
     "state": "Delhi"
   },
   {
-    "name": "Old Delhi",
+    "name": "Chandni Chowk",
     "state": "Delhi"
   },
   {
-    "name": "South Delhi",
-    "state": "Delhi"
-  },
-  {
-    "name": "North Delhi",
-    "state": "Delhi"
-  },
-  {
-    "name": "Dwarka",
-    "state": "Delhi"
-  },
-  {
-    "name": "Rohini",
-    "state": "Delhi"
-  },
-  {
-    "name": "Karol Bagh",
+    "name": "Civil Lines",
     "state": "Delhi"
   },
   {
@@ -176,231 +864,207 @@
     "state": "Delhi"
   },
   {
-    "name": "Mumbai",
-    "state": "Maharashtra"
+    "name": "Dwarka",
+    "state": "Delhi"
   },
   {
-    "name": "South Mumbai",
-    "state": "Maharashtra"
+    "name": "Greater Kailash",
+    "state": "Delhi"
   },
   {
-    "name": "Bandra",
-    "state": "Maharashtra"
+    "name": "Hauz Khas",
+    "state": "Delhi"
   },
   {
-    "name": "Juhu",
-    "state": "Maharashtra"
+    "name": "Janakpuri",
+    "state": "Delhi"
   },
   {
-    "name": "Andheri",
-    "state": "Maharashtra"
+    "name": "Kalkaji",
+    "state": "Delhi"
   },
   {
-    "name": "Colaba",
-    "state": "Maharashtra"
+    "name": "Karol Bagh",
+    "state": "Delhi"
   },
   {
-    "name": "Powai",
-    "state": "Maharashtra"
+    "name": "Kashmere Gate",
+    "state": "Delhi"
   },
   {
-    "name": "Goregaon",
-    "state": "Maharashtra"
+    "name": "Lajpat Nagar",
+    "state": "Delhi"
   },
   {
-    "name": "Dadar",
-    "state": "Maharashtra"
+    "name": "Mayur Vihar",
+    "state": "Delhi"
   },
   {
-    "name": "Pune",
-    "state": "Maharashtra"
+    "name": "Mehrauli",
+    "state": "Delhi"
   },
   {
-    "name": "Nagpur",
-    "state": "Maharashtra"
+    "name": "Najafgarh",
+    "state": "Delhi"
   },
   {
-    "name": "Bengaluru",
-    "state": "Karnataka"
+    "name": "Narela",
+    "state": "Delhi"
   },
   {
-    "name": "Mysuru",
-    "state": "Karnataka"
+    "name": "Nehru Place",
+    "state": "Delhi"
   },
   {
-    "name": "Mangaluru",
-    "state": "Karnataka"
+    "name": "New Delhi",
+    "state": "Delhi"
   },
   {
-    "name": "Hubballi",
-    "state": "Karnataka"
+    "name": "Nizamuddin",
+    "state": "Delhi"
   },
   {
-    "name": "Hampi",
-    "state": "Karnataka"
+    "name": "Okhla",
+    "state": "Delhi"
   },
   {
-    "name": "Belagavi",
-    "state": "Karnataka"
+    "name": "Old Delhi",
+    "state": "Delhi"
   },
   {
-    "name": "Shivamogga",
-    "state": "Karnataka"
+    "name": "Paharganj",
+    "state": "Delhi"
   },
   {
-    "name": "Udupi",
-    "state": "Karnataka"
+    "name": "Paschim Vihar",
+    "state": "Delhi"
   },
   {
-    "name": "Chikkamagaluru",
-    "state": "Karnataka"
+    "name": "Patel Nagar",
+    "state": "Delhi"
   },
   {
-    "name": "Ballari",
-    "state": "Karnataka"
+    "name": "Pitampura",
+    "state": "Delhi"
   },
   {
-    "name": "Chennai",
-    "state": "Tamil Nadu"
+    "name": "Preet Vihar",
+    "state": "Delhi"
   },
   {
-    "name": "Coimbatore",
-    "state": "Tamil Nadu"
+    "name": "Punjabi Bagh",
+    "state": "Delhi"
   },
   {
-    "name": "Central Kolkata",
-    "state": "West Bengal"
+    "name": "Rajouri Garden",
+    "state": "Delhi"
   },
   {
-    "name": "North Kolkata",
-    "state": "West Bengal"
+    "name": "Rohini",
+    "state": "Delhi"
   },
   {
-    "name": "South Kolkata",
-    "state": "West Bengal"
+    "name": "Safdarjung",
+    "state": "Delhi"
   },
   {
-    "name": "Salt Lake",
-    "state": "West Bengal"
+    "name": "Saket",
+    "state": "Delhi"
   },
   {
-    "name": "New Town",
-    "state": "West Bengal"
+    "name": "Shahdara",
+    "state": "Delhi"
   },
   {
-    "name": "Alipore",
-    "state": "West Bengal"
+    "name": "Shalimar Bagh",
+    "state": "Delhi"
   },
   {
-    "name": "Howrah",
-    "state": "West Bengal"
+    "name": "South Delhi",
+    "state": "Delhi"
   },
   {
-    "name": "Park Street",
-    "state": "West Bengal"
+    "name": "Vasant Kunj",
+    "state": "Delhi"
   },
   {
-    "name": "Dakshineswar",
-    "state": "West Bengal"
+    "name": "Agonda",
+    "state": "Goa"
   },
   {
-    "name": "Belur",
-    "state": "West Bengal"
+    "name": "Anjuna",
+    "state": "Goa"
   },
   {
-    "name": "Lucknow",
-    "state": "Uttar Pradesh"
+    "name": "Arambol",
+    "state": "Goa"
   },
   {
-    "name": "Agra",
-    "state": "Uttar Pradesh"
+    "name": "Baga",
+    "state": "Goa"
   },
   {
-    "name": "Varanasi",
-    "state": "Uttar Pradesh"
+    "name": "Benaulim",
+    "state": "Goa"
   },
   {
-    "name": "Prayagraj",
-    "state": "Uttar Pradesh"
+    "name": "Betalbatim",
+    "state": "Goa"
   },
   {
-    "name": "Mathura",
-    "state": "Uttar Pradesh"
+    "name": "Betul",
+    "state": "Goa"
   },
   {
-    "name": "Vrindavan",
-    "state": "Uttar Pradesh"
+    "name": "Calangute",
+    "state": "Goa"
   },
   {
-    "name": "Ayodhya",
-    "state": "Uttar Pradesh"
+    "name": "Canacona",
+    "state": "Goa"
   },
   {
-    "name": "Jhansi",
-    "state": "Uttar Pradesh"
+    "name": "Candolim",
+    "state": "Goa"
   },
   {
-    "name": "Meerut",
-    "state": "Uttar Pradesh"
+    "name": "Cavelossim",
+    "state": "Goa"
   },
   {
-    "name": "Gorakhpur",
-    "state": "Uttar Pradesh"
+    "name": "Chapora",
+    "state": "Goa"
   },
   {
-    "name": "Jaipur",
-    "state": "Rajasthan"
+    "name": "Chorao Island",
+    "state": "Goa"
   },
   {
-    "name": "Udaipur",
-    "state": "Rajasthan"
+    "name": "Colva",
+    "state": "Goa"
   },
   {
-    "name": "Jodhpur",
-    "state": "Rajasthan"
+    "name": "Divar Island",
+    "state": "Goa"
   },
   {
-    "name": "Jaisalmer",
-    "state": "Rajasthan"
+    "name": "Dona Paula",
+    "state": "Goa"
   },
   {
-    "name": "Ajmer",
-    "state": "Rajasthan"
+    "name": "Dudhsagar",
+    "state": "Goa"
   },
   {
-    "name": "Pushkar",
-    "state": "Rajasthan"
+    "name": "Majorda",
+    "state": "Goa"
   },
   {
-    "name": "Bikaner",
-    "state": "Rajasthan"
+    "name": "Mandrem",
+    "state": "Goa"
   },
   {
-    "name": "Chittorgarh",
-    "state": "Rajasthan"
-  },
-  {
-    "name": "Mount Abu",
-    "state": "Rajasthan"
-  },
-  {
-    "name": "Ranthambore (Sawai Madhopur)",
-    "state": "Rajasthan"
-  },
-  {
-    "name": "Ahmedabad",
-    "state": "Gujarat"
-  },
-  {
-    "name": "Vadodara",
-    "state": "Gujarat"
-  },
-  {
-    "name": "Surat",
-    "state": "Gujarat"
-  },
-  {
-    "name": "Panaji",
+    "name": "Mapusa",
     "state": "Goa"
   },
   {
@@ -408,159 +1072,203 @@
     "state": "Goa"
   },
   {
-    "name": "Kochi",
-    "state": "Kerala"
+    "name": "Mollem",
+    "state": "Goa"
   },
   {
-    "name": "Thiruvananthapuram",
-    "state": "Kerala"
+    "name": "Morjim",
+    "state": "Goa"
   },
   {
-    "name": "Munnar",
-    "state": "Kerala"
+    "name": "Old Goa",
+    "state": "Goa"
   },
   {
-    "name": "Shimla",
-    "state": "Himachal Pradesh"
+    "name": "Palolem",
+    "state": "Goa"
   },
   {
-    "name": "Manali",
-    "state": "Himachal Pradesh"
+    "name": "Panaji (Panjim)",
+    "state": "Goa"
   },
   {
-    "name": "Dharamshala",
-    "state": "Himachal Pradesh"
+    "name": "Pernem",
+    "state": "Goa"
   },
   {
-    "name": "Dehradun",
-    "state": "Uttarakhand"
+    "name": "Ponda",
+    "state": "Goa"
   },
   {
-    "name": "Haridwar",
-    "state": "Uttarakhand"
+    "name": "Quepem",
+    "state": "Goa"
   },
   {
-    "name": "Rishikesh",
-    "state": "Uttarakhand"
+    "name": "Sanguem",
+    "state": "Goa"
   },
   {
-    "name": "Bhopal",
-    "state": "Madhya Pradesh"
+    "name": "Sinquerim",
+    "state": "Goa"
   },
   {
-    "name": "Indore",
-    "state": "Madhya Pradesh"
+    "name": "Vagator",
+    "state": "Goa"
   },
   {
-    "name": "Hyderabad",
-    "state": "Telangana"
+    "name": "Valpoi",
+    "state": "Goa"
   },
   {
-    "name": "Warangal",
-    "state": "Telangana"
+    "name": "Varca",
+    "state": "Goa"
   },
   {
-    "name": "Visakhapatnam",
-    "state": "Andhra Pradesh"
+    "name": "Vasco da Gama",
+    "state": "Goa"
   },
   {
-    "name": "Tirupati",
-    "state": "Andhra Pradesh"
+    "name": "Ahmedabad",
+    "state": "Gujarat"
   },
   {
-    "name": "Bhubaneswar",
-    "state": "Odisha"
+    "name": "Anand",
+    "state": "Gujarat"
   },
   {
-    "name": "Puri",
-    "state": "Odisha"
+    "name": "Bharuch",
+    "state": "Gujarat"
   },
   {
-    "name": "Raipur",
-    "state": "Chhattisgarh"
+    "name": "Bhavnagar",
+    "state": "Gujarat"
   },
   {
-    "name": "Guwahati",
-    "state": "Assam"
+    "name": "Bhuj",
+    "state": "Gujarat"
   },
   {
-    "name": "Imphal",
-    "state": "Manipur"
+    "name": "Champaner",
+    "state": "Gujarat"
   },
   {
-    "name": "Shillong",
-    "state": "Meghalaya"
+    "name": "Dasada",
+    "state": "Gujarat"
   },
   {
-    "name": "Gangtok",
-    "state": "Sikkim"
+    "name": "Dholavira",
+    "state": "Gujarat"
   },
   {
-    "name": "Agartala",
-    "state": "Tripura"
+    "name": "Diu",
+    "state": "Gujarat"
   },
   {
-    "name": "Itanagar",
-    "state": "Arunachal Pradesh"
+    "name": "Dwarka",
+    "state": "Gujarat"
   },
   {
-    "name": "Kohima",
-    "state": "Nagaland"
+    "name": "Gandhinagar",
+    "state": "Gujarat"
   },
   {
-    "name": "Aizawl",
-    "state": "Mizoram"
+    "name": "Gir National Park (Sasan Gir)",
+    "state": "Gujarat"
   },
   {
-    "name": "Gurugram",
-    "state": "Haryana"
+    "name": "Jamnagar",
+    "state": "Gujarat"
   },
   {
-    "name": "Faridabad",
-    "state": "Haryana"
+    "name": "Junagadh",
+    "state": "Gujarat"
   },
   {
-    "name": "Panipat",
-    "state": "Haryana"
+    "name": "Kevadia",
+    "state": "Gujarat"
   },
   {
-    "name": "Kurukshetra",
-    "state": "Haryana"
+    "name": "Kutch",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Little Rann of Kutch",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Lothal",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Mandvi",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Modhera",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Morbi",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Nadiad",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Palitana",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Patan",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Porbandar",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Rajkot",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Rann of Kutch (Dhordo)",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Saputara",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Somnath",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Surat",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Tithal",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Vadodara",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Valsad",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Veraval",
+    "state": "Gujarat"
+  },
+  {
+    "name": "Wankaner",
+    "state": "Gujarat"
   },
   {
     "name": "Ambala",
-    "state": "Haryana"
-  },
-  {
-    "name": "Karnal",
-    "state": "Haryana"
-  },
-  {
-    "name": "Rohtak",
-    "state": "Haryana"
-  },
-  {
-    "name": "Sonipat",
-    "state": "Haryana"
-  },
-  {
-    "name": "Hisar",
-    "state": "Haryana"
-  },
-  {
-    "name": "Sirsa",
-    "state": "Haryana"
-  },
-  {
-    "name": "Yamunanagar",
-    "state": "Haryana"
-  },
-  {
-    "name": "Panchkula",
-    "state": "Haryana"
-  },
-  {
-    "name": "Rewari",
     "state": "Haryana"
   },
   {
@@ -568,11 +1276,67 @@
     "state": "Haryana"
   },
   {
+    "name": "Dharuhera",
+    "state": "Haryana"
+  },
+  {
+    "name": "Faridabad",
+    "state": "Haryana"
+  },
+  {
+    "name": "Fatehabad",
+    "state": "Haryana"
+  },
+  {
+    "name": "Gurugram",
+    "state": "Haryana"
+  },
+  {
+    "name": "Hansi",
+    "state": "Haryana"
+  },
+  {
+    "name": "Hisar",
+    "state": "Haryana"
+  },
+  {
     "name": "Jhajjar",
     "state": "Haryana"
   },
   {
+    "name": "Jind",
+    "state": "Haryana"
+  },
+  {
+    "name": "Kaithal",
+    "state": "Haryana"
+  },
+  {
+    "name": "Kalka",
+    "state": "Haryana"
+  },
+  {
+    "name": "Karnal",
+    "state": "Haryana"
+  },
+  {
+    "name": "Kurukshetra",
+    "state": "Haryana"
+  },
+  {
     "name": "Mahendragarh",
+    "state": "Haryana"
+  },
+  {
+    "name": "Manesar",
+    "state": "Haryana"
+  },
+  {
+    "name": "Mewat (Nuh)",
+    "state": "Haryana"
+  },
+  {
+    "name": "Morni",
     "state": "Haryana"
   },
   {
@@ -584,11 +1348,3427 @@
     "state": "Haryana"
   },
   {
-    "name": "Jind",
+    "name": "Panchkula",
     "state": "Haryana"
   },
   {
-    "name": "Kaithal",
+    "name": "Panipat",
     "state": "Haryana"
+  },
+  {
+    "name": "Pataudi",
+    "state": "Haryana"
+  },
+  {
+    "name": "Pehowa",
+    "state": "Haryana"
+  },
+  {
+    "name": "Pinjore",
+    "state": "Haryana"
+  },
+  {
+    "name": "Ratia",
+    "state": "Haryana"
+  },
+  {
+    "name": "Rewari",
+    "state": "Haryana"
+  },
+  {
+    "name": "Rohtak",
+    "state": "Haryana"
+  },
+  {
+    "name": "Samalkha",
+    "state": "Haryana"
+  },
+  {
+    "name": "Sirsa",
+    "state": "Haryana"
+  },
+  {
+    "name": "Sohna",
+    "state": "Haryana"
+  },
+  {
+    "name": "Sonipat",
+    "state": "Haryana"
+  },
+  {
+    "name": "Thanesar",
+    "state": "Haryana"
+  },
+  {
+    "name": "Tosham",
+    "state": "Haryana"
+  },
+  {
+    "name": "Yamunanagar",
+    "state": "Haryana"
+  },
+  {
+    "name": "Barot",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Bir Billing",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Chail",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Chamba",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Dalhousie",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Dharamshala",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Hamirpur",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Jibhi",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kalpa",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kasauli",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kasol",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Keylong",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Khajjiar",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kinnaur (Reckong Peo)",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kufri",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Kullu",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Lahaul",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Manali",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Mandi",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "McLeod Ganj",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Naggar",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Nahan",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Narkanda",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Palampur",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Parwanoo",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Rohru",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Sangla",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Sarahan",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Shimla",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Shoja",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Sirmaur",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Solan",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Spiti Valley (Kaza)",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Tirthan Valley",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Una",
+    "state": "Himachal Pradesh"
+  },
+  {
+    "name": "Aharbal",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Anantnag",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Aru Valley",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Baramulla",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Betaab Valley",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Bhaderwah",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Budgam",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Dachigam",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Doodhpathri",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Ganderbal",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Gulmarg",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Jammu",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Katra",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Kokernag",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Kupwara",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Pahalgam",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Patnitop",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Poonch",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Pulwama",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Rajouri",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Sanasar",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Shopian",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Sonamarg",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Srinagar",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Uri",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Verinag",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Yusmarg",
+    "state": "Jammu & Kashmir"
+  },
+  {
+    "name": "Betla",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Bokaro",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Chaibasa",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Chakradharpur",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Chatra",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Deoghar",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Dhanbad",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Dumka",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Garhwa",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Giridih",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Godda",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Gumla",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Hazaribagh",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Itkhori",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Jamshedpur",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Jamtara",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Khunti",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Koderma",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Latehar",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Lohardaga",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Madhupur",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "McCluskieganj",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Netarhat",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Pakur",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Palamu (Medininagar)",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Parasnath",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Patratu",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Rajrappa",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Ramgarh",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Ranchi",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Sahibganj",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Saraikela",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Shikarji",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Simdega",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Tenughat",
+    "state": "Jharkhand"
+  },
+  {
+    "name": "Agumbe",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Aihole",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Badami",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Ballari",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Bandipur",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Belur",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Bengaluru",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Bidar",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Bijapur (Vijayapura)",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Chikkamagaluru",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Chitradurga",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Coorg (Madikeri)",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Dandeli",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Dharmasthala",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Dharwad",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Gokarna",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Halebidu",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Hampi",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Hubballi",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Jog Falls (Sagara)",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Kabini",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Karkala",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Karwar",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Kemmannugundi",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Kudremukh",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Mangaluru",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Murudeshwar",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Mysuru",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Nagarhole",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Nandi Hills",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Pattadakal",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Sakleshpur",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Shivamogga",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Sringeri",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Udupi",
+    "state": "Karnataka"
+  },
+  {
+    "name": "Alappuzha (Alleppey)",
+    "state": "Kerala"
+  },
+  {
+    "name": "Ashtamudi",
+    "state": "Kerala"
+  },
+  {
+    "name": "Athirappilly",
+    "state": "Kerala"
+  },
+  {
+    "name": "Bekal",
+    "state": "Kerala"
+  },
+  {
+    "name": "Cherai",
+    "state": "Kerala"
+  },
+  {
+    "name": "Guruvayur",
+    "state": "Kerala"
+  },
+  {
+    "name": "Idukki",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kannur",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kasaragod",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kochi (Cochin)",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kollam",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kottayam",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kovalam",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kozhikode (Calicut)",
+    "state": "Kerala"
+  },
+  {
+    "name": "Kumarakom",
+    "state": "Kerala"
+  },
+  {
+    "name": "Malampuzha",
+    "state": "Kerala"
+  },
+  {
+    "name": "Mararikulam",
+    "state": "Kerala"
+  },
+  {
+    "name": "Munnar",
+    "state": "Kerala"
+  },
+  {
+    "name": "Munroe Island",
+    "state": "Kerala"
+  },
+  {
+    "name": "Nelliyampathy",
+    "state": "Kerala"
+  },
+  {
+    "name": "Nilambur",
+    "state": "Kerala"
+  },
+  {
+    "name": "Palakkad",
+    "state": "Kerala"
+  },
+  {
+    "name": "Pathanamthitta",
+    "state": "Kerala"
+  },
+  {
+    "name": "Ponmudi",
+    "state": "Kerala"
+  },
+  {
+    "name": "Poovar",
+    "state": "Kerala"
+  },
+  {
+    "name": "Sabarimala",
+    "state": "Kerala"
+  },
+  {
+    "name": "Silent Valley",
+    "state": "Kerala"
+  },
+  {
+    "name": "Thalassery",
+    "state": "Kerala"
+  },
+  {
+    "name": "Thekkady",
+    "state": "Kerala"
+  },
+  {
+    "name": "Thenmala",
+    "state": "Kerala"
+  },
+  {
+    "name": "Thiruvananthapuram",
+    "state": "Kerala"
+  },
+  {
+    "name": "Thrissur",
+    "state": "Kerala"
+  },
+  {
+    "name": "Vagamon",
+    "state": "Kerala"
+  },
+  {
+    "name": "Varkala",
+    "state": "Kerala"
+  },
+  {
+    "name": "Wayanad",
+    "state": "Kerala"
+  },
+  {
+    "name": "Alchi",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Basgo",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Batalik",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Chemrey",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Chilling",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Diskit",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Dras",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Durbuk",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Hanle",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Hemis",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Hunder",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Kargil",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Khalatse",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Khardung",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Korzok",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Lamayuru",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Leh",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Likir",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Mulbekh",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Nimmu",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Nyoma",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Padum",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Panamik",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Pangong",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Saspol",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Shey",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Spangmik",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Stok",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Sumur",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Tangtse",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Thiksey",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Tso Moriri",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Turtuk",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Upshi",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Zanskar",
+    "state": "Ladakh"
+  },
+  {
+    "name": "Agatti",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Agatti Lagoon",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Amini",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Andrott",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Bangaram",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Bangaram Lagoon",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Bitra",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Cheriyam",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Chetlat",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Coral Beach",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Dolphin Dive Point",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kadmat",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kadmat Beach",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kalpeni",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kalpeni Lagoon",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kalpitti Island",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kavaratti",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kavaratti Marine Area",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Kiltan",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Marine National Reef",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Minicoy",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Minicoy Lighthouse Area",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Parali I",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Parali II",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Parali III",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Pellet Island",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Perumal Par",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Pitti Bird Sanctuary",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Shipwreck Dive Site",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Suheli Par",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Thinnakara",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Thundi Beach",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Turtle Reef",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Valiyakara",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Viringili",
+    "state": "Lakshadweep"
+  },
+  {
+    "name": "Amarkantak",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Balaghat",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Bandhavgarh",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Bhimbetka",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Bhopal",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Burhanpur",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Chanderi",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Chhindwara",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Datia",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Dewas",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Gwalior",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Hoshangabad (Narmadapuram)",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Indore",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Jabalpur",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Kanha",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Khajuraho",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Maheshwar",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Mandsaur",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Mandu",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Neemuch",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Omkareshwar",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Orchha",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Pachmarhi",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Panna",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Pench",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Ratlam",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Rewa",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Sanchi",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Satna",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Seoni",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Shivpuri",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Singrauli",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Tikamgarh",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Ujjain",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Vidisha",
+    "state": "Madhya Pradesh"
+  },
+  {
+    "name": "Ajanta",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Akola",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Alibaug",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Amravati",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Aurangabad",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Bhandardara",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Bhimashankar",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Buldhana",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Chandrapur",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Ellora",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Ganpatipule",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Harihareshwar",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Igatpuri",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Karjat",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Khandala",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Kolhapur",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Lavasa",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Lonavala",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Mahabaleshwar",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Malvan",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Matheran",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Mumbai",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Murud",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Nagpur",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Nanded",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Nashik",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Pune",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Raigad",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Ratnagiri",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Satara",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Shirdi",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Sindhudurg",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Solapur",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Tadoba",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Tarkarli",
+    "state": "Maharashtra"
+  },
+  {
+    "name": "Andro",
+    "state": "Manipur"
+  },
+  {
+    "name": "Bishnupur",
+    "state": "Manipur"
+  },
+  {
+    "name": "Chandel",
+    "state": "Manipur"
+  },
+  {
+    "name": "Churachandpur",
+    "state": "Manipur"
+  },
+  {
+    "name": "Dzuko Valley (Manipur Side)",
+    "state": "Manipur"
+  },
+  {
+    "name": "Heingang",
+    "state": "Manipur"
+  },
+  {
+    "name": "Imphal",
+    "state": "Manipur"
+  },
+  {
+    "name": "Jiribam",
+    "state": "Manipur"
+  },
+  {
+    "name": "Kakching",
+    "state": "Manipur"
+  },
+  {
+    "name": "Kangpokpi",
+    "state": "Manipur"
+  },
+  {
+    "name": "Kasom Khullen",
+    "state": "Manipur"
+  },
+  {
+    "name": "Keibul Lamjao",
+    "state": "Manipur"
+  },
+  {
+    "name": "Khongjom",
+    "state": "Manipur"
+  },
+  {
+    "name": "Khoupum",
+    "state": "Manipur"
+  },
+  {
+    "name": "Kumbi",
+    "state": "Manipur"
+  },
+  {
+    "name": "Lamlai",
+    "state": "Manipur"
+  },
+  {
+    "name": "Leimaram",
+    "state": "Manipur"
+  },
+  {
+    "name": "Lilong",
+    "state": "Manipur"
+  },
+  {
+    "name": "Loktak Lake",
+    "state": "Manipur"
+  },
+  {
+    "name": "Mao",
+    "state": "Manipur"
+  },
+  {
+    "name": "Maram",
+    "state": "Manipur"
+  },
+  {
+    "name": "Moirang",
+    "state": "Manipur"
+  },
+  {
+    "name": "Moreh",
+    "state": "Manipur"
+  },
+  {
+    "name": "Noney",
+    "state": "Manipur"
+  },
+  {
+    "name": "Pallel",
+    "state": "Manipur"
+  },
+  {
+    "name": "Phubala",
+    "state": "Manipur"
+  },
+  {
+    "name": "Sadu Chiru",
+    "state": "Manipur"
+  },
+  {
+    "name": "Sekmai",
+    "state": "Manipur"
+  },
+  {
+    "name": "Senapati",
+    "state": "Manipur"
+  },
+  {
+    "name": "Shirui",
+    "state": "Manipur"
+  },
+  {
+    "name": "Sugnu",
+    "state": "Manipur"
+  },
+  {
+    "name": "Tamenglong",
+    "state": "Manipur"
+  },
+  {
+    "name": "Tengnoupal",
+    "state": "Manipur"
+  },
+  {
+    "name": "Thoubal",
+    "state": "Manipur"
+  },
+  {
+    "name": "Ukhrul",
+    "state": "Manipur"
+  },
+  {
+    "name": "Amlarem",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Ampati",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Baghmara",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Balpakram",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Borsora",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Cherra Plateau",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Cherrapunji (Sohra)",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Dawki",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Jowai",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Khliehriat",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Laitkynsew",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Laitlum",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Madanrting",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mairang",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mawkdok",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mawlynnong",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mawphlang",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mawshynrut",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Mawsynram",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Nartiang",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Nokrek",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Nongpoh",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Nongriat",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Nongstoin",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Pynursla",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Ranikor",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Resubelpara",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Rongram",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Shillong",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Shnongpdeng",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Siju",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Songsak",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Tura",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Umroi",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Williamnagar",
+    "state": "Meghalaya"
+  },
+  {
+    "name": "Aizawl",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Bairabi",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Bungtlang",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Champhai",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Chawngte",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Dampa",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Falkawn",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Hmuifang",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Hnahthial",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Kawrthah",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Khawbung",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Khawzawl",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Khuangchera Puk",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Kolasib",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Lawngtlai",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Lengpui",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Lengteng",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Lunglei",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Mamit",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Murlen",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Ngengpui",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Phawngpui",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Reiek",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Rih Dil Viewpoint",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Saiha",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Saitual",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Serchhip",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Sialsuk",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Tamdil",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Thenzawl",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Thingsulthliah",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Tlabung",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Vairengte",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Vantawng",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Zokhawthar",
+    "state": "Mizoram"
+  },
+  {
+    "name": "Aboi",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Benreu",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Chizami",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Chumoukedima",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Dimapur",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Doyang",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Dzukou Valley",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Dzuleke",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Jakhama",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Japfu Peak",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Khonoma",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Kiphire",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Kisama",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Kohima",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Longleng",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Longwa",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Mangkolemba",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Medziphema",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Meluri",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Mima",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Mokokchung",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Mon",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Noklak",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Peren",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Pfutsero",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Phek",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Pungro",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Ruzaphema",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Shamator",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Shilloi Lake",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Touphema",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Tuensang",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Viswema",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Wokha",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Zunheboto",
+    "state": "Nagaland"
+  },
+  {
+    "name": "Angul",
+    "state": "Odisha"
+  },
+  {
+    "name": "Balasore",
+    "state": "Odisha"
+  },
+  {
+    "name": "Baripada",
+    "state": "Odisha"
+  },
+  {
+    "name": "Berhampur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Bhawanipatna",
+    "state": "Odisha"
+  },
+  {
+    "name": "Bhitarkanika",
+    "state": "Odisha"
+  },
+  {
+    "name": "Bhubaneswar",
+    "state": "Odisha"
+  },
+  {
+    "name": "Bolangir",
+    "state": "Odisha"
+  },
+  {
+    "name": "Chandipur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Chilika (Satapada)",
+    "state": "Odisha"
+  },
+  {
+    "name": "Cuttack",
+    "state": "Odisha"
+  },
+  {
+    "name": "Daringbadi",
+    "state": "Odisha"
+  },
+  {
+    "name": "Dhenkanal",
+    "state": "Odisha"
+  },
+  {
+    "name": "Ganjam",
+    "state": "Odisha"
+  },
+  {
+    "name": "Gopalpur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Jajpur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Jeypore",
+    "state": "Odisha"
+  },
+  {
+    "name": "Kendrapara",
+    "state": "Odisha"
+  },
+  {
+    "name": "Kendujhar",
+    "state": "Odisha"
+  },
+  {
+    "name": "Keonjhar",
+    "state": "Odisha"
+  },
+  {
+    "name": "Khordha",
+    "state": "Odisha"
+  },
+  {
+    "name": "Konark",
+    "state": "Odisha"
+  },
+  {
+    "name": "Koraput",
+    "state": "Odisha"
+  },
+  {
+    "name": "Mayurbhanj",
+    "state": "Odisha"
+  },
+  {
+    "name": "Nayagarh",
+    "state": "Odisha"
+  },
+  {
+    "name": "Nuapada",
+    "state": "Odisha"
+  },
+  {
+    "name": "Paradeep",
+    "state": "Odisha"
+  },
+  {
+    "name": "Phulbani",
+    "state": "Odisha"
+  },
+  {
+    "name": "Puri",
+    "state": "Odisha"
+  },
+  {
+    "name": "Rayagada",
+    "state": "Odisha"
+  },
+  {
+    "name": "Rourkela",
+    "state": "Odisha"
+  },
+  {
+    "name": "Sambalpur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Similipal",
+    "state": "Odisha"
+  },
+  {
+    "name": "Sonepur",
+    "state": "Odisha"
+  },
+  {
+    "name": "Taptapani",
+    "state": "Odisha"
+  },
+  {
+    "name": "Arikamedu",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Ariyankuppam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Auroville",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Bahour",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Chalakkara",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Chunnambar",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Kalapet",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Karaikal",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Keezhakasakudi",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Kodiyakarai Route",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Kottakuppam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Kottucherry",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Lawspet",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Mahe",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Manapet",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Moolakulam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Murungapakkam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Muthialpet",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Nedungadu",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Neravy",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Oulgaret",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Palloor",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Pandakkal",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Paradise Beach",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Pillaichavady",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Poovam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Puducherry",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Reppo Beach Area",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Serenity Beach",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Thirunallar",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Tirumalairayanpattinam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Veerampattinam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Villianur",
+    "state": "Puducherry"
+  },
+  {
+    "name": "White Town",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Yanam",
+    "state": "Puducherry"
+  },
+  {
+    "name": "Abohar",
+    "state": "Punjab"
+  },
+  {
+    "name": "Amritsar",
+    "state": "Punjab"
+  },
+  {
+    "name": "Anandpur Sahib",
+    "state": "Punjab"
+  },
+  {
+    "name": "Barnala",
+    "state": "Punjab"
+  },
+  {
+    "name": "Batala",
+    "state": "Punjab"
+  },
+  {
+    "name": "Bathinda",
+    "state": "Punjab"
+  },
+  {
+    "name": "Chamkaur Sahib",
+    "state": "Punjab"
+  },
+  {
+    "name": "Chandigarh",
+    "state": "Punjab"
+  },
+  {
+    "name": "Dera Baba Nanak",
+    "state": "Punjab"
+  },
+  {
+    "name": "Faridkot",
+    "state": "Punjab"
+  },
+  {
+    "name": "Fatehgarh Sahib",
+    "state": "Punjab"
+  },
+  {
+    "name": "Firozpur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Gurdaspur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Harike",
+    "state": "Punjab"
+  },
+  {
+    "name": "Hoshiarpur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Jalandhar",
+    "state": "Punjab"
+  },
+  {
+    "name": "Kapurthala",
+    "state": "Punjab"
+  },
+  {
+    "name": "Khanna",
+    "state": "Punjab"
+  },
+  {
+    "name": "Kila Raipur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Lehragaga",
+    "state": "Punjab"
+  },
+  {
+    "name": "Ludhiana",
+    "state": "Punjab"
+  },
+  {
+    "name": "Malerkotla",
+    "state": "Punjab"
+  },
+  {
+    "name": "Mansa",
+    "state": "Punjab"
+  },
+  {
+    "name": "Moga",
+    "state": "Punjab"
+  },
+  {
+    "name": "Mohali (SAS Nagar)",
+    "state": "Punjab"
+  },
+  {
+    "name": "Muktsar",
+    "state": "Punjab"
+  },
+  {
+    "name": "Nawanshahr (Shaheed Bhagat Singh Nagar)",
+    "state": "Punjab"
+  },
+  {
+    "name": "Pathankot",
+    "state": "Punjab"
+  },
+  {
+    "name": "Patiala",
+    "state": "Punjab"
+  },
+  {
+    "name": "Phagwara",
+    "state": "Punjab"
+  },
+  {
+    "name": "Rajpura",
+    "state": "Punjab"
+  },
+  {
+    "name": "Rupnagar (Ropar)",
+    "state": "Punjab"
+  },
+  {
+    "name": "Sangrur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Sultanpur Lodhi",
+    "state": "Punjab"
+  },
+  {
+    "name": "Tarn Taran",
+    "state": "Punjab"
+  },
+  {
+    "name": "Zirakpur",
+    "state": "Punjab"
+  },
+  {
+    "name": "Abhaneri",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Ajmer",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Alwar",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Banswara",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Barmer",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Bharatpur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Bikaner",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Bundi",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Chittorgarh",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Dausa",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Dungarpur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Jaipur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Jaisalmer",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Jhalawar",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Jhunjhunu",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Jodhpur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Karauli",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Kota",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Kumbhalgarh",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Mandawa",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Mount Abu",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Nagaur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Nawalgarh",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Neemrana",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Osian",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Pali",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Pushkar",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Ranakpur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Ranthambore (Sawai Madhopur)",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Sariska",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Shekhawati",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Sikar",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Sirohi",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Tonk",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Udaipur",
+    "state": "Rajasthan"
+  },
+  {
+    "name": "Aritar",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Borong",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Chungthang",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Dentam",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Dzongu",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Gangtok",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Geyzing (Gyalshing)",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Gnathang",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Gurudongmar",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Kabi",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Kaluk",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Khecheopalri",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Kupup",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Lachen",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Lachung",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Legship",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Mangan",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Namchi",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Nathang Valley",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Pelling",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Pemayangtse",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Phodong",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Ralang",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Rangpo",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Ravangla",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Rinchenpong",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Rumtek",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Singtam",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Soreng",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Temi",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Tsomgo (Changu)",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Yangang",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Yuksom",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Yumthang Valley",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Zuluk",
+    "state": "Sikkim"
+  },
+  {
+    "name": "Auroville",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Chennai",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Chidambaram",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Coimbatore",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Coonoor",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Courtallam (Kutralam)",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Dhanushkodi",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Dharmapuri",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Dindigul",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Erode",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Hogenakkal",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Kanchipuram",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Kanyakumari",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Karaikudi",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Kodaikanal",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Kotagiri",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Kumbakonam",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Madurai",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Mahabalipuram",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Nagapattinam",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Ooty (Udhagamandalam)",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Pollachi",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Pudukkottai",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Rameswaram",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Salem",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Srirangam",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Thanjavur",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Thoothukudi (Tuticorin)",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Tiruchirappalli (Trichy)",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Tirunelveli",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Tiruvannamalai",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Valparai",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Vellore",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Yelagiri",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Yercaud",
+    "state": "Tamil Nadu"
+  },
+  {
+    "name": "Adilabad",
+    "state": "Telangana"
+  },
+  {
+    "name": "Basar",
+    "state": "Telangana"
+  },
+  {
+    "name": "Bhadrachalam",
+    "state": "Telangana"
+  },
+  {
+    "name": "Bhongir",
+    "state": "Telangana"
+  },
+  {
+    "name": "Hyderabad",
+    "state": "Telangana"
+  },
+  {
+    "name": "Jagtial",
+    "state": "Telangana"
+  },
+  {
+    "name": "Jangaon",
+    "state": "Telangana"
+  },
+  {
+    "name": "Jayashankar Bhupalpally",
+    "state": "Telangana"
+  },
+  {
+    "name": "Kamareddy",
+    "state": "Telangana"
+  },
+  {
+    "name": "Karimnagar",
+    "state": "Telangana"
+  },
+  {
+    "name": "Khammam",
+    "state": "Telangana"
+  },
+  {
+    "name": "Kothagudem",
+    "state": "Telangana"
+  },
+  {
+    "name": "Kumuram Bheem (Asifabad)",
+    "state": "Telangana"
+  },
+  {
+    "name": "Laknavaram",
+    "state": "Telangana"
+  },
+  {
+    "name": "Mahabubabad",
+    "state": "Telangana"
+  },
+  {
+    "name": "Mahabubnagar",
+    "state": "Telangana"
+  },
+  {
+    "name": "Mancherial",
+    "state": "Telangana"
+  },
+  {
+    "name": "Medak",
+    "state": "Telangana"
+  },
+  {
+    "name": "Medchal",
+    "state": "Telangana"
+  },
+  {
+    "name": "Mulugu",
+    "state": "Telangana"
+  },
+  {
+    "name": "Nagarjuna Sagar",
+    "state": "Telangana"
+  },
+  {
+    "name": "Nagarkurnool",
+    "state": "Telangana"
+  },
+  {
+    "name": "Nalgonda",
+    "state": "Telangana"
+  },
+  {
+    "name": "Narayanpet",
+    "state": "Telangana"
+  },
+  {
+    "name": "Nirmal",
+    "state": "Telangana"
+  },
+  {
+    "name": "Nizamabad",
+    "state": "Telangana"
+  },
+  {
+    "name": "Pochampally",
+    "state": "Telangana"
+  },
+  {
+    "name": "Ramagundam",
+    "state": "Telangana"
+  },
+  {
+    "name": "Sangareddy",
+    "state": "Telangana"
+  },
+  {
+    "name": "Siddipet",
+    "state": "Telangana"
+  },
+  {
+    "name": "Suryapet",
+    "state": "Telangana"
+  },
+  {
+    "name": "Vemulawada",
+    "state": "Telangana"
+  },
+  {
+    "name": "Wanaparthy",
+    "state": "Telangana"
+  },
+  {
+    "name": "Warangal",
+    "state": "Telangana"
+  },
+  {
+    "name": "Yadadri (Yadagirigutta)",
+    "state": "Telangana"
+  },
+  {
+    "name": "Agartala",
+    "state": "Tripura"
+  },
+  {
+    "name": "Amarpur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Ambassa",
+    "state": "Tripura"
+  },
+  {
+    "name": "Belonia",
+    "state": "Tripura"
+  },
+  {
+    "name": "Bishalgarh",
+    "state": "Tripura"
+  },
+  {
+    "name": "Boxanagar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Chabimura",
+    "state": "Tripura"
+  },
+  {
+    "name": "Dharmanagar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Dumbur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Gandacharra",
+    "state": "Tripura"
+  },
+  {
+    "name": "Hrishyamukh",
+    "state": "Tripura"
+  },
+  {
+    "name": "Jampui Hills",
+    "state": "Tripura"
+  },
+  {
+    "name": "Jampuijala",
+    "state": "Tripura"
+  },
+  {
+    "name": "Jirania",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kailashahar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kakraban",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kalyanpur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kamalpur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kanchanpur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Karook",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kathalia",
+    "state": "Tripura"
+  },
+  {
+    "name": "Khowai",
+    "state": "Tripura"
+  },
+  {
+    "name": "Kumarghat",
+    "state": "Tripura"
+  },
+  {
+    "name": "Manu",
+    "state": "Tripura"
+  },
+  {
+    "name": "Melaghar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Mohanpur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Panisagar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Pilak",
+    "state": "Tripura"
+  },
+  {
+    "name": "Ranirbazar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Sabroom",
+    "state": "Tripura"
+  },
+  {
+    "name": "Santirbazar",
+    "state": "Tripura"
+  },
+  {
+    "name": "Sonamura",
+    "state": "Tripura"
+  },
+  {
+    "name": "Teliamura",
+    "state": "Tripura"
+  },
+  {
+    "name": "Udaipur",
+    "state": "Tripura"
+  },
+  {
+    "name": "Unakoti",
+    "state": "Tripura"
+  },
+  {
+    "name": "Agra",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Aligarh",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Ayodhya",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Ballia",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Banda",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Bareilly",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Bithoor",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Chitrakoot",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Deoria",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Etawah",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Faizabad",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Farrukhabad",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Fatehpur Sikri",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Firozabad",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Ghaziabad",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Ghazipur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Gorakhpur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Greater Noida",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Hastinapur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Jaunpur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Jhansi",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Kannauj",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Kanpur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Kushinagar",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Lakhimpur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Lucknow",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Mahoba",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Mathura",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Meerut",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Mirzapur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Moradabad",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Noida",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Pilibhit",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Prayagraj",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Rampur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Sambhal",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Sarnath",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Shravasti",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Sonbhadra",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Sultanpur",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Varanasi",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Vindhyachal",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Vrindavan",
+    "state": "Uttar Pradesh"
+  },
+  {
+    "name": "Almora",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Auli",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Badrinath",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Bhimtal",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Binsar",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Chakrata",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Champawat",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Chopta",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Dehradun",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Devprayag",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Dhanaulti",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Dharchula",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Gangotri",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Guptkashi",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Haridwar",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Jim Corbett (Ramnagar)",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Joshimath",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Kausani",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Kedarnath",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Kotdwar",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Lansdowne",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Mukteshwar",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Munsiyari",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Mussoorie",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Nainital",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Naukuchiatal",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Pauri",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Pithoragarh",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Ranikhet",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Rishikesh",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Rudraprayag",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Tanakpur",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Tehri",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Uttarkashi",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Yamunotri",
+    "state": "Uttarakhand"
+  },
+  {
+    "name": "Alipurduar",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Ayodhya Hills",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Bakkhali",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Bankura",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Bardhaman",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Bishnupur",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Bolpur",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Chandannagar",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Cooch Behar",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Darjeeling",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Diamond Harbour",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Digha",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Dooars",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Gorumara",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Haldia",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Hooghly",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Jaldapara",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Jalpaiguri",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Kalimpong",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Kolkata",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Kurseong",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Lataguri",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Malda",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Mandarmani",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Mayapur",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Mirik",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Murshidabad",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Nabadwip",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Purulia",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Raiganj",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Shantiniketan",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Siliguri",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Sundarbans",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Tajpur",
+    "state": "West Bengal"
+  },
+  {
+    "name": "Tarapith",
+    "state": "West Bengal"
   }
 ]

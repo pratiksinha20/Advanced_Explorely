@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import HotelCard from '../components/HotelCard';
+import Icon from '../components/Icon';
 
 export default function Hotels() {
     const { allHotels, dataLoaded } = useApp();
@@ -40,14 +41,14 @@ export default function Hotels() {
     return (
         <div className="hotels-page">
             <div className="page-header">
-                <h1 className="page-title">🏨 Hotels & Resorts</h1>
+                <h1 className="page-title"><Icon name="hotel" size={26} className="page-title-icon" /> Hotels & Resorts</h1>
                 <p className="page-subtitle">Find the perfect stay across India</p>
             </div>
 
             <div className="explore-layout">
                 <aside className="explore-sidebar">
                     <div className="filter-group">
-                        <label className="filter-label">🏙️ City</label>
+                        <label className="filter-label"><Icon name="building" size={16} className="filter-label-icon" /> City</label>
                         <select className="filter-select" value={cityFilter} onChange={(e) => setCityFilter(e.target.value)}>
                             <option value="">All Cities</option>
                             {hotelCities.map(c => <option key={c} value={c}>{c}</option>)}
@@ -55,7 +56,7 @@ export default function Hotels() {
                     </div>
 
                     <div className="filter-group">
-                        <label className="filter-label">🏷️ Type</label>
+                        <label className="filter-label"><Icon name="tag" size={16} className="filter-label-icon" /> Type</label>
                         <select className="filter-select" value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
                             <option value="">All Types</option>
                             {hotelTypes.map(t => <option key={t} value={t}>{t}</option>)}
@@ -63,7 +64,7 @@ export default function Hotels() {
                     </div>
 
                     <div className="filter-group">
-                        <label className="filter-label">💰 Price Range</label>
+                        <label className="filter-label"><Icon name="dollar-sign" size={16} className="filter-label-icon" /> Price Range</label>
                         <select className="filter-select" value={priceFilter} onChange={(e) => setPriceFilter(e.target.value)}>
                             <option value="">Any Price</option>
                             <option value="low">Budget (Under ₹5,000)</option>
@@ -73,7 +74,7 @@ export default function Hotels() {
                     </div>
 
                     <div className="filter-group">
-                        <label className="filter-label">⭐ Min Rating</label>
+                        <label className="filter-label"><Icon name="star" size={16} className="filter-label-icon" /> Min Rating</label>
                         <select className="filter-select" value={ratingFilter} onChange={(e) => setRatingFilter(Number(e.target.value))}>
                             <option value={0}>Any Rating</option>
                             <option value={4}>4+ Stars</option>
@@ -83,7 +84,7 @@ export default function Hotels() {
                     </div>
 
                     <div className="filter-group">
-                        <label className="filter-label">🔄 Sort By</label>
+                        <label className="filter-label"><Icon name="arrow-up-down" size={16} className="filter-label-icon" /> Sort By</label>
                         <select className="filter-select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                             <option value="rating">Top Rated</option>
                             <option value="price-low">Price: Low to High</option>
@@ -107,7 +108,7 @@ export default function Hotels() {
                         </div>
                     ) : (
                         <div className="empty-state">
-                            <span className="empty-icon">🏨</span>
+                            <span className="empty-icon"><Icon name="hotel" size={40} /></span>
                             <p>No hotels match your filters. Try adjusting them.</p>
                         </div>
                     )}

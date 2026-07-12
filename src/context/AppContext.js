@@ -53,23 +53,23 @@ export function AppProvider({ children }) {
 
     const toggleDarkMode = useCallback(() => setDarkMode(d => !d), []);
 
-    // Categories with icons
+    // Categories with Lucide icon identifiers
     const categories = useMemo(() => [
-        { name: 'Temple / Religious', icon: '🛕' },
-        { name: 'Mountains / Hills', icon: '⛰️' },
-        { name: 'Beaches', icon: '🏖️' },
-        { name: 'Forests', icon: '🌲' },
-        { name: 'Wildlife Sanctuaries', icon: '🦁' },
-        { name: 'Waterfalls', icon: '💧' },
-        { name: 'Lakes', icon: '🏞️' },
-        { name: 'Forts', icon: '🏰' },
-        { name: 'Palaces', icon: '👑' },
-        { name: 'Museums & Galleries', icon: '🏛️' },
-        { name: 'Historic Monuments', icon: '🗿' },
-        { name: 'Parks & Gardens', icon: '🌳' },
-        { name: 'Markets & Bazaars', icon: '🛍️' },
-        { name: 'Adventure / Trekking', icon: '🧗' },
-        { name: 'Spiritual Sites', icon: '🙏' },
+        { name: 'Temple / Religious', icon: 'landmark' },
+        { name: 'Mountains / Hills', icon: 'mountain' },
+        { name: 'Beaches', icon: 'umbrella' },
+        { name: 'Forests', icon: 'tree-pine' },
+        { name: 'Wildlife Sanctuaries', icon: 'paw-print' },
+        { name: 'Waterfalls', icon: 'droplets' },
+        { name: 'Lakes', icon: 'waves' },
+        { name: 'Forts', icon: 'castle' },
+        { name: 'Palaces', icon: 'crown' },
+        { name: 'Museums & Galleries', icon: 'columns-3' },
+        { name: 'Historic Monuments', icon: 'building' },
+        { name: 'Parks & Gardens', icon: 'tree-deciduous' },
+        { name: 'Markets & Bazaars', icon: 'shopping-bag' },
+        { name: 'Adventure / Trekking', icon: 'backpack' },
+        { name: 'Spiritual Sites', icon: 'flame' },
     ], []);
 
     const value = useMemo(() => ({

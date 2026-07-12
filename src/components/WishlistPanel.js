@@ -1,5 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
+import { Heart, X, MapPin, Trash2, ClipboardList } from 'lucide-react';
 
 export default function WishlistPanel() {
     const { wishlist, showWishlist, setShowWishlist, removeFromWishlist } = useApp();
@@ -9,12 +10,12 @@ export default function WishlistPanel() {
         <div className="wishlist-overlay" onClick={() => setShowWishlist(false)}>
             <div className="wishlist-panel" onClick={(e) => e.stopPropagation()}>
                 <div className="wishlist-header">
-                    <h2>❤️ My Wishlist</h2>
-                    <button className="wishlist-close" onClick={() => setShowWishlist(false)}>✕</button>
+                    <h2><Heart size={20} fill="#e74c3c" color="#e74c3c" style={{ verticalAlign: '-3px', marginRight: '6px' }} /> My Wishlist</h2>
+                    <button className="wishlist-close" onClick={() => setShowWishlist(false)}><X size={18} /></button>
                 </div>
                 {wishlist.length === 0 ? (
                     <div className="wishlist-empty">
-                        <span className="empty-icon">📋</span>
+                        <span className="empty-icon"><ClipboardList size={40} /></span>
                         <p>Your wishlist is empty.</p>
                         <p className="hint-text">Tap the heart on any place to save it!</p>
                     </div>
@@ -27,9 +28,9 @@ export default function WishlistPanel() {
                                 <div className="wishlist-item-info">
                                     <h4>{item.name}</h4>
                                     <p>{item.city}{item.state ? `, ${item.state}` : ''}</p>
-                                    <a href={item.mapLink} target="_blank" rel="noopener noreferrer" className="wishlist-map-link">📍 Maps</a>
+                                    <a href={item.mapLink} target="_blank" rel="noopener noreferrer" className="wishlist-map-link"><MapPin size={14} /> Maps</a>
                                 </div>
-                                <button className="wishlist-remove" onClick={() => removeFromWishlist(item)} title="Remove">🗑️</button>
+                                <button className="wishlist-remove" onClick={() => removeFromWishlist(item)} title="Remove"><Trash2 size={16} /></button>
                             </div>
                         ))}
                     </div>

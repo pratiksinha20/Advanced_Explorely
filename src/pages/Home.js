@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import SpotCard from '../components/SpotCard';
 import HotelCard from '../components/HotelCard';
+import Icon from '../components/Icon';
 
 export default function Home() {
     const { allSpots, allHotels, states, categories, dataLoaded } = useApp();
@@ -63,7 +64,7 @@ export default function Home() {
             {/* Explore by State */}
             <section className="home-section">
                 <div className="section-header">
-                    <h2 className="section-title">🗺️ Explore by State</h2>
+                    <h2 className="section-title"><Icon name="map" size={22} className="section-title-icon" /> Explore by State</h2>
                     <Link to="/explore" className="see-all-link">See All →</Link>
                 </div>
                 <div className="state-grid">
@@ -80,13 +81,13 @@ export default function Home() {
             {/* Explore by Category */}
             <section className="home-section">
                 <div className="section-header">
-                    <h2 className="section-title">📂 Explore by Category</h2>
+                    <h2 className="section-title"><Icon name="folder-open" size={22} className="section-title-icon" /> Explore by Category</h2>
                     <Link to="/categories" className="see-all-link">See All →</Link>
                 </div>
                 <div className="category-scroll">
                     {categories.map((cat, i) => (
                         <Link to={`/categories?cat=${encodeURIComponent(cat.name)}`} key={i} className="category-card">
-                            <span className="category-icon">{cat.icon}</span>
+                            <span className="category-icon"><Icon name={cat.icon} size={28} /></span>
                             <span className="category-name">{cat.name}</span>
                             <span className="category-count">{allSpots.filter(s => s.category === cat.name).length}</span>
                         </Link>
@@ -97,7 +98,7 @@ export default function Home() {
             {/* Popular Destinations */}
             <section className="home-section">
                 <div className="section-header">
-                    <h2 className="section-title">🌟 Popular Destinations</h2>
+                    <h2 className="section-title"><Icon name="sparkles" size={22} className="section-title-icon" /> Popular Destinations</h2>
                     <Link to="/explore" className="see-all-link">See All →</Link>
                 </div>
                 <div className="spots-grid">
@@ -111,7 +112,7 @@ export default function Home() {
             {trendingSpots.length > 0 && (
                 <section className="home-section">
                     <div className="section-header">
-                        <h2 className="section-title">🔥 Trending Tourist Spots</h2>
+                        <h2 className="section-title"><Icon name="trending-up" size={22} className="section-title-icon" /> Trending Tourist Spots</h2>
                     </div>
                     <div className="spots-grid">
                         {trendingSpots.map((spot, i) => (
@@ -124,7 +125,7 @@ export default function Home() {
             {/* Top Hotels */}
             <section className="home-section">
                 <div className="section-header">
-                    <h2 className="section-title">🏨 Top Hotels & Resorts</h2>
+                    <h2 className="section-title"><Icon name="hotel" size={22} className="section-title-icon" /> Top Hotels & Resorts</h2>
                     <Link to="/hotels" className="see-all-link">See All →</Link>
                 </div>
                 <div className="hotels-grid">
