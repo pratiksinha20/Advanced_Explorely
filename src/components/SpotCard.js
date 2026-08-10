@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
-import { Heart, MapPin, Star } from 'lucide-react';
+import { Heart, MapPin, Star, Search } from 'lucide-react';
 
 export default function SpotCard({ spot, style }) {
     const { isInWishlist, toggleWishlist } = useApp();
@@ -39,6 +39,9 @@ export default function SpotCard({ spot, style }) {
                 <div className="spot-actions">
                     <a href={spot.mapLink} target="_blank" rel="noopener noreferrer" className="map-link">
                         <MapPin size={14} /> View on Maps
+                    </a>
+                    <a href={`https://www.google.com/search?q=${encodeURIComponent(`${spot.name}, ${spot.city}, ${spot.state || ''}`)}`} target="_blank" rel="noopener noreferrer" className="google-search-link">
+                        <Search size={14} /> Search on Google
                     </a>
                 </div>
             </div>

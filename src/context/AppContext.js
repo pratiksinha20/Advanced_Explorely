@@ -13,6 +13,7 @@ export function AppProvider({ children }) {
 
     const [allSpots, setAllSpots] = useState([]);
     const [allHotels, setAllHotels] = useState([]);
+    const [allFoods, setAllFoods] = useState({});
     const [states, setStates] = useState([]);
     const [cities, setCities] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
@@ -28,11 +29,13 @@ export function AppProvider({ children }) {
             fetch(process.env.PUBLIC_URL + '/data/cities.json').then(r => r.json()),
             fetch(process.env.PUBLIC_URL + '/data/spots.json').then(r => r.json()),
             fetch(process.env.PUBLIC_URL + '/data/hotels.json').then(r => r.json()),
-        ]).then(([s, c, sp, h]) => {
+            fetch(process.env.PUBLIC_URL + '/data/foods.json').then(r => r.json()),
+        ]).then(([s, c, sp, h, f]) => {
             setStates(s);
             setCities(c);
             setAllSpots(sp);
             setAllHotels(h);
+            setAllFoods(f);
             setDataLoaded(true);
         }).catch(err => console.error('Data load error:', err));
     }, []);
@@ -76,9 +79,9 @@ export function AppProvider({ children }) {
         darkMode, toggleDarkMode,
         wishlist, showWishlist, setShowWishlist,
         isInWishlist, toggleWishlist, removeFromWishlist,
-        allSpots, allHotels, states, cities, categories, dataLoaded,
+        allSpots, allHotels, allFoods, states, cities, categories, dataLoaded,
     }), [darkMode, toggleDarkMode, wishlist, showWishlist, isInWishlist, toggleWishlist,
-        removeFromWishlist, allSpots, allHotels, states, cities, categories, dataLoaded]);
+        removeFromWishlist, allSpots, allHotels, allFoods, states, cities, categories, dataLoaded]);
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

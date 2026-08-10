@@ -988,6 +988,68 @@ nav {
 }
 
 /* ===========================
+   GOOGLE SEARCH BUTTON — WATER FILL EFFECT
+   =========================== */
+.google-search-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(14, 165, 233, 0.08);
+  color: #0284c7;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.35s ease, border-color 0.35s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-search-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  z-index: -1;
+  transition: height 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.google-search-link:hover {
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.4);
+}
+
+.google-search-link:hover::before {
+  height: 100%;
+}
+
+.google-search-link .lucide-icon {
+  transition: transform 0.3s ease;
+}
+
+.google-search-link:hover .lucide-icon {
+  transform: scale(1.1);
+}
+
+.app.dark .google-search-link {
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.app.dark .google-search-link:hover {
+  color: #ffffff;
+}
+
+/* ===========================
    HOTEL GRID & CARD
    =========================== */
 .hotels-grid {
@@ -2173,3 +2235,495 @@ nav {
   color: white;
   border-color: transparent;
 }
+
+/* ===========================
+   FOOD CARD STYLES
+   =========================== */
+.food-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, rgba(0,0,0,0.07));
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: all var(--transition);
+  animation: fadeUp 0.4s ease both;
+  cursor: default;
+}
+
+.food-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(255, 126, 95, 0.3);
+}
+
+.food-card-emoji-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.food-card-emoji {
+  font-size: 2.4rem;
+  line-height: 1;
+  display: block;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255,126,95,0.12), rgba(254,180,123,0.12));
+  border-radius: var(--radius-sm);
+}
+
+.food-rank-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.food-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.food-card-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.food-state-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  background: rgba(255, 126, 95, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.food-card-description {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===========================
+   FOODS PAGE
+   =========================== */
+.foods-page {
+  min-height: calc(100vh - var(--header-height));
+}
+
+.foods-hero {
+  background: var(--accent-gradient);
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.foods-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.foods-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.foods-hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+.foods-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.foods-hero-subtitle {
+  color: rgba(255,255,255,0.88);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.foods-search-bar {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.foods-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0,0,0,0.45);
+}
+
+.foods-search-input {
+  width: 100%;
+  padding: 14px 44px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  outline: none;
+  color: #333;
+}
+
+.foods-search-input::placeholder {
+  color: #999;
+}
+
+.foods-search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+  padding: 4px;
+}
+
+.foods-layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.search-foods-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* State food index in sidebar */
+.state-food-index {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.state-food-index::-webkit-scrollbar {
+  width: 4px;
+}
+
+.state-food-index-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.82rem;
+}
+
+.state-food-index-item:hover {
+  background: rgba(255, 126, 95, 0.07);
+  border-color: rgba(255, 126, 95, 0.2);
+}
+
+.state-food-index-item.active {
+  background: rgba(255, 126, 95, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.state-food-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 8px;
+}
+
+.state-food-count {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+  background: rgba(255, 126, 95, 0.1);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+/* ===========================
+   EXPLORE PAGE ENHANCEMENTS
+   =========================== */
+.explore-city-banner {
+  width: 100%;
+  min-height: 220px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.explore-banner-img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.explore-city-banner:hover .explore-banner-img {
+  transform: scale(1.03);
+}
+
+.explore-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.15) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 32px;
+  z-index: 2;
+}
+
+.explore-banner-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.02em;
+}
+
+.explore-banner-subtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.explore-highlight-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.highlight-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.01em;
+}
+
+.food-highlight-btn {
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 126, 95, 0.45);
+}
+
+.food-highlight-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(255, 126, 95, 0.6);
+  filter: brightness(1.08);
+}
+
+.hotel-highlight-btn {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+}
+
+.hotel-highlight-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.6);
+  filter: brightness(1.08);
+}
+
+.highlight-btn .btn-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* ===========================
+   EXPLORE MODAL OVERLAY
+   =========================== */
+.explore-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.explore-modal-content {
+  background: var(--card-bg, #ffffff);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 1px solid rgba(255, 126, 95, 0.2);
+}
+
+.app.dark .explore-modal-content {
+  background: #1a1c23;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.explore-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 28px 16px 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.app.dark .explore-modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.modal-title-wrapper h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+.modal-close-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.app.dark .modal-close-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-close-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.modal-search-wrapper {
+  position: relative;
+  margin: 16px 28px;
+}
+
+.modal-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.modal-search-input {
+  width: 100%;
+  padding: 10px 38px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 0.9rem;
+  outline: none;
+  color: inherit;
+}
+
+.app.dark .modal-search-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.modal-search-input:focus {
+  border-color: var(--accent);
+}
+
+.modal-search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.explore-modal-body {
+  padding: 0 28px 28px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+

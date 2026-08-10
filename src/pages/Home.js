@@ -3,10 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import SpotCard from '../components/SpotCard';
 import HotelCard from '../components/HotelCard';
+import FoodCard from '../components/FoodCard';
 import Icon from '../components/Icon';
 
 export default function Home() {
-    const { allSpots, allHotels, states, categories, dataLoaded } = useApp();
+    const { allSpots, allHotels, allFoods, states, categories, dataLoaded } = useApp();
     const navigate = useNavigate();
 
     const popularSpots = useMemo(() =>
@@ -25,6 +26,19 @@ export default function Home() {
     const featuredStates = useMemo(() =>
         states.filter(s => ['Rajasthan', 'Kerala', 'Goa', 'Himachal Pradesh', 'Uttarakhand', 'Tamil Nadu', 'Maharashtra', 'Karnataka'].includes(s.name)),
         [states]);
+
+    // Featured foods: top dish from each of 8 featured states
+    const featuredFoods = useMemo(() => {
+        const featured = ['Rajasthan', 'Kerala', 'Punjab', 'West Bengal', 'Maharashtra', 'Tamil Nadu', 'Goa', 'Gujarat'];
+        const result = [];
+        featured.forEach(stateName => {
+            const foods = allFoods[stateName];
+            if (foods && foods.length > 0) {
+                result.push({ ...foods[0], state: stateName });
+            }
+        });
+        return result;
+    }, [allFoods]);
 
     if (!dataLoaded) {
         return (
@@ -117,6 +131,23 @@ export default function Home() {
                     <div className="spots-grid">
                         {trendingSpots.map((spot, i) => (
                             <SpotCard key={i} spot={spot} style={{ animationDelay: `${i * 0.05}s` }} />
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {/* Regional Food Specialties */}
+            {featuredFoods.length > 0 && (
+                <section className="home-section">
+                    <div className="section-header">
+                        <h2 className="section-title"><span style={{ marginRight: '8px', fontSize: '1.2rem' }}>🍽️</span> Regional Food Specialties</h2>
+                        <Link to="/explore" className="see-all-link">Explore Cuisine →</Link>
+                    </div>
+                    <div className="home-foods-scroll">
+                        {featuredFoods.map((food, i) => (
+                            <Link to={`/explore?state=${encodeURIComponent(food.state)}`} key={i} className="home-food-link">
+                                <FoodCard food={food} stateName={food.state} style={{ animationDelay: `${i * 0.05}s` }} />
+                            </Link>
                         ))}
                     </div>
                 </section>

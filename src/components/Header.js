@@ -4,7 +4,7 @@ import { useApp } from '../context/AppContext';
 import Icon from './Icon';
 
 export default function Header() {
-    const { darkMode, toggleDarkMode, wishlist, setShowWishlist, allSpots, allHotels, states, cities } = useApp();
+    const { darkMode, toggleDarkMode, wishlist, setShowWishlist, allSpots, allHotels, allFoods, states, cities } = useApp();
     const [searchQuery, setSearchQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
@@ -35,8 +35,20 @@ export default function Header() {
         allSpots.filter(s => s.name.toLowerCase().includes(ql)).slice(0, 4)
             .forEach(s => results.push({ type: 'Place', name: s.name, sub: s.city, iconName: 'map-pin' }));
         allHotels.filter(h => h.name.toLowerCase().includes(ql)).slice(0, 3)
-            .forEach(h => results.push({ type: 'Hotel', name: h.name, sub: h.city, iconName: 'hotel' }));
-        setSuggestions(results);
+            .forEach(h => results.push({ 
+                type: h.type, 
+                name: h.name, 
+                sub: h.city, 
+                iconName: h.type === 'Restaurant' ? 'utensils' : 'hotel' 
+            }));
+        // Food suggestions
+        Object.entries(allFoods).forEach(([stateName, foods]) => {
+            if (Array.isArray(foods)) {
+                foods.filter(f => f.name.toLowerCase().includes(ql)).slice(0, 2)
+                    .forEach(f => results.push({ type: 'Food', name: f.name, sub: stateName, iconName: 'utensils' }));
+            }
+        });
+        setSuggestions(results.slice(0, 12));
         setShowSuggestions(results.length > 0);
     };
 
@@ -46,7 +58,8 @@ export default function Header() {
         if (s.type === 'State') navigate(`/explore?state=${encodeURIComponent(s.name)}`);
         else if (s.type === 'City') navigate(`/explore?state=${encodeURIComponent(s.sub)}&city=${encodeURIComponent(s.name)}`);
         else if (s.type === 'Place') navigate(`/search?q=${encodeURIComponent(s.name)}`);
-        else if (s.type === 'Hotel') navigate(`/hotels?q=${encodeURIComponent(s.name)}`);
+        else if (s.type === 'Hotel' || s.type === 'Resort' || s.type === 'Restaurant') navigate(`/hotels?q=${encodeURIComponent(s.name)}`);
+        else if (s.type === 'Food') navigate(`/explore?state=${encodeURIComponent(s.sub)}`);
     };
 
     const handleSearchSubmit = (e) => {

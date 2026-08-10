@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import HotelCard from '../components/HotelCard';
@@ -13,6 +13,7 @@ export default function Hotels() {
     const [ratingFilter, setRatingFilter] = useState(0);
     const [priceFilter, setPriceFilter] = useState('');
     const [sortBy, setSortBy] = useState('rating');
+    const [visibleCount, setVisibleCount] = useState(24);
 
     const searchQ = searchParams.get('q') || '';
 
@@ -36,13 +37,36 @@ export default function Hotels() {
         return result;
     }, [allHotels, cityFilter, typeFilter, ratingFilter, priceFilter, sortBy, searchQ]);
 
+    const visibleHotels = useMemo(() => {
+        return filtered.slice(0, visibleCount);
+    }, [filtered, visibleCount]);
+
+    // Reset pagination on filter change
+    useEffect(() => {
+        setVisibleCount(24);
+    }, [cityFilter, typeFilter, ratingFilter, priceFilter, sortBy, searchQ]);
+
+    // Infinite scroll handler
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
+                setVisibleCount(prev => {
+                    if (prev >= filtered.length) return prev;
+                    return prev + 24;
+                });
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [filtered.length]);
+
     if (!dataLoaded) return <div className="page-loading"><div className="loading-spinner" /><p>Loading...</p></div>;
 
     return (
         <div className="hotels-page">
             <div className="page-header">
-                <h1 className="page-title"><Icon name="hotel" size={26} className="page-title-icon" /> Hotels & Resorts</h1>
-                <p className="page-subtitle">Find the perfect stay across India</p>
+                <h1 className="page-title"><Icon name="hotel" size={26} className="page-title-icon" /> Stays & Dining</h1>
+                <p className="page-subtitle">Find the perfect hotel, resort, or restaurant across India</p>
             </div>
 
             <div className="explore-layout">
@@ -100,16 +124,24 @@ export default function Hotels() {
 
                 <div className="explore-results">
                     <div className="results-header">
-                        <span className="results-count">{filtered.length} hotels found</span>
+                        <span className="results-count">{filtered.length} listings found</span>
                     </div>
                     {filtered.length > 0 ? (
-                        <div className="hotels-grid">
-                            {filtered.map((hotel, i) => <HotelCard key={i} hotel={hotel} />)}
-                        </div>
+                        <>
+                            <div className="hotels-grid">
+                                {visibleHotels.map((hotel, i) => <HotelCard key={i} hotel={hotel} />)}
+                            </div>
+                            {visibleCount < filtered.length && (
+                                <div className="loading-more" style={{ marginTop: '20px' }}>
+                                    <div className="loading-spinner-small" />
+                                    <p>Loading more stays...</p>
+                                </div>
+                            )}
+                        </>
                     ) : (
                         <div className="empty-state">
                             <span className="empty-icon"><Icon name="hotel" size={40} /></span>
-                            <p>No hotels match your filters. Try adjusting them.</p>
+                            <p>No listings match your filters. Try adjusting them.</p>
                         </div>
                     )}
                 </div>

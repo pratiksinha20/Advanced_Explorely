@@ -1,0 +1,2444 @@
+{
+  "Andaman and Nicobar Islands": [
+    {
+      "name": "Coconut Prawn Curry",
+      "rank": 1,
+      "description": "Fresh prawns cooked in a creamy coconut milk gravy with mild local spices.",
+      "emoji": "🥥 Prawns"
+    },
+    {
+      "name": "Fish Curry",
+      "rank": 2,
+      "description": "Classic island-style fresh fish curry prepared with mustard paste and spices.",
+      "emoji": "🐟 Fish"
+    },
+    {
+      "name": "Grilled Tilapia",
+      "rank": 3,
+      "description": "Fresh Tilapia marinated in garlic, lemon juice, and local spices, grilled to perfection.",
+      "emoji": "🔥 Tilapia"
+    },
+    {
+      "name": "Barbeque Fish",
+      "rank": 4,
+      "description": "Whole fish coated in rich marinades, roasted over open charcoals on the beach.",
+      "emoji": "🍢 Fish Barbeque"
+    },
+    {
+      "name": "Lobster Jalfrezi",
+      "rank": 5,
+      "description": "Succulent lobster stir-fried with bell peppers, green chillies, and thick spicy onion gravy.",
+      "emoji": "🦞 Lobster"
+    },
+    {
+      "name": "Macher Jhol",
+      "rank": 6,
+      "description": "Traditional Bengali-style fish broth popular due to the prominent Bengali community.",
+      "emoji": "🍲 Macher Jhol"
+    },
+    {
+      "name": "Chilli Curry",
+      "rank": 7,
+      "description": "Extremely hot and tangy curry packed with local green and red chillies.",
+      "emoji": "🌶️ Curry"
+    },
+    {
+      "name": "Tandoori Fish",
+      "rank": 8,
+      "description": "Fresh catch marinated in yoghurt and tandoori masala, baked in a clay oven.",
+      "emoji": "🍖 Tandoori Fish"
+    },
+    {
+      "name": "Prawn Biryani",
+      "rank": 9,
+      "description": "Fragrant basmati rice cooked with fresh sea prawns and rich aromatic spices.",
+      "emoji": "🍛 Biryani"
+    },
+    {
+      "name": "Crab Masala",
+      "rank": 10,
+      "description": "Mud crabs simmered in a dense, spicy ginger-garlic paste and coconut sauce.",
+      "emoji": "🦀 Crab"
+    },
+    {
+      "name": "Banana Flower Curry",
+      "rank": 11,
+      "description": "Offbeat island dish made of finely chopped banana flower cooked with grated coconut.",
+      "emoji": "🍌 Veg Curry"
+    },
+    {
+      "name": "Coconut Water",
+      "rank": 12,
+      "description": "Sweet, refreshing water from fresh king coconuts harvested along the beaches.",
+      "emoji": "🥤 Coconut"
+    }
+  ],
+  "Andhra Pradesh": [
+    {
+      "name": "Hyderabadi Biryani",
+      "rank": 1,
+      "description": "World-famous basmati rice dish slow-cooked (dum) with saffron-marinated tender meat.",
+      "emoji": "🍛 Dum Biryani"
+    },
+    {
+      "name": "Pootarekulu",
+      "rank": 2,
+      "description": "Paper-thin wafer dessert made from rice starch, pure ghee, and stuffed with jaggery or sugar.",
+      "emoji": "🍬 Paper Sweet"
+    },
+    {
+      "name": "Gongura Pachadi",
+      "rank": 3,
+      "description": "Extremely tangy and fiery pickle made of sorrel leaves, green chillies, and garlic.",
+      "emoji": "🌶️ Pickle"
+    },
+    {
+      "name": "Chepala Pulusu",
+      "rank": 4,
+      "description": "Tangy and hot fish curry cooked in tamarind juice with raw mango slices.",
+      "emoji": "🐟 Fish Curry"
+    },
+    {
+      "name": "Pesarattu",
+      "rank": 5,
+      "description": "Nutritious green gram (moong dal) crepe, typically served with ginger chutney.",
+      "emoji": "🥞 Crepe"
+    },
+    {
+      "name": "Natu Kodi Kura",
+      "rank": 6,
+      "description": "Fiery country-chicken curry cooked with dry coconut powder and red chillies.",
+      "emoji": "🍗 Chicken Curry"
+    },
+    {
+      "name": "Bobbatlu",
+      "rank": 7,
+      "description": "Sweet flatbread stuffed with a delicious mixture of Bengal gram and jaggery.",
+      "emoji": "🥞 Sweet bread"
+    },
+    {
+      "name": "Guntur Idli",
+      "rank": 8,
+      "description": "Steamed rice cakes coated in generous amounts of spicy lentil powder (podi) and hot ghee.",
+      "emoji": "🍡 Podi Idli"
+    },
+    {
+      "name": "Pulasa Fish Curry",
+      "rank": 9,
+      "description": "Rare and highly prized seasonal river fish curry prepared with sour herbs.",
+      "emoji": "🐟 Pulasa Curry"
+    },
+    {
+      "name": "Arisa",
+      "rank": 10,
+      "description": "Deep-fried traditional sweet made of rice flour and melted jaggery, topped with sesame.",
+      "emoji": "🍪 Sweet Cake"
+    },
+    {
+      "name": "Ragi Sankati",
+      "rank": 11,
+      "description": "Healthy, dense balls of finger millet flour eaten with hot country chicken stew.",
+      "emoji": "🥣 Millet Ball"
+    },
+    {
+      "name": "Royyala Vepudu",
+      "rank": 12,
+      "description": "Dry-spiced stir-fry of fresh prawns with caramelized onions, curry leaves, and green chillies.",
+      "emoji": "🍤 Prawn Fry"
+    }
+  ],
+  "Arunachal Pradesh": [
+    {
+      "name": "Thukpa",
+      "rank": 1,
+      "description": "Hearty Tibetan-style noodle soup with fresh vegetables, meat, and local mountain herbs.",
+      "emoji": "🍜 Noodle Soup"
+    },
+    {
+      "name": "Momos",
+      "rank": 2,
+      "description": "Steamed dumplings stuffed with minced meat or seasoned vegetables, served with spicy chilli paste.",
+      "emoji": "🥟 Dumplings"
+    },
+    {
+      "name": "Pehak",
+      "rank": 3,
+      "description": "Spicy condiment paste made of fermented soy beans and local hot red chillies.",
+      "emoji": "🌶️ Soy Paste"
+    },
+    {
+      "name": "Apong",
+      "rank": 4,
+      "description": "Traditional homemade rice beer with a sweet-sour taste and fragrant aroma.",
+      "emoji": "🍺 Rice Drink"
+    },
+    {
+      "name": "Pika Pila",
+      "rank": 5,
+      "description": "Traditional hot pickle made of bamboo shoot, pork fat, and dried red chillies.",
+      "emoji": "🥢 Pickle"
+    },
+    {
+      "name": "Chura Sabji",
+      "rank": 6,
+      "description": "Spicy, thin soup curry made of fermented yak cheese and fresh green chillies.",
+      "emoji": "🧀 Cheese Curry"
+    },
+    {
+      "name": "Wungwut Ngam",
+      "rank": 7,
+      "description": "Unique chicken dish cooked using toasted rice flour powder and local forest herbs.",
+      "emoji": "🍗 Rice Chicken"
+    },
+    {
+      "name": "Lukter",
+      "rank": 8,
+      "description": "Dry meat flakes combined with roasted Bhut Jolokia (ghost chilli) flakes.",
+      "emoji": "🥩 Spicy Meat"
+    },
+    {
+      "name": "Dung Po",
+      "rank": 9,
+      "description": "Fragrant steamed rice wrapped in local leaves and cooked in double clay pots.",
+      "emoji": "🍙 Leaf Rice"
+    },
+    {
+      "name": "Bamboo Shoot Fry",
+      "rank": 10,
+      "description": "Crispy stir-fried tender bamboo shoots seasoned with local herbs and chillies.",
+      "emoji": "🎋 Bamboo Stir-fry"
+    },
+    {
+      "name": "Koat Pitha",
+      "rank": 11,
+      "description": "Sweet fried rolls made of bananas, rice flour, and jaggery.",
+      "emoji": "🍌 Sweet Roll"
+    },
+    {
+      "name": "Marua",
+      "rank": 12,
+      "description": "Traditional millet-based fermented beverage popular in local mountain tribes.",
+      "emoji": "🌾 Millet Brew"
+    }
+  ],
+  "Assam": [
+    {
+      "name": "Masor Tenga",
+      "rank": 1,
+      "description": "Light, sour fish curry cooked with tomatoes, lemon juice, or elephant apple.",
+      "emoji": "🐟 Sour Fish"
+    },
+    {
+      "name": "Khaar",
+      "rank": 2,
+      "description": "Traditional starter dish filtered through ashes of burnt banana plant peels, cooked with papaya or fish.",
+      "emoji": "🥣 Alkaline Khaar"
+    },
+    {
+      "name": "Duck Meat Curry",
+      "rank": 3,
+      "description": "Rich duck meat curry cooked slowly with white gourd (ash gourd) and ginger.",
+      "emoji": "🍲 Duck Curry"
+    },
+    {
+      "name": "Pitha",
+      "rank": 4,
+      "description": "Rice cakes filled with sweet sesame or jaggery, baked or roasted in bamboo hollows.",
+      "emoji": "🥖 Sweet Pitha"
+    },
+    {
+      "name": "Aloo Pitika",
+      "rank": 5,
+      "description": "Comfort food of mashed potatoes mixed with raw onions, green chillies, mustard oil, and coriander.",
+      "emoji": "🥔 Mash Potato"
+    },
+    {
+      "name": "Ou Tenga Chutney",
+      "rank": 6,
+      "description": "Sweet and tangy chutney made of elephant apple fruit pulp and jaggery.",
+      "emoji": "🍯 Chutney"
+    },
+    {
+      "name": "Paro Manxo",
+      "rank": 7,
+      "description": "Delicacy of pigeon meat cooked with banana flowers and traditional Assamese spices.",
+      "emoji": "🐦 Pigeon Meat"
+    },
+    {
+      "name": "Baanhgaj",
+      "rank": 8,
+      "description": "Fermented bamboo shoots cooked with mustard seeds, green chillies, and small fish.",
+      "emoji": "🎋 Bamboo Shoot"
+    },
+    {
+      "name": "Doi-Chira",
+      "rank": 9,
+      "description": "Traditional breakfast of flattened rice, thick curd, and liquid palm jaggery (Gur).",
+      "emoji": "🥣 Curd Rice"
+    },
+    {
+      "name": "Silkworm Fry",
+      "rank": 10,
+      "description": "Crispy fried silkworm pupae seasoned with salt, onions, and local hot spices.",
+      "emoji": "🐛 Fried Insect"
+    },
+    {
+      "name": "Haahor Xak",
+      "rank": 11,
+      "description": "Rich duck meat stew simmered with leafy green spinach and mustard greens.",
+      "emoji": "🥬 Duck & Greens"
+    },
+    {
+      "name": "Alu Bhaji",
+      "rank": 12,
+      "description": "Crispy julienned potatoes deep-fried in mustard oil, served with rice.",
+      "emoji": "🍟 Potato Fry"
+    }
+  ],
+  "Bihar": [
+    {
+      "name": "Litti Chokha",
+      "rank": 1,
+      "description": "Wheat balls stuffed with spicy roasted gram flour (sattu), baked on coal and dipped in pure ghee. Served with mashed vegetables.",
+      "emoji": "🥯 Litti Chokha"
+    },
+    {
+      "name": "Sattu Paratha",
+      "rank": 2,
+      "description": "Flatbread stuffed with spiced sattu (roasted gram flour), cooked with ghee.",
+      "emoji": "🥞 Flatbread"
+    },
+    {
+      "name": "Khaja",
+      "rank": 3,
+      "description": "Crispy, multi-layered sweet pastry from Silao dipped in sugar syrup.",
+      "emoji": "🥨 Sweet Pastry"
+    },
+    {
+      "name": "Chana Ghugni",
+      "rank": 4,
+      "description": "Spicy and tangy black chickpea gravy garnished with raw onions and green chillies.",
+      "emoji": "🍲 Chickpea Curry"
+    },
+    {
+      "name": "Thekua",
+      "rank": 5,
+      "description": "Hard-baked cookie sweet made of wheat flour, jaggery, coconut, and cardamoms. Chhath Puja specialty.",
+      "emoji": "🍪 Cookie Sweet"
+    },
+    {
+      "name": "Mutton Taas",
+      "rank": 6,
+      "description": "Spicy, dry-fried mutton cooked on an iron griddle, popular in Champaran region.",
+      "emoji": "🥩 Griddle Mutton"
+    },
+    {
+      "name": "Malpua",
+      "rank": 7,
+      "description": "Sweet pancakes made of flour and mashed bananas, deep fried and soaked in thick syrup.",
+      "emoji": "🥞 Sweet Pancake"
+    },
+    {
+      "name": "Balushahi",
+      "rank": 8,
+      "description": "Flaky, doughnut-like sweet pastry glazed with sugar syrup.",
+      "emoji": "🍩 Glazed Sweet"
+    },
+    {
+      "name": "Kadhi Badi",
+      "rank": 9,
+      "description": "Soft gram flour dumplings cooked in a rich, tangy yoghurt and chickpea flour curry.",
+      "emoji": "🥣 Dumpling Curry"
+    },
+    {
+      "name": "Dal Puri",
+      "rank": 10,
+      "description": "Deep-fried puffed bread stuffed with cooked and spiced chana dal.",
+      "emoji": "🥙 Stuffed Puri"
+    },
+    {
+      "name": "Anarsa",
+      "rank": 11,
+      "description": "Traditional sweet pastry made of rice flour and sesame seeds, deep-fried to a crisp.",
+      "emoji": "🍩 Sesame Sweet"
+    },
+    {
+      "name": "Pittha",
+      "rank": 12,
+      "description": "Steamed rice-flour dumplings stuffed with spicy lentil paste or sweet khoya.",
+      "emoji": "🥟 Steamed Dumpling"
+    }
+  ],
+  "Chhattisgarh": [
+    {
+      "name": "Fara / Phara",
+      "rank": 1,
+      "description": "Steamed, cylindrical rice-flour rolls seasoned with sesame seeds, green chillies, and curry leaves.",
+      "emoji": "🥖 Rice Rolls"
+    },
+    {
+      "name": "Chila",
+      "rank": 2,
+      "description": "Crispy rice flour crepe served with spicy tomato-garlic chutney.",
+      "emoji": "🥞 Rice Crepe"
+    },
+    {
+      "name": "Muthia",
+      "rank": 3,
+      "description": "Steamed dumplings made of rice batter, chickpea flour, and fresh spices.",
+      "emoji": "🥟 Steamed Balls"
+    },
+    {
+      "name": "Bafauri",
+      "rank": 4,
+      "description": "Healthy snack made of steamed chana dal dumplings, oil-free alternative to pakoras.",
+      "emoji": "🍡 Steamed Snack"
+    },
+    {
+      "name": "Amat",
+      "rank": 5,
+      "description": "Traditional soup made of mixed vegetables, bamboo shoot, and local spices.",
+      "emoji": "🥣 Veg Soup"
+    },
+    {
+      "name": "Bore Basi",
+      "rank": 6,
+      "description": "Soaked cooked rice kept overnight, eaten cold in summer with curd, pickle, and raw onion.",
+      "emoji": "🍚 Soaked Rice"
+    },
+    {
+      "name": "Chousela",
+      "rank": 7,
+      "description": "Deep-fried, crispy puffed pooris made of rice flour, eaten with dry potato curry.",
+      "emoji": "🥯 Rice Puri"
+    },
+    {
+      "name": "Dehrori",
+      "rank": 8,
+      "description": "Sweet rice dumplings deep-fried and soaked in cardomom-flavored sugar syrup.",
+      "emoji": "🍡 Sweet Rice"
+    },
+    {
+      "name": "Dubki Kadi",
+      "rank": 9,
+      "description": "Moong dal dumplings dropped directly into boiling yoghurt curry to cook.",
+      "emoji": "🍲 Yoghurt Curry"
+    },
+    {
+      "name": "Bara",
+      "rank": 10,
+      "description": "Urad dal fritters prepared during festivals, served with spicy green chutney.",
+      "emoji": "🍩 Dal Fritters"
+    },
+    {
+      "name": "Kusli",
+      "rank": 11,
+      "description": "Sweet pastry stuffed with semolina, dry fruits, and coconut, fried in ghee.",
+      "emoji": "🥟 Sweet Pastry"
+    },
+    {
+      "name": "Sabudana Khichdi",
+      "rank": 12,
+      "description": "Sago pearls stir-fried with roasted peanuts, curry leaves, and potatoes.",
+      "emoji": "🍲 Sago Khichdi"
+    }
+  ],
+  "Dadra and Nagar Haveli and Daman and Diu": [
+    {
+      "name": "Ubadiyu",
+      "rank": 1,
+      "description": "Mixed winter vegetables and herbs packed in an earthen pot and slow-cooked upside down under fire.",
+      "emoji": "🏺 Earthen Pot Veg"
+    },
+    {
+      "name": "Damania Prawns",
+      "rank": 2,
+      "description": "Juicy prawns cooked in a spicy, fiery red masala flavored with local wine or coconut toddy.",
+      "emoji": "🍤 Spicy Prawns"
+    },
+    {
+      "name": "Crab Masala",
+      "rank": 3,
+      "description": "Fresh sea crabs cooked in a thick paste of onions, chillies, and grated coconut.",
+      "emoji": "🦀 Crab Masala"
+    },
+    {
+      "name": "Fish Koliwada",
+      "rank": 4,
+      "description": "Deep-fried batter-coated spicy fish bites, crispy and served with lemon.",
+      "emoji": "🐟 Fried Fish"
+    },
+    {
+      "name": "Val Dal",
+      "rank": 5,
+      "description": "Butter bean curry prepared with dry spices and fresh coriander.",
+      "emoji": "🍲 Bean Curry"
+    },
+    {
+      "name": "Dhokla",
+      "rank": 6,
+      "description": "Steamed Gujarati-style split chickpea cakes tempered with mustard seeds.",
+      "emoji": "🧆 Dhokla"
+    },
+    {
+      "name": "Chicken Bullet",
+      "rank": 7,
+      "description": "Spicy, crispy fried minced chicken sticks served with hot schezwan chutney.",
+      "emoji": "🍗 Fried Chicken"
+    },
+    {
+      "name": "Butter Garlic Prawns",
+      "rank": 8,
+      "description": "Indo-Portuguese style prawns stir-fried in a rich garlic butter sauce.",
+      "emoji": "🍤 Garlic Prawns"
+    },
+    {
+      "name": "Puri Shak",
+      "rank": 9,
+      "description": "Puffed whole wheat bread served with a spiced potato gravy.",
+      "emoji": "🥙 Puri Potato"
+    },
+    {
+      "name": "Dudh Pak",
+      "rank": 10,
+      "description": "Rich rice pudding sweet flavored with saffron, cardamoms, and dry fruits.",
+      "emoji": "🥣 Rice Pudding"
+    },
+    {
+      "name": "Lobster Masala",
+      "rank": 11,
+      "description": "Tender lobster tail chunks simmered in a hot Portuguese-Indian fusion sauce.",
+      "emoji": "🦞 Lobster Masala"
+    },
+    {
+      "name": "Sweet Feni",
+      "rank": 12,
+      "description": "Sugary vermicelli pudding garnished with slivered almonds and pistachios.",
+      "emoji": "🍜 Sweet Vermicelli"
+    }
+  ],
+  "Delhi": [
+    {
+      "name": "Chole Bhature",
+      "rank": 1,
+      "description": "Spicy chickpea curry paired with giant, fluffy deep-fried bread, served with pickles and onions.",
+      "emoji": "🥯 Chole Bhature"
+    },
+    {
+      "name": "Butter Chicken",
+      "rank": 2,
+      "description": "Tandoori chicken pieces simmered in a rich, buttery, creamy tomato gravy with dried fenugreek leaves.",
+      "emoji": "🍗 Butter Chicken"
+    },
+    {
+      "name": "Mutton Nihari",
+      "rank": 3,
+      "description": "Slow-cooked mutton stew simmered overnight with bone marrow and rich spices.",
+      "emoji": "🍲 Nihari Stew"
+    },
+    {
+      "name": "Daulat Ki Chaat",
+      "rank": 4,
+      "description": "Winter delicacy of light, frothy milk foam topped with saffron, khoya, and pistachios.",
+      "emoji": "🍧 Daulat Chaat"
+    },
+    {
+      "name": "Dahi Bhalla",
+      "rank": 5,
+      "description": "Lentil dumplings soaked in sweet yoghurt, topped with green chutney, tamarind sauce, and spices.",
+      "emoji": "🍨 Dahi Bhalla"
+    },
+    {
+      "name": "Paranthe (Chandni Chowk)",
+      "rank": 6,
+      "description": "Deep-fried custom flatbreads filled with potatoes, cheese, radishes, or even bananas.",
+      "emoji": "🥞 Puffed Parantha"
+    },
+    {
+      "name": "Kathi Rolls",
+      "rank": 7,
+      "description": "Skewered kebabs or paneer wrapped in flaky paranthas with sliced onions and spicy chutney.",
+      "emoji": "🌯 Kathi Roll"
+    },
+    {
+      "name": "Aloo Chaat",
+      "rank": 8,
+      "description": "Fried potato cubes tossed in tangy spice powders, lemon juice, and sweet-sour chutneys.",
+      "emoji": "🥔 Aloo Chaat"
+    },
+    {
+      "name": "Golgappe",
+      "rank": 9,
+      "description": "Crispy puffed puris filled with boiled potatoes, chickpeas, and flavored spicy mint water.",
+      "emoji": "🍘 Golgappe"
+    },
+    {
+      "name": "Kulfi Faluda",
+      "rank": 10,
+      "description": "Dense, slow-cooked frozen milk dessert served with sweet corn starch vermicelli noodles.",
+      "emoji": "🍦 Kulfi Faluda"
+    },
+    {
+      "name": "Shahi Tukda",
+      "rank": 11,
+      "description": "Deep-fried bread slices soaked in cardomom syrup and topped with thick condensed milk (rabri).",
+      "emoji": "🍞 Sweet Rabri"
+    },
+    {
+      "name": "Kachori Aloo",
+      "rank": 12,
+      "description": "Flaky, fried pastries served with a very spicy potato curry and green chillies.",
+      "emoji": "🍩 Kachori Aloo"
+    }
+  ],
+  "Goa": [
+    {
+      "name": "Goan Fish Curry",
+      "rank": 1,
+      "description": "Fresh fish simmered in a coconut-heavy, sour tamarind and red chilli paste gravy.",
+      "emoji": "🐟 Goan Fish"
+    },
+    {
+      "name": "Pork Vindaloo",
+      "rank": 2,
+      "description": "Spicy, tangy pork curry marinated in garlic, red chillies, and local toddy vinegar.",
+      "emoji": "🥩 Vindaloo Pork"
+    },
+    {
+      "name": "Bebinca",
+      "rank": 3,
+      "description": "Traditional 7 to 16 layered Goan pudding cake made of coconut milk, egg yolks, and ghee.",
+      "emoji": "🍰 Bebinca Cake"
+    },
+    {
+      "name": "Chicken Xacuti",
+      "rank": 4,
+      "description": "Spicy Goan chicken curry cooked with roasted grated coconut and a complex mix of spices.",
+      "emoji": "🍗 Chicken Xacuti"
+    },
+    {
+      "name": "Shark Ambot Tik",
+      "rank": 5,
+      "description": "Fiery and sour baby shark meat curry prepared with local chillies and kokum.",
+      "emoji": "🦈 Sour Shark"
+    },
+    {
+      "name": "Goan Poi",
+      "rank": 6,
+      "description": "Traditional crusty bran-coated hollow bread, eaten with curries or butter.",
+      "emoji": "🍞 Poi Bread"
+    },
+    {
+      "name": "Crab Xec Xec",
+      "rank": 7,
+      "description": "Crabs cooked in a thick toasted coconut gravy, aromatic seeds, and red chillies.",
+      "emoji": "🦀 Crab Curry"
+    },
+    {
+      "name": "Pork Sorpotel",
+      "rank": 8,
+      "description": "Rich Goan stew of pork offal simmered in vinegar, red chilli paste, and warming spices.",
+      "emoji": "🍲 Sorpotel Stew"
+    },
+    {
+      "name": "Prawn Balchao",
+      "rank": 9,
+      "description": "Fiery prawn pickle cooked in a sour and sweet tomato-chilli sauce.",
+      "emoji": "🍤 Prawn Balchao"
+    },
+    {
+      "name": "Patoleo",
+      "rank": 10,
+      "description": "Sweet rice paste filled with coconut and jaggery, wrapped in fresh turmeric leaves and steamed.",
+      "emoji": "🥬 Sweet Steamed"
+    },
+    {
+      "name": "Caldeirada",
+      "rank": 11,
+      "description": "Portuguese-style mild fish and vegetable stew cooked in white wine.",
+      "emoji": "🍲 Fish Stew"
+    },
+    {
+      "name": "Feni Cashew Flavour",
+      "rank": 12,
+      "description": "Cuisine flavored with Goan cashew apple spirits, sweet and aromatic.",
+      "emoji": "🍹 Cashew Brew"
+    }
+  ],
+  "Gujarat": [
+    {
+      "name": "Dhokla",
+      "rank": 1,
+      "description": "Steamed fermented rice and chickpea batter cakes, tempered with mustard seeds and curry leaves.",
+      "emoji": "🧆 Steamed Dhokla"
+    },
+    {
+      "name": "Khandvi",
+      "rank": 2,
+      "description": "Silky, rolled snacks made from seasoned chickpea flour and sour yoghurt paste, garnished with mustard seeds.",
+      "emoji": "🟡 Khandvi Roll"
+    },
+    {
+      "name": "Undhiyu",
+      "rank": 3,
+      "description": "Mixed winter vegetable dish slow-cooked upside down in clay pots with fenugreek dumplings.",
+      "emoji": "🍲 Mixed Veg Pot"
+    },
+    {
+      "name": "Jalebi Fafda",
+      "rank": 4,
+      "description": "Crispy chickpea crackers (fafda) paired with sweet, syrupy jalebis and fried green chillies.",
+      "emoji": "🥨 Fafda Jalebi"
+    },
+    {
+      "name": "Thepla",
+      "rank": 5,
+      "description": "Healthy flatbreads made of wheat flour, gram flour, and fresh fenugreek leaves.",
+      "emoji": "🥞 Fenugreek Bread"
+    },
+    {
+      "name": "Dabeli",
+      "rank": 6,
+      "description": "Spicy potato mixture stuffed in burger buns, topped with sweet tamarind sauce, pomegranate, and sev.",
+      "emoji": "🍔 Dabeli Bun"
+    },
+    {
+      "name": "Gujarati Thali",
+      "rank": 7,
+      "description": "Grand meal consisting of rotis, various sweet-savory dals, dry curries, khichdi, and sweet dishes.",
+      "emoji": "🍱 Gujarati Thali"
+    },
+    {
+      "name": "Handvo",
+      "rank": 8,
+      "description": "Baked savory lentil cake loaded with bottle gourd, peanuts, and toasted sesame seeds.",
+      "emoji": "🥮 Lentil Cake"
+    },
+    {
+      "name": "Dal Dhokli",
+      "rank": 9,
+      "description": "Wheat flour dumplings simmered in a sweet, spicy, and tangy pigeon pea lentil soup.",
+      "emoji": "🥣 Dal Dhokli"
+    },
+    {
+      "name": "Basundi",
+      "rank": 10,
+      "description": "Thickened sweet milk dessert flavored with cardamom, nutmeg, and dry almonds.",
+      "emoji": "🥛 Sweet Milk"
+    },
+    {
+      "name": "Locho",
+      "rank": 11,
+      "description": "Loose steamed chickpea batter snack from Surat, topped with butter, oil, and custom spices.",
+      "emoji": "🍛 Surat Locho"
+    },
+    {
+      "name": "Khakhra",
+      "rank": 12,
+      "description": "Paper-thin, crunchy flatbreads made of wheat flour, hand-pressed and roasted.",
+      "emoji": "🥞 Crispy Bread"
+    }
+  ],
+  "Haryana": [
+    {
+      "name": "Bajra Khichri",
+      "rank": 1,
+      "description": "Coarsely ground pearl millet cooked slowly with yellow moong dal and served with lots of fresh ghee.",
+      "emoji": "🥣 Millet Porridge"
+    },
+    {
+      "name": "Singri ki Sabji",
+      "rank": 2,
+      "description": "Rare desert bean curry cooked with dried berries (ker) and spices.",
+      "emoji": "🍲 Desert Bean Sabji"
+    },
+    {
+      "name": "Besan Masala Roti",
+      "rank": 3,
+      "description": "Flatbread made from chickpea flour, wheat flour, and chopped onions, seasoned with dry spices.",
+      "emoji": "🥞 Spiced Flatbread"
+    },
+    {
+      "name": "Bathua Raita",
+      "rank": 4,
+      "description": "Yoghurt dip mixed with boiled wild spinach (chenopodium leaves) and roasted cumin.",
+      "emoji": "🥣 Spinach Yoghurt"
+    },
+    {
+      "name": "Kachri ki Chutney",
+      "rank": 5,
+      "description": "Tangy chutney made of wild local cucumbers, red chillies, and garlic.",
+      "emoji": "🌶️ Kachri Chutney"
+    },
+    {
+      "name": "Hara Dhania Cholia",
+      "rank": 6,
+      "description": "Fresh green chickpeas cooked with green onions, coriander, and spices.",
+      "emoji": "🍲 Green Chickpea"
+    },
+    {
+      "name": "Churma",
+      "rank": 7,
+      "description": "Wheat flour rotis crumbled and mixed vigorously with sugar or jaggery and melted ghee.",
+      "emoji": "🍪 Ghee Churma"
+    },
+    {
+      "name": "Gaund Ladoo",
+      "rank": 8,
+      "description": "Sweet balls made of edible gum crystals, wheat flour, ghee, and chopped nuts.",
+      "emoji": "🟡 Gum Sweet"
+    },
+    {
+      "name": "Kadhi Pakora",
+      "rank": 9,
+      "description": "Tangy buttermilk curry thickened with chickpea flour and carrying crispy onion fritters.",
+      "emoji": "🥣 Kadhi Curry"
+    },
+    {
+      "name": "Malpua",
+      "rank": 10,
+      "description": "Sweet, deep-fried syrup-soaked pancakes flavored with fennel seeds.",
+      "emoji": "🥞 Sweet Pancake"
+    },
+    {
+      "name": "Kheer",
+      "rank": 11,
+      "description": "Slow-boiled milk rice pudding sweetened and cooked with nuts.",
+      "emoji": "🥣 Rice Pudding"
+    },
+    {
+      "name": "Alloo Raita",
+      "rank": 12,
+      "description": "Chilled yoghurt whisked with boiled potato cubes and red chilli powder.",
+      "emoji": "🥣 Potato Yoghurt"
+    }
+  ],
+  "Himachal Pradesh": [
+    {
+      "name": "Dham",
+      "rank": 1,
+      "description": "Festive multi-course feast cooked by hereditary chefs, featuring rice, dals, and sweet semolina dishes.",
+      "emoji": "🍱 Dham Feast"
+    },
+    {
+      "name": "Siddu",
+      "rank": 2,
+      "description": "Yeast-risen steamed wheat bread stuffed with poppy seeds, walnuts, or spiced dal, served with ghee.",
+      "emoji": "🥯 Siddu Bread"
+    },
+    {
+      "name": "Chha Gosht",
+      "rank": 3,
+      "description": "Rich lamb curry cooked in a seasoned buttermilk gravy with gram flour and dry spices.",
+      "emoji": "🍲 Lamb Buttermilk"
+    },
+    {
+      "name": "Babru",
+      "rank": 4,
+      "description": "Flatbread stuffed with black gram dal paste, deep fried and served with tamarind chutney.",
+      "emoji": "🥞 Himachali Kachori"
+    },
+    {
+      "name": "Tudkiya Bhath",
+      "rank": 5,
+      "description": "Rich pulao rice cooked with lentils, potatoes, yoghurt, garlic, and mountain herbs.",
+      "emoji": "🍛 Tudkiya Pulao"
+    },
+    {
+      "name": "Madra",
+      "rank": 6,
+      "description": "Chickpeas cooked in a thick gravy of yoghurt, cardamom, and raisins.",
+      "emoji": "🍲 Chickpea Madra"
+    },
+    {
+      "name": "Bhey",
+      "rank": 7,
+      "description": "Thinly sliced lotus stems stir-fried with onion, garlic, ginger, and gram flour.",
+      "emoji": "🎋 Lotus Stem"
+    },
+    {
+      "name": "Aktori",
+      "rank": 8,
+      "description": "Traditional festive pancake made of buckwheat flour and wheat flour.",
+      "emoji": "🥞 Buckwheat Cake"
+    },
+    {
+      "name": "Patrode",
+      "rank": 9,
+      "description": "Colocasia leaves smeared with spicy chickpea paste, rolled, steamed, and fried crisp.",
+      "emoji": "🥬 Leaf Roll"
+    },
+    {
+      "name": "Mittha",
+      "rank": 10,
+      "description": "Himachali dessert made of sweetened rice loaded with raisins, dry nuts, and ghee.",
+      "emoji": "🍚 Sweet Rice"
+    },
+    {
+      "name": "Khatta",
+      "rank": 11,
+      "description": "Tangy and sour side dish made of pumpkin or dry mango powder cooked with chickpea flour.",
+      "emoji": "🍲 Tangy Pumpkin"
+    },
+    {
+      "name": "Trout Fish Curry",
+      "rank": 12,
+      "description": "Fresh river trout marinated in local spices and pan-fried, popular in Kullu-Manali.",
+      "emoji": "🐟 River Trout"
+    }
+  ],
+  "Jharkhand": [
+    {
+      "name": "Dhuska",
+      "rank": 1,
+      "description": "Deep-fried savory pancakes made from a batter of rice and split chickpeas (chana dal), served with potato curry.",
+      "emoji": "🥞 Dhuska Fritter"
+    },
+    {
+      "name": "Litti Chokha (Jharkhand Style)",
+      "rank": 2,
+      "description": "Wheat balls stuffed with sattu, roasted over wood coals, and served with mashed spicy brinjals.",
+      "emoji": "🥯 Sattu Litti"
+    },
+    {
+      "name": "Chilka Roti",
+      "rank": 3,
+      "description": "Pancake prepared with rice flour and chana dal, similar to a soft dosa.",
+      "emoji": "🥞 Rice Roti"
+    },
+    {
+      "name": "Rugra Sabji",
+      "rank": 4,
+      "description": "Edible round wild mushrooms available in monsoon, cooked in a hot onion-tomato gravy.",
+      "emoji": "🍄 Wild Mushroom"
+    },
+    {
+      "name": "Bamboo Shoot Curry",
+      "rank": 5,
+      "description": "Tender bamboo shoots cooked with mustard seeds and local spices.",
+      "emoji": "🎋 Bamboo Shoot"
+    },
+    {
+      "name": "Mada Pitha",
+      "rank": 6,
+      "description": "Steamed pancake prepared with rice flour batter, stuffed with sweet coconut.",
+      "emoji": "🥟 Coconut Pitha"
+    },
+    {
+      "name": "Arsa Roti",
+      "rank": 7,
+      "description": "Deep-fried sweet bread made from rice flour and melted jaggery syrup.",
+      "emoji": "🥯 Jaggery Arsa"
+    },
+    {
+      "name": "Kudrum ki Chutney",
+      "rank": 8,
+      "description": "Sour chutney made from wild hibiscus flower petals and sugar.",
+      "emoji": "🌺 Sour Chutney"
+    },
+    {
+      "name": "Handia Rice Drink",
+      "rank": 9,
+      "description": "Traditional tribal fermented rice beverage brewed in earthen pots.",
+      "emoji": "🥣 Rice Drink"
+    },
+    {
+      "name": "Thekua",
+      "rank": 10,
+      "description": "Sweet, dry wheat cookies pressed with wooden moulds and deep-fried.",
+      "emoji": "🍪 Wheat Cookie"
+    },
+    {
+      "name": "Malpua",
+      "rank": 11,
+      "description": "Crispy sweet pancakes soaked in warm cardamom sugar syrup.",
+      "emoji": "🥞 Sweet Pancake"
+    },
+    {
+      "name": "Lal Saag",
+      "rank": 12,
+      "description": "Red leafy amaranth stir-fried with green chillies, garlic, and raw mustard oil.",
+      "emoji": "🥬 Red Greens"
+    }
+  ],
+  "Karnataka": [
+    {
+      "name": "Bisi Bele Bhath",
+      "rank": 1,
+      "description": "Spicy, tangy rice dish cooked with lentils, vegetables, tamarind, and a special spice blend.",
+      "emoji": "🍛 Bisi Bele Bhath"
+    },
+    {
+      "name": "Mysore Pak",
+      "rank": 2,
+      "description": "Rich sweet fudge made from chickpea flour, generous amounts of hot ghee, and sugar.",
+      "emoji": "🍰 Mysore Pak"
+    },
+    {
+      "name": "Mysore Masala Dosa",
+      "rank": 3,
+      "description": "Crispy rice crepes lined with a spicy red garlic chutney, stuffed with mashed potato.",
+      "emoji": "🥞 Masala Dosa"
+    },
+    {
+      "name": "Ragi Mudde",
+      "rank": 4,
+      "description": "Nutritious, steamed balls of finger millet flour eaten with spicy sambar or chicken curry.",
+      "emoji": "🥣 Millet Ball"
+    },
+    {
+      "name": "Neer Dosa",
+      "rank": 5,
+      "description": "Paper-thin, lacy crepes made from a watery rice batter, served with coconut chutney or jaggery.",
+      "emoji": "🥞 Lacy Crepe"
+    },
+    {
+      "name": "Dharwad Pedha",
+      "rank": 6,
+      "description": "Dark brown milk sweet made from condensed milk solids, roasted in ghee and sugar.",
+      "emoji": "🟤 Dharwad Peda"
+    },
+    {
+      "name": "Idli Vada Combo",
+      "rank": 7,
+      "description": "Steamed rice cakes (idli) and crispy lentil fritters (vada) served with coconut chutney and hot sambar.",
+      "emoji": "🍡 Idli Vada"
+    },
+    {
+      "name": "Korri Gassi",
+      "rank": 8,
+      "description": "Mangalorean chicken curry infused with roasted red chillies, spices, and thick coconut milk.",
+      "emoji": "🍗 Prawns / Chicken"
+    },
+    {
+      "name": "Maddur Vada",
+      "rank": 9,
+      "description": "Crispy fritter patties made of semolina, flour, sliced onions, green chillies, and curry leaves.",
+      "emoji": "🥯 Maddur Vada"
+    },
+    {
+      "name": "Mangalore Buns",
+      "rank": 10,
+      "description": "Sweet, fluffy fried puris made of flour and mashed ripe bananas.",
+      "emoji": "🍩 Banana Buns"
+    },
+    {
+      "name": "Pandi Curry",
+      "rank": 11,
+      "description": "Coorg pork curry cooked with toasted spices and sour Kachampuli (local vinegar).",
+      "emoji": "🍲 Coorg Pork"
+    },
+    {
+      "name": "Akki Roti",
+      "rank": 12,
+      "description": "Rice-flour flatbread mixed with grated dill leaves, carrots, and onions, roasted on tawa.",
+      "emoji": "🥞 Rice Flatbread"
+    }
+  ],
+  "Kerala": [
+    {
+      "name": "Kerala Sadya",
+      "rank": 1,
+      "description": "Grand vegetarian banquet of 24-28 dishes served on a banana leaf, featuring payasam.",
+      "emoji": "🍱 Sadya Feast"
+    },
+    {
+      "name": "Appam with Stew",
+      "rank": 2,
+      "description": "Lacy, fermented rice pancakes with soft spongy centers, served with a coconut milk vegetable/meat stew.",
+      "emoji": "🥞 Appam Stew"
+    },
+    {
+      "name": "Karimeen Pollichathu",
+      "rank": 3,
+      "description": "Pearl spot fish marinated in spicy masala, wrapped in banana leaves, and pan-fried.",
+      "emoji": "🐟 Pearl Spot Fish"
+    },
+    {
+      "name": "Puttu and Kadala Curry",
+      "rank": 4,
+      "description": "Steamed cylinders of ground rice and coconut layers, paired with a black chickpea curry.",
+      "emoji": "🥥 Puttu Kadala"
+    },
+    {
+      "name": "Malabar Parotta & Beef Fry",
+      "rank": 5,
+      "description": "Flaky, layered flatbread paired with fiery fried beef chunks in toasted coconut shards.",
+      "emoji": "🥞 Parotta Beef"
+    },
+    {
+      "name": "Idiyappam",
+      "rank": 6,
+      "description": "Steamed rice noodles (string hoppers) served with coconut milk or spicy egg roast.",
+      "emoji": "🍜 Rice Noodles"
+    },
+    {
+      "name": "Banana Chips (Nendran)",
+      "rank": 7,
+      "description": "Crispy yellow chips made from raw banana slices deep-fried in coconut oil.",
+      "emoji": "🍌 Banana Chips"
+    },
+    {
+      "name": "Palada Payasam",
+      "rank": 8,
+      "description": "Rich sweet pudding made of boiled rice flakes, milk, sugar, and cardamom.",
+      "emoji": "🥣 Sweet Payasam"
+    },
+    {
+      "name": "Thalassery Biryani",
+      "rank": 9,
+      "description": "Fragrant biryani made with short-grain Khaima rice, ghee, and slow-cooked meat.",
+      "emoji": "🍛 short-grain Biryani"
+    },
+    {
+      "name": "Kozhikodan Halwa",
+      "rank": 10,
+      "description": "Chewy, sweet jelly-like dessert made of flour, coconut oil, sugar, and cardamom.",
+      "emoji": "🍮 Kozhikode Halwa"
+    },
+    {
+      "name": "Unnakkaya",
+      "rank": 11,
+      "description": "Spindle-shaped boiled banana paste shells stuffed with sweetened grated coconut and dry fruits.",
+      "emoji": "🍌 Sweet Banana"
+    },
+    {
+      "name": "Erissery",
+      "rank": 12,
+      "description": "Creamy pumpkin and black-eyed pea curry topped with roasted grated coconut oil.",
+      "emoji": "🍲 Pumpkin Curry"
+    }
+  ],
+  "Lakshadweep": [
+    {
+      "name": "Mus Kavaab",
+      "rank": 1,
+      "description": "Spiced tuna fish chunks marinated in coconut paste, dried chillies, and grilled on coal skewers.",
+      "emoji": "🐟 Tuna Kebab"
+    },
+    {
+      "name": "Octopus Fry",
+      "rank": 2,
+      "description": "Tender octopus stir-fried in coconut oil with fresh green chillies, ginger, and curry leaves.",
+      "emoji": "🐙 Fried Octopus"
+    },
+    {
+      "name": "Maasu Podi",
+      "rank": 3,
+      "description": "Dried, shredded tuna powder tossed with grated coconut, onions, and chillies, eaten with rice.",
+      "emoji": "🐟 Dried Tuna"
+    },
+    {
+      "name": "Coconut Fish Curry",
+      "rank": 4,
+      "description": "Fresh coral-reef fish simmered in a spiced broth of fresh ground coconut milk.",
+      "emoji": "🥥 Fish Curry"
+    },
+    {
+      "name": "Fish Tikka",
+      "rank": 5,
+      "description": "Fish cubes marinated in hot red chillies, vinegar, and char-grilled.",
+      "emoji": "🍢 Fish Tikka"
+    },
+    {
+      "name": "Kadalakka",
+      "rank": 6,
+      "description": "Sweet split chickpea dessert prepared with coconut milk and cardamom syrup.",
+      "emoji": "🥣 Chickpea Sweet"
+    },
+    {
+      "name": "Rayere Kula",
+      "rank": 7,
+      "description": "Sweet rice dumplings boiled in sweet cardamom coconut milk.",
+      "emoji": "🍡 Rice Dumplings"
+    },
+    {
+      "name": "Prawn Curry",
+      "rank": 8,
+      "description": "Creamy island prawn curry prepared with local bay leaf and green chillies.",
+      "emoji": "🍤 Creamy Prawns"
+    },
+    {
+      "name": "Kelji Fry",
+      "rank": 9,
+      "description": "Pan-fried lamb liver pieces tossed in crushed black pepper and onions.",
+      "emoji": "🍲 Liver Fry"
+    },
+    {
+      "name": "Banana Fritters",
+      "rank": 10,
+      "description": "Sweet, batter-coated fried banana slices popular as tea-time snacks.",
+      "emoji": "🍌 Banana Fry"
+    },
+    {
+      "name": "Fish Biryani",
+      "rank": 11,
+      "description": "Saffron-spiced basmati rice layered with seasoned fresh sea fish.",
+      "emoji": "🍛 Fish Biryani"
+    },
+    {
+      "name": "Sweet Coconut Water",
+      "rank": 12,
+      "description": "Fresh water directly from island dwarf coconuts, incredibly sweet.",
+      "emoji": "🥤 Coconut Water"
+    }
+  ],
+  "Madhya Pradesh": [
+    {
+      "name": "Poha Jalebi",
+      "rank": 1,
+      "description": "Fluffy flattened rice cooked with turmeric, mustard seeds, and fennel, served with crispy sweet jalebis.",
+      "emoji": "🍛 Poha Jalebi"
+    },
+    {
+      "name": "Dal Bafla",
+      "rank": 2,
+      "description": "Boiled and then baked wheat dough balls, dipped in melted ghee, served with spicy dal.",
+      "emoji": "🥯 Ghee Bafla"
+    },
+    {
+      "name": "Bhutte Ka Kees",
+      "rank": 3,
+      "description": "Grated fresh sweet corn cooked with milk, spices, mustard seeds, and garnished with fresh coconut.",
+      "emoji": "🌽 Grated Corn"
+    },
+    {
+      "name": "Seekh Kebab (Bhopali)",
+      "rank": 4,
+      "description": "Juicy minced lamb kebabs mixed with herbs and cooked on metal skewers.",
+      "emoji": "🍢 Seekh Kebab"
+    },
+    {
+      "name": "Mawa Bati",
+      "rank": 5,
+      "description": "Grand dessert resembling a large gulab jamun, filled with dry fruits and mawa.",
+      "emoji": "🍩 Mawa Sweet"
+    },
+    {
+      "name": "Biryani Pilaf",
+      "rank": 6,
+      "description": "Mildly spiced fragrant rice cooked with slow-simmered vegetables and whole spices.",
+      "emoji": "🍛 Mild Pulao"
+    },
+    {
+      "name": "Kopra Pak",
+      "rank": 7,
+      "description": "Traditional coconut fudge flavored with cardamom and decorated with saffron.",
+      "emoji": "🥮 Coconut Fudge"
+    },
+    {
+      "name": "Chakki Ki Shaak",
+      "rank": 8,
+      "description": "Steamed wheat gluten cakes cooked in a rich, spicy curd-based gravy.",
+      "emoji": "🍲 Gluten Curry"
+    },
+    {
+      "name": "Sabudana Khichdi",
+      "rank": 9,
+      "description": "Sago pearls cooked with potato chunks, peanuts, and green chillies, popular for fasting.",
+      "emoji": "🍲 Sago Khichdi"
+    },
+    {
+      "name": "Palak Puri",
+      "rank": 10,
+      "description": "Deep-fried puffed wheat pooris colored green with fresh spinach puree.",
+      "emoji": "🥯 Spinach Puri"
+    },
+    {
+      "name": "Malpua",
+      "rank": 11,
+      "description": "Deep-fried sweet crepes soaked in syrup, served with creamy condensed rabri.",
+      "emoji": "🥞 Sweet Crepe"
+    },
+    {
+      "name": "Mathura Peda Flavour",
+      "rank": 12,
+      "description": "Rich roasted milk sweets widely sold in temple towns across the state.",
+      "emoji": "🟤 Sweet Peda"
+    }
+  ],
+  "Maharashtra": [
+    {
+      "name": "Vada Pav",
+      "rank": 1,
+      "description": "Battered, deep-fried spiced potato dumpling stuffed in a bread bun with dry garlic chutney.",
+      "emoji": "🍔 Vada Pav"
+    },
+    {
+      "name": "Pav Bhaji",
+      "rank": 2,
+      "description": "Thick mashed vegetable curry cooked with special spices, served with soft buttered bread buns.",
+      "emoji": "🥪 Pav Bhaji"
+    },
+    {
+      "name": "Misal Pav",
+      "rank": 3,
+      "description": "Spicy curry made of sprouted moth beans, topped with farsan (crispy mix), onions, served with pav.",
+      "emoji": "🍲 Spicy Misal"
+    },
+    {
+      "name": "Puran Poli",
+      "rank": 4,
+      "description": "Sweet flatbread stuffed with a smooth paste of boiled yellow gram and jaggery.",
+      "emoji": "🥞 Sweet Poli"
+    },
+    {
+      "name": "Ukadiche Modak",
+      "rank": 5,
+      "description": "Steamed sweet dumplings with rice flour shells, stuffed with fresh coconut and jaggery. Lord Ganesha's favorite.",
+      "emoji": "🥟 Modak Sweet"
+    },
+    {
+      "name": "Sol Kadhi",
+      "rank": 6,
+      "description": "Chilled, tangy pink drink made of coconut milk, kokum skins, garlic, and green chillies.",
+      "emoji": "🥤 Pink drink"
+    },
+    {
+      "name": "Kanda Poha",
+      "rank": 7,
+      "description": "Classic breakfast of flattened rice steam-cooked with onions, potatoes, turmeric, and peanuts.",
+      "emoji": "🍛 Kanda Poha"
+    },
+    {
+      "name": "Kothimbir Vadi",
+      "rank": 8,
+      "description": "Crispy savory cakes made of fresh coriander leaves, chickpea flour, steamed and sliced-fried.",
+      "emoji": "🧆 Coriander Cakes"
+    },
+    {
+      "name": "Pitla Bhakri",
+      "rank": 9,
+      "description": "Gram flour porridge curry (pitla) eaten with rustic flatbread made of sorghum (jowar bhakri).",
+      "emoji": "🥞 Pitla Bhakri"
+    },
+    {
+      "name": "Bhel Puri",
+      "rank": 10,
+      "description": "Popular beach street food made of puffed rice, vegetables, and sweet-sour chutneys.",
+      "emoji": "🥗 Bhel Puri"
+    },
+    {
+      "name": "Shrikhand Puri",
+      "rank": 11,
+      "description": "Sweet, strained yoghurt flavored with cardamom and saffron, paired with hot puffed pooris.",
+      "emoji": "🍨 Sweet Yoghurt"
+    },
+    {
+      "name": "Sabudana Khichadi",
+      "rank": 12,
+      "description": "Tapioca pearls stir-fried with crushed peanuts, green chillies, and cumin seeds.",
+      "emoji": "🍲 Sago Pearls"
+    }
+  ],
+  "Manipur": [
+    {
+      "name": "Eromba",
+      "rank": 1,
+      "description": "Boiled vegetables mashed with hot red chillies, fermented fish (ngari), and garnished with coriander.",
+      "emoji": "🥣 Mashed Salad"
+    },
+    {
+      "name": "Kangshoi",
+      "rank": 2,
+      "description": "Healthy soup stew made of seasonal vegetables, dried fish, sliced onions, and ginger.",
+      "emoji": "🍲 Fish Soup"
+    },
+    {
+      "name": "Singju",
+      "rank": 3,
+      "description": "Fiery salad consisting of finely shredded cabbage, lotus stem, and roasted pea powder.",
+      "emoji": "🥗 Spicy Salad"
+    },
+    {
+      "name": "Chak-Hao Kheer",
+      "rank": 4,
+      "description": "Beautiful purple rice pudding made of local black sticky rice, milk, and sugar.",
+      "emoji": "🥣 Purple Kheer"
+    },
+    {
+      "name": "Ngari",
+      "rank": 5,
+      "description": "Fermented small freshwater fish, the backbone of manipuri spice cooking.",
+      "emoji": "🐟 Fermented Fish"
+    },
+    {
+      "name": "Sana Thongba",
+      "rank": 6,
+      "description": "Manipuri paneer (cottage cheese) curry prepared with green peas and milk.",
+      "emoji": "🍲 Paneer Curry"
+    },
+    {
+      "name": "Chamthong",
+      "rank": 7,
+      "description": "Boiled, oil-free vegetable stew flavored with sliced garlic and local green herbs.",
+      "emoji": "🥣 Boil Veg"
+    },
+    {
+      "name": "Morok Metpa",
+      "rank": 8,
+      "description": "Hot chilli paste made of roasted red/green chillies, mashed with fermented fish.",
+      "emoji": "🌶️ Chilli Paste"
+    },
+    {
+      "name": "Paaknam",
+      "rank": 9,
+      "description": "Savory baked cake of chickpea flour, herbs, and fermented fish, wrapped in banana leaves.",
+      "emoji": "🥮 Baked Cake"
+    },
+    {
+      "name": "Alu Kangmet",
+      "rank": 10,
+      "description": "Simple side dish of dry-mashed boiled potatoes tossed in mustard oil and salt.",
+      "emoji": "🥔 Mashed Potato"
+    },
+    {
+      "name": "Tan Flatbread",
+      "rank": 11,
+      "description": "Traditional manipuri flatbread made of wheat flour, fried or pan-cooked.",
+      "emoji": "🥞 Flatbread"
+    },
+    {
+      "name": "Kabok",
+      "rank": 12,
+      "description": "Sweet or savory snack made of puffed rice mixed with caramelized jaggery.",
+      "emoji": "🍿 Puffed Rice"
+    }
+  ],
+  "Meghalaya": [
+    {
+      "name": "Jadoh",
+      "rank": 1,
+      "description": "Khasi dish of red short-grain rice cooked with pork or chicken blood, onions, ginger, and green chillies.",
+      "emoji": "🍛 Jadoh Rice"
+    },
+    {
+      "name": "Doh-Khlieh",
+      "rank": 2,
+      "description": "Clean salad made of boiled pork chunks, chopped onions, and hot green chillies.",
+      "emoji": "🥗 Pork Salad"
+    },
+    {
+      "name": "Doh-Neiiong",
+      "rank": 3,
+      "description": "Savory pork curry cooked with toasted black sesame seed paste and ginger.",
+      "emoji": "🍲 Sesame Pork"
+    },
+    {
+      "name": "Tungrymbai",
+      "rank": 4,
+      "description": "Pungent fermented soy bean paste fried with pork fat, onion, and red chillies.",
+      "emoji": "🍲 Soy Paste"
+    },
+    {
+      "name": "Nakham Bitchi",
+      "rank": 5,
+      "description": "Hot, spicy soup prepared with dried fish, chillies, and garlic, consumed before meals.",
+      "emoji": "🥣 Dry Fish Soup"
+    },
+    {
+      "name": "Pumaloi",
+      "rank": 6,
+      "description": "Special steamed rice powder cakes, cooked in earthen pots called Khiew Ranei.",
+      "emoji": "🥯 Rice Cakes"
+    },
+    {
+      "name": "Pukhlein",
+      "rank": 7,
+      "description": "Sweet snack made of rice flour and jaggery batter, deep-fried to a golden brown.",
+      "emoji": "🍩 Sweet Fritter"
+    },
+    {
+      "name": "Sakin Gata",
+      "rank": 8,
+      "description": "Sweet steamed white rice cake layered with roasted sesame seeds.",
+      "emoji": "🥮 Sesame Cake"
+    },
+    {
+      "name": "Kyat Rice Brew",
+      "rank": 9,
+      "description": "Popular local rice beer served during festivals and family gatherings.",
+      "emoji": "🍺 Rice Brew"
+    },
+    {
+      "name": "Bamboo Shoot Pork",
+      "rank": 10,
+      "description": "Pork cubes simmered with sliced tender bamboo shoot and green chillies.",
+      "emoji": "🎋 Bamboo Pork"
+    },
+    {
+      "name": "Doh-jem",
+      "rank": 11,
+      "description": "Khasi style stir-fried pork intestines cooked with local wild black pepper.",
+      "emoji": "🍲 Fried Pork"
+    },
+    {
+      "name": "Hot Momos",
+      "rank": 12,
+      "description": "Steamed vegetable or chicken dumplings served with spicy garlic-chilli dip.",
+      "emoji": "🥟 Dumplings"
+    }
+  ],
+  "Mizoram": [
+    {
+      "name": "Bai",
+      "rank": 1,
+      "description": "Traditional stew made of mixed vegetables, bamboo shoot, pork, and local sodium bicarbonate salt.",
+      "emoji": "🥣 Veg Stew"
+    },
+    {
+      "name": "Vawksa Rep",
+      "rank": 2,
+      "description": "Smoked pork stir-fried with mustard leaves, green chillies, and ginger paste.",
+      "emoji": "🥩 Smoked Pork"
+    },
+    {
+      "name": "Arsa Buhchiar",
+      "rank": 3,
+      "description": "Traditional chicken dish cooked with broken rice, local herbs, and green chillies.",
+      "emoji": "🍗 Chicken Rice"
+    },
+    {
+      "name": "Sawhchiar",
+      "rank": 4,
+      "description": "Rice porridge cooked with shredded pork or chicken, seasoned with salt and ginger.",
+      "emoji": "🥣 Rice Porridge"
+    },
+    {
+      "name": "Koat Pitha",
+      "rank": 5,
+      "description": "Deep-fried sweet fritters made of rice flour, mashed bananas, and jaggery.",
+      "emoji": "🍌 Sweet Fritter"
+    },
+    {
+      "name": "Chhum Han",
+      "rank": 6,
+      "description": "Healthy side dish of steamed fresh mountain vegetables like broccoli and cabbage.",
+      "emoji": "🥦 Steamed Veg"
+    },
+    {
+      "name": "Misa Mach Poora",
+      "rank": 7,
+      "description": "Grilled prawns seasoned with mustard oil, lime juice, and grilled in banana leaves.",
+      "emoji": "🍤 Grilled Prawns"
+    },
+    {
+      "name": "Bamboo Shoot Pickle",
+      "rank": 8,
+      "description": "Tangy and hot pickle made of shredded bamboo shoots and ghost pepper flakes.",
+      "emoji": "🎋 Bamboo Pickle"
+    },
+    {
+      "name": "Panch Phoron Tarkari",
+      "rank": 9,
+      "description": "Mizo dry vegetable curry cooked with the five-spice blend.",
+      "emoji": "🍲 Spice Veg"
+    },
+    {
+      "name": "Zu Brew Flavour",
+      "rank": 10,
+      "description": "Dishes cooked or flavored with local fermented millet spirits.",
+      "emoji": "🍹 Millet Brew"
+    },
+    {
+      "name": "Til Pitha",
+      "rank": 11,
+      "description": "Rolls of roasted rice flour filled with sweet sesame seed paste.",
+      "emoji": "🥖 Sesame Roll"
+    },
+    {
+      "name": "Rice Bread",
+      "rank": 12,
+      "description": "Simple baked bread prepared from glutinous rice flour.",
+      "emoji": "🍞 Rice Bread"
+    }
+  ],
+  "Nagaland": [
+    {
+      "name": "Pork with Bamboo Shoot",
+      "rank": 1,
+      "description": "Large pork chunks cooked with lots of fresh bamboo shoot and fiery Naga green chillies.",
+      "emoji": "🥩 Bamboo Pork"
+    },
+    {
+      "name": "Smoked Pork in Axone",
+      "rank": 2,
+      "description": "Smoked pork simmered in a dense curry of fermented soy beans (axone) and dried ghost peppers.",
+      "emoji": "🍲 Axone Pork"
+    },
+    {
+      "name": "Galho",
+      "rank": 3,
+      "description": "Nagaland khichdi made of rice, seasonal greens, and pork or beef scraps.",
+      "emoji": "🥣 Rice Greens"
+    },
+    {
+      "name": "Zutho Drink Flavour",
+      "rank": 4,
+      "description": "Dishes cooked with local fermented yeast rice drink, sweet and slightly sour.",
+      "emoji": "🍺 Rice Drink"
+    },
+    {
+      "name": "Akibiye",
+      "rank": 5,
+      "description": "Mild and comforting dish of colocasia (yam) roots boiled with mustard leaves and minimal salt.",
+      "emoji": "🍲 Colocasia Veg"
+    },
+    {
+      "name": "Naga Chilli Chutney",
+      "rank": 6,
+      "description": "Extremely hot chutney prepared with roasted Raja Mircha (ghost pepper), onions, and fermented fish.",
+      "emoji": "🌶️ Ghost Chutney"
+    },
+    {
+      "name": "Hinkejvu",
+      "rank": 7,
+      "description": "Healthy daily food made of boiled cabbage leaves, mustard leaves, green beans, and salt.",
+      "emoji": "🥬 Boiled Greens"
+    },
+    {
+      "name": "Bamboo Tube Fish",
+      "rank": 8,
+      "description": "Fresh fish marinated in garlic and ginger, stuffed inside bamboo tubes and roasted over wood logs.",
+      "emoji": "🎋 Roasted Fish"
+    },
+    {
+      "name": "Black Rice Pudding",
+      "rank": 9,
+      "description": "Nutty and fragrant sweet pudding made of local black glutinous rice, milk, and sugar.",
+      "emoji": "🥣 Black Rice"
+    },
+    {
+      "name": "Roasted Intestines",
+      "rank": 10,
+      "description": "Pork or beef intestines dry-roasted on open fire, crispy and seasoned with wild ginger.",
+      "emoji": "🍢 Crispy Offal"
+    },
+    {
+      "name": "Beef Pickle",
+      "rank": 11,
+      "description": "Fiery shredded beef pickle made with ginger-garlic paste and Naga red chillies.",
+      "emoji": "🥩 Beef Pickle"
+    },
+    {
+      "name": "Yam Stew",
+      "rank": 12,
+      "description": "Yam tubers boiled in water with dried fish and fresh ginger shoots.",
+      "emoji": "🍲 Yam Stew"
+    }
+  ],
+  "Odisha": [
+    {
+      "name": "Chhena Poda",
+      "rank": 1,
+      "description": "Baked cheese dessert made of fresh cottage cheese (chhena), sugar, and raisins, burnt on top for a caramelized crust.",
+      "emoji": "🍰 Baked Cheese"
+    },
+    {
+      "name": "Pakhala Bhata",
+      "rank": 2,
+      "description": "Rice fermented in water, consumed cold with curds, mustard oil, fried fish, or roasted vegetables. Summer special.",
+      "emoji": "🍚 Fermented Rice"
+    },
+    {
+      "name": "Dalma",
+      "rank": 3,
+      "description": "Nutritious stew of split yellow lentils cooked with raw banana, papaya, pumpkin, and tempered with panch phoron.",
+      "emoji": "🍲 Lentil Dalma"
+    },
+    {
+      "name": "Dahi Bara Aloo Dum",
+      "rank": 4,
+      "description": "Fried urad dal vadas soaked in watered yoghurt, served with a hot, spicy potato-chickpea curry.",
+      "emoji": "🥣 Dahi Bara"
+    },
+    {
+      "name": "Pahala Rasagola",
+      "rank": 5,
+      "description": "Soft, melt-in-mouth milk sweets from Pahala, served hot in light sugar syrup.",
+      "emoji": "🟤 Soft Rasgulla"
+    },
+    {
+      "name": "Santula",
+      "rank": 6,
+      "description": "Low-oil vegetable stew made of boiled raw papaya, potatoes, brinjal, and tempered with mustard seeds.",
+      "emoji": "🥣 Santula Veg"
+    },
+    {
+      "name": "Kanika",
+      "rank": 7,
+      "description": "Sweet yellow pulao cooked with basmati rice, ghee, raisins, cashews, and cardamom.",
+      "emoji": "🍛 Sweet Pulao"
+    },
+    {
+      "name": "Kakara Pitha",
+      "rank": 8,
+      "description": "Sweet fried pancakes made of semolina or wheat flour, stuffed with sweet coconut stuffing.",
+      "emoji": "🥞 Sweet Pitha"
+    },
+    {
+      "name": "Machha Besara",
+      "rank": 9,
+      "description": "Traditional fish curry cooked in a tangy mustard seed paste gravy.",
+      "emoji": "🐟 Mustard Fish"
+    },
+    {
+      "name": "Chhena Jhili",
+      "rank": 10,
+      "description": "Juicy fried cheese spirals soaked in cardamom syrup, originated in Nimapada.",
+      "emoji": "🍩 Cheese Loops"
+    },
+    {
+      "name": "Gupchup",
+      "rank": 11,
+      "description": "Odisha style panipuri filled with spicy mashed potato and sour tamarind water.",
+      "emoji": "🍘 Gupchup"
+    },
+    {
+      "name": "Enduri Pitha",
+      "rank": 12,
+      "description": "Rice-flour pancakes steamed in fresh turmeric leaves, filled with coconut and jaggery.",
+      "emoji": "🥬 Turmeric Pitha"
+    }
+  ],
+  "Puducherry": [
+    {
+      "name": "Kadugu Yerra",
+      "rank": 1,
+      "description": "Prawns cooked in a rich, French-Indian style gravy of coconut paste, mustard seeds, and potatoes.",
+      "emoji": "🍤 Mustard Prawns"
+    },
+    {
+      "name": "Fish Depuy",
+      "rank": 2,
+      "description": "Mild and aromatic fish curry prepared with fresh spices, curry leaves, and a dash of vinegar.",
+      "emoji": "🐟 Fish Depuy"
+    },
+    {
+      "name": "French Baguettes",
+      "rank": 3,
+      "description": "Freshly baked crusty French bread loaves, sold in local boulangeries.",
+      "emoji": "🥖 Baguette"
+    },
+    {
+      "name": "Mutton Rolls",
+      "rank": 4,
+      "description": "Crispy, deep-fried breadcrumbs rolls stuffed with spiced minced mutton.",
+      "emoji": "🌯 Mutton Rolls"
+    },
+    {
+      "name": "Ratatouille",
+      "rank": 5,
+      "description": "Classic French stewed vegetable dish made of eggplants, zucchinis, and tomatoes.",
+      "emoji": "🍲 Ratatouille"
+    },
+    {
+      "name": "Bouillabaisse",
+      "rank": 6,
+      "description": "Rich French seafood soup cooked with fish, prawns, herbs, and saffron.",
+      "emoji": "🥣 Seafood Soup"
+    },
+    {
+      "name": "Curried Vegetables",
+      "rank": 7,
+      "description": "Assorted fresh local vegetables cooked in a coconut milk base with mild curry spices.",
+      "emoji": "🍲 Mild Curry"
+    },
+    {
+      "name": "Palpayasam",
+      "rank": 8,
+      "description": "Sweet rice dessert prepared with boiled condensed milk and sugar.",
+      "emoji": "🥣 Palpayasam"
+    },
+    {
+      "name": "Tandoori Chicken",
+      "rank": 9,
+      "description": "Chicken quarters marinated in yoghurt-spices and roasted in clay ovens.",
+      "emoji": "🍗 Tandoori Bird"
+    },
+    {
+      "name": "Crab Masala",
+      "rank": 10,
+      "description": "Crabs simmered in a dense, spicy ginger-garlic paste and coconut sauce.",
+      "emoji": "🦀 Crab Masala"
+    },
+    {
+      "name": "Sambar Rice",
+      "rank": 11,
+      "description": "Rice cooked with yellow lentils, vegetables, and tamarind juice.",
+      "emoji": "🍛 Sambar Rice"
+    },
+    {
+      "name": "Medu Vada",
+      "rank": 12,
+      "description": "Crispy fried black gram lentil rings served with coconut chutney.",
+      "emoji": "🍩 Medu Vada"
+    }
+  ],
+  "Punjab": [
+    {
+      "name": "Sarson Ka Saag & Makki Di Roti",
+      "rank": 1,
+      "description": "Thick mustard green curry cooked with spices, served with flatbreads made of yellow cornmeal and fresh butter.",
+      "emoji": "🥞 Saag & Roti"
+    },
+    {
+      "name": "Butter Chicken (Murgh Makhani)",
+      "rank": 2,
+      "description": "Tandoori chicken pieces cooked in a luxurious, creamy tomato gravy with butter and fenugreek leaves.",
+      "emoji": "🍗 Butter Chicken"
+    },
+    {
+      "name": "Amritsari Kulcha",
+      "rank": 3,
+      "description": "Crispy flatbread stuffed with spiced potato/paneer, baked in tandoor and crushed with butter. Eaten with chole.",
+      "emoji": "🥞 Flaky Kulcha"
+    },
+    {
+      "name": "Dal Makhani",
+      "rank": 4,
+      "description": "Black lentils and kidney beans slow-cooked overnight with cream, butter, and mild spices.",
+      "emoji": "🍲 Dal Makhani"
+    },
+    {
+      "name": "Tandoori Chicken",
+      "rank": 5,
+      "description": "Chicken chunks marinated in red tandoori spices and yoghurt, skewered and baked in clay ovens.",
+      "emoji": "🍗 Tandoori Bird"
+    },
+    {
+      "name": "Sweet Lassi",
+      "rank": 6,
+      "description": "Thick, churned sweet yoghurt drink served in tall clay glasses, topped with a thick layer of malai (cream).",
+      "emoji": "🥛 Sweet Lassi"
+    },
+    {
+      "name": "Chole Bhature",
+      "rank": 7,
+      "description": "Spicy chickpea curry paired with deep-fried leavened bread.",
+      "emoji": "🥯 Chole Bhature"
+    },
+    {
+      "name": "Rajma Chawal",
+      "rank": 8,
+      "description": "Red kidney bean curry cooked with thick onion-tomato gravy, served with hot basmati rice.",
+      "emoji": "🍛 Kidney Beans"
+    },
+    {
+      "name": "Paneer Tikka",
+      "rank": 9,
+      "description": "Cubes of paneer cheese, capsicum, and onions grilled on skewers.",
+      "emoji": "🍢 Paneer Tikka"
+    },
+    {
+      "name": "Gajar Ka Halwa",
+      "rank": 10,
+      "description": "Rich winter dessert of grated red carrots cooked with milk, khoya, sugar, and dry fruits.",
+      "emoji": "🥣 Carrot Sweet"
+    },
+    {
+      "name": "Aloo Paratha",
+      "rank": 11,
+      "description": "Flatbread stuffed with spicy mashed potato, cooked on tawa with butter.",
+      "emoji": "🥞 Potato Paratha"
+    },
+    {
+      "name": "Rice Kheer",
+      "rank": 12,
+      "description": "Sweet rice-milk pudding flavored with cardamoms and almonds.",
+      "emoji": "🥣 Sweet Kheer"
+    }
+  ],
+  "Rajasthan": [
+    {
+      "name": "Dal Baati Churma",
+      "rank": 1,
+      "description": "Hard wheat dough balls (baati) baked over coals, crushed and dipped in ghee, served with spicy mixed lentils (dal) and sweet wheat crumble (churma).",
+      "emoji": "🥯 Dal Baati"
+    },
+    {
+      "name": "Laal Maas",
+      "rank": 2,
+      "description": "Fiery mutton curry cooked in a rich gravy of yogurt and lots of hot Mathania red chillies.",
+      "emoji": "🥩 Spicy Mutton"
+    },
+    {
+      "name": "Pyaz Kachori",
+      "rank": 3,
+      "description": "Large, flaky deep-fried pastry stuffed with a highly spiced onion-potato filling, served with sweet tamarind chutney.",
+      "emoji": "🍩 Onion Kachori"
+    },
+    {
+      "name": "Gatte Ki Sabji",
+      "rank": 4,
+      "description": "Boiled chickpea flour logs (gatte) simmered in a tangy yogurt-based spiced gravy.",
+      "emoji": "🍲 Gram Flour Logs"
+    },
+    {
+      "name": "Ker Sangri",
+      "rank": 5,
+      "description": "Traditional desert dish of dried sour berries (ker) and long beans (sangri) stir-fried with raisins and spices.",
+      "emoji": "🍲 Desert Berries"
+    },
+    {
+      "name": "Mirchi Bada",
+      "rank": 6,
+      "description": "Large green chillies stuffed with potato mash, coated in gram flour batter and deep-fried.",
+      "emoji": "🌶️ Chilli Fritter"
+    },
+    {
+      "name": "Ghevar",
+      "rank": 7,
+      "description": "Traditional disc-shaped sweet cake made of flour, soaked in sugar syrup, and topped with dry fruits or rabri.",
+      "emoji": "🥨 Ghevar Sweet"
+    },
+    {
+      "name": "Mawa Kachori",
+      "rank": 8,
+      "description": "Crispy sweet kachori stuffed with sweetened milk solids (khoya) and dipped in syrup.",
+      "emoji": "🍩 Sweet Kachori"
+    },
+    {
+      "name": "Bajre Ki Ghat",
+      "rank": 9,
+      "description": "Hearty millet porridge cooked slowly and consumed with cold buttermilk and ghee.",
+      "emoji": "🥣 Millet Porridge"
+    },
+    {
+      "name": "Alwar Milk Cake (Kalakand)",
+      "rank": 10,
+      "description": "Rich, grainy milk sweet made by condensing milk solids with sugar.",
+      "emoji": "🍰 Milk Cake"
+    },
+    {
+      "name": "Rajasthani Kadhi",
+      "rank": 11,
+      "description": "Spicy and tangy yogurt curry cooked with chickpea flour and red chillies.",
+      "emoji": "🥣 Tangy Kadhi"
+    },
+    {
+      "name": "Safed Maas",
+      "rank": 12,
+      "description": "Mild, royal mutton curry cooked in a white gravy of cashew nuts, poppy seeds, and yoghurt.",
+      "emoji": "🍲 White Mutton"
+    }
+  ],
+  "Sikkim": [
+    {
+      "name": "Momo",
+      "rank": 1,
+      "description": "Steamed dumplings stuffed with minced meat or seasoned vegetables, served with hot tomato-chilli sauce.",
+      "emoji": "🥟 Dumplings"
+    },
+    {
+      "name": "Thukpa",
+      "rank": 2,
+      "description": "Tibetan-style hot noodle soup loaded with vegetables, shredded meat, and aromatic mountain herbs.",
+      "emoji": "🍜 Noodle Soup"
+    },
+    {
+      "name": "Sha Phaley",
+      "rank": 3,
+      "description": "Deep-fried bread stuffed with seasoned minced beef or chicken, crispy on the outside.",
+      "emoji": "🥙 Stuffed Bread"
+    },
+    {
+      "name": "Phagshapa",
+      "rank": 4,
+      "description": "Strip cuts of pork fat cooked with radishes, dried red chillies, and ginger, oil-free.",
+      "emoji": "🍲 Pork Radish"
+    },
+    {
+      "name": "Gundruk Soup",
+      "rank": 5,
+      "description": "Soup made of fermented leafy mustard/radish greens, sour and comforting.",
+      "emoji": "🥣 Fermented Greens"
+    },
+    {
+      "name": "Thenthuk",
+      "rank": 6,
+      "description": "Tibetan hand-pulled flat noodle soup with mixed vegetables and meat chunks.",
+      "emoji": "🍜 Pulled Noodles"
+    },
+    {
+      "name": "Sinki",
+      "rank": 7,
+      "description": "Fermented radish taproots, cooked with local herbs or made into sour pickles.",
+      "emoji": "🥗 Radish Pickle"
+    },
+    {
+      "name": "Kinema Curry",
+      "rank": 8,
+      "description": "Nutritious curry made of fermented sticky soybeans, popular in local hills.",
+      "emoji": "🍲 Sticky Soy"
+    },
+    {
+      "name": "Chhurpi Soup",
+      "rank": 9,
+      "description": "Soup prepared with local cottage cheese (chhurpi) and fresh green vegetables.",
+      "emoji": "🧀 Cheese Soup"
+    },
+    {
+      "name": "Sel Roti",
+      "rank": 10,
+      "description": "Sweet, ring-shaped crispy fried rice-flour bread prepared during Nepali festivals.",
+      "emoji": "🍩 Rice Ring"
+    },
+    {
+      "name": "Mesu Pickle",
+      "rank": 11,
+      "description": "Fermented bamboo shoots pickled with salt, mustard seeds, and hot chillies.",
+      "emoji": "🎋 Bamboo Pickle"
+    },
+    {
+      "name": "Kalo Dal",
+      "rank": 12,
+      "description": "Nutritious soup of local black lentils, slow-cooked in iron pots.",
+      "emoji": "🍲 Black Lentils"
+    }
+  ],
+  "Tamil Nadu": [
+    {
+      "name": "Masala Dosa",
+      "rank": 1,
+      "description": "Thin, crispy rice-lentil crepes stuffed with spiced potato mash, served with sambar and chutneys.",
+      "emoji": "🥞 Masala Dosa"
+    },
+    {
+      "name": "Idli Sambar Vada",
+      "rank": 2,
+      "description": "Classic combination of soft steamed rice cakes, crispy lentil donuts, and hot vegetable sambar.",
+      "emoji": "🍡 Idli Sambar"
+    },
+    {
+      "name": "Ven Pongal",
+      "rank": 3,
+      "description": "Comfort food made of rice and yellow lentils cooked soft, tempered with black pepper, cumin, cashew, and ghee.",
+      "emoji": "🥣 Ghee Pongal"
+    },
+    {
+      "name": "Chettinad Chicken Curry",
+      "rank": 4,
+      "description": "Fiery chicken curry cooked in freshly roasted spice paste of star anise, black stone flower, and chillies.",
+      "emoji": "🍗 Spicy Chettinad"
+    },
+    {
+      "name": "Filter Coffee",
+      "rank": 5,
+      "description": "Frothy, strong coffee brewed using dark roasted chicory-coffee beans, poured in metal tumblers.",
+      "emoji": "☕ Filter Coffee"
+    },
+    {
+      "name": "Chicken 65",
+      "rank": 6,
+      "description": "Crispy, deep-fried spicy red chicken bites, invented at Buhari Hotel in Chennai.",
+      "emoji": "🍗 Fried Chicken"
+    },
+    {
+      "name": "Uttapam",
+      "rank": 7,
+      "description": "Thick rice pancake cooked with onions, tomatoes, and green chillies sprinkled on top.",
+      "emoji": "🥞 Thick Pancake"
+    },
+    {
+      "name": "Kothu Parotta",
+      "rank": 8,
+      "description": "Street food of chopped Malabar parotta flatbreads stir-fried with eggs, meat, and spicy curry gravy.",
+      "emoji": "🥞 Chopped Parotta"
+    },
+    {
+      "name": "Payasam",
+      "rank": 9,
+      "description": "Traditional sweet dessert of milk and vermicelli or sago, sweetened with sugar or jaggery.",
+      "emoji": "🥣 Sweet Payasam"
+    },
+    {
+      "name": "Rasam Rice",
+      "rank": 10,
+      "description": "Comforting rice mixed with hot, tangy, and peppery tomato-tamarind soup.",
+      "emoji": "🍲 Rasam Rice"
+    },
+    {
+      "name": "Sambar Rice",
+      "rank": 11,
+      "description": "Rice cooked soft with lentils, vegetables, tamarind, and ghee.",
+      "emoji": "🍛 Sambar Rice"
+    },
+    {
+      "name": "Kozhukattai",
+      "rank": 12,
+      "description": "Steamed sweet dumplings stuffed with coconut and grated jaggery.",
+      "emoji": "🥟 Sweet Dumpling"
+    }
+  ],
+  "Telangana": [
+    {
+      "name": "Hyderabadi Biryani",
+      "rank": 1,
+      "description": "Legendary layered basmati rice dish cooked (dum) with saffron-marinated tender meat.",
+      "emoji": "🍛 Dum Biryani"
+    },
+    {
+      "name": "Hyderabadi Haleem",
+      "rank": 2,
+      "description": "Thick, nutritious porridge of wheat, barley, meat, and lentils, slow-cooked for hours during Ramadan.",
+      "emoji": "🥣 Mutton Haleem"
+    },
+    {
+      "name": "Sarva Pindi",
+      "rank": 3,
+      "description": "Savory, crispy rice-flour pancake cooked in deep copper pans with peanuts, sesame seeds, and chana dal.",
+      "emoji": "🥞 Crispy Pancake"
+    },
+    {
+      "name": "Sakinalu",
+      "rank": 4,
+      "description": "Traditional ring-shaped snack made of rice flour and sesame seeds, deep-fried to a crisp.",
+      "emoji": "🍩 Sesame Rings"
+    },
+    {
+      "name": "Chegodi",
+      "rank": 5,
+      "description": "Crispy golden rings made of rice flour seasoned with red chilli powder and cumin.",
+      "emoji": "🍩 Crispy Ring"
+    },
+    {
+      "name": "Gongura Chutney",
+      "rank": 6,
+      "description": "Fiery chutney made of sorrel leaves, cooked with dried red chillies and garlic cloves.",
+      "emoji": "🌶️ Sorrel Chutney"
+    },
+    {
+      "name": "Boti Curry",
+      "rank": 7,
+      "description": "Telangana specialty mutton intestines curry cooked with rich local spice powders.",
+      "emoji": "🍲 Spicy Boti"
+    },
+    {
+      "name": "Qubani Ka Meetha",
+      "rank": 8,
+      "description": "Royal dessert made of stewed dried apricots, served with fresh cream or vanilla ice cream.",
+      "emoji": "🍨 Apricot Sweet"
+    },
+    {
+      "name": "Double Ka Meetha",
+      "rank": 9,
+      "description": "Rich bread pudding sweet made of fried bread slices soaked in milk, sugar syrup, and cardamom.",
+      "emoji": "🍞 Bread Pudding"
+    },
+    {
+      "name": "Pachi Pulusu",
+      "rank": 10,
+      "description": "Cold, unboiled tamarind soup mixed with sliced raw onions, green chillies, and mustard tempering.",
+      "emoji": "🥣 Cold Soup"
+    },
+    {
+      "name": "Natu Kodi Curry",
+      "rank": 11,
+      "description": "Spicy country chicken curry prepared with sesame seeds and poppy seeds paste.",
+      "emoji": "🍗 Country Chicken"
+    },
+    {
+      "name": "Malidalu",
+      "rank": 12,
+      "description": "Sweet balls made of crumbled rotis, jaggery, ghee, and chopped nuts.",
+      "emoji": "🟤 Sweet Balls"
+    }
+  ],
+  "Tripura": [
+    {
+      "name": "Mui Borok",
+      "rank": 1,
+      "description": "Traditional dish featuring Berma (fermented dried fish) cooked without oil, seasoned with spices.",
+      "emoji": "🐟 Fermented Fish"
+    },
+    {
+      "name": "Kosoi Bwtwi",
+      "rank": 2,
+      "description": "Healthy beans stew cooked with Berma (fermented fish), garlic, and green chillies.",
+      "emoji": "🍲 Bean Stew"
+    },
+    {
+      "name": "Wahan Mosdeng",
+      "rank": 3,
+      "description": "Pork salad made of boiled pork chunks tossed with green chillies, onions, and ginger.",
+      "emoji": "🥗 Pork Salad"
+    },
+    {
+      "name": "Godok",
+      "rank": 4,
+      "description": "Mashed vegetables like potato, brinjal, and beans, cooked with fermented fish paste in bamboo tubes.",
+      "emoji": "🥣 Mashed Veg"
+    },
+    {
+      "name": "Chakhwi",
+      "rank": 5,
+      "description": "Bamboo shoots and jackfruit seeds simmered in alkaline water filtered through ash.",
+      "emoji": "🎋 Bamboo Seed"
+    },
+    {
+      "name": "Mosdeng Ser",
+      "rank": 6,
+      "description": "Fiery chutney prepared with roasted green chillies, garlic, and dried fish paste.",
+      "emoji": "🌶️ Dry Fish Paste"
+    },
+    {
+      "name": "Bhangui",
+      "rank": 7,
+      "description": "Conical steamed dessert made of sticky rice, raisins, and ghee, wrapped in banana leaves.",
+      "emoji": "🍙 Sticky Rice"
+    },
+    {
+      "name": "Tripure Pitha",
+      "rank": 8,
+      "description": "Rice-flour pancakes folded and filled with sweet coconut-jaggery mixture.",
+      "emoji": "🥞 Sweet Pitha"
+    },
+    {
+      "name": "Fish Stew",
+      "rank": 9,
+      "description": "Light, oil-free fresh river fish soup prepared with local herbs.",
+      "emoji": "🐟 River Fish"
+    },
+    {
+      "name": "Muya Awandru",
+      "rank": 10,
+      "description": "Creamy bamboo shoot gravy thickened with rice flour paste and local spices.",
+      "emoji": "🎋 Bamboo Gravy"
+    },
+    {
+      "name": "Chuak Rice Beer",
+      "rank": 11,
+      "description": "Traditional home-brewed rice beer served during festivals.",
+      "emoji": "🍺 Rice Brew"
+    },
+    {
+      "name": "Spicy Pork Curry",
+      "rank": 12,
+      "description": "Pork pieces slow-cooked with fresh ginger, garlic, and red pepper flakes.",
+      "emoji": "🍲 Pork Curry"
+    }
+  ],
+  "Uttar Pradesh": [
+    {
+      "name": "Galouti Kebab (Tunday)",
+      "rank": 1,
+      "description": "Melt-in-mouth minced meat kebabs infused with 160 secret spices, developed for Nawab of Lucknow.",
+      "emoji": "🍢 Galouti Kebab"
+    },
+    {
+      "name": "Petha",
+      "rank": 2,
+      "description": "Translucent candy sweet made from ash gourd (winter melon), specialized in Agra.",
+      "emoji": "🍬 Agra Petha"
+    },
+    {
+      "name": "Banarasi Paan",
+      "rank": 3,
+      "description": "Famed betel leaf preparation stuffed with gulkand (rose petal paste), fennel, dry dates, and spices.",
+      "emoji": "🍃 Banarasi Paan"
+    },
+    {
+      "name": "Bedmi Poori & Aloo Sabzi",
+      "rank": 4,
+      "description": "Fried wheat pooris stuffed with dal paste, served with extremely spicy potato curry.",
+      "emoji": "🥙 Bedmi Poori"
+    },
+    {
+      "name": "Awadhi Biryani",
+      "rank": 5,
+      "description": "Lucknowi style fragrant basmati rice layered with cooked chicken, saffron, and rose water.",
+      "emoji": "🍛 Awadhi Biryani"
+    },
+    {
+      "name": "Malaiyo",
+      "rank": 6,
+      "description": "Fluffy, saffron-flavored milk foam dessert, sold in Varanasi during winter mornings.",
+      "emoji": "🍨 Varanasi Malaiyo"
+    },
+    {
+      "name": "Baati Chokha",
+      "rank": 7,
+      "description": "Wheat balls baked over cow-dung cakes, dipped in ghee, served with spicy mashed potato-brinjal.",
+      "emoji": "🥯 Baati Chokha"
+    },
+    {
+      "name": "Basket Chaat (Katori)",
+      "rank": 8,
+      "description": "Fried potato basket filled with boiled peas, curd, chutneys, pomegranates, and sev.",
+      "emoji": "🥗 Basket Chaat"
+    },
+    {
+      "name": "Mathura Peda",
+      "rank": 9,
+      "description": "Grainy, sweet pedas made of roasted khoya (condensed milk) and sugar.",
+      "emoji": "🟤 Mathura Peda"
+    },
+    {
+      "name": "Makhan Malai",
+      "rank": 10,
+      "description": "Light, whipped milk cream dessert flavored with pistachios, cardamoms, and silver leaf.",
+      "emoji": "🍨 Milk Cream"
+    },
+    {
+      "name": "Sheermal",
+      "rank": 11,
+      "description": "Saffron-flavored traditional flatbread sweetened with milk, baked in tandoor.",
+      "emoji": "🥞 Sweet Bread"
+    },
+    {
+      "name": "Rabri Lassi",
+      "rank": 12,
+      "description": "Thick, sweet curd drink topped with thick rabri, malai, and slivered almonds.",
+      "emoji": "🥛 Rabri Lassi"
+    }
+  ],
+  "Uttarakhand": [
+    {
+      "name": "Kafuli",
+      "rank": 1,
+      "description": "Thick green curry made of spinach and fenugreek leaves, thickened with rice paste, cooked in iron pots.",
+      "emoji": "🥬 Spinach Kafuli"
+    },
+    {
+      "name": "Bhang Ki Chutney",
+      "rank": 2,
+      "description": "Tangy chutney prepared with roasted hemp seeds, mint leaves, and lemon juice.",
+      "emoji": "🌶️ Hemp Chutney"
+    },
+    {
+      "name": "Bal Mithai",
+      "rank": 3,
+      "description": "Famous brown chocolate-like milk fudge coated in white sugar beads, from Almora.",
+      "emoji": "🍬 Bal Mithai"
+    },
+    {
+      "name": "Phaanu",
+      "rank": 4,
+      "description": "Soupy dish made of mixed lentils (gahat) soaked overnight and ground into paste.",
+      "emoji": "🍲 Phaanu Lentils"
+    },
+    {
+      "name": "Chainsoo",
+      "rank": 5,
+      "description": "Garhwali dish made of roasted black gram dal paste cooked slowly with herbs.",
+      "emoji": "🍲 Black Gram"
+    },
+    {
+      "name": "Aloo Ke Gutke",
+      "rank": 6,
+      "description": "Fried potato cubes seasoned with red chilli flakes, coriander, and local Jakhiya seeds.",
+      "emoji": "🥔 Spiced Potatoes"
+    },
+    {
+      "name": "Singori",
+      "rank": 7,
+      "description": "Sweet khoya (condensed milk) cone wrapped in fresh local Maalu leaves, aromatic.",
+      "emoji": "🍦 Leaf Sweet"
+    },
+    {
+      "name": "Dubuk",
+      "rank": 8,
+      "description": "Lentil paste soup prepared with local hill pulses like Gahat or Bhatt.",
+      "emoji": "🥣 Dubuk Soup"
+    },
+    {
+      "name": "Gahat Ki Dal",
+      "rank": 9,
+      "description": "Highly nutritious horse-gram lentil soup seasoned with spices.",
+      "emoji": "🍲 Horse Gram"
+    },
+    {
+      "name": "Arsa",
+      "rank": 10,
+      "description": "Deep-fried sweet balls made of rice flour, mustard oil, and jaggery.",
+      "emoji": "🍩 Sweet Fritter"
+    },
+    {
+      "name": "Kumaoni Raita",
+      "rank": 11,
+      "description": "Yoghurt mixed with grated cucumber, yellow mustard seeds, green chillies, and turmeric.",
+      "emoji": "🥣 Mustard Raita"
+    },
+    {
+      "name": "Garhwal Ka Fannah",
+      "rank": 12,
+      "description": "Comforting black gram dal dish popular in Garhwal hills.",
+      "emoji": "🍲 Fannah Dal"
+    }
+  ],
+  "West Bengal": [
+    {
+      "name": "Shorshe Ilish",
+      "rank": 1,
+      "description": "Hilsa fish steaks simmered in a sharp, pungent mustard paste gravy with green chillies.",
+      "emoji": "🐟 Mustard Fish"
+    },
+    {
+      "name": "Roshogolla & Sandesh",
+      "rank": 2,
+      "description": "Spongy cottage-cheese sweet balls in sugar syrup, and dry milk sweets made of Nolen Gur (palm jaggery).",
+      "emoji": "⚪ Sweet Balls"
+    },
+    {
+      "name": "Kosha Mangsho",
+      "rank": 3,
+      "description": "Rich, spicy mutton curry slow-cooked on low fire until the gravy coats the meat.",
+      "emoji": "🥩 Mutton Kosha"
+    },
+    {
+      "name": "Luchi & Alur Dom",
+      "rank": 4,
+      "description": "Puffed deep-fried refined flour pooris served with a rich, dry-spiced baby potato curry.",
+      "emoji": "🥙 Luchi Alur Dom"
+    },
+    {
+      "name": "Misti Doi",
+      "rank": 5,
+      "description": "Creamy, caramelized sweet yogurt fermented and set in earthen clay pots.",
+      "emoji": "🥣 Sweet Curd"
+    },
+    {
+      "name": "Kolkata Biryani",
+      "rank": 6,
+      "description": "Mildly spiced fragrant rice cooked with ghee, eggs, chicken, and a signature soft, flavored boiled potato.",
+      "emoji": "🍛 Potato Biryani"
+    },
+    {
+      "name": "Chingri Malai Curry",
+      "rank": 7,
+      "description": "Jumbo prawns cooked in a delicate, rich gravy of fresh coconut milk and ghee.",
+      "emoji": "🍤 Coconut Prawns"
+    },
+    {
+      "name": "Shukto",
+      "rank": 8,
+      "description": "Bitter-sweet starter dish of mixed vegetables like bitter gourd, raw banana, drumsticks, and bori.",
+      "emoji": "🍲 Mixed Shukto"
+    },
+    {
+      "name": "Kolkata Puchka",
+      "rank": 9,
+      "description": "Crispy puffed wheat hollow pooris stuffed with spicy mashed potato and tamarind water.",
+      "emoji": "🍘 Puchka"
+    },
+    {
+      "name": "Cholar Dal",
+      "rank": 10,
+      "description": "Bengal gram dal cooked with coconut slices, ginger, and ghee, slightly sweet.",
+      "emoji": "🍲 Cholar Dal"
+    },
+    {
+      "name": "Jhalmuri",
+      "rank": 11,
+      "description": "Spiced puffed rice tossed with mustard oil, chopped onions, green chillies, and peanuts.",
+      "emoji": "🍿 Spicy Puffed"
+    },
+    {
+      "name": "Beguni",
+      "rank": 12,
+      "description": "Eggplant slices dipped in spiced chickpea batter and deep-fried to a crisp.",
+      "emoji": "🍆 Eggplant Fry"
+    }
+  ]
+}
