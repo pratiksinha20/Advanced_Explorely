@@ -308,29 +308,32 @@ export default function Explore() {
                 <div className="explore-results">
                     {/* Location Header with Famous Food & Stays Action Buttons */}
                     {selectedState && (
-                        <div className="explore-location-header fade-in">
-                            <div className="location-header-info">
-                                <h2 className="location-title">
-                                    {selectedCity ? selectedCity : selectedState}
-                                </h2>
-                                <p className="location-subtitle">
-                                    {selectedCity ? `${selectedCity}, ${selectedState}` : selectedState} &nbsp;·&nbsp; {spots.length} tourist places
-                                </p>
-                            </div>
+                        <div className="explore-city-banner fade-in">
+                            <img src={bannerImage} alt={selectedState} className="explore-banner-img" />
+                            <div className="explore-banner-overlay">
+                                <div className="location-header-info">
+                                    <h2 className="explore-banner-title">
+                                        {selectedCity ? selectedCity : selectedState}
+                                    </h2>
+                                    <p className="explore-banner-subtitle">
+                                        {selectedCity ? `${selectedCity}, ${selectedState}` : selectedState} &nbsp;·&nbsp; {spots.length} tourist places
+                                    </p>
+                                </div>
 
-                            <div className="explore-highlight-buttons">
-                                <button
-                                    className="highlight-btn food-highlight-btn"
-                                    onClick={() => { setActiveModal('foods'); setModalSearch(''); }}
-                                >
-                                    <span className="btn-icon">🍽️</span> Famous Foods of {selectedState}
-                                </button>
-                                <button
-                                    className="highlight-btn hotel-highlight-btn"
-                                    onClick={() => { setActiveModal('hotels'); setModalSearch(''); }}
-                                >
-                                    <Icon name="hotel" size={18} /> Famous Stays & Hotels in {selectedCity || selectedState}
-                                </button>
+                                <div className="explore-highlight-buttons">
+                                    <button
+                                        className="highlight-btn food-highlight-btn"
+                                        onClick={() => { setActiveModal('foods'); setModalSearch(''); }}
+                                    >
+                                        <span className="btn-icon">🍽️</span> Famous Foods of {selectedState}
+                                    </button>
+                                    <button
+                                        className="highlight-btn hotel-highlight-btn"
+                                        onClick={() => { setActiveModal('hotels'); setModalSearch(''); }}
+                                    >
+                                        <Icon name="hotel" size={18} /> Famous Stays & Hotels in {selectedCity || selectedState}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     )}
