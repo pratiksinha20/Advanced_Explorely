@@ -56,8 +56,15 @@ export default function Explore() {
     const [activeModal, setActiveModal] = useState(null); // 'foods' | 'hotels' | null
     const [modalSearch, setModalSearch] = useState('');
 
+    // Banner visibility toggle state
+    const [hideBanner, setHideBanner] = useState(false);
+
     // Pagination state
     const [visibleCount, setVisibleCount] = useState(24);
+
+    useEffect(() => {
+        setHideBanner(false);
+    }, [selectedState, selectedCity]);
 
     useEffect(() => {
         const s = searchParams.get('state');
@@ -307,7 +314,7 @@ export default function Explore() {
 
                 <div className="explore-results">
                     {/* Location Header with Famous Food & Stays Action Buttons */}
-                    {selectedState && (
+                    {selectedState && !hideBanner && (
                         <div className="explore-city-banner fade-in">
                             <img src={bannerImage} alt={selectedState} className="explore-banner-img" />
                             <div className="explore-banner-overlay">
@@ -324,14 +331,24 @@ export default function Explore() {
                                     <button
                                         className="highlight-btn food-highlight-btn"
                                         onClick={() => { setActiveModal('foods'); setModalSearch(''); }}
+                                        title={`Famous Foods of ${selectedState}`}
                                     >
-                                        <span className="btn-icon">🍽️</span> Famous Foods of {selectedState}
+                                        <span className="btn-icon">🍽️</span> Famous Foods
                                     </button>
                                     <button
                                         className="highlight-btn hotel-highlight-btn"
                                         onClick={() => { setActiveModal('hotels'); setModalSearch(''); }}
+                                        title={`Famous Stays & Hotels in ${selectedCity || selectedState}`}
                                     >
-                                        <Icon name="hotel" size={18} /> Famous Stays & Hotels in {selectedCity || selectedState}
+                                        <Icon name="hotel" size={15} /> Famous Stays
+                                    </button>
+                                    <button
+                                        className="banner-close-btn"
+                                        onClick={() => setHideBanner(true)}
+                                        title="Hide this banner"
+                                        aria-label="Hide banner"
+                                    >
+                                        ×
                                     </button>
                                 </div>
                             </div>
@@ -339,8 +356,19 @@ export default function Explore() {
                     )}
 
                     <div className="results-header">
-                        <span className="results-count">{spots.length} places found</span>
-                        {selectedState && <span className="results-filter">in {selectedState}{selectedCity ? ` › ${selectedCity}` : ''}</span>}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                            <span className="results-count">{spots.length} places found</span>
+                            {selectedState && <span className="results-filter">in {selectedState}{selectedCity ? ` › ${selectedCity}` : ''}</span>}
+                        </div>
+                        {selectedState && hideBanner && (
+                            <button
+                                className="show-banner-toggle"
+                                onClick={() => setHideBanner(false)}
+                                title="Show banner & highlights"
+                            >
+                                <span>✨</span> Show Banner
+                            </button>
+                        )}
                     </div>
 
                     <div className="tier-filter-tabs">

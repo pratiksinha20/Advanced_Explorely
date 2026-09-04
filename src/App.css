@@ -2516,105 +2516,195 @@ nav {
    =========================== */
 .explore-city-banner {
   width: 100%;
-  min-height: 220px;
-  border-radius: var(--radius-xl);
+  height: 94px;
+  border-radius: var(--radius-lg, 14px);
   overflow: hidden;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   background: linear-gradient(135deg, #1e293b, #0f172a);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
 }
 
 .explore-banner-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 220px;
   object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.6);
   transition: transform 0.6s ease;
+  pointer-events: none;
 }
 
 .explore-city-banner:hover .explore-banner-img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .explore-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.15) 100%);
+  background: linear-gradient(90deg, rgba(10, 15, 29, 0.92) 0%, rgba(10, 15, 29, 0.65) 50%, rgba(10, 15, 29, 0.9) 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  z-index: 2;
+  gap: 16px;
+}
+
+.location-header-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 28px 32px;
-  z-index: 2;
+  justify-content: center;
+  min-width: 0;
 }
 
 .explore-banner-title {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 4px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2px;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .explore-banner-subtitle {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .explore-highlight-buttons {
   display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 16px;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 0;
 }
 
 .highlight-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 22px;
+  gap: 6px;
+  padding: 7px 14px;
   border-radius: 50px;
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .food-highlight-btn {
   background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(255, 126, 95, 0.45);
+  box-shadow: 0 3px 12px rgba(255, 126, 95, 0.35);
 }
 
 .food-highlight-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 28px rgba(255, 126, 95, 0.6);
-  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 126, 95, 0.5);
+  filter: brightness(1.06);
 }
 
 .hotel-highlight-btn {
   background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+  box-shadow: 0 3px 12px rgba(14, 165, 233, 0.35);
 }
 
 .hotel-highlight-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.6);
-  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.5);
+  filter: brightness(1.06);
 }
 
 .highlight-btn .btn-icon {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   line-height: 1;
+}
+
+.banner-close-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s ease;
+  margin-left: 2px;
+}
+
+.banner-close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.show-banner-toggle {
+  background: rgba(255, 126, 95, 0.12);
+  color: #ff7e5f;
+  border: 1px solid rgba(255, 126, 95, 0.25);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.show-banner-toggle:hover {
+  background: rgba(255, 126, 95, 0.22);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .explore-city-banner {
+    height: auto;
+    min-height: 105px;
+  }
+  .explore-banner-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .explore-highlight-buttons {
+    width: 100%;
+    gap: 8px;
+  }
+  .highlight-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
 }
 
 /* ===========================
