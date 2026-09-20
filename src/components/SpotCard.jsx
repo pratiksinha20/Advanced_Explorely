@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { Heart, MapPin, Star, Search } from 'lucide-react';
+import { Heart, MapPin, Star, Camera } from 'lucide-react';
 
 export default function SpotCard({ spot, style }) {
     const { isInWishlist, toggleWishlist } = useApp();
     const inWishlist = isInWishlist(spot.name, spot.city);
+    const [loaded, setLoaded] = useState(false);
 
     return (
         <article className="spot-card" style={style}>
             <div className="spot-image-wrapper">
-                <img src={spot.image} alt={spot.name} className="spot-image" loading="lazy"
-                    onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600'; }} />
+                {!loaded && <div className="spot-image-skeleton" />}
+                <img
+                    src={spot.image}
+                    alt={spot.name}
+                    className={`spot-image ${loaded ? 'loaded' : ''}`}
+                    loading="lazy"
+                    decoding="async"
+                    onLoad={() => setLoaded(true)}
+                    onError={(e) => {
+                        setLoaded(true);
+                        e.target.src = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600';
+                    }}
+                />
                 <div className="spot-image-overlay" />
                 <button className={`wishlist-heart ${inWishlist ? 'active' : ''}`}
                     onClick={(e) => { e.stopPropagation(); toggleWishlist(spot); }}
@@ -40,8 +52,14 @@ export default function SpotCard({ spot, style }) {
                     <a href={spot.mapLink} target="_blank" rel="noopener noreferrer" className="map-link">
                         <MapPin size={14} /> View on Maps
                     </a>
-                    <a href={`https://www.google.com/search?q=${encodeURIComponent(`${spot.name}, ${spot.city}, ${spot.state || ''}`)}`} target="_blank" rel="noopener noreferrer" className="google-search-link">
-                        <Search size={14} /> Search on Google
+                    <a
+                        href={`https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${spot.name} ${spot.city} ${spot.state || ''}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="google-search-link"
+                        title={`Browse live Google Photos of ${spot.name}`}
+                    >
+                        <Camera size={14} /> Google Photos
                     </a>
                 </div>
             </div>

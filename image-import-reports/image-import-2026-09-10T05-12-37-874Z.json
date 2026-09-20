@@ -1,0 +1,45 @@
+{
+  "version": "7.1",
+  "startedAt": "2026-09-10T05:12:36.803Z",
+  "totalDataset": 21573,
+  "requested": 5,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-10T05-12-36-784Z.json",
+  "results": [
+    {
+      "status": "skipped_existing",
+      "reason": "already_imported",
+      "index": 0,
+      "name": "Aerial Bay Local Market"
+    },
+    {
+      "status": "skipped_existing",
+      "reason": "existing_working_url",
+      "index": 1,
+      "name": "Aerial Bay Traditional Village"
+    },
+    {
+      "status": "skipped_existing",
+      "reason": "existing_working_url",
+      "index": 2,
+      "name": "Aerial Bay Viewpoint"
+    },
+    {
+      "status": "skipped_existing",
+      "reason": "existing_working_url",
+      "index": 3,
+      "name": "Aerial Bay forest trail"
+    },
+    {
+      "status": "skipped_existing",
+      "reason": "existing_working_url",
+      "index": 4,
+      "name": "Aerial Bay river view"
+    }
+  ],
+  "finishedAt": "2026-09-10T05:12:37.873Z",
+  "summary": {
+    "updated": 0,
+    "skipped": 5,
+    "failed": 0
+  }
+}

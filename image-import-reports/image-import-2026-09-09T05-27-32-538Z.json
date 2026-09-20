@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-09-09T05:27:05.563Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-09T05-27-05-552Z.json",
+  "config": {
+    "minWidth": 700,
+    "minHeight": 450,
+    "autoUploadScore": 100,
+    "minNameEvidence": 0.55,
+    "resultsPerQuery": 20,
+    "maxQueries": 8,
+    "apiDelayMs": 1000,
+    "uploadDelayMs": 700,
+    "retries": 3,
+    "overwrite": true
+  },
+  "results": [
+    {
+      "status": "not_found",
+      "index": 0,
+      "name": "Aerial Bay Local Market",
+      "sourceCounts": {
+        "wikimedia": 0,
+        "openverse": 0
+      }
+    }
+  ],
+  "finishedAt": "2026-09-09T05:27:32.537Z"
+}

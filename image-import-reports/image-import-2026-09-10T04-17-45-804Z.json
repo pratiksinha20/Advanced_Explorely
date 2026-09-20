@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-09-10T04:17:23.537Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "configuration": {
+    "maxWidth": 1600,
+    "maxHeight": 1600,
+    "webpQuality": 82,
+    "strongMatchScore": 100,
+    "locationFallbackScore": 35
+  },
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-10T04-17-23-520Z.json",
+  "results": [
+    {
+      "status": "upload_failed",
+      "index": 4922,
+      "name": "Hazaribagh lake",
+      "error": "Could not download original or thumbnail. Original: Request failed with status code 404 | Thumbnail: Request failed with status code 424"
+    }
+  ],
+  "finishedAt": "2026-09-10T04:17:45.803Z"
+}

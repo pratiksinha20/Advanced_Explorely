@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-09-09T07:15:24.114Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-09T07-15-24-097Z.json",
+  "results": [
+    {
+      "status": "uploaded",
+      "index": 0,
+      "name": "Aerial Bay Local Market",
+      "provider": "Wikimedia Commons",
+      "title": "File:Andaman & Nicobar Islands.jpg",
+      "score": 50,
+      "matchType": "location-fallback",
+      "cloudinaryUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1788938206/explorely/spots/aerial-bay-andaman-and-nicobar-islands/aerial-bay-local-market.jpg",
+      "publicId": "explorely/spots/aerial-bay-andaman-and-nicobar-islands/aerial-bay-local-market",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File%3AAndaman_%26_Nicobar_Islands.jpg"
+    }
+  ],
+  "finishedAt": "2026-09-09T07:16:48.753Z"
+}

@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-09-09T05:53:22.560Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-09T05-53-22-520Z.json",
+  "results": [
+    {
+      "status": "upload_failed",
+      "index": 18805,
+      "name": "Wokha Nature Reserve & Forest Walk",
+      "error": "Error in loading https://upload.wikimedia.org/wikipedia/commons/0/07/Forest_around_Pangti_Village_and_Doyang_Dam_region_Nagaland_JEG4760.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original - 429 Too Many Requests"
+    }
+  ],
+  "finishedAt": "2026-09-09T05:53:57.522Z"
+}

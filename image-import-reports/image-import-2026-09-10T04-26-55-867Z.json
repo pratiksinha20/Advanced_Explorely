@@ -1,0 +1,50 @@
+{
+  "version": "6.0",
+  "startedAt": "2026-09-10T04:26:42.869Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "configuration": {
+    "maxWidth": 1600,
+    "maxHeight": 1600,
+    "webpQuality": 82,
+    "strongMatchScore": 100,
+    "locationFallbackScore": 35,
+    "maxDownloadCandidates": 20
+  },
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-10T04-26-42-859Z.json",
+  "results": [
+    {
+      "status": "upload_failed",
+      "index": 4922,
+      "name": "Hazaribagh lake",
+      "attemptedCandidates": 1,
+      "bestCandidate": {
+        "source": "Openverse",
+        "title": "Hazaribagh lake",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Hazaribagh_lake.jpg",
+        "thumbnail": "https://api.openverse.org/v1/images/9c6da759-4ddb-41aa-80d2-5cf667ddb304/thumb/",
+        "width": 978,
+        "height": 704,
+        "mime": "image/*",
+        "score": 325,
+        "nameRatio": 1,
+        "attractionRatio": 0,
+        "matchedNameWords": [
+          "hazaribagh",
+          "lake"
+        ],
+        "matchedAttractionWords": [],
+        "cityMatched": true,
+        "stateMatched": false,
+        "exact": true,
+        "sourcePage": "https://commons.wikimedia.org/w/index.php?curid=121130684",
+        "creator": "Ranjanrohan",
+        "license": "by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "description": ""
+      }
+    }
+  ],
+  "finishedAt": "2026-09-10T04:26:55.866Z"
+}

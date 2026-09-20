@@ -1,0 +1,32 @@
+{
+  "version": "7.0",
+  "startedAt": "2026-09-10T04:38:46.629Z",
+  "totalDataset": 21573,
+  "requested": 1,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-10T04-38-46-611Z.json",
+  "results": [
+    {
+      "status": "updated",
+      "index": 4922,
+      "name": "Hazaribagh lake",
+      "city": "Hazaribagh",
+      "state": "Jharkhand",
+      "oldImage": "https://upload.wikimedia.org/wikipedia/commons/1/13/Hazaribagh_Jheel_near_Ranchi.jpg",
+      "newImage": "https://res.cloudinary.com/eayitgbp/image/upload/v1789015162/explorely/spots/hazaribagh-jharkhand/hazaribagh-lake.webp",
+      "source": "Wikimedia Commons",
+      "title": "File:Hazaribagh National Park 101.jpg",
+      "tier": "STRONG",
+      "score": 250,
+      "downloadMethod": "original",
+      "creator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Pic_Boy_101&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Pic Boy 101 (page does not exist)\">Pic Boy 101</a>",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    }
+  ],
+  "finishedAt": "2026-09-10T04:39:29.284Z",
+  "summary": {
+    "updated": 1,
+    "skipped": 0,
+    "failed": 0
+  }
+}

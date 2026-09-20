@@ -1,0 +1,21 @@
+{
+  "version": "7.1",
+  "startedAt": "2026-09-10T05:12:14.763Z",
+  "totalDataset": 21573,
+  "requested": 1,
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-10T05-12-14-731Z.json",
+  "results": [
+    {
+      "status": "skipped_existing",
+      "reason": "already_imported",
+      "index": 4922,
+      "name": "Hazaribagh lake"
+    }
+  ],
+  "finishedAt": "2026-09-10T05:12:14.780Z",
+  "summary": {
+    "updated": 0,
+    "skipped": 1,
+    "failed": 0
+  }
+}

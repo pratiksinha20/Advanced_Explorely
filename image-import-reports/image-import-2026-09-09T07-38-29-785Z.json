@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-09-09T07:37:59.378Z",
+  "datasetSize": 21573,
+  "selectedCount": 1,
+  "configuration": {
+    "maxWidth": 1600,
+    "maxHeight": 1600,
+    "webpQuality": 82,
+    "strongMatchScore": 100,
+    "locationFallbackScore": 35
+  },
+  "backupPath": "C:\\Users\\sinha\\OneDrive\\Desktop\\explorelyO\\public\\data\\backups\\spots-2026-09-09T07-37-59-370Z.json",
+  "results": [
+    {
+      "status": "uploaded",
+      "index": 18805,
+      "name": "Wokha Nature Reserve & Forest Walk",
+      "provider": "Wikimedia Commons",
+      "title": "File:Forest around Pangti Village and Doyang Dam region Nagaland JEG4760.JPG",
+      "score": 178,
+      "matchType": "high-confidence",
+      "license": "CC BY-SA 3.0",
+      "creator": "P Jeganathan",
+      "cloudinaryUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1788939507/explorely/spots/wokha-nagaland/wokha-nature-reserve-and-forest-walk.webp",
+      "publicId": "explorely/spots/wokha-nagaland/wokha-nature-reserve-and-forest-walk",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File%3AForest_around_Pangti_Village_and_Doyang_Dam_region_Nagaland_JEG4760.JPG"
+    }
+  ],
+  "finishedAt": "2026-09-09T07:38:29.784Z"
+}

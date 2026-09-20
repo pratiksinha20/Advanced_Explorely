@@ -59,7 +59,7 @@ export default function Home() {
                         Discover <span className="gradient-text">India's</span> Hidden Gems
                     </h1>
                     <p className="hero-subtitle">
-                        Explore 300+ tourist destinations, hotels & attractions across 29 states
+                        Explore 21000+ tourist destinations, hotels & attractions across 29 states
                     </p>
                     <div className="hero-search-wrapper">
                         <input type="text" className="hero-search" placeholder="Where do you want to go?"
