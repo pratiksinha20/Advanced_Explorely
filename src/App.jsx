@@ -10,6 +10,8 @@ import Explore from './pages/Explore';
 import Categories from './pages/Categories';
 import Hotels from './pages/Hotels';
 import NearMe from './pages/NearMe';
+import SpinAndGo from './pages/SpinAndGo';
+import SplitExpenses from './pages/SplitExpenses';
 import SearchResults from './pages/SearchResults';
 import './App.css';
 
@@ -27,6 +29,8 @@ function AppShell() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/hotels" element={<Hotels />} />
           <Route path="/near-me" element={<NearMe />} />
+          <Route path="/spin-go" element={<SpinAndGo />} />
+          <Route path="/split" element={<SplitExpenses />} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
       </main>

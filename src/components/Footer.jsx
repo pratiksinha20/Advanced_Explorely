@@ -20,8 +20,8 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4>Discover</h4>
                         <Link to="/near-me">Near Me</Link>
-                        <Link to="/categories">Temples</Link>
-                        <Link to="/categories">Beaches</Link>
+                        <Link to="/spin-go">Spin & Go</Link>
+                        <Link to="/split">Split Expenses</Link>
                     </div>
                 </div>
             </div>

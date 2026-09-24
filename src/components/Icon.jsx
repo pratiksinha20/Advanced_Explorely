@@ -5,7 +5,9 @@ import {
     Landmark, Mountain, Umbrella, TreePine, PawPrint, Droplets, Waves,
     Castle, Crown, Columns3, TreeDeciduous, ShoppingBag, Backpack, Flame,
     ArrowUpDown, Tag, DollarSign, Ban, Filter,
-    MapPinned, TrendingUp, Sparkles, LayoutGrid
+    MapPinned, TrendingUp, Sparkles, LayoutGrid,
+    RefreshCw, RotateCcw, GripVertical, Trash2, Plus, Quote, ArrowRight, Dices, Award,
+    Split, Users, Receipt, Wallet, CheckCircle2, ArrowRightLeft, AlertCircle, Utensils, Car, Ticket, Check, Target
 } from 'lucide-react';
 
 const iconMap = {
@@ -30,6 +32,30 @@ const iconMap = {
     'trending-up': TrendingUp,
     'sparkles': Sparkles,
     'layout-grid': LayoutGrid,
+    'refresh-cw': RefreshCw,
+    'rotate-ccw': RotateCcw,
+    'grip-vertical': GripVertical,
+    'trash-2': Trash2,
+    'plus': Plus,
+    'quote': Quote,
+    'arrow-right': ArrowRight,
+    'dices': Dices,
+    'award': Award,
+
+    // Split & Expense Icons
+    'split': Split,
+    'users': Users,
+    'receipt': Receipt,
+    'wallet': Wallet,
+    'check-circle': CheckCircle2,
+    'arrow-right-left': ArrowRightLeft,
+    'alert-circle': AlertCircle,
+    'utensils': Utensils,
+    'taxi': Car,
+    'car': Car,
+    'ticket': Ticket,
+    'check': Check,
+    'target': Target,
 
     // Categories
     'landmark': Landmark,

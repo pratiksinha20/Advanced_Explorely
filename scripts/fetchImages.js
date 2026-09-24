@@ -6,46 +6,50 @@ const axios = require("axios");
 const sharp = require("sharp");
 const cloudinary = require("cloudinary").v2;
 
+// ============================================================
+// CLOUDINARY CONFIGURATION
+// ============================================================
+const cloudName = (process.env.CLOUDINARY_CLOUD_NAME || "").trim();
+const apiKey = (process.env.CLOUDINARY_API_KEY || "").trim();
+const apiSecret = (process.env.CLOUDINARY_API_SECRET || "").trim();
+
+if (!cloudName || !apiKey || !apiSecret) {
+    console.error("❌ Cloudinary environment variables missing in .env file.");
+    process.exit(1);
+}
+
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+    cloud_name: cloudName,
+    api_key: apiKey,
+    api_secret: apiSecret,
 });
 
+// ============================================================
+// FILE PATHS & CONSTANTS
+// ============================================================
 const spotsPath = path.join(__dirname, "../public/data/spots.json");
-const backupDir = path.join(__dirname, "../public/data/backups");
-const reportDir = path.join(__dirname, "../image-import-reports");
+const backupPath = path.join(__dirname, "../public/data/spots.backup.json");
+const reportPath = path.join(__dirname, "../image-update-report.json");
 
 const USER_AGENT =
-    "ExplorelyImageImporter/7.1 (https://explorely.in; contact: pratiksinha@gmail.com)";
+    "ExplorelyImageImporter/1.0 (https://explorely.in; contact: pratiksinha@gmail.com)";
 
 const CONFIG = {
-    minWidth: 600,
-    minHeight: 400,
-    maxImageSizeMB: 50,
-
-    resultsPerQuery: 20,
-    maxQueries: 7,
-    maxCandidatesPerSpot: 30,
-
-    apiDelayMs: 900,
-    uploadDelayMs: 700,
-
-    apiRetries: 3,
-    downloadRetries: 3,
-    uploadRetries: 3,
+    concurrency: 4,
+    wikimediaIntervalMs: 300, // Polite to Wikimedia Commons (~3 req/sec max)
+    minWidth: 400,
+    minHeight: 300,
+    maxImageSizeMB: 40,
+    maxWidth: 1600,
+    maxHeight: 1600,
+    webpQuality: 82,
 
     strongMatchScore: 100,
     relatedMatchScore: 50,
     locationFallbackScore: 35,
 
-    maxWidth: 1600,
-    maxHeight: 1600,
-
-    webpQuality: 82,
-    webpEffort: 5,
-
-    overwrite: true,
+    saveIntervalMs: 5000,
+    saveBatchCount: 20,
 
     UNSUITABLE_TITLE_WORDS: [
         "map",
@@ -73,361 +77,123 @@ const CONFIG = {
         "ceremony",
         "addressing",
         "speech",
+        "screenshot",
+        "cemetery",
+        "graveyard",
+        "aircraft",
+        "air crash",
+        "stamp",
+        "coin",
+        "banknote",
+        "document",
+        "newspaper",
+        "clipping",
+        "pdf",
+        "scan",
+        "scanned",
+        "manuscript",
+    ],
+
+    FOREIGN_COUNTRY_WORDS: [
+        "france", "germany", "united states", "usa", "uk",
+        "england", "scotland", "ireland", "australia", "canada",
+        "russia", "poland", "michigan", "hawaii", "california",
+        "texas", "florida", "ohio", "norway", "sweden", "spain", "italy",
     ],
 
     LOCATION_VISUAL_WORDS: [
-        "lake",
-        "jheel",
-        "reservoir",
-        "pond",
-        "water",
-        "river",
-        "waterfall",
-        "falls",
-        "park",
-        "forest",
-        "wildlife",
-        "sanctuary",
-        "reserve",
-        "hill",
-        "hills",
-        "mountain",
-        "valley",
-        "beach",
-        "coast",
-        "garden",
-        "landscape",
-        "nature",
-        "view",
-        "scenery",
-        "temple",
-        "fort",
-        "palace",
-        "monument",
-        "museum",
-        "cave",
-        "bridge",
-        "tower",
-        "shrine",
-        "mosque",
-        "church",
-        "gurudwara",
-        "gurdwara",
-        "monastery",
-        "stupa",
+        "lake", "jheel", "reservoir", "pond", "water", "river",
+        "waterfall", "falls", "park", "forest", "wildlife",
+        "sanctuary", "reserve", "hill", "hills", "mountain",
+        "valley", "beach", "coast", "garden", "landscape",
+        "nature", "view", "scenery", "temple", "fort", "palace",
+        "monument", "museum", "cave", "bridge", "tower",
+        "shrine", "mosque", "church", "gurudwara", "gurdwara",
+        "monastery", "stupa", "ghat", "mandir", "bazaar", "market",
     ],
 };
 
 const GENERIC_WORDS = new Set([
-    "the",
-    "and",
-    "of",
-    "in",
-    "at",
-    "on",
-    "for",
-    "a",
-    "an",
-    "near",
-    "view",
-    "views",
-    "place",
-    "point",
-    "area",
-    "road",
-    "street",
-    "district",
-    "city",
-    "town",
-    "village",
-    "india",
-    "indian",
-    "tourism",
-    "tourist",
-    "photo",
-    "photograph",
-    "picture",
-    "image",
-    "file",
-    "jpg",
-    "jpeg",
-    "png",
-    "webp",
-    "nearby",
-    "region",
-    "state",
+    "the", "and", "of", "in", "at", "on", "for", "a", "an", "near",
+    "view", "views", "place", "point", "area", "road", "street",
+    "district", "city", "town", "village", "india", "indian", "tourism",
+    "tourist", "photo", "photograph", "picture", "image", "file",
+    "jpg", "jpeg", "png", "webp", "nearby", "region", "state",
 ]);
 
 const LOCATION_WORDS = new Set([
-    "india",
-    "delhi",
-    "mumbai",
-    "bombay",
-    "kolkata",
-    "calcutta",
-    "chennai",
-    "madras",
-    "bengaluru",
-    "bangalore",
-    "hyderabad",
-    "pune",
-    "agra",
-    "jaipur",
-    "lucknow",
-    "patna",
-    "varanasi",
-    "goa",
+    "india", "delhi", "mumbai", "bombay", "kolkata", "calcutta",
+    "chennai", "madras", "bengaluru", "bangalore", "hyderabad",
+    "pune", "agra", "jaipur", "lucknow", "patna", "varanasi", "goa",
 ]);
 
 const ATTRACTION_GENERIC = new Set([
-    "temple",
-    "mosque",
-    "church",
-    "gurudwara",
-    "gurdwara",
-    "fort",
-    "palace",
-    "museum",
-    "monument",
-    "sanctuary",
-    "shrine",
-    "park",
-    "garden",
-    "lake",
-    "waterfall",
-    "waterfalls",
-    "beach",
-    "dam",
-    "cave",
-    "hill",
-    "hills",
-    "tower",
-    "gate",
-    "bridge",
-    "station",
-    "zoo",
-    "reserve",
-    "forest",
-    "wildlife",
-    "national",
-    "memorial",
-    "ashram",
-    "stupa",
-    "mahal",
-    "nature",
-    "valley",
-    "river",
-    "monastery",
-    "falls",
-    "reservoir",
-    "pond",
-    "jheel",
-    "sarovar",
-    "waterbody",
+    "temple", "mosque", "church", "gurudwara", "gurdwara", "fort",
+    "palace", "museum", "monument", "sanctuary", "shrine", "park",
+    "garden", "lake", "waterfall", "waterfalls", "beach", "dam",
+    "cave", "hill", "hills", "tower", "gate", "bridge", "station",
+    "zoo", "reserve", "forest", "wildlife", "national", "memorial",
+    "ashram", "stupa", "mahal", "nature", "valley", "river",
+    "monastery", "falls", "reservoir", "pond", "jheel", "sarovar",
 ]);
 
 const TYPE_ALIASES = {
-    lake: [
-        "lake",
-        "jheel",
-        "sarovar",
-        "reservoir",
-        "pond",
-        "waterbody",
-        "water",
-    ],
-
-    waterfall: [
-        "waterfall",
-        "waterfalls",
-        "falls",
-        "cascade",
-    ],
-
-    fort: [
-        "fort",
-        "qila",
-        "kila",
-        "citadel",
-    ],
-
-    temple: [
-        "temple",
-        "mandir",
-        "shrine",
-        "devasthan",
-    ],
-
-    mosque: [
-        "mosque",
-        "masjid",
-    ],
-
-    church: [
-        "church",
-        "cathedral",
-        "chapel",
-    ],
-
-    palace: [
-        "palace",
-        "mahal",
-    ],
-
-    museum: [
-        "museum",
-    ],
-
-    beach: [
-        "beach",
-        "coast",
-        "shore",
-    ],
-
-    dam: [
-        "dam",
-        "barrage",
-    ],
-
-    cave: [
-        "cave",
-        "cavern",
-    ],
-
-    hill: [
-        "hill",
-        "hills",
-        "mountain",
-        "peak",
-        "valley",
-    ],
-
-    park: [
-        "park",
-        "garden",
-        "national park",
-        "wildlife",
-        "reserve",
-        "sanctuary",
-        "forest",
-    ],
-
-    monument: [
-        "monument",
-        "memorial",
-        "tower",
-        "gate",
-        "stupa",
-    ],
+    lake: ["lake", "jheel", "sarovar", "reservoir", "pond", "waterbody", "water"],
+    waterfall: ["waterfall", "waterfalls", "falls", "cascade"],
+    fort: ["fort", "qila", "kila", "citadel"],
+    temple: ["temple", "mandir", "shrine", "devasthan"],
+    mosque: ["mosque", "masjid"],
+    church: ["church", "cathedral", "chapel"],
+    palace: ["palace", "mahal"],
+    museum: ["museum"],
+    beach: ["beach", "coast", "shore"],
+    dam: ["dam", "barrage"],
+    cave: ["cave", "cavern"],
+    hill: ["hill", "hills", "mountain", "peak", "valley"],
+    park: ["park", "garden", "national park", "wildlife", "reserve", "sanctuary", "forest"],
+    monument: ["monument", "memorial", "tower", "gate", "stupa"],
 };
 
-const args = process.argv.slice(2);
-
-function getArg(name) {
-    const index = args.indexOf(name);
-
-    if (index === -1) {
-        return null;
-    }
-
-    return args[index + 1] ?? null;
-}
-
-const indexValue = getArg("--index");
-const limitValue = getArg("--limit");
-const startValue = getArg("--start");
-
-const indexArg =
-    indexValue !== null ? Number(indexValue) : null;
-
-const limitArg =
-    limitValue !== null ? Number(limitValue) : null;
-
-const startArg =
-    startValue !== null ? Number(startValue) : 0;
-
-const force = args.includes("--force");
-const all = args.includes("--all");
-
-const help =
-    args.includes("--help") ||
-    args.includes("-h");
-
+// ============================================================
+// STATE & CIRCUIT BREAKERS
+// ============================================================
+let openverseRateLimited = false;
+let cloudinaryCreditLimitReached = false;
+let lastWikimediaTime = 0;
 let spots = [];
+let isDirty = false;
+let lastSaveTime = Date.now();
+let updatesSinceLastSave = 0;
 
-function printHelp() {
-    console.log(`
-============================================================
- Explorely Image Importer v7.1
-============================================================
+const reportData = {
+    totalSpotsProcessed: 0,
+    unsplashUrlsFound: 0,
+    successfullyReplaced: 0,
+    wikipediaUsed: 0,
+    openverseUsed: 0,
+    wikimediaCommonsUsed: 0,
+    failed: 0,
+    skippedValidOrProtected: 0,
+    failedSpots: [],
+    replacedSpots: [],
+};
 
-TEST ONE:
-  node scripts/fetchImages.js --index 4922
-
-FIRST 10:
-  node scripts/fetchImages.js --limit 10
-
-START + LIMIT:
-  node scripts/fetchImages.js --start 100 --limit 10
-
-ALL:
-  node scripts/fetchImages.js --all
-
-ALL + FORCE:
-  node scripts/fetchImages.js --all --force
-
-============================================================
- MANUAL IMAGE PROTECTION
-============================================================
-
-For a manually selected image:
-
-  "imageProtected": true
-
-OR:
-
-  "imageSource": "manual"
-
-Protected manual images are NEVER replaced,
-even when --force is used.
-
-Normal mode also preserves any existing working image URL.
-
-============================================================
- FALLBACK ORDER
-============================================================
-
-1. Strong exact / highly relevant candidate
-2. Related candidate
-3. Wikimedia location fallback
-4. Keep existing image if everything fails
-
-============================================================
- PIPELINE
-============================================================
-
-Wikimedia/Openverse
-        ↓
-Original URL
-        ↓
-Thumbnail fallback
-        ↓
-Sharp validation
-        ↓
-Resize max 1600px
-        ↓
-WebP quality 82
-        ↓
-Cloudinary
-        ↓
-spots.json
-
-============================================================
-`);
-}
-
+// ============================================================
+// UTILITIES
+// ============================================================
 function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function stripHtml(text = "") {
+    return String(text)
+        .replace(/<[^>]*>?/gm, "")
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .trim();
 }
 
 function normalize(text = "") {
@@ -448,55 +214,46 @@ function words(text = "") {
 }
 
 function escapeRegExp(text) {
-    return String(text).replace(
-        /[.*+?^${}()|[\]\\]/g,
-        "\\$&"
-    );
+    return String(text).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function includesWord(text, word) {
-    if (!text || !word) {
-        return false;
-    }
-
-    return new RegExp(
-        `\\b${escapeRegExp(word)}\\b`,
-        "i"
-    ).test(text);
+    if (!text || !word) return false;
+    return new RegExp(`\\b${escapeRegExp(word)}\\b`, "i").test(text);
 }
 
 function containsAnyPhrase(text, phrases) {
     const value = normalize(text);
+    return phrases.some((phrase) => value.includes(normalize(phrase)));
+}
 
-    return phrases.some(
-        (phrase) =>
-            value.includes(normalize(phrase))
+function safeSlug(text) {
+    return normalize(text)
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "")
+        .substring(0, 100);
+}
+
+function buildPublicId(spot) {
+    const loc = safeSlug(`${spot.city || ""}-${spot.state || ""}`);
+    const name = safeSlug(spot.name || "spot");
+    return ["explorely", "spots", loc, name].filter(Boolean).join("/");
+}
+
+function titleLooksUnsuitable(title) {
+    return containsAnyPhrase(title, CONFIG.UNSUITABLE_TITLE_WORDS);
+}
+
+function mentionsForeignCountry(text) {
+    return containsAnyPhrase(text, CONFIG.FOREIGN_COUNTRY_WORDS);
+}
+
+function isSvg(mime = "", url = "") {
+    return (
+        String(mime).toLowerCase() === "image/svg+xml" ||
+        /\.svg(?:$|[?#])/i.test(url)
     );
-}
-
-function compactText(...values) {
-    return values
-        .filter(Boolean)
-        .join(" ");
-}
-
-function inferTypeWords(spot) {
-    const name = normalize(spot.name || "");
-    const found = new Set();
-
-    for (const [type, aliases] of Object.entries(
-        TYPE_ALIASES
-    )) {
-        if (
-            aliases.some((alias) =>
-                name.includes(normalize(alias))
-            )
-        ) {
-            found.add(type);
-        }
-    }
-
-    return [...found];
 }
 
 function cleanNameParts(spot) {
@@ -514,127 +271,53 @@ function cleanNameParts(spot) {
     );
 
     const typeWords = name.filter(
-        (word) =>
-            word.length >= 4 &&
-            ATTRACTION_GENERIC.has(word)
+        (word) => word.length >= 4 && ATTRACTION_GENERIC.has(word)
     );
 
     return {
-        nameWords: [
-            ...new Set(
-                name.filter((word) => word.length >= 3)
-            ),
-        ],
-
-        attractionWords: [
-            ...new Set(attractionWords),
-        ],
-
-        typeWords: [
-            ...new Set(typeWords),
-        ],
-
-        cityWords: [
-            ...new Set(
-                city.filter((word) => word.length >= 3)
-            ),
-        ],
-
-        stateWords: [
-            ...new Set(
-                state.filter((word) => word.length >= 3)
-            ),
-        ],
+        nameWords: [...new Set(name.filter((word) => word.length >= 3))],
+        attractionWords: [...new Set(attractionWords)],
+        typeWords: [...new Set(typeWords)],
+        cityWords: [...new Set(city.filter((word) => word.length >= 3))],
+        stateWords: [...new Set(state.filter((word) => word.length >= 3))],
     };
 }
 
-function titleLooksUnsuitable(title) {
-    return containsAnyPhrase(
-        title,
-        CONFIG.UNSUITABLE_TITLE_WORDS
-    );
-}
-
-function candidateIsSvg(candidate) {
-    return (
-        String(candidate.mime || "").toLowerCase() ===
-        "image/svg+xml" ||
-        /\.svg(?:$|[?#])/i.test(
-            candidate.url || ""
-        )
-    );
+function inferTypeWords(spot) {
+    const name = normalize(spot.name || "");
+    const found = new Set();
+    for (const [type, aliases] of Object.entries(TYPE_ALIASES)) {
+        if (aliases.some((alias) => name.includes(normalize(alias)))) {
+            found.add(type);
+        }
+    }
+    return [...found];
 }
 
 function calculateScore(candidateText, spot) {
     const title = normalize(candidateText);
+    if (!title) return { score: 0 };
 
-    if (!title) {
-        return {
-            score: 0,
-            nameRatio: 0,
-            attractionRatio: 0,
-            matchedNameWords: [],
-            matchedAttractionWords: [],
-            cityMatched: false,
-            stateMatched: false,
-            exact: false,
-            typeMatched: false,
-            typeMatches: [],
-            locationVisualMatched: false,
-        };
-    }
-
-    const placeName = normalize(
-        spot.name || ""
-    );
-
-    const city = normalize(
-        spot.city || ""
-    );
-
-    const state = normalize(
-        spot.state || ""
-    );
-
-    const {
-        nameWords,
-        attractionWords,
-        typeWords,
-    } = cleanNameParts(spot);
-
-    const inferredTypes =
-        inferTypeWords(spot);
+    const placeName = normalize(spot.name || "");
+    const city = normalize(spot.city || "");
+    const state = normalize(spot.state || "");
+    const { nameWords, attractionWords, typeWords } = cleanNameParts(spot);
+    const inferredTypes = inferTypeWords(spot);
 
     let score = 0;
+    const exact = placeName.length >= 5 && title.includes(placeName);
+    if (exact) score += 180;
 
-    const exact =
-        placeName.length >= 5 &&
-        title.includes(placeName);
-
-    if (exact) {
-        score += 180;
+    // Filter out foreign locations if not exact
+    if (!exact && mentionsForeignCountry(title)) {
+        return { score: 0 };
     }
 
-    const matchedNameWords =
-        nameWords.filter((word) =>
-            includesWord(title, word)
-        );
+    const matchedNameWords = nameWords.filter((w) => includesWord(title, w));
+    const matchedAttractionWords = attractionWords.filter((w) => includesWord(title, w));
 
-    const matchedAttractionWords =
-        attractionWords.filter((word) =>
-            includesWord(title, word)
-        );
-
-    const nameRatio = nameWords.length
-        ? matchedNameWords.length /
-        nameWords.length
-        : 0;
-
-    const attractionRatio =
-        attractionWords.length
-            ? matchedAttractionWords.length /
-            attractionWords.length
-            : 0;
+    const nameRatio = nameWords.length ? matchedNameWords.length / nameWords.length : 0;
+    const attractionRatio = attractionWords.length ? matchedAttractionWords.length / attractionWords.length : 0;
 
     score += Math.round(nameRatio * 80);
     score += Math.round(attractionRatio * 90);
@@ -642,2589 +325,805 @@ function calculateScore(candidateText, spot) {
     const typeMatches = [
         ...new Set(
             inferredTypes.filter((type) =>
-                TYPE_ALIASES[type].some((alias) =>
-                    title.includes(normalize(alias))
-                )
+                TYPE_ALIASES[type].some((alias) => title.includes(normalize(alias)))
             )
         ),
     ];
 
-    const typeMatched =
-        typeMatches.length > 0 ||
-        typeWords.some((word) =>
-            includesWord(title, word)
-        );
+    const typeMatched = typeMatches.length > 0 || typeWords.some((w) => includesWord(title, w));
+    if (typeMatched) score += 30;
 
-    if (typeMatched) {
-        score += 30;
-    }
+    const cityMatched = city.length > 2 && includesWord(title, city);
+    if (cityMatched) score += 25;
 
-    const cityMatched =
-        city.length > 2 &&
-        includesWord(title, city);
+    const stateMatched = state.length > 2 && includesWord(title, state);
+    if (stateMatched) score += 10;
 
-    if (cityMatched) {
-        score += 25;
-    }
+    if (matchedAttractionWords.length >= 2) score += 30;
+    if (matchedNameWords.length >= 2) score += 10;
+    if (exact && (cityMatched || stateMatched)) score += 25;
 
-    const stateMatched =
-        state.length > 2 &&
-        includesWord(title, state);
+    const locationVisualMatched = CONFIG.LOCATION_VISUAL_WORDS.some((w) =>
+        title.includes(normalize(w))
+    );
+    if (locationVisualMatched) score += 5;
 
-    if (stateMatched) {
-        score += 10;
-    }
+    // Relevance gating: must have exact match OR (city/state match with attraction word)
+    const isReliable =
+        exact ||
+        (matchedAttractionWords.length >= 1 && (cityMatched || stateMatched)) ||
+        (matchedNameWords.length >= 2 && (cityMatched || stateMatched || typeMatched));
 
-    if (
-        matchedAttractionWords.length >= 2
-    ) {
-        score += 30;
-    }
-
-    if (
-        matchedNameWords.length >= 2
-    ) {
-        score += 10;
-    }
-
-    if (
-        exact &&
-        (cityMatched || stateMatched)
-    ) {
-        score += 25;
-    }
-
-    const locationVisualMatched =
-        CONFIG.LOCATION_VISUAL_WORDS.some(
-            (word) =>
-                title.includes(normalize(word))
-        );
-
-    if (locationVisualMatched) {
-        score += 5;
+    if (!isReliable && score < CONFIG.strongMatchScore) {
+        return { score: 0 };
     }
 
     return {
         score: Math.max(0, score),
+        exact,
         nameRatio,
         attractionRatio,
         matchedNameWords,
         matchedAttractionWords,
         cityMatched,
         stateMatched,
-        exact,
         typeMatched,
         typeMatches,
         locationVisualMatched,
     };
 }
 
-function buildQueries(spot) {
-    const name =
-        String(spot.name || "").trim();
+function openverseLicenseAllowed(license) {
+    const val = normalize(license || "");
+    if (!val || val === "unknown") return false;
+    return !(
+        val.includes("by-nc") ||
+        val.includes(" nc ") ||
+        val.endsWith(" nc") ||
+        val.includes("non commercial")
+    );
+}
 
-    const city =
-        String(spot.city || "").trim();
+// ============================================================
+// SPOT QUALIFICATION
+// ============================================================
+function getSpotStatus(spot) {
+    if (!spot) return { action: "skip", reason: "invalid_spot" };
 
-    const state =
-        String(spot.state || "").trim();
+    if (spot.imageProtected === true || spot.imageSource === "manual") {
+        return { action: "skip", reason: "manual_protected" };
+    }
 
-    const {
-        attractionWords,
-        typeWords,
-    } = cleanNameParts(spot);
+    const img = String(spot.image || "").trim();
+
+    if (img.includes("res.cloudinary.com")) {
+        return { action: "skip", reason: "cloudinary_exists" };
+    }
+
+    if (img.includes("upload.wikimedia.org") || img.includes("wikipedia.org")) {
+        return { action: "skip", reason: "wikipedia_exists" };
+    }
+
+    if (!img) {
+        return { action: "process", reason: "missing_image" };
+    }
+
+    if (img.includes("images.unsplash.com")) {
+        return { action: "process", reason: "unsplash_image" };
+    }
+
+    return { action: "process", reason: "other_image" };
+}
+
+const SYNTHETIC_SUFFIXES = [
+    " complex", " view", " viewpoint", " resort", " area", " trek", " trail",
+    " walk", " picnic", " sunset", " sunrise", " tour", " camping", " camp",
+    " local market", " market", " sweet market", " food walk", " border view",
+    " town park", " flower garden", " garden walk", " pine walk", " snow slide",
+    " watchtower", " bird watching", " angling spot", " snorkeling", " scuba diving",
+    " glass bottom boat", " boating", " river rafting", " river view", " river side",
+    " crop fields", " clock tower", " site", " ruins", " temple ruins", " temple pond",
+    " pond", " industry view", " main gate", " guest house", " hilltop temple"
+];
+
+function getCleanBaseName(name = "") {
+    let cleaned = String(name || "").trim();
+    const lower = cleaned.toLowerCase();
+    for (const suffix of SYNTHETIC_SUFFIXES) {
+        if (lower.endsWith(suffix) && cleaned.length - suffix.length >= 3) {
+            cleaned = cleaned.substring(0, cleaned.length - suffix.length).trim();
+            break;
+        }
+    }
+    return cleaned;
+}
+
+// ============================================================
+// RATE LIMITED HTTP CLIENT FOR APIS
+// ============================================================
+async function rateLimitedWikimediaGet(url, params) {
+    const now = Date.now();
+    const elapsed = now - lastWikimediaTime;
+    if (elapsed < CONFIG.wikimediaIntervalMs) {
+        await sleep(CONFIG.wikimediaIntervalMs - elapsed);
+    }
+    lastWikimediaTime = Date.now();
+
+    return axios.get(url, {
+        params,
+        timeout: 20000,
+        headers: { "User-Agent": USER_AGENT },
+    });
+}
+
+// ============================================================
+// SEARCH WIKIPEDIA ARTICLE LEAD IMAGES (AUTHORITATIVE)
+// ============================================================
+async function searchWikipedia(spot) {
+    const rawName = String(spot.name || "").trim();
+    const cleanName = getCleanBaseName(rawName);
+    const city = String(spot.city || "").trim();
+    const state = String(spot.state || "").trim();
 
     const queries = [];
+    if (cleanName) queries.push(cleanName);
+    if (cleanName && city) queries.push(`${cleanName} ${city}`);
+    if (rawName && rawName !== cleanName) queries.push(rawName);
 
-    function add(query) {
-        if (!query) {
-            return;
-        }
+    const candidates = [];
 
-        const normalized =
-            normalize(query);
-
-        if (!normalized) {
-            return;
-        }
-
-        if (
-            !queries.some(
-                (existing) =>
-                    normalize(existing) ===
-                    normalized
-            )
-        ) {
-            queries.push(query);
-        }
-    }
-
-    add(`"${name}" "${city}"`);
-    add(`"${name}"`);
-    add(`${name} ${city}`);
-
-    if (attractionWords.length > 0) {
-        add(
-            `${attractionWords
-                .slice(0, 5)
-                .join(" ")} ${city} ${state}`
-        );
-
-        add(
-            `${attractionWords
-                .slice(0, 4)
-                .join(" ")} ${city}`
-        );
-    }
-
-    if (
-        typeWords.length > 0 &&
-        attractionWords.length > 0
-    ) {
-        add(
-            `${attractionWords
-                .slice(0, 4)
-                .join(" ")} ${typeWords[0]} ${city}`
-        );
-    }
-
-    add(`${city} ${state}`);
-
-    return queries.slice(
-        0,
-        CONFIG.maxQueries
-    );
-}
-
-function isRetryable(error) {
-    const status =
-        error.response?.status;
-
-    return (
-        !status ||
-        status === 408 ||
-        status === 425 ||
-        status === 429 ||
-        status >= 500
-    );
-}
-
-async function axiosGet(
-    url,
-    options = {},
-    attempt = 1
-) {
-    try {
-        return await axios.get(
-            url,
-            {
-                ...options,
-
-                timeout:
-                    options.timeout || 30000,
-
-                headers: {
-                    "User-Agent": USER_AGENT,
-                    ...(options.headers || {}),
-                },
-            }
-        );
-    } catch (error) {
-        if (
-            attempt < CONFIG.apiRetries &&
-            isRetryable(error)
-        ) {
-            const wait =
-                2000 * attempt;
-
-            console.log(
-                `      ↻ API retry ${attempt}/${CONFIG.apiRetries - 1} in ${wait}ms...`
-            );
-
-            await sleep(wait);
-
-            return axiosGet(
-                url,
-                options,
-                attempt + 1
-            );
-        }
-
-        throw error;
-    }
-}
-
-function openverseLicenseAllowed(
-    license
-) {
-    const value =
-        normalize(license || "");
-
-    if (
-        !value ||
-        value === "unknown"
-    ) {
-        return false;
-    }
-
-    return !(
-        value.includes("by-nc") ||
-        value.includes(" nc ") ||
-        value.endsWith(" nc") ||
-        value.includes("non commercial")
-    );
-}
-
-async function searchWikimedia(spot) {
-    const results = [];
-
-    console.log(
-        "\n🟣 WIKIMEDIA COMMONS"
-    );
-
-    const queries =
-        buildQueries(spot);
-
-    for (const query of queries) {
-        console.log(
-            `   🔎 ${query}`
-        );
-
+    for (const q of queries) {
         try {
-            const response =
-                await axiosGet(
-                    "https://commons.wikimedia.org/w/api.php",
-                    {
-                        params: {
-                            action: "query",
-                            generator: "search",
-                            gsrnamespace: 6,
-                            gsrsearch: query,
-                            gsrlimit:
-                                CONFIG.resultsPerQuery,
-                            prop: "imageinfo",
-                            iiprop:
-                                "url|extmetadata|size|mime",
-                            iiurlwidth: 1600,
-                            format: "json",
-                            origin: "*",
-                        },
-                    }
-                );
+            const resp = await axios.get("https://en.wikipedia.org/w/api.php", {
+                params: {
+                    action: "query",
+                    generator: "search",
+                    gsrsearch: q,
+                    gsrlimit: 3,
+                    prop: "pageimages|extracts|info",
+                    piprop: "original|thumbnail",
+                    pithumbsize: 1600,
+                    exintro: 1,
+                    explaintext: 1,
+                    exsentences: 2,
+                    format: "json",
+                },
+                timeout: 12000,
+                headers: { "User-Agent": USER_AGENT },
+            });
 
-            const pages =
-                response.data?.query?.pages ||
-                {};
+            const pages = Object.values(resp.data?.query?.pages || {});
+            for (const page of pages) {
+                const imgUrl = page.original?.source || page.thumbnail?.source;
+                if (!imgUrl || isSvg("", imgUrl)) continue;
 
-            console.log(
-                `      ✓ ${Object.keys(pages).length} result(s)`
+                const text = `${page.title || ""} ${page.extract || ""}`;
+                const match = calculateScore(text, spot);
+                if (match.score < CONFIG.locationFallbackScore) continue;
+
+                candidates.push({
+                    source: "Wikipedia",
+                    title: page.title,
+                    url: imgUrl,
+                    thumbnail: page.thumbnail?.source || imgUrl,
+                    width: page.original?.width || 1200,
+                    height: page.original?.height || 800,
+                    mime: "image/jpeg",
+                    sourcePage: `https://en.wikipedia.org/?curid=${page.pageid}`,
+                    creator: "Wikipedia",
+                    license: "CC BY-SA",
+                    ...match,
+                });
+            }
+
+            if (candidates.some((c) => c.score >= CONFIG.strongMatchScore)) {
+                break;
+            }
+        } catch (err) {
+            // non-fatal
+        }
+    }
+
+    return candidates;
+}
+
+// ============================================================
+// SEARCH OPENVERSE (PRIMARY REPOSITORY)
+// ============================================================
+async function searchOpenverse(spot) {
+    if (openverseRateLimited) return [];
+
+    const rawName = String(spot.name || "").trim();
+    const cleanName = getCleanBaseName(rawName);
+    const city = String(spot.city || "").trim();
+    const state = String(spot.state || "").trim();
+    const category = String(spot.category || "").trim();
+
+    const queries = [];
+    if (cleanName) queries.push(cleanName);
+    if (cleanName && city) queries.push(`${cleanName} ${city}`);
+    if (rawName && rawName !== cleanName) queries.push(rawName);
+    if (cleanName && (category || state)) queries.push(`${cleanName} ${category} ${state}`.trim());
+
+    const allCandidates = [];
+
+    for (const q of queries) {
+        try {
+            const resp = await axios.get("https://api.openverse.org/v1/images/", {
+                params: {
+                    q: q.replace(/"/g, ""),
+                    page_size: 15,
+                    mature: false,
+                },
+                timeout: 12000,
+                headers: { "User-Agent": USER_AGENT },
+            });
+
+            const items = resp.data?.results || [];
+            for (const item of items) {
+                if (!item.url || isSvg(item.mimetype, item.url)) continue;
+                if (!openverseLicenseAllowed(item.license)) continue;
+
+                const width = Number(item.width || 0);
+                const height = Number(item.height || 0);
+                if (width && height && (width < CONFIG.minWidth || height < CONFIG.minHeight)) {
+                    continue;
+                }
+
+                const title = item.title || "Untitled";
+                if (titleLooksUnsuitable(title)) continue;
+
+                const text = [
+                    title,
+                    item.creator,
+                    item.description,
+                    Array.isArray(item.tags)
+                        ? item.tags.map((t) => t?.name || t || "").join(" ")
+                        : "",
+                ]
+                    .filter(Boolean)
+                    .join(" ");
+
+                const match = calculateScore(text, spot);
+                if (match.score < CONFIG.locationFallbackScore) continue;
+
+                allCandidates.push({
+                    source: "Openverse",
+                    title,
+                    url: item.url,
+                    thumbnail: item.thumbnail || item.url,
+                    width,
+                    height,
+                    mime: item.mimetype || "image/jpeg",
+                    sourcePage: item.foreign_landing_url || item.detail_url || item.url,
+                    creator: stripHtml(item.creator || ""),
+                    license: stripHtml(item.license || ""),
+                    ...match,
+                });
+            }
+
+            const hasStrong = allCandidates.some((c) => c.score >= CONFIG.strongMatchScore);
+            if (hasStrong) break;
+        } catch (err) {
+            if (err.response?.status === 429) {
+                console.log("\n⚠️ Openverse anonymous daily rate limit reached (429). Switching permanently to Wikimedia Commons.");
+                openverseRateLimited = true;
+                break;
+            }
+        }
+    }
+
+    return allCandidates;
+}
+
+// ============================================================
+// SEARCH WIKIMEDIA COMMONS (FALLBACK)
+// ============================================================
+async function searchWikimedia(spot) {
+    const rawName = String(spot.name || "").trim();
+    const cleanName = getCleanBaseName(rawName);
+    const city = String(spot.city || "").trim();
+    const state = String(spot.state || "").trim();
+
+    const queries = [];
+    if (cleanName && city && state) queries.push(`${cleanName} ${city} ${state}`);
+    if (cleanName && city) queries.push(`${cleanName} ${city}`);
+    if (cleanName) queries.push(cleanName);
+    if (rawName && rawName !== cleanName) queries.push(rawName);
+
+    const allCandidates = [];
+
+    for (const q of queries) {
+        try {
+            const resp = await rateLimitedWikimediaGet(
+                "https://commons.wikimedia.org/w/api.php",
+                {
+                    action: "query",
+                    generator: "search",
+                    gsrnamespace: 6,
+                    gsrsearch: q,
+                    gsrlimit: 15,
+                    prop: "imageinfo",
+                    iiprop: "url|extmetadata|size|mime",
+                    iiurlwidth: 1600,
+                    format: "json",
+                    origin: "*",
+                }
             );
 
-            for (const page of Object.values(
-                pages
-            )) {
-                const info =
-                    page.imageinfo?.[0];
+            const pages = resp.data?.query?.pages || {};
+            for (const page of Object.values(pages)) {
+                const info = page.imageinfo?.[0];
+                if (!info?.url) continue;
 
-                if (!info?.url) {
+                const mime = String(info.mime || "").toLowerCase();
+                if (!mime.startsWith("image/") || isSvg(mime, info.url)) continue;
+
+                const width = Number(info.width || 0);
+                const height = Number(info.height || 0);
+                if (width && height && (width < CONFIG.minWidth || height < CONFIG.minHeight)) {
                     continue;
                 }
 
-                const mime =
-                    String(
-                        info.mime || ""
-                    ).toLowerCase();
+                const title = page.title || "Untitled";
+                if (titleLooksUnsuitable(title)) continue;
 
-                const width =
-                    Number(info.width || 0);
-
-                const height =
-                    Number(info.height || 0);
-
-                if (
-                    !mime.startsWith("image/")
-                ) {
-                    continue;
-                }
-
-                if (
-                    width < CONFIG.minWidth ||
-                    height < CONFIG.minHeight
-                ) {
-                    continue;
-                }
-
-                const metadata =
-                    info.extmetadata || {};
-
-                const text =
-                    compactText(
-                        page.title,
-                        metadata
-                            .ImageDescription?.value,
-                        metadata
-                            .ObjectName?.value,
-                        metadata
-                            .Categories?.value,
-                        metadata
-                            .Depicts?.value,
-                        metadata
-                            .Keywords?.value
-                    );
-
-                const match =
-                    calculateScore(
-                        text,
-                        spot
-                    );
-
-                const title =
-                    page.title ||
-                    "Untitled";
-
-                results.push({
-                    source:
-                        "Wikimedia Commons",
-
+                const meta = info.extmetadata || {};
+                const text = [
                     title,
+                    meta.ImageDescription?.value,
+                    meta.ObjectName?.value,
+                    meta.Categories?.value,
+                    meta.Depicts?.value,
+                    meta.Keywords?.value,
+                ]
+                    .filter(Boolean)
+                    .join(" ");
 
+                const match = calculateScore(text, spot);
+                if (match.score < CONFIG.locationFallbackScore) continue;
+
+                allCandidates.push({
+                    source: "Wikimedia Commons",
+                    title,
                     url: info.url,
-
-                    thumbnail:
-                        info.thumburl ||
-                        info.url,
-
+                    thumbnail: info.thumburl || info.url,
                     width,
                     height,
                     mime,
-
+                    sourcePage: `https://commons.wikimedia.org/wiki/${encodeURIComponent(
+                        String(title).replace(/ /g, "_")
+                    )}`,
+                    creator: stripHtml(meta.Artist?.value || meta.Credit?.value || ""),
+                    license: stripHtml(meta.LicenseShortName?.value || meta.License?.value || ""),
                     ...match,
-
-                    sourcePage:
-                        `https://commons.wikimedia.org/wiki/${encodeURIComponent(
-                            String(title).replace(
-                                / /g,
-                                "_"
-                            )
-                        )}`,
-
-                    creator:
-                        metadata.Artist?.value ||
-                        metadata.Credit?.value ||
-                        "",
-
-                    license:
-                        metadata
-                            .LicenseShortName
-                            ?.value || "",
-
-                    licenseUrl:
-                        metadata
-                            .LicenseUrl
-                            ?.value || "",
-
-                    licenseVersion:
-                        metadata
-                            .LicenseVersion
-                            ?.value || "",
-
-                    description:
-                        metadata
-                            .ImageDescription
-                            ?.value || "",
                 });
             }
-        } catch (error) {
-            console.log(
-                `      ⚠️ Wikimedia error: ${error.response?.status ||
-                error.message
-                }`
-            );
-        }
 
-        await sleep(
-            CONFIG.apiDelayMs
-        );
+            const hasStrong = allCandidates.some((c) => c.score >= CONFIG.strongMatchScore);
+            if (hasStrong) break;
+        } catch (err) {
+            // Handled
+        }
     }
 
-    return uniqueCandidates(results);
+    return allCandidates;
 }
 
-async function searchOpenverse(spot) {
-    const results = [];
-
-    console.log(
-        "\n🟢 OPENVERSE"
-    );
-
-    const queries =
-        buildQueries(spot);
-
-    for (const query of queries) {
-        console.log(
-            `   🔎 ${query}`
-        );
-
+// ============================================================
+// IMAGE DOWNLOAD & PROCESSING
+// ============================================================
+async function downloadImageBuffer(url, retries = 2) {
+    for (let attempt = 1; attempt <= retries + 1; attempt++) {
         try {
-            const response =
-                await axiosGet(
-                    "https://api.openverse.org/v1/images/",
-                    {
-                        params: {
-                            q: query.replace(
-                                /"/g,
-                                ""
-                            ),
-
-                            page_size:
-                                CONFIG.resultsPerQuery,
-
-                            mature: false,
-                        },
-                    }
-                );
-
-            const items =
-                response.data?.results ||
-                [];
-
-            console.log(
-                `      ✓ ${items.length} result(s)`
-            );
-
-            for (const item of items) {
-                if (!item.url) {
-                    continue;
-                }
-
-                if (
-                    !openverseLicenseAllowed(
-                        item.license
-                    )
-                ) {
-                    continue;
-                }
-
-                const width =
-                    Number(item.width || 0);
-
-                const height =
-                    Number(item.height || 0);
-
-                if (
-                    width &&
-                    height &&
-                    (
-                        width < CONFIG.minWidth ||
-                        height < CONFIG.minHeight
-                    )
-                ) {
-                    continue;
-                }
-
-                const text =
-                    compactText(
-                        item.title,
-                        item.creator,
-                        item.description,
-
-                        Array.isArray(
-                            item.tags
-                        )
-                            ? item.tags
-                                .map(
-                                    (tag) =>
-                                        tag?.name ||
-                                        tag ||
-                                        ""
-                                )
-                                .join(" ")
-                            : ""
-                    );
-
-                const match =
-                    calculateScore(
-                        text,
-                        spot
-                    );
-
-                results.push({
-                    source:
-                        "Openverse",
-
-                    title:
-                        item.title ||
-                        "Untitled",
-
-                    url:
-                        item.url,
-
-                    thumbnail:
-                        item.thumbnail ||
-                        item.url,
-
-                    width,
-                    height,
-
-                    mime:
-                        item.mimetype ||
-                        "image/*",
-
-                    ...match,
-
-                    sourcePage:
-                        item.foreign_landing_url ||
-                        item.detail_url ||
-                        "",
-
-                    creator:
-                        item.creator ||
-                        "",
-
-                    license:
-                        item.license ||
-                        "",
-
-                    licenseVersion:
-                        item.license_version ||
-                        "",
-
-                    licenseUrl:
-                        item.license_url ||
-                        "",
-
-                    description:
-                        item.description ||
-                        "",
-                });
-            }
-        } catch (error) {
-            console.log(
-                `      ⚠️ Openverse error: ${error.response?.status ||
-                error.message
-                }`
-            );
-        }
-
-        await sleep(
-            CONFIG.apiDelayMs
-        );
-    }
-
-    return uniqueCandidates(results);
-}
-
-function uniqueCandidates(
-    candidates
-) {
-    const map = new Map();
-
-    for (const candidate of candidates) {
-        const key =
-            String(
-                candidate.url || ""
-            )
-                .split("?")[0]
-                .toLowerCase();
-
-        if (!key) {
-            continue;
-        }
-
-        const existing =
-            map.get(key);
-
-        if (
-            !existing ||
-            candidate.score >
-            existing.score
-        ) {
-            map.set(
-                key,
-                candidate
-            );
-        }
-    }
-
-    return [
-        ...map.values(),
-    ].sort(
-        (a, b) => {
-            if (
-                b.score !== a.score
-            ) {
-                return (
-                    b.score -
-                    a.score
-                );
-            }
-
-            const areaA =
-                (a.width || 0) *
-                (a.height || 0);
-
-            const areaB =
-                (b.width || 0) *
-                (b.height || 0);
-
-            return (
-                areaB -
-                areaA
-            );
-        }
-    );
-}
-
-function isStrongCandidate(
-    candidate
-) {
-    if (
-        candidate.score <
-        CONFIG.strongMatchScore
-    ) {
-        return false;
-    }
-
-    if (
-        titleLooksUnsuitable(
-            candidate.title
-        )
-    ) {
-        return false;
-    }
-
-    if (
-        candidateIsSvg(candidate)
-    ) {
-        return false;
-    }
-
-    return (
-        candidate.exact ||
-        candidate.typeMatched ||
-        (
-            candidate
-                .matchedAttractionWords
-                ?.length > 0
-        )
-    );
-}
-
-function isRelatedCandidate(
-    candidate,
-    spot
-) {
-    if (
-        candidate.score <
-        CONFIG.relatedMatchScore
-    ) {
-        return false;
-    }
-
-    if (
-        titleLooksUnsuitable(
-            candidate.title
-        )
-    ) {
-        return false;
-    }
-
-    if (
-        candidateIsSvg(candidate)
-    ) {
-        return false;
-    }
-
-    const nameEvidence =
-        (
-            candidate
-                .matchedNameWords
-                ?.length || 0
-        ) > 0;
-
-    const attractionEvidence =
-        (
-            candidate
-                .matchedAttractionWords
-                ?.length || 0
-        ) > 0;
-
-    const typeEvidence =
-        candidate.typeMatched ||
-        (
-            candidate
-                .typeMatches
-                ?.length || 0
-        ) > 0;
-
-    const locationEvidence =
-        candidate.cityMatched ||
-        candidate.stateMatched;
-
-    if (
-        !nameEvidence &&
-        !attractionEvidence &&
-        !typeEvidence
-    ) {
-        return false;
-    }
-
-    const inferredTypes =
-        inferTypeWords(spot);
-
-    if (
-        inferredTypes.length &&
-        candidate.typeMatches?.length
-    ) {
-        const compatible =
-            inferredTypes.some(
-                (type) =>
-                    candidate
-                        .typeMatches
-                        .includes(type)
-            );
-
-        if (
-            !compatible &&
-            !attractionEvidence &&
-            !candidate.exact
-        ) {
-            return false;
-        }
-    }
-
-    return (
-        locationEvidence ||
-        attractionEvidence ||
-        typeEvidence ||
-        candidate.exact
-    );
-}
-
-function isLocationFallback(
-    candidate,
-    spot
-) {
-    if (
-        candidate.source !==
-        "Wikimedia Commons"
-    ) {
-        return false;
-    }
-
-    if (
-        candidate.score <
-        CONFIG.locationFallbackScore
-    ) {
-        return false;
-    }
-
-    if (
-        titleLooksUnsuitable(
-            candidate.title
-        )
-    ) {
-        return false;
-    }
-
-    if (
-        candidateIsSvg(candidate)
-    ) {
-        return false;
-    }
-
-    const city =
-        normalize(
-            spot.city || ""
-        );
-
-    const state =
-        normalize(
-            spot.state || ""
-        );
-
-    const title =
-        normalize(
-            candidate.title || ""
-        );
-
-    const cityMatched =
-        city.length > 2 &&
-        includesWord(
-            title,
-            city
-        );
-
-    const stateMatched =
-        state.length > 2 &&
-        includesWord(
-            title,
-            state
-        );
-
-    if (
-        !cityMatched &&
-        !stateMatched
-    ) {
-        return false;
-    }
-
-    const nameEvidence =
-        (
-            candidate
-                .matchedNameWords
-                ?.length || 0
-        ) > 0;
-
-    const visualEvidence =
-        candidate.locationVisualMatched;
-
-    const bothLocation =
-        cityMatched &&
-        stateMatched;
-
-    return (
-        nameEvidence ||
-        visualEvidence ||
-        bothLocation
-    );
-}
-
-function categorizeCandidates(
-    candidates,
-    spot
-) {
-    const strong =
-        candidates.filter(
-            (candidate) =>
-                isStrongCandidate(
-                    candidate
-                )
-        );
-
-    const strongUrls =
-        new Set(
-            strong.map(
-                (candidate) =>
-                    candidate.url
-            )
-        );
-
-    const related =
-        candidates.filter(
-            (candidate) =>
-                !strongUrls.has(
-                    candidate.url
-                ) &&
-                isRelatedCandidate(
-                    candidate,
-                    spot
-                )
-        );
-
-    const relatedUrls =
-        new Set(
-            related.map(
-                (candidate) =>
-                    candidate.url
-            )
-        );
-
-    const location =
-        candidates.filter(
-            (candidate) =>
-                !strongUrls.has(
-                    candidate.url
-                ) &&
-                !relatedUrls.has(
-                    candidate.url
-                ) &&
-                isLocationFallback(
-                    candidate,
-                    spot
-                )
-        );
-
-    return {
-        strong,
-        related,
-        location,
-
-        ordered: [
-            ...strong,
-            ...related,
-            ...location,
-        ],
-    };
-}
-
-function safeSlug(text) {
-    return normalize(text)
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "")
-        .substring(0, 120);
-}
-
-function buildPublicId(spot) {
-    const location =
-        safeSlug(
-            `${spot.city || ""}-${spot.state || ""}`
-        );
-
-    const name =
-        safeSlug(
-            spot.name || "spot"
-        );
-
-    return [
-        "explorely",
-        "spots",
-        location,
-        name,
-    ]
-        .filter(Boolean)
-        .join("/");
-}
-
-async function validateBufferAsImage(
-    buffer,
-    allowSmall = false
-) {
-    const metadata =
-        await sharp(buffer)
-            .metadata();
-
-    const width =
-        Number(
-            metadata.width || 0
-        );
-
-    const height =
-        Number(
-            metadata.height || 0
-        );
-
-    const format =
-        String(
-            metadata.format || ""
-        ).toLowerCase();
-
-    if (!width || !height) {
-        throw new Error(
-            "Image has no valid dimensions."
-        );
-    }
-
-    if (
-        !format ||
-        format === "svg" ||
-        format === "svg+xml"
-    ) {
-        throw new Error(
-            `Unsupported image format: ${format || "unknown"
-            }`
-        );
-    }
-
-    if (
-        !allowSmall &&
-        (
-            width < CONFIG.minWidth ||
-            height < CONFIG.minHeight
-        )
-    ) {
-        throw new Error(
-            `Image too small: ${width}x${height}`
-        );
-    }
-
-    return metadata;
-}
-
-async function downloadImage(
-    url,
-    attempt = 1
-) {
-    const cleanUrl =
-        String(url || "").trim();
-
-    if (!cleanUrl) {
-        throw new Error(
-            "Image URL is empty."
-        );
-    }
-
-    try {
-        const response =
-            await axios.get(
-                cleanUrl,
-                {
-                    responseType:
-                        "arraybuffer",
-
-                    timeout: 60000,
-
-                    headers: {
-                        "User-Agent":
-                            USER_AGENT,
-
-                        Accept:
-                            "image/avif,image/webp,image/apng,image/jpeg,image/png,image/gif,image/*,*/*;q=0.8",
-                    },
-
-                    maxContentLength:
-                        CONFIG.maxImageSizeMB *
-                        1024 *
-                        1024,
-
-                    maxBodyLength:
-                        CONFIG.maxImageSizeMB *
-                        1024 *
-                        1024,
-
-                    validateStatus:
-                        (status) =>
-                            status >= 200 &&
-                            status < 300,
-                }
-            );
-
-        const contentType =
-            String(
-                response.headers[
-                "content-type"
-                ] || ""
-            ).toLowerCase();
-
-        if (
-            contentType &&
-            !contentType.startsWith(
-                "image/"
-            )
-        ) {
-            throw new Error(
-                `Not an image response: ${contentType}`
-            );
-        }
-
-        const buffer =
-            Buffer.from(
-                response.data
-            );
-
-        if (
-            buffer.length < 1000
-        ) {
-            throw new Error(
-                "Downloaded payload is too small."
-            );
-        }
-
-        await validateBufferAsImage(
-            buffer
-        );
-
-        return buffer;
-    } catch (error) {
-        if (
-            attempt <
-            CONFIG.downloadRetries &&
-            isRetryable(error)
-        ) {
-            const wait =
-                3000 * attempt;
-
-            console.log(
-                `      ↻ Download retry ${attempt}/${CONFIG.downloadRetries - 1} in ${wait}ms...`
-            );
-
-            await sleep(wait);
-
-            return downloadImage(
-                cleanUrl,
-                attempt + 1
-            );
-        }
-
-        throw error;
-    }
-}
-
-async function getCandidateBuffer(
-    candidate
-) {
-    console.log(
-        `\n   ⬇️ Candidate: ${candidate.title}`
-    );
-
-    try {
-        console.log(
-            "   → Trying original URL"
-        );
-
-        const buffer =
-            await downloadImage(
-                candidate.url
-            );
-
-        console.log(
-            `   ✅ Original downloaded: ${(buffer.length / 1024 / 1024).toFixed(2)} MB`
-        );
-
-        return {
-            buffer,
-            method: "original",
-        };
-    } catch (error) {
-        console.log(
-            `   ⚠️ Original failed: ${error.response?.status ||
-            error.message
-            }`
-        );
-    }
-
-    if (
-        candidate.thumbnail &&
-        candidate.thumbnail !==
-        candidate.url
-    ) {
-        try {
-            console.log(
-                "   → Trying thumbnail URL"
-            );
-
-            const buffer =
-                await downloadImage(
-                    candidate.thumbnail
-                );
-
-            console.log(
-                `   ✅ Thumbnail downloaded: ${(buffer.length / 1024 / 1024).toFixed(2)} MB`
-            );
-
-            return {
-                buffer,
-                method: "thumbnail",
-            };
-        } catch (error) {
-            console.log(
-                `   ⚠️ Thumbnail failed: ${error.response?.status ||
-                error.message
-                }`
-            );
-        }
-    }
-
-    return null;
-}
-
-async function compressImage(
-    originalBuffer
-) {
-    console.log(
-        "   🗜️ Compressing with Sharp..."
-    );
-
-    const originalSize =
-        originalBuffer.length;
-
-    const compressedBuffer =
-        await sharp(
-            originalBuffer
-        )
-            .rotate()
-            .resize({
-                width:
-                    CONFIG.maxWidth,
-
-                height:
-                    CONFIG.maxHeight,
-
-                fit: "inside",
-
-                withoutEnlargement:
-                    true,
-            })
-            .webp({
-                quality:
-                    CONFIG.webpQuality,
-
-                effort:
-                    CONFIG.webpEffort,
-            })
-            .toBuffer();
-
-    await validateBufferAsImage(
-        compressedBuffer,
-        true
-    );
-
-    const reduced =
-        (
-            1 -
-            compressedBuffer.length /
-            originalSize
-        ) *
-        100;
-
-    console.log(
-        `   📦 Before: ${(originalSize / 1024 / 1024).toFixed(2)} MB`
-    );
-
-    console.log(
-        `   📦 After : ${(compressedBuffer.length / 1024).toFixed(0)} KB`
-    );
-
-    console.log(
-        `   📉 Reduced: ${reduced.toFixed(1)}%`
-    );
-
-    return compressedBuffer;
-}
-
-function isCloudinaryRetryable(
-    error
-) {
-    const status =
-        Number(
-            error?.http_code ||
-            error?.status ||
-            error?.response?.status ||
-            0
-        );
-
-    return (
-        !status ||
-        status === 408 ||
-        status === 425 ||
-        status === 429 ||
-        status >= 500
-    );
-}
-
-async function uploadBufferToCloudinary(
-    buffer,
-    candidate,
-    spot,
-    attempt = 1
-) {
-    const publicId =
-        buildPublicId(
-            spot
-        );
-
-    console.log(
-        `   ☁️ Uploading WebP → ${publicId}`
-    );
-
-    try {
-        return await new Promise(
-            (resolve, reject) => {
-                const uploadStream =
-                    cloudinary.uploader.upload_stream(
-                        {
-                            public_id:
-                                publicId,
-
-                            resource_type:
-                                "image",
-
-                            overwrite:
-                                CONFIG.overwrite,
-
-                            use_filename:
-                                false,
-
-                            unique_filename:
-                                false,
-
-                            format:
-                                "webp",
-
-                            context: {
-                                spot:
-                                    spot.name || "",
-
-                                city:
-                                    spot.city || "",
-
-                                state:
-                                    spot.state || "",
-
-                                source:
-                                    candidate.source ||
-                                    "",
-
-                                source_page:
-                                    candidate.sourcePage ||
-                                    "",
-
-                                creator:
-                                    candidate.creator ||
-                                    "",
-
-                                license:
-                                    candidate.license ||
-                                    "",
-
-                                license_url:
-                                    candidate.licenseUrl ||
-                                    "",
-                            },
-                        },
-
-                        (
-                            error,
-                            result
-                        ) => {
-                            if (error) {
-                                reject(error);
-                                return;
-                            }
-
-                            resolve(result);
-                        }
-                    );
-
-                uploadStream.end(
-                    buffer
-                );
-            }
-        );
-    } catch (error) {
-        if (
-            attempt <
-            CONFIG.uploadRetries &&
-            isCloudinaryRetryable(error)
-        ) {
-            const wait =
-                3000 * attempt;
-
-            console.log(
-                `      ↻ Upload retry ${attempt}/${CONFIG.uploadRetries - 1} in ${wait}ms...`
-            );
-
-            await sleep(wait);
-
-            return uploadBufferToCloudinary(
-                buffer,
-                candidate,
-                spot,
-                attempt + 1
-            );
-        }
-
-        throw error;
-    }
-}
-
-async function tryCandidate(
-    candidate,
-    spot
-) {
-    const downloaded =
-        await getCandidateBuffer(
-            candidate
-        );
-
-    if (!downloaded) {
-        return null;
-    }
-
-    let compressedBuffer;
-
-    try {
-        compressedBuffer =
-            await compressImage(
-                downloaded.buffer
-            );
-    } catch (error) {
-        console.log(
-            `   ❌ Compression failed: ${error.message}`
-        );
-
-        return null;
-    }
-
-    try {
-        const uploaded =
-            await uploadBufferToCloudinary(
-                compressedBuffer,
-                candidate,
-                spot
-            );
-
-        await sleep(
-            CONFIG.uploadDelayMs
-        );
-
-        return {
-            uploaded,
-
-            downloadMethod:
-                downloaded.method,
-
-            compressedBytes:
-                compressedBuffer.length,
-        };
-    } catch (error) {
-        console.log(
-            `   ❌ Cloudinary upload failed: ${error.message}`
-        );
-
-        return null;
-    }
-}
-
-function ensureDirectories() {
-    fs.mkdirSync(
-        backupDir,
-        {
-            recursive: true,
-        }
-    );
-
-    fs.mkdirSync(
-        reportDir,
-        {
-            recursive: true,
-        }
-    );
-}
-
-function createBackup() {
-    ensureDirectories();
-
-    const timestamp =
-        new Date()
-            .toISOString()
-            .replace(
-                /[:.]/g,
-                "-"
-            );
-
-    const backupPath =
-        path.join(
-            backupDir,
-            `spots-${timestamp}.json`
-        );
-
-    fs.copyFileSync(
-        spotsPath,
-        backupPath
-    );
-
-    return backupPath;
-}
-
-function saveSpots(data) {
-    const tempPath =
-        `${spotsPath}.tmp`;
-
-    fs.writeFileSync(
-        tempPath,
-        JSON.stringify(
-            data,
-            null,
-            2
-        ),
-        "utf8"
-    );
-
-    fs.renameSync(
-        tempPath,
-        spotsPath
-    );
-}
-
-function saveReport(
-    report
-) {
-    ensureDirectories();
-
-    const timestamp =
-        new Date()
-            .toISOString()
-            .replace(
-                /[:.]/g,
-                "-"
-            );
-
-    const reportPath =
-        path.join(
-            reportDir,
-            `image-import-${timestamp}.json`
-        );
-
-    fs.writeFileSync(
-        reportPath,
-        JSON.stringify(
-            report,
-            null,
-            2
-        ),
-        "utf8"
-    );
-
-    return reportPath;
-}
-
-// ============================================================
-// EXISTING IMAGE PROTECTION
-// ============================================================
-
-function isProtectedManualImage(
-    spot
-) {
-    const source =
-        normalize(
-            spot.imageSource || ""
-        );
-
-    return (
-        spot.imageProtected === true ||
-        source === "manual" ||
-        source.includes(
-            "manual selected"
-        ) ||
-        source.includes(
-            "manually selected"
-        )
-    );
-}
-
-function isCloudinaryImage(
-    spot
-) {
-    return (
-        !!spot.image &&
-        String(
-            spot.image
-        ).includes(
-            "res.cloudinary.com"
-        )
-    );
-}
-
-function isExplorelyImportedImage(
-    spot
-) {
-    const source =
-        normalize(
-            spot.imageSource || ""
-        );
-
-    return (
-        source ===
-        "explorely image importer" ||
-        source ===
-        "explorely image importer v7" ||
-        source ===
-        "explorely image importer v7 1"
-    );
-}
-
-function hasExistingImage(
-    spot
-) {
-    return (
-        !!spot.image &&
-        /^https?:\/\//i.test(
-            String(
-                spot.image
-            ).trim()
-        )
-    );
-}
-
-async function existingImageIsWorking(
-    spot
-) {
-    if (
-        !hasExistingImage(spot)
-    ) {
-        return false;
-    }
-
-    try {
-        console.log(
-            "   🔍 Checking existing image URL..."
-        );
-
-        const buffer =
-            await downloadImage(
-                spot.image
-            );
-
-        await validateBufferAsImage(
-            buffer
-        );
-
-        console.log(
-            "   ✅ Existing image URL works. Preserving it."
-        );
-
-        return true;
-    } catch (error) {
-        console.log(
-            `   ⚠️ Existing image is unavailable/invalid: ${error.response?.status ||
-            error.message
-            }`
-        );
-
-        return false;
-    }
-}
-
-async function shouldSkipSpot(
-    spot
-) {
-    // Explicit manual protection ALWAYS wins.
-    if (
-        isProtectedManualImage(
-            spot
-        )
-    ) {
-        return {
-            skip: true,
-            reason:
-                "manual_protected",
-        };
-    }
-
-    // No image → needs importing.
-    if (!spot.image) {
-        return {
-            skip: false,
-            reason:
-                "missing_image",
-        };
-    }
-
-    // Existing Cloudinary/imported image.
-    if (
-        !force &&
-        (
-            isCloudinaryImage(
-                spot
-            ) ||
-            isExplorelyImportedImage(
-                spot
-            )
-        )
-    ) {
-        return {
-            skip: true,
-            reason:
-                "already_imported",
-        };
-    }
-
-    // Any other existing URL:
-    // check if the URL actually contains a usable image.
-    //
-    // Working image → preserve.
-    // Broken image → replace.
-    if (
-        !force &&
-        hasExistingImage(spot)
-    ) {
-        const working =
-            await existingImageIsWorking(
-                spot
-            );
-
-        if (working) {
-            return {
-                skip: true,
-                reason:
-                    "existing_working_url",
-            };
-        }
-    }
-
-    return {
-        skip: false,
-        reason:
-            "needs_import",
-    };
-}
-
-// ============================================================
-// PROCESS ONE SPOT
-// ============================================================
-
-async function processSpot(
-    spot,
-    index
-) {
-    console.log(
-        `\n${"=".repeat(76)}`
-    );
-
-    console.log(
-        `📍 Spot ${index + 1}`
-    );
-
-    console.log(
-        `${"=".repeat(76)}`
-    );
-
-    console.log(
-        `Name : ${spot.name || "-"}`
-    );
-
-    console.log(
-        `City : ${spot.city || "-"}`
-    );
-
-    console.log(
-        `State: ${spot.state || "-"}`
-    );
-
-    console.log(
-        `Old  : ${spot.image || "-"}`
-    );
-
-    // ----------------------------------------------------------
-    // EXISTING IMAGE HANDLING
-    // ----------------------------------------------------------
-
-    const decision =
-        await shouldSkipSpot(
-            spot
-        );
-
-    if (decision.skip) {
-        let message =
-            "⏭️ Existing image preserved.";
-
-        if (
-            decision.reason ===
-            "manual_protected"
-        ) {
-            message =
-                "🔒 Manual image is protected. Skipping permanently.";
-        } else if (
-            decision.reason ===
-            "existing_working_url"
-        ) {
-            message =
-                "⏭️ Existing working image URL. Skipping.";
-        } else if (
-            decision.reason ===
-            "already_imported"
-        ) {
-            message =
-                "⏭️ Existing Cloudinary/imported image. Skipping.";
-        }
-
-        console.log(
-            `\n${message}`
-        );
-
-        return {
-            status:
-                "skipped_existing",
-
-            reason:
-                decision.reason,
-
-            index,
-
-            name:
-                spot.name,
-        };
-    }
-
-    // ----------------------------------------------------------
-    // WIKIMEDIA
-    // ----------------------------------------------------------
-
-    let wikimedia = [];
-
-    try {
-        wikimedia =
-            await searchWikimedia(
-                spot
-            );
-    } catch (error) {
-        console.log(
-            `⚠️ Wikimedia stage crashed: ${error.message}`
-        );
-    }
-
-    // ----------------------------------------------------------
-    // OPENVERSE
-    // ----------------------------------------------------------
-
-    let openverse = [];
-
-    try {
-        openverse =
-            await searchOpenverse(
-                spot
-            );
-    } catch (error) {
-        console.log(
-            `⚠️ Openverse stage crashed: ${error.message}`
-        );
-    }
-
-    // ----------------------------------------------------------
-    // MERGE RESULTS
-    // ----------------------------------------------------------
-
-    const candidates =
-        uniqueCandidates([
-            ...wikimedia,
-            ...openverse,
-        ]).slice(
-            0,
-            CONFIG.maxCandidatesPerSpot
-        );
-
-    if (
-        candidates.length === 0
-    ) {
-        console.log(
-            "\n❌ NO USABLE SEARCH CANDIDATES"
-        );
-
-        console.log(
-            "   Existing image will be kept."
-        );
-
-        return {
-            status:
-                "not_found",
-
-            index,
-
-            name:
-                spot.name,
-        };
-    }
-
-    // ----------------------------------------------------------
-    // CATEGORIZE
-    // ----------------------------------------------------------
-
-    const groups =
-        categorizeCandidates(
-            candidates,
-            spot
-        );
-
-    console.log(
-        "\n🖼️ CANDIDATE SUMMARY"
-    );
-
-    console.log(
-        `   Strong   : ${groups.strong.length}`
-    );
-
-    console.log(
-        `   Related  : ${groups.related.length}`
-    );
-
-    console.log(
-        `   Location : ${groups.location.length}`
-    );
-
-    // ----------------------------------------------------------
-    // PREVIEW
-    // ----------------------------------------------------------
-
-    groups.ordered
-        .slice(0, 12)
-        .forEach(
-            (
-                candidate,
-                i
-            ) => {
-                let tier =
-                    "LOCATION";
-
-                if (
-                    groups.strong.includes(
-                        candidate
-                    )
-                ) {
-                    tier =
-                        "STRONG";
-                } else if (
-                    groups.related.includes(
-                        candidate
-                    )
-                ) {
-                    tier =
-                        "RELATED";
-                }
-
-                console.log(
-                    `\n   ${i + 1}. [${tier}] score=${candidate.score}`
-                );
-
-                console.log(
-                    `      ${candidate.source} — ${candidate.title}`
-                );
-
-                console.log(
-                    `      city=${candidate.cityMatched
-                        ? "YES"
-                        : "NO"
-                    } state=${candidate.stateMatched
-                        ? "YES"
-                        : "NO"
-                    }`
-                );
-
-                console.log(
-                    `      matched=${candidate.matchedNameWords?.join(
-                        ", "
-                    ) || "none"
-                    }`
-                );
-
-                console.log(
-                    `      type=${candidate.typeMatches?.join(
-                        ", "
-                    ) || "none"
-                    }`
-                );
-            }
-        );
-
-    if (
-        groups.ordered.length === 0
-    ) {
-        console.log(
-            "\n⚠️ No candidate passed relevance filters."
-        );
-
-        console.log(
-            "   Existing image will be kept."
-        );
-
-        return {
-            status:
-                "no_relevant_candidate",
-
-            index,
-
-            name:
-                spot.name,
-        };
-    }
-
-    // ----------------------------------------------------------
-    // TRY ALL CANDIDATES
-    // ----------------------------------------------------------
-
-    for (
-        let i = 0;
-        i < groups.ordered.length;
-        i++
-    ) {
-        const candidate =
-            groups.ordered[i];
-
-        let tier =
-            "LOCATION FALLBACK";
-
-        if (
-            groups.strong.includes(
-                candidate
-            )
-        ) {
-            tier =
-                "STRONG";
-        } else if (
-            groups.related.includes(
-                candidate
-            )
-        ) {
-            tier =
-                "RELATED";
-        }
-
-        console.log(
-            `\n🚀 TRYING ${i + 1}/${groups.ordered.length} [${tier}]`
-        );
-
-        console.log(
-            `   ${candidate.source}: ${candidate.title}`
-        );
-
-        console.log(
-            `   Score: ${candidate.score}`
-        );
-
-        const result =
-            await tryCandidate(
-                candidate,
-                spot
-            );
-
-        if (!result) {
-            console.log(
-                "   ↪ Candidate failed. Moving to next candidate..."
-            );
-
-            continue;
-        }
-
-        // --------------------------------------------------------
-        // SUCCESS
-        // --------------------------------------------------------
-
-        const oldImage =
-            spot.image || "";
-
-        spot.image =
-            result.uploaded
-                .secure_url;
-
-        spot.imageSource =
-            "Explorely Image Importer v7.1";
-
-        spot.imageSourceUrl =
-            candidate.sourcePage ||
-            candidate.url ||
-            "";
-
-        spot.imageCreator =
-            candidate.creator ||
-            "";
-
-        spot.imageLicense =
-            candidate.license ||
-            "";
-
-        spot.imageLicenseUrl =
-            candidate.licenseUrl ||
-            "";
-
-        spot.imageImportedAt =
-            new Date().toISOString();
-
-        // Automatically mark imported images
-        // as not manually protected.
-        spot.imageProtected =
-            false;
-
-        // Save immediately.
-        saveSpots(
-            spots
-        );
-
-        console.log(
-            "\n✅ SUCCESS"
-        );
-
-        console.log(
-            `   Cloudinary: ${spot.image}`
-        );
-
-        console.log(
-            `   Source    : ${candidate.source}`
-        );
-
-        console.log(
-            `   Tier      : ${tier}`
-        );
-
-        console.log(
-            `   Download  : ${result.downloadMethod}`
-        );
-
-        console.log(
-            "   Saved     : spots.json"
-        );
-
-        return {
-            status:
-                "updated",
-
-            index,
-
-            name:
-                spot.name,
-
-            city:
-                spot.city,
-
-            state:
-                spot.state,
-
-            oldImage,
-
-            newImage:
-                spot.image,
-
-            source:
-                candidate.source,
-
-            title:
-                candidate.title,
-
-            tier,
-
-            score:
-                candidate.score,
-
-            downloadMethod:
-                result.downloadMethod,
-
-            creator:
-                candidate.creator,
-
-            license:
-                candidate.license,
-
-            licenseUrl:
-                candidate.licenseUrl,
-        };
-    }
-
-    // ----------------------------------------------------------
-    // EVERYTHING FAILED
-    // ----------------------------------------------------------
-
-    console.log(
-        "\n❌ ALL RELEVANT CANDIDATES FAILED"
-    );
-
-    console.log(
-        "   Existing image will be kept."
-    );
-
-    return {
-        status:
-            "all_candidates_failed",
-
-        index,
-
-        name:
-            spot.name,
-
-        tried:
-            groups.ordered.length,
-    };
-}
-
-// ============================================================
-// MAIN
-// ============================================================
-
-async function main() {
-    if (help) {
-        printHelp();
-        return;
-    }
-
-    // ----------------------------------------------------------
-    // ENV CHECK
-    // ----------------------------------------------------------
-
-    if (
-        !process.env.CLOUDINARY_CLOUD_NAME ||
-        !process.env.CLOUDINARY_API_KEY ||
-        !process.env.CLOUDINARY_API_SECRET
-    ) {
-        throw new Error(
-            "Cloudinary environment variables are missing. Check your .env file."
-        );
-    }
-
-    // ----------------------------------------------------------
-    // FILE CHECK
-    // ----------------------------------------------------------
-
-    if (
-        !fs.existsSync(
-            spotsPath
-        )
-    ) {
-        throw new Error(
-            `spots.json not found at:\n${spotsPath}`
-        );
-    }
-
-    // ----------------------------------------------------------
-    // READ DATA
-    // ----------------------------------------------------------
-
-    spots =
-        JSON.parse(
-            fs.readFileSync(
-                spotsPath,
-                "utf8"
-            )
-        );
-
-    if (
-        !Array.isArray(spots)
-    ) {
-        throw new Error(
-            "spots.json must contain a JSON array."
-        );
-    }
-
-    ensureDirectories();
-
-    // ----------------------------------------------------------
-    // BACKUP
-    // ----------------------------------------------------------
-
-    const backupPath =
-        createBackup();
-
-    // ----------------------------------------------------------
-    // BUILD INDICES
-    // ----------------------------------------------------------
-
-    let indices = [];
-
-    // ----------------------------------------------------------
-    // --index
-    // ----------------------------------------------------------
-
-    if (
-        indexArg !== null
-    ) {
-        if (
-            !Number.isInteger(
-                indexArg
-            ) ||
-            indexArg < 0 ||
-            indexArg >=
-            spots.length
-        ) {
-            throw new Error(
-                `--index must be an integer from 0 to ${spots.length - 1
-                }.`
-            );
-        }
-
-        indices = [
-            indexArg,
-        ];
-    }
-
-    // ----------------------------------------------------------
-    // --start / --limit
-    // ----------------------------------------------------------
-
-    else if (
-        limitArg !== null ||
-        args.includes(
-            "--start"
-        )
-    ) {
-        if (
-            !Number.isInteger(
-                startArg
-            ) ||
-            startArg < 0 ||
-            startArg >=
-            spots.length
-        ) {
-            throw new Error(
-                `--start must be an integer from 0 to ${spots.length - 1
-                }.`
-            );
-        }
-
-        if (
-            limitArg === null
-        ) {
-            indices =
-                Array.from(
-                    {
-                        length:
-                            spots.length -
-                            startArg,
-                    },
-                    (
-                        _,
-                        i
-                    ) =>
-                        startArg + i
-                );
-        } else {
-            if (
-                !Number.isInteger(
-                    limitArg
-                ) ||
-                limitArg <= 0
-            ) {
-                throw new Error(
-                    "--limit must be a positive integer."
-                );
-            }
-
-            const count =
-                Math.min(
-                    limitArg,
-                    spots.length -
-                    startArg
-                );
-
-            indices =
-                Array.from(
-                    {
-                        length:
-                            count,
-                    },
-                    (
-                        _,
-                        i
-                    ) =>
-                        startArg + i
-                );
-        }
-    }
-
-    // ----------------------------------------------------------
-    // --all
-    // ----------------------------------------------------------
-
-    else if (all) {
-        indices =
-            Array.from(
-                {
-                    length:
-                        spots.length,
+            const resp = await axios.get(url, {
+                responseType: "arraybuffer",
+                timeout: 25000,
+                headers: {
+                    "User-Agent": USER_AGENT,
+                    Accept: "image/avif,image/webp,image/apng,image/jpeg,image/png,image/*,*/*;q=0.8",
                 },
-                (
-                    _,
-                    i
-                ) => i
-            );
-    }
-
-    // ----------------------------------------------------------
-    // NOTHING
-    // ----------------------------------------------------------
-
-    else {
-        printHelp();
-        return;
-    }
-
-    // ----------------------------------------------------------
-    // RUN INFO
-    // ----------------------------------------------------------
-
-    console.log(
-        `\n🚀 Explorely Image Importer v7.1`
-    );
-
-    console.log(
-        `   Total spots : ${spots.length}`
-    );
-
-    console.log(
-        "   Sources    : Wikimedia Commons + Openverse"
-    );
-
-    console.log(
-        "   Pipeline   : download → validate → Sharp → WebP → Cloudinary → JSON"
-    );
-
-    console.log(
-        "   Fallback   : strong → related → Wikimedia location"
-    );
-
-    console.log(
-        "   Protection : manual + existing working URLs"
-    );
-
-    console.log(
-        `   Backup     : ${backupPath}`
-    );
-
-    console.log(
-        `\n🎯 This run will process ${indices.length} spot(s).`
-    );
-
-    console.log(
-        force
-            ? "⚠️ FORCE mode: non-protected existing images may be replaced."
-            : "✅ Normal mode: working existing URLs and imported images are preserved."
-    );
-
-    // ----------------------------------------------------------
-    // REPORT
-    // ----------------------------------------------------------
-
-    const report = {
-        version: "7.1",
-
-        startedAt:
-            new Date().toISOString(),
-
-        totalDataset:
-            spots.length,
-
-        requested:
-            indices.length,
-
-        backupPath,
-
-        results: [],
-    };
-
-    let updated = 0;
-    let skipped = 0;
-    let failed = 0;
-
-    // ----------------------------------------------------------
-    // SEQUENTIAL PROCESSING
-    // ----------------------------------------------------------
-
-    for (
-        let runIndex = 0;
-        runIndex <
-        indices.length;
-        runIndex++
-    ) {
-        const index =
-            indices[runIndex];
-
-        console.log(
-            `\n📊 PROGRESS ${runIndex + 1}/${indices.length}`
-        );
-
-        try {
-            const result =
-                await processSpot(
-                    spots[index],
-                    index
-                );
-
-            report.results.push(
-                result
-            );
-
-            if (
-                result.status ===
-                "updated"
-            ) {
-                updated++;
-            } else if (
-                result.status ===
-                "skipped_existing"
-            ) {
-                skipped++;
-            } else {
-                failed++;
-            }
-        } catch (error) {
-            console.log(
-                "\n💥 Spot crashed safely:"
-            );
-
-            console.log(
-                error.stack ||
-                error.message
-            );
-
-            report.results.push({
-                status:
-                    "spot_exception",
-
-                index,
-
-                name:
-                    spots[index]?.name,
-
-                error:
-                    error.message,
+                maxContentLength: CONFIG.maxImageSizeMB * 1024 * 1024,
             });
 
-            failed++;
+            const buf = Buffer.from(resp.data);
+            if (buf.length < 1000) {
+                throw new Error("Downloaded payload too small");
+            }
+
+            const meta = await sharp(buf).metadata();
+            if (!meta.width || !meta.height || meta.format === "svg") {
+                throw new Error(`Invalid format or dimensions: ${meta.format}`);
+            }
+
+            return buf;
+        } catch (err) {
+            if (attempt <= retries && (!err.response || err.response.status >= 500 || err.response.status === 429)) {
+                await sleep(1500 * attempt);
+                continue;
+            }
+            throw err;
+        }
+    }
+}
+
+async function processWithSharp(buf) {
+    return sharp(buf)
+        .rotate()
+        .resize({
+            width: CONFIG.maxWidth,
+            height: CONFIG.maxHeight,
+            fit: "inside",
+            withoutEnlargement: true,
+        })
+        .webp({ quality: CONFIG.webpQuality })
+        .toBuffer();
+}
+
+async function uploadToCloudinary(buffer, spot, candidate, retries = 2) {
+    if (cloudinaryCreditLimitReached) {
+        throw new Error("Cloudinary credit/resource limit reached");
+    }
+
+    const publicId = buildPublicId(spot);
+
+    for (let attempt = 1; attempt <= retries + 1; attempt++) {
+        try {
+            return await new Promise((resolve, reject) => {
+                const stream = cloudinary.uploader.upload_stream(
+                    {
+                        public_id: publicId,
+                        resource_type: "image",
+                        overwrite: true,
+                        use_filename: false,
+                        unique_filename: false,
+                        format: "webp",
+                        context: {
+                            spot: spot.name || "",
+                            city: spot.city || "",
+                            state: spot.state || "",
+                            source: candidate.source || "",
+                            source_url: candidate.sourcePage || candidate.url || "",
+                            license: candidate.license || "",
+                            author: candidate.creator || "",
+                        },
+                    },
+                    (err, res) => {
+                        if (err) reject(err);
+                        else resolve(res);
+                    }
+                );
+                stream.end(buffer);
+            });
+        } catch (err) {
+            const msg = String(err.message || "");
+            if (msg.includes("credit limit") || msg.includes("Resource limit exceeded") || err.http_code === 420) {
+                cloudinaryCreditLimitReached = true;
+                throw new Error("Cloudinary credit limit exceeded");
+            }
+            if (attempt <= retries) {
+                await sleep(2000 * attempt);
+                continue;
+            }
+            throw err;
+        }
+    }
+}
+
+// ============================================================
+// ATOMIC & SAFE DATA PERSISTENCE
+// ============================================================
+function saveSpotsToFile(force = false) {
+    if (!isDirty && !force) return;
+
+    try {
+        const tempPath = `${spotsPath}.tmp`;
+        fs.writeFileSync(tempPath, JSON.stringify(spots, null, 2), "utf8");
+        try {
+            fs.renameSync(tempPath, spotsPath);
+        } catch (renameErr) {
+            fs.copyFileSync(tempPath, spotsPath);
+            try { fs.unlinkSync(tempPath); } catch (_) {}
+        }
+        isDirty = false;
+        lastSaveTime = Date.now();
+        updatesSinceLastSave = 0;
+    } catch (err) {
+        console.error(`\n❌ Error saving spots.json: ${err.message}`);
+    }
+}
+
+function saveReportToFile() {
+    try {
+        const report = {
+            version: "8.1",
+            generatedAt: new Date().toISOString(),
+            ...reportData,
+        };
+        fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8");
+    } catch (err) {
+        console.error(`\n❌ Error saving report: ${err.message}`);
+    }
+}
+
+// Periodic auto-saver
+setInterval(() => {
+    if (isDirty && (Date.now() - lastSaveTime > CONFIG.saveIntervalMs || updatesSinceLastSave >= CONFIG.saveBatchCount)) {
+        saveSpotsToFile();
+        saveReportToFile();
+    }
+}, 2000).unref();
+
+// ============================================================
+// PROCESS A SINGLE SPOT
+// ============================================================
+async function processSingleSpot(spot, index) {
+    reportData.totalSpotsProcessed++;
+
+    const status = getSpotStatus(spot);
+
+    if (status.action === "skip") {
+        reportData.skippedValidOrProtected++;
+        return { status: "skipped", reason: status.reason };
+    }
+
+    reportData.unsplashUrlsFound++;
+
+    // 1. Search Wikipedia first (Authoritative lead images for real monuments/places)
+    let candidates = await searchWikipedia(spot);
+
+    // 2. Search Openverse if no strong Wikipedia candidate
+    if (!candidates.some((c) => c.score >= CONFIG.strongMatchScore)) {
+        const ovCandidates = await searchOpenverse(spot);
+        candidates = [...candidates, ...ovCandidates];
+    }
+
+    // 3. Search Wikimedia Commons if no related candidate yet
+    if (!candidates.some((c) => c.score >= CONFIG.relatedMatchScore)) {
+        const wikiCandidates = await searchWikimedia(spot);
+        candidates = [...candidates, ...wikiCandidates];
+    }
+
+    // 4. Authentic City / Area Fallback for synthetic spots that have no specific photo
+    if (candidates.length === 0 && spot.city) {
+        const citySpot = { name: spot.city, city: spot.city, state: spot.state || "", category: "City" };
+        const cityCandidates = await searchWikipedia(citySpot);
+        if (cityCandidates.length > 0) {
+            cityCandidates[0].score = 60;
+            candidates.push(cityCandidates[0]);
         }
     }
 
-    // ----------------------------------------------------------
-    // FINISH REPORT
-    // ----------------------------------------------------------
+    // Sort by score descending
+    candidates.sort((a, b) => b.score - a.score);
 
-    report.finishedAt =
-        new Date().toISOString();
+    if (candidates.length === 0 || candidates[0].score < CONFIG.locationFallbackScore) {
+        reportData.failed++;
+        reportData.failedSpots.push({
+            name: spot.name,
+            city: spot.city,
+            state: spot.state,
+            reason: "no_suitable_image_found",
+        });
+        return { status: "failed", reason: "no_suitable_image_found" };
+    }
 
-    report.summary = {
-        updated,
-        skipped,
-        failed,
-    };
+    // Try candidates until one downloads, processes, and uploads successfully
+    for (const candidate of candidates.slice(0, 3)) {
+        try {
+            // Download original or thumbnail
+            let rawBuffer = null;
+            try {
+                rawBuffer = await downloadImageBuffer(candidate.url);
+            } catch (dErr) {
+                if (candidate.thumbnail && candidate.thumbnail !== candidate.url) {
+                    rawBuffer = await downloadImageBuffer(candidate.thumbnail);
+                } else {
+                    throw dErr;
+                }
+            }
 
-    const reportPath =
-        saveReport(
-            report
-        );
+            // Sharp resize to 1600px inside, webp quality 82, strip metadata
+            const processedBuffer = await processWithSharp(rawBuffer);
 
-    console.log(
-        `\n${"=".repeat(76)}`
-    );
+            // Cloudinary upload
+            const uploadRes = await uploadToCloudinary(processedBuffer, spot, candidate);
 
-    console.log(
-        "🏁 RUN FINISHED"
-    );
+            // Update spot in memory
+            const oldUrl = spot.image;
+            spot.image = uploadRes.secure_url;
 
-    console.log(
-        `${"=".repeat(76)}`
-    );
+            if (!spot.imageSource) spot.imageSource = candidate.source;
+            if (!spot.imageSourceUrl) spot.imageSourceUrl = candidate.sourcePage || candidate.url;
+            if (!spot.imageLicense && candidate.license) spot.imageLicense = candidate.license;
+            if (!spot.imageAuthor && candidate.creator) spot.imageAuthor = candidate.creator;
 
-    console.log(
-        `✅ Updated : ${updated}`
-    );
+            isDirty = true;
+            updatesSinceLastSave++;
 
-    console.log(
-        `⏭️ Skipped : ${skipped}`
-    );
+            reportData.successfullyReplaced++;
+            if (candidate.source === "Wikipedia") reportData.wikipediaUsed++;
+            else if (candidate.source === "Openverse") reportData.openverseUsed++;
+            else reportData.wikimediaCommonsUsed++;
 
-    console.log(
-        `⚠️ Failed  : ${failed}`
-    );
+            reportData.replacedSpots.push({
+                name: spot.name,
+                originalUrl: oldUrl,
+                cloudinaryUrl: spot.image,
+                imageSource: candidate.source,
+                license: candidate.license || "N/A",
+                author: candidate.creator || "N/A",
+            });
 
-    console.log(
-        `💾 Backup  : ${backupPath}`
-    );
+            if (updatesSinceLastSave >= CONFIG.saveBatchCount) {
+                saveSpotsToFile();
+                saveReportToFile();
+            }
 
-    console.log(
-        `📄 Report  : ${reportPath}`
-    );
+            return {
+                status: "success",
+                source: candidate.source,
+                score: candidate.score,
+                url: spot.image,
+            };
+        } catch (uploadErr) {
+            if (cloudinaryCreditLimitReached) {
+                reportData.failed++;
+                reportData.failedSpots.push({
+                    name: spot.name,
+                    city: spot.city,
+                    state: spot.state,
+                    reason: "cloudinary_limit_exceeded",
+                });
+                return { status: "failed", reason: "cloudinary_limit_exceeded" };
+            }
+            // Otherwise try next candidate
+        }
+    }
+
+    reportData.failed++;
+    reportData.failedSpots.push({
+        name: spot.name,
+        city: spot.city,
+        state: spot.state,
+        reason: "all_candidates_failed_download_or_upload",
+    });
+    return { status: "failed", reason: "download_or_upload_failed" };
 }
 
-process.on(
-    "unhandledRejection",
-    (error) => {
-        console.error(
-            "\n❌ Unhandled rejection:"
-        );
+// ============================================================
+// MAIN EXECUTION
+// ============================================================
+async function main() {
+    console.log("\n============================================================");
+    console.log(" Explorely Ultra-Fast Image Importer v8.0");
+    console.log("============================================================");
 
-        console.error(
-            error
-        );
+    if (!fs.existsSync(spotsPath)) {
+        console.error(`spots.json not found at ${spotsPath}`);
+        process.exit(1);
     }
-);
 
-main().catch(
-    (error) => {
-        console.error(
-            "\n❌ FATAL ERROR:"
-        );
-
-        console.error(
-            error.stack ||
-            error.message
-        );
-
-        process.exitCode = 1;
+    // Create backup if not already present
+    if (!fs.existsSync(backupPath)) {
+        console.log("Creating backup at public/data/spots.backup.json...");
+        fs.copyFileSync(spotsPath, backupPath);
+        console.log("Backup created.");
     }
-);
+
+    spots = JSON.parse(fs.readFileSync(spotsPath, "utf8"));
+    if (!Array.isArray(spots)) {
+        console.error("spots.json must contain an array.");
+        process.exit(1);
+    }
+
+    const args = process.argv.slice(2);
+    const isTest = args.includes("--test");
+    const limitArg = args.find((a, i) => args[i - 1] === "--limit");
+    const startArg = args.find((a, i) => args[i - 1] === "--start");
+
+    let startIndex = startArg ? parseInt(startArg, 10) : 0;
+    let limit = limitArg ? parseInt(limitArg, 10) : (isTest ? 5 : spots.length);
+
+    console.log(`Loaded ${spots.length} spots.`);
+    console.log(`Run Configuration: start=${startIndex}, limit=${limit}, concurrency=${CONFIG.concurrency}`);
+
+    const targetIndices = [];
+    for (let i = startIndex; i < spots.length && targetIndices.length < limit; i++) {
+        targetIndices.push(i);
+    }
+
+    console.log(`Processing ${targetIndices.length} spots...\n`);
+
+    let activeWorkers = 0;
+    let currentIndex = 0;
+    let completedCount = 0;
+    const startTime = Date.now();
+
+    await new Promise((resolve) => {
+        function launchWorker() {
+            while (activeWorkers < CONFIG.concurrency && currentIndex < targetIndices.length) {
+                const spotIndex = targetIndices[currentIndex++];
+                const spot = spots[spotIndex];
+                activeWorkers++;
+
+                processSingleSpot(spot, spotIndex)
+                    .then((result) => {
+                        completedCount++;
+                        if (result.status === "success") {
+                            console.log(`[${completedCount}/${targetIndices.length}] ✅ #${spotIndex} "${spot.name}" -> ${result.source} (score: ${result.score})`);
+                        } else if (result.status === "skipped") {
+                            // Print periodically
+                            if (completedCount % 500 === 0 || isTest) {
+                                console.log(`[${completedCount}/${targetIndices.length}] ⏭️ #${spotIndex} Skipped (${result.reason})`);
+                            }
+                        } else {
+                            if (isTest || completedCount % 100 === 0) {
+                                console.log(`[${completedCount}/${targetIndices.length}] ⚠️ #${spotIndex} "${spot.name}" -> ${result.reason}`);
+                            }
+                        }
+                    })
+                    .catch((err) => {
+                        completedCount++;
+                        console.error(`[${completedCount}/${targetIndices.length}] ❌ Error on #${spotIndex}: ${err.message}`);
+                    })
+                    .finally(() => {
+                        activeWorkers--;
+                        if (cloudinaryCreditLimitReached) {
+                            console.log("\n⚠️ Halting further uploads due to Cloudinary credit limit.");
+                            resolve();
+                            return;
+                        }
+                        if (currentIndex < targetIndices.length) {
+                            launchWorker();
+                        } else if (activeWorkers === 0) {
+                            resolve();
+                        }
+                    });
+            }
+
+            if (targetIndices.length === 0 || (currentIndex >= targetIndices.length && activeWorkers === 0)) {
+                resolve();
+            }
+        }
+
+        launchWorker();
+    });
+
+    // Final save
+    saveSpotsToFile(true);
+    saveReportToFile();
+
+    const elapsedSec = ((Date.now() - startTime) / 1000).toFixed(1);
+    console.log("\n============================================================");
+    console.log(`🏁 FINISHED IN ${elapsedSec}s`);
+    console.log("============================================================");
+    console.log(`Total processed: ${reportData.totalSpotsProcessed}`);
+    console.log(`Unsplash found : ${reportData.unsplashUrlsFound}`);
+    console.log(`Replaced       : ${reportData.successfullyReplaced} (Wikipedia: ${reportData.wikipediaUsed}, Openverse: ${reportData.openverseUsed}, Wikimedia: ${reportData.wikimediaCommonsUsed})`);
+    console.log(`Skipped        : ${reportData.skippedValidOrProtected}`);
+    console.log(`Failed         : ${reportData.failed}`);
+    console.log(`Saved JSON     : ${spotsPath}`);
+    console.log(`Report JSON    : ${reportPath}`);
+}
+
+process.on("SIGINT", () => {
+    console.log("\nReceived SIGINT. Saving and shutting down cleanly...");
+    saveSpotsToFile(true);
+    saveReportToFile();
+    process.exit(0);
+});
+
+process.on("SIGTERM", () => {
+    console.log("\nReceived SIGTERM. Saving and shutting down cleanly...");
+    saveSpotsToFile(true);
+    saveReportToFile();
+    process.exit(0);
+});
+
+main().catch((err) => {
+    console.error("\n❌ Fatal error in main:", err.stack || err.message);
+    saveSpotsToFile(true);
+    saveReportToFile();
+    process.exit(1);
+});

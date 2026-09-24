@@ -76,6 +76,8 @@ export default function Header() {
         { path: '/categories', label: 'Categories', iconName: 'folder-open' },
         { path: '/hotels', label: 'Hotels', iconName: 'hotel' },
         { path: '/near-me', label: 'Near Me', iconName: 'map-pin' },
+        { path: '/spin-go', label: 'Spin & Go', iconName: 'refresh-cw' },
+        { path: '/split', label: 'Split', iconName: 'split' },
     ];
 
     return (
@@ -90,7 +92,7 @@ export default function Header() {
             <nav className={`header-nav ${mobileNav ? 'open' : ''}`}>
                 {navLinks.map(l => (
                     <Link key={l.path} to={l.path}
-                        className={`nav-link ${location.pathname === l.path ? 'active' : ''}`}
+                        className={`nav-link ${l.path === '/spin-go' ? 'nav-link-spin' : ''} ${location.pathname === l.path ? 'active' : ''}`}
                         onClick={() => setMobileNav(false)}>
                         <span className="nav-icon"><Icon name={l.iconName} size={16} /></span>
                         <span className="nav-label">{l.label}</span>
