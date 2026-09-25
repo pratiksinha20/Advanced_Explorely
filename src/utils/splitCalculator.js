@@ -203,9 +203,10 @@ export function calculateSettlements(balances = []) {
  */
 export const DEFAULT_PEOPLE = [
     { id: 'p-1', name: 'Pratik', isYou: true },
-    { id: 'p-2', name: 'manish', isYou: false },
-    { id: 'p-3', name: 'shruti', isYou: false },
-    { id: 'p-4', name: 'sakshi', isYou: false },
+    { id: 'p-2', name: 'Shrish', isYou: false },
+    { id: 'p-3', name: 'Ravi', isYou: false },
+    { id: 'p-4', name: 'Samrat', isYou: false },
+    { id: 'p-5', name: 'XYZ', isYou: false },
 ];
 
 export const DEFAULT_EXPENSES = [
@@ -214,7 +215,7 @@ export const DEFAULT_EXPENSES = [
         description: 'rent',
         amount: 1500,
         paidBy: 'Pratik',
-        splitAmong: ['Pratik', 'manish', 'shruti', 'sakshi'],
+        splitAmong: ['Pratik', 'Shrish', 'Ravi', 'Samrat', 'XYZ'],
         iconType: 'stay',
         date: new Date(Date.now() - 3600000 * 2).toISOString(),
     },
@@ -222,8 +223,8 @@ export const DEFAULT_EXPENSES = [
         id: 'exp-2',
         description: 'food',
         amount: 1000,
-        paidBy: 'manish',
-        splitAmong: ['Pratik', 'manish', 'shruti', 'sakshi'],
+        paidBy: 'Shrish',
+        splitAmong: ['Pratik', 'Shrish', 'Ravi', 'Samrat', 'XYZ'],
         iconType: 'food',
         date: new Date(Date.now() - 3600000 * 1).toISOString(),
     },

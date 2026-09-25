@@ -13,6 +13,7 @@ import NearMe from './pages/NearMe';
 import SpinAndGo from './pages/SpinAndGo';
 import SplitExpenses from './pages/SplitExpenses';
 import SearchResults from './pages/SearchResults';
+import ExplorelyLoader from './components/ExplorelyLoader';
 import './App.css';
 
 function AppShell() {
@@ -20,6 +21,7 @@ function AppShell() {
 
   return (
     <div className={`app ${darkMode ? 'dark' : 'light'}`}>
+      <ExplorelyLoader />
       <Header />
       <WishlistPanel />
       <main className="main-content">

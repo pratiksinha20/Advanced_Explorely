@@ -1,0 +1,235 @@
+/* =======================================================
+   EXPLORELY CINEMATIC 3D LOGO STARTUP ANIMATION
+   60-120FPS GPU HARDWARE ACCELERATED • ZERO LAG • FULL HD
+   ======================================================= */
+
+.explorely-loader-stage {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: all;
+  user-select: none;
+  -webkit-user-select: none;
+  background: radial-gradient(circle at 50% 50%, #fffdfa 0%, #faf8f5 65%, #f3eee6 100%);
+  transition: opacity 0.36s cubic-bezier(0.16, 1, 0.3, 1), transform 0.36s ease-out;
+  will-change: opacity, transform;
+}
+
+.explorely-loader-stage.dark {
+  background: radial-gradient(circle at 50% 50%, #152336 0%, #0c1524 70%, #070d18 100%);
+}
+
+.explorely-loader-stage.stage-exiting {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(1.02);
+}
+
+/* =======================================================
+   3D PERSPECTIVE VIEWPORT (CAMERA STAGE)
+   ======================================================= */
+.loader-3d-viewport {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.loader-medallion-wrapper {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+/* =======================================================
+   3D EXPLORELY LOGO MEDALLION
+   Pure GPU Transform Matrix Blitting — ZERO CPU filter blur!
+   ======================================================= */
+.explorely-loader-logo {
+  width: 480px;
+  height: 480px;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  pointer-events: none;
+  will-change: transform;
+  contain: layout paint;
+}
+
+/* Dedicated soft ambient shadow under the logo */
+.loader-logo-shadow-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 128, 87, 0.40) 0%, rgba(254, 180, 123, 0.15) 50%, transparent 70%);
+  transform: translateZ(-20px);
+  will-change: transform;
+}
+
+/* =======================================================
+   WARM AMBIENT AURA (BACKLIGHT)
+   ======================================================= */
+.loader-ambient-aura {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 128, 87, 0.38) 0%, rgba(254, 180, 123, 0.18) 45%, transparent 72%);
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.explorely-loader-stage.dark .loader-ambient-aura {
+  background: radial-gradient(circle, rgba(255, 128, 87, 0.48) 0%, rgba(254, 180, 123, 0.22) 50%, transparent 75%);
+}
+
+/* =======================================================
+   ATMOSPHERIC 3D LIGHT PARTICLES
+   ======================================================= */
+.loader-particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.loader-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #ff8057;
+  pointer-events: none;
+  opacity: 0;
+  animation: particleFloat 2.2s ease-out forwards;
+}
+
+.loader-particle.p1 { width: 5px; height: 5px; top: 38%; left: 42%; animation-delay: 0.05s; }
+.loader-particle.p2 { width: 7px; height: 7px; top: 62%; left: 58%; animation-delay: 0.10s; }
+.loader-particle.p3 { width: 4px; height: 4px; top: 44%; left: 60%; animation-delay: 0.15s; }
+.loader-particle.p4 { width: 6px; height: 6px; top: 56%; left: 38%; animation-delay: 0.20s; }
+.loader-particle.p5 { width: 4px; height: 4px; top: 30%; left: 52%; animation-delay: 0.25s; }
+.loader-particle.p6 { width: 8px; height: 8px; top: 68%; left: 46%; animation-delay: 0.08s; }
+
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate(0, 0);
+  }
+  20% {
+    opacity: 0.60;
+  }
+  75% {
+    opacity: 0.70;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5) translate(var(--dx, 20px), var(--dy, -20px));
+  }
+}
+
+/* =======================================================
+   MINIMAL MOTTO BADGE
+   ======================================================= */
+.loader-motto-wrapper {
+  position: absolute;
+  bottom: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: mottoFade 2.2s ease-in-out forwards;
+}
+
+.loader-motto {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 4.5px;
+  color: #172638;
+  text-transform: uppercase;
+}
+
+.explorely-loader-stage.dark .loader-motto {
+  color: #ffffff;
+}
+
+@keyframes mottoFade {
+  0% { opacity: 0; transform: translateY(6px); }
+  15% { opacity: 0.75; transform: translateY(0); }
+  35% { opacity: 0.75; transform: translateY(0); }
+  50% { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+
+/* =======================================================
+   PORTAL FLASH TRANSITION
+   ======================================================= */
+.loader-portal-flash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 245, 235, 0.95) 0%, rgba(255, 128, 87, 0.40) 50%, transparent 80%);
+  opacity: 0;
+  will-change: opacity;
+}
+
+.explorely-loader-stage.dark .loader-portal-flash {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 235, 220, 0.85) 0%, rgba(255, 128, 87, 0.50) 55%, transparent 85%);
+}
+
+/* =======================================================
+   ACCESSIBILITY: PREFERS REDUCED MOTION
+   ======================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .explorely-loader-logo {
+    animation: loaderReducedMotion 1.2s ease-in-out forwards !important;
+  }
+  .loader-ambient-aura,
+  .loader-particles-container,
+  .loader-portal-flash,
+  .loader-logo-shadow-glow {
+    display: none !important;
+  }
+}
+
+@keyframes loaderReducedMotion {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  30%, 75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}

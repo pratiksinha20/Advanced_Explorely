@@ -1,0 +1,136 @@
+/* =======================================================
+   3D INDIA MAP BACKGROUND LAYER — EXPLORELY
+   Non-blocking visual atmosphere behind Home page content
+   ======================================================= */
+
+.india-3d-bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none !important;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.india-3d-bg-wrapper.loaded {
+  opacity: 1;
+}
+
+.india-3d-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  pointer-events: none !important;
+}
+
+/* 
+   Subtle ambient vignette:
+   Soft edge fade to let India's vibrant colors shine through clearly
+   without whitewashing the 3D relief
+*/
+.india-3d-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 55%,
+    var(--bg-primary, #faf8f5) 95%
+  );
+  opacity: 0.25;
+  mix-blend-mode: normal;
+  transition: opacity 0.5s ease;
+}
+
+.app.dark .india-3d-vignette {
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 50%,
+    var(--bg-primary, #0c1524) 95%
+  );
+  opacity: 0.35;
+}
+
+/* Ensure home page sections sit comfortably in front of background */
+.home-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.home-page > section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure hero text has pristine legibility against the 3D map */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section {
+  padding-top: 96px !important;
+}
+
+.hero-title {
+  text-shadow: 0 2px 20px rgba(250, 248, 245, 0.95), 0 0 36px rgba(250, 248, 245, 0.85);
+}
+
+.app.dark .hero-title {
+  text-shadow: 0 2px 20px rgba(12, 21, 36, 0.95), 0 0 36px rgba(12, 21, 36, 0.85);
+}
+
+/* Original, rich, unmistakable brand orange for "India's" */
+.hero-india-word,
+.hero-title .hero-india-word,
+.hero-title .gradient-text {
+  display: inline-block;
+  color: #ff5722 !important;
+  background: linear-gradient(135deg, #ff5722 0%, #ff7e5f 70%, #ff8c69 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 10px rgba(255, 87, 34, 0.35));
+  font-weight: 900;
+  padding: 0 2px;
+}
+
+.app.dark .hero-india-word,
+.app.dark .hero-title .hero-india-word,
+.app.dark .hero-title .gradient-text {
+  color: #ff6b4a !important;
+  background: linear-gradient(135deg, #ff6b4a 0%, #ff8566 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 2px 14px rgba(255, 107, 74, 0.6));
+}
+
+.hero-subtitle {
+  text-shadow: 0 1px 12px rgba(250, 248, 245, 0.95);
+}
+
+.app.dark .hero-subtitle {
+  text-shadow: 0 1px 12px rgba(12, 21, 36, 0.95);
+}
+
+/* Mobile & tablet adjustments */
+@media (max-width: 768px) {
+  .india-3d-bg-wrapper {
+    opacity: 0;
+  }
+  .india-3d-bg-wrapper.loaded {
+    opacity: 0.65;
+  }
+  .india-3d-vignette {
+    opacity: 0.4;
+  }
+}

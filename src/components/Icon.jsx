@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     Home, Compass, FolderOpen, Hotel, MapPin, Search, Heart, Sun, Moon,
-    Menu, X, Map, Building2, Star, ExternalLink, Link2,
+    Menu, X, Map, Building2, Star, ExternalLink, Link2, ChevronRight,
     Landmark, Mountain, Umbrella, TreePine, PawPrint, Droplets, Waves,
     Castle, Crown, Columns3, TreeDeciduous, ShoppingBag, Backpack, Flame,
     ArrowUpDown, Tag, DollarSign, Ban, Filter,
@@ -23,6 +23,7 @@ const iconMap = {
     'moon': Moon,
     'menu': Menu,
     'x': X,
+    'chevron-right': ChevronRight,
     'map': Map,
     'building': Building2,
     'star': Star,

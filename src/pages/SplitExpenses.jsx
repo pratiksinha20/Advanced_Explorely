@@ -12,17 +12,33 @@ import {
     DEFAULT_EXPENSES,
 } from '../utils/splitCalculator';
 
-const STORAGE_KEY_PEOPLE = 'explorely_split_people';
-const STORAGE_KEY_EXPENSES = 'explorely_split_expenses';
+const STORAGE_KEY_PEOPLE = 'explorely_split_people_v2';
+const STORAGE_KEY_EXPENSES = 'explorely_split_expenses_v2';
+const OLD_DEFAULT_NAMES = ['manish', 'shruti', 'sakshi'];
+
+const hasLegacyDefaults = (list) => {
+    return Array.isArray(list) && list.some((p) => p && OLD_DEFAULT_NAMES.includes(String(p.name).toLowerCase()));
+};
 
 export default function SplitExpenses() {
     // 1. People state with LocalStorage
     const [people, setPeople] = useState(() => {
         try {
+            // Check v2 storage first
             const saved = localStorage.getItem(STORAGE_KEY_PEOPLE);
             if (saved) {
                 const parsed = JSON.parse(saved);
-                if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+                if (Array.isArray(parsed) && parsed.length > 0 && !hasLegacyDefaults(parsed)) {
+                    return parsed;
+                }
+            }
+            // Check legacy v1 storage
+            const legacySaved = localStorage.getItem('explorely_split_people');
+            if (legacySaved) {
+                const parsedLegacy = JSON.parse(legacySaved);
+                if (Array.isArray(parsedLegacy) && parsedLegacy.length > 0 && !hasLegacyDefaults(parsedLegacy)) {
+                    return parsedLegacy;
+                }
             }
         } catch (e) {
             console.error('Error loading split people:', e);
@@ -33,10 +49,33 @@ export default function SplitExpenses() {
     // 2. Expenses state with LocalStorage
     const [expenses, setExpenses] = useState(() => {
         try {
+            // Check v2 storage first
             const saved = localStorage.getItem(STORAGE_KEY_EXPENSES);
             if (saved) {
                 const parsed = JSON.parse(saved);
-                if (Array.isArray(parsed)) return parsed;
+                if (Array.isArray(parsed)) {
+                    const hasOld = parsed.some(
+                        (e) =>
+                            OLD_DEFAULT_NAMES.includes(String(e.paidBy).toLowerCase()) ||
+                            (Array.isArray(e.splitAmong) &&
+                                e.splitAmong.some((n) => OLD_DEFAULT_NAMES.includes(String(n).toLowerCase())))
+                    );
+                    if (!hasOld) return parsed;
+                }
+            }
+            // Check legacy v1 storage
+            const legacyExpenses = localStorage.getItem('explorely_split_expenses');
+            if (legacyExpenses) {
+                const parsedLegacyExp = JSON.parse(legacyExpenses);
+                if (Array.isArray(parsedLegacyExp)) {
+                    const hasOld = parsedLegacyExp.some(
+                        (e) =>
+                            OLD_DEFAULT_NAMES.includes(String(e.paidBy).toLowerCase()) ||
+                            (Array.isArray(e.splitAmong) &&
+                                e.splitAmong.some((n) => OLD_DEFAULT_NAMES.includes(String(n).toLowerCase())))
+                    );
+                    if (!hasOld && parsedLegacyExp.length > 0) return parsedLegacyExp;
+                }
             }
         } catch (e) {
             console.error('Error loading split expenses:', e);
@@ -51,6 +90,7 @@ export default function SplitExpenses() {
     useEffect(() => {
         try {
             localStorage.setItem(STORAGE_KEY_PEOPLE, JSON.stringify(people));
+            localStorage.removeItem('explorely_split_people');
         } catch (e) {
             console.error('Error saving split people:', e);
         }
@@ -59,6 +99,7 @@ export default function SplitExpenses() {
     useEffect(() => {
         try {
             localStorage.setItem(STORAGE_KEY_EXPENSES, JSON.stringify(expenses));
+            localStorage.removeItem('explorely_split_expenses');
         } catch (e) {
             console.error('Error saving split expenses:', e);
         }
