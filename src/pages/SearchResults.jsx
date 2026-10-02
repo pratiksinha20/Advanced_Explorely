@@ -5,9 +5,10 @@ import SpotCard from '../components/SpotCard';
 import HotelCard from '../components/HotelCard';
 import FoodCard from '../components/FoodCard';
 import Icon from '../components/Icon';
+import { MapPin } from 'lucide-react';
 
 export default function SearchResults() {
-    const { allSpots, allHotels, allFoods, states, cities, dataLoaded } = useApp();
+    const { allSpots, allHotels, allFoods, states, cities, dataLoaded, openFeedbackModal } = useApp();
     const [searchParams] = useSearchParams();
     const query = searchParams.get('q') || '';
 
@@ -96,9 +97,23 @@ export default function SearchResults() {
             </div>
 
             {total === 0 ? (
-                <div className="empty-state">
-                    <span className="empty-icon"><Icon name="search" size={40} /></span>
-                    <p>No results found for "{query}". Try a different search term.</p>
+                <div className="empty-state explore-empty-card">
+                    <div className="empty-state-glow-icon">
+                        <Icon name="search" size={32} />
+                    </div>
+                    <h3 className="empty-state-heading">No results found for "{query}"</h3>
+                    <p className="empty-state-subtext">
+                        Looking for a destination, hotel, or spot that isn't on Explorely yet? 
+                        Submit the place details and picture, and our team will add it!
+                    </p>
+                    <button
+                        type="button"
+                        className="empty-state-submit-btn"
+                        onClick={() => openFeedbackModal({ type: 'spot', spotName: query })}
+                    >
+                        <MapPin size={16} />
+                        <span>+ Submit & Add "{query}" to Explorely</span>
+                    </button>
                 </div>
             ) : (
                 <div className="search-results-content">

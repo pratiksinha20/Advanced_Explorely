@@ -4,7 +4,12 @@ const AppContext = createContext();
 
 export function AppProvider({ children }) {
     const [darkMode, setDarkMode] = useState(() => {
-        try { return JSON.parse(localStorage.getItem('explorely-dark')) ?? true; } catch { return true; }
+        try {
+            const saved = localStorage.getItem('explorely-dark');
+            return saved !== null ? JSON.parse(saved) : false;
+        } catch {
+            return false;
+        }
     });
     const [wishlist, setWishlist] = useState(() => {
         try { const s = localStorage.getItem('explorely-wishlist'); return s ? JSON.parse(s) : []; } catch { return []; }
@@ -20,7 +25,13 @@ export function AppProvider({ children }) {
 
     // Persist
     useEffect(() => { localStorage.setItem('explorely-wishlist', JSON.stringify(wishlist)); }, [wishlist]);
-    useEffect(() => { localStorage.setItem('explorely-dark', JSON.stringify(darkMode)); }, [darkMode]);
+    useEffect(() => {
+        localStorage.setItem('explorely-dark', JSON.stringify(darkMode));
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', darkMode ? '#0a0a1a' : '#ffffff');
+        }
+    }, [darkMode]);
 
     // Load all data once
     useEffect(() => {
@@ -75,13 +86,28 @@ export function AppProvider({ children }) {
         { name: 'Spiritual Sites', icon: 'flame' },
     ], []);
 
+    const [feedbackModalOpen, setFeedbackModalOpen] = useState(false);
+    const [feedbackModalData, setFeedbackModalData] = useState({});
+
+    const openFeedbackModal = useCallback((initialData = {}) => {
+        setFeedbackModalData(initialData);
+        setFeedbackModalOpen(true);
+    }, []);
+
+    const closeFeedbackModal = useCallback(() => {
+        setFeedbackModalOpen(false);
+        setFeedbackModalData({});
+    }, []);
+
     const value = useMemo(() => ({
         darkMode, toggleDarkMode,
         wishlist, showWishlist, setShowWishlist,
         isInWishlist, toggleWishlist, removeFromWishlist,
         allSpots, allHotels, allFoods, states, cities, categories, dataLoaded,
+        feedbackModalOpen, feedbackModalData, openFeedbackModal, closeFeedbackModal,
     }), [darkMode, toggleDarkMode, wishlist, showWishlist, isInWishlist, toggleWishlist,
-        removeFromWishlist, allSpots, allHotels, allFoods, states, cities, categories, dataLoaded]);
+        removeFromWishlist, allSpots, allHotels, allFoods, states, cities, categories, dataLoaded,
+        feedbackModalOpen, feedbackModalData, openFeedbackModal, closeFeedbackModal]);
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

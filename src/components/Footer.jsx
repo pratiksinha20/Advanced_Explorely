@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useApp } from '../context/AppContext';
+import siteConfig from '../config/siteConfig';
 import { 
-    Heart, Sparkles, Mail, Send, ArrowUp, Compass, Globe, MapPin, Hotel 
+    Heart, ArrowUp, Compass, MapPin, MessageSquare
 } from 'lucide-react';
 
-const InstagramIcon = ({ size = 17 }) => (
+const InstagramIcon = ({ size = 15 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
@@ -12,33 +14,22 @@ const InstagramIcon = ({ size = 17 }) => (
     </svg>
 );
 
-const TwitterIcon = ({ size = 17 }) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+const XIcon = ({ size = 14 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
     </svg>
 );
 
-const YoutubeIcon = ({ size = 17 }) => (
+const LinkedinIcon = ({ size = 15 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
-        <path d="m10 15 5-3-5-3z"/>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect width="4" height="12" x="2" y="9"/>
+        <circle cx="4" cy="4" r="2"/>
     </svg>
 );
 
 export default function Footer() {
-    const [email, setEmail] = useState('');
-    const [subscribed, setSubscribed] = useState(false);
-
-    const handleSubscribe = (e) => {
-        e.preventDefault();
-        if (email.trim()) {
-            setSubscribed(true);
-            setTimeout(() => {
-                setEmail('');
-                setSubscribed(false);
-            }, 4000);
-        }
-    };
+    const { openFeedbackModal } = useApp();
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -47,43 +38,10 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                {/* Top Newsletter / CTA Banner */}
-                <div className="footer-newsletter-wrap">
-                    <div className="footer-newsletter-card">
-                        <div className="footer-newsletter-info">
-                            <span className="footer-newsletter-badge">
-                                <Sparkles size={14} className="sparkle-icon" />
-                                <span>INCREDIBLE INDIA AWAITS</span>
-                            </span>
-                            <h3 className="footer-newsletter-title">Plan Your Dream Journey Across India</h3>
-                            <p className="footer-newsletter-desc">
-                                Get hand-picked heritage destinations, hidden scenic gems, and seasonal travel inspiration delivered straight to your inbox.
-                            </p>
-                        </div>
-                        <form className="footer-newsletter-form" onSubmit={handleSubscribe}>
-                            <div className="footer-input-box">
-                                <Mail size={18} className="footer-input-icon" />
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email address..."
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    className="footer-email-input"
-                                />
-                            </div>
-                            <button type="submit" className="footer-subscribe-btn">
-                                <span>{subscribed ? 'Subscribed! 🎉' : 'Subscribe'}</span>
-                                {!subscribed && <Send size={15} />}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                {/* Main Footer Content */}
-                <div className="footer-main-content">
-                    {/* Brand Column */}
-                    <div className="footer-brand-col">
+                {/* 4-Column Professional Travel Platform Grid */}
+                <div className="footer-simple-grid">
+                    {/* Brand & Connect Column */}
+                    <div className="footer-brand-section">
                         <Link to="/" className="footer-brand-header">
                             <img src="/explorely-logo.png" alt="Explorely Logo" className="footer-logo-img" />
                             <div className="footer-brand-titles">
@@ -92,92 +50,124 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className="footer-brand-text">
-                            Discover the magic, culture, and untold wonders of India. One destination, one story, one unforgettable journey at a time.
+                            Curating India's timeless heritage, scenic retreats, and hidden wonders — helping travelers explore deeper with every journey.
                         </p>
                         
-                        <div className="footer-pill-badges">
-                            <span className="footer-pill"><Compass size={13} className="pill-icon" /> 28+ States</span>
-                            <span className="footer-pill"><MapPin size={13} className="pill-icon" /> 21,500+ Places</span>
-                            <span className="footer-pill"><Hotel size={13} className="pill-icon" /> 19,000+ Stays</span>
-                        </div>
-
-                        <div className="footer-social-links">
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="footer-social-icon" aria-label="Instagram">
-                                <InstagramIcon size={17} />
+                        <div className="footer-social-links" aria-label="Social Profiles">
+                            <a 
+                                href={siteConfig.social.x} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="footer-social-icon" 
+                                aria-label="X (Twitter)"
+                                title={`Pratik Sinha on X (${siteConfig.social.xHandle})`}
+                            >
+                                <XIcon size={14} />
                             </a>
-                            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="footer-social-icon" aria-label="Twitter">
-                                <TwitterIcon size={17} />
+                            <a 
+                                href={siteConfig.social.instagram} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="footer-social-icon" 
+                                aria-label="Instagram"
+                                title={`Pratik Sinha on Instagram (${siteConfig.social.instagramHandle})`}
+                            >
+                                <InstagramIcon size={15} />
                             </a>
-                            <a href="https://youtube.com" target="_blank" rel="noreferrer" className="footer-social-icon" aria-label="YouTube">
-                                <YoutubeIcon size={17} />
-                            </a>
-                            <a href="https://explorely.com" target="_blank" rel="noreferrer" className="footer-social-icon" aria-label="Website">
-                                <Globe size={17} />
+                            <a 
+                                href={siteConfig.social.linkedin} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="footer-social-icon" 
+                                aria-label="LinkedIn"
+                                title="Pratik Sinha on LinkedIn"
+                            >
+                                <LinkedinIcon size={15} />
                             </a>
                         </div>
                     </div>
 
-                    {/* Navigation Columns */}
-                    <div className="footer-nav-grid">
-                        <div className="footer-links-group">
-                            <h4 className="footer-group-title">Explore</h4>
-                            <ul className="footer-links-list">
-                                <li><Link to="/explore">States & Cities</Link></li>
-                                <li><Link to="/categories">Browse Categories</Link></li>
-                                <li><Link to="/hotels">Hotels & Resorts</Link></li>
-                                <li><Link to="/explore?category=Heritage">Heritage & Palaces</Link></li>
-                                <li><Link to="/explore?category=Nature">Hill Stations & Treks</Link></li>
-                            </ul>
-                        </div>
+                    {/* Explore Navigation Column */}
+                    <div className="footer-column">
+                        <h4 className="footer-section-heading">Explore</h4>
+                        <ul className="footer-links-list">
+                            <li><Link to="/explore">Explore Places</Link></li>
+                            <li><Link to="/categories">Categories</Link></li>
+                            <li><Link to="/hotels">Hotels & Stays</Link></li>
+                            <li><Link to="/near-me">Places Near Me</Link></li>
+                            <li><Link to="/spin-go">Spin & Go Lucky Trip</Link></li>
+                            <li><Link to="/split">Split Travel Expenses</Link></li>
+                        </ul>
+                    </div>
 
-                        <div className="footer-links-group">
-                            <h4 className="footer-group-title">Discover</h4>
-                            <ul className="footer-links-list">
-                                <li><Link to="/near-me">Places Near Me</Link></li>
-                                <li><Link to="/spin-go">Spin & Go Lucky Trip</Link></li>
-                                <li><Link to="/split">Split Travel Expenses</Link></li>
-                                <li><Link to="/explore?category=Spiritual">Sacred Temples & Ghats</Link></li>
-                                <li><Link to="/explore?category=Beach">Beaches & Coastal</Link></li>
-                            </ul>
-                        </div>
+                    {/* Company Column */}
+                    <div className="footer-column">
+                        <h4 className="footer-section-heading">Company</h4>
+                        <ul className="footer-links-list">
+                            <li><Link to="/contact#about">About Explorely</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
+                        </ul>
 
-                        <div className="footer-links-group top-destinations-group">
-                            <h4 className="footer-group-title">Top Destinations</h4>
-                            <ul className="footer-links-list top-dest-list">
-                                <li><Link to="/explore?state=Uttar%20Pradesh&city=Agra">Taj Mahal, Agra</Link></li>
-                                <li><Link to="/explore?state=Himachal%20Pradesh&city=Manali">Manali & Solang</Link></li>
-                                <li><Link to="/explore?state=Goa">Goa Sunsets & Palms</Link></li>
-                                <li><Link to="/explore?state=Rajasthan&city=Jaipur">Jaipur Amer Fort</Link></li>
-                                <li><Link to="/explore?state=Uttar%20Pradesh&city=Varanasi">Varanasi Ghats</Link></li>
-                                <li><Link to="/explore?state=Karnataka&city=Hampi">Hampi Ruins</Link></li>
-                            </ul>
+                        {/* Highlighted Interactive Actions */}
+                        <div className="footer-highlight-group">
+                            <button 
+                                type="button" 
+                                className="footer-highlight-card-btn spot-highlight"
+                                onClick={() => openFeedbackModal({ type: 'spot' })}
+                                title="Suggest a missing spot or attraction to add to Explorely"
+                            >
+                                <span className="footer-highlight-icon-wrap">
+                                    <MapPin size={14} />
+                                </span>
+                                <div className="footer-highlight-text-wrap">
+                                    <span className="footer-highlight-label">Suggest a Place</span>
+                                    <span className="footer-highlight-sub">Add Missing Spot</span>
+                                </div>
+                                <span className="footer-highlight-badge">+ Add</span>
+                            </button>
+
+                            <button 
+                                type="button" 
+                                className="footer-highlight-card-btn feedback-highlight"
+                                onClick={() => openFeedbackModal({ type: 'feedback' })}
+                                title="Send ideas, corrections, or general feedback"
+                            >
+                                <span className="footer-highlight-icon-wrap">
+                                    <MessageSquare size={13} />
+                                </span>
+                                <div className="footer-highlight-text-wrap">
+                                    <span className="footer-highlight-label">Feedback</span>
+                                    <span className="footer-highlight-sub">Share Thoughts</span>
+                                </div>
+                            </button>
                         </div>
                     </div>
-                </div>
 
-                {/* Back to top row */}
-                <div className="footer-top-btn-wrap">
-                    <button onClick={scrollToTop} className="footer-back-to-top-btn" aria-label="Back to top">
-                        <Compass size={16} className="compass-icon" />
-                        <span>Back to top</span>
-                        <ArrowUp size={15} />
-                    </button>
+                    {/* Legal Column */}
+                    <div className="footer-column">
+                        <h4 className="footer-section-heading">Legal</h4>
+                        <ul className="footer-links-list">
+                            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                            <li><Link to="/terms">Terms & Conditions</Link></li>
+                            <li><Link to="/disclaimer">Disclaimer</Link></li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Footer Bottom Bar */}
                 <div className="footer-bottom-bar">
                     <div className="footer-bottom-flex">
                         <p className="footer-copyright-text">
-                            © 2026 Explorely · Crafted with <Heart size={14} fill="#e74c3c" color="#e74c3c" className="footer-inline-heart" /> in India for passionate travelers worldwide
+                            © 2026 Explorely · Crafted with <Heart size={13} fill="#e74c3c" color="#e74c3c" className="footer-inline-heart" /> in India
                         </p>
-                        <div className="footer-bottom-meta">
-                            <Link to="/explore">Explore India</Link>
-                            <span className="footer-meta-sep">•</span>
-                            <Link to="/hotels">Hotels</Link>
-                            <span className="footer-meta-sep">•</span>
-                            <Link to="/split">Expense Splitter</Link>
-                            <span className="footer-meta-sep">•</span>
-                            <span className="footer-meta-flag">🇮🇳 INR (₹)</span>
+
+                        <div className="footer-bottom-right">
+                            <span className="footer-meta-currency">🇮🇳 INR (₹)</span>
+                            <button onClick={scrollToTop} className="footer-simple-top-btn" aria-label="Back to top">
+                                <Compass size={14} />
+                                <span>Top</span>
+                                <ArrowUp size={13} />
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -1,1056 +1,5 @@
 [
   {
-    "name": "Taj Mahal",
-    "city": "Agra",
-    "description": "An ivory-white marble mausoleum on the south bank of the Yamuna river. Commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal. One of the Seven Wonders of the World and a UNESCO World Heritage Site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783664494/images_uvizft.jpg",
-    "mapLink": "https://www.google.com/maps?q=27.1751,78.0421",
-    "state": "Uttar Pradesh",
-    "category": "Historic Monuments",
-    "rating": 5,
-    "tags": [
-      "UNESCO",
-      "Must Visit",
-      "Iconic",
-      "Trending"
-    ],
-    "lat": 27.1751,
-    "lng": 78.0421,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Red Fort",
-    "city": "Old Delhi",
-    "description": "The colossal 17th-century Mughal fortress palace constructed in red sandstone, a UNESCO site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449305/explorely/spots/old-delhi-delhi/red-fort.webp",
-    "mapLink": "https://www.google.com/maps?q=28.6562,77.241",
-    "state": "Delhi",
-    "category": "Historic Monuments",
-    "rating": 5,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Top Attraction",
-      "Delhi Tourism"
-    ],
-    "lat": 28.6562,
-    "lng": 77.241,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ARed_Fort%2C_Old_Delhi%2C_India.jpg",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageAuthor": "Mr. Debapriya Hore",
-    "imageProtected": false
-  },
-  {
-    "name": "Akshardham Temple (Swaminarayan Akshardham)",
-    "city": "New Delhi",
-    "state": "Delhi",
-    "category": "Spiritual & Temples",
-    "description": "A monumental Hindu temple and cultural campus showcasing ten millennia of traditional Indian and Hindu culture, spirituality, and ornate hand-carved sandstone architecture.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433726/explorely/spots/new-delhi-delhi/akshardham-temple-swaminarayan-akshardham.webp",
-    "mapLink": "https://www.google.com/maps?q=28.6127,77.2773",
-    "rating": 5,
-    "tags": [
-      "Spiritual & Temples",
-      "Architecture",
-      "Musical Fountain",
-      "Must Visit",
-      "Delhi Tourism"
-    ],
-    "lat": 28.6127,
-    "lng": 77.2773,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AAkshardham_Delhi.jpg",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Swaminarayan Sanstha",
-    "imageProtected": false
-  },
-  {
-    "name": "Golden Temple (Harmandir Sahib)",
-    "city": "Amritsar",
-    "description": "The holiest Sikh shrine known for its golden structure and sacred Amrit Sarovar.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790234491/1280px-The_Golden_Temple_of_Amrithsar_7.jpg_m5pv76.jpg",
-    "mapLink": "https://www.google.com/maps?q=Golden+Temple+Amritsar",
-    "state": "Punjab",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Historic",
-      "Pilgrimage"
-    ],
-    "lat": 31.63826390991755,
-    "lng": 74.8724073870951,
-    "tier": "most famous"
-  },
-  {
-    "name": "Gateway of India",
-    "city": "Mumbai",
-    "description": "Iconic arch monument overlooking the Arabian Sea built during British rule.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449337/explorely/spots/mumbai-maharashtra/gateway-of-india.webp",
-    "mapLink": "https://www.google.com/maps?q=Gateway+of+India+Mumbai",
-    "state": "Maharashtra",
-    "category": "Beaches",
-    "rating": 5,
-    "tags": [
-      "Popular"
-    ],
-    "lat": 18.91907971607298,
-    "lng": 72.8255240576375,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=494788",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Varanasi Ghats (Dashashwamedh Ghat)",
-    "city": "Varanasi",
-    "description": "The main and most spectacular ghat in Varanasi, situated close to Vishwanath Temple. Famous for the Ganga Aarti, a daily spiritual ritual of fire and hymns conducted by young priests, creating a deeply spiritual ambiance.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783621763/1721718932207_31713114937_810651363b_b_ladimt.webp",
-    "mapLink": "https://www.google.com/maps?q=25.3042,83.0107",
-    "state": "Uttar Pradesh",
-    "category": "Spiritual Sites",
-    "rating": 5,
-    "tags": [
-      "Iconic",
-      "Must Visit",
-      "Scenic"
-    ],
-    "lat": 25.3042,
-    "lng": 83.0107,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Hawa Mahal",
-    "city": "Jaipur",
-    "description": "Iconic palace with 953 small windows built for royal women to observe street festivals.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449358/explorely/spots/jaipur-rajasthan/hawa-mahal.webp",
-    "mapLink": "https://www.google.com/maps?q=Hawa+Mahal+Jaipur",
-    "state": "Rajasthan",
-    "category": "Palaces",
-    "rating": 5,
-    "tags": [
-      "Popular"
-    ],
-    "lat": 26.91174532367054,
-    "lng": 75.78115898628532,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=2072735",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Meenakshi Amman Temple",
-    "city": "Madurai",
-    "description": "A colossal temple complex famous for its towering gopurams and thousand-pillared hall.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789628893/explorely/spots/madurai-tamil-nadu/meenakshi-amman-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=9.919,78.119",
-    "state": "Tamil Nadu",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Top Attraction",
-      "Tamil Nadu Tourism"
-    ],
-    "lat": 9.919,
-    "lng": 78.119,
-    "tier": "most famous",
-    "imageSource": "Explorely Image Importer v7.1",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AMeenakshi_Amman_Temple%2C_Madurai.jpg",
-    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:DCSJ&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:DCSJ (page does not exist)\">DCSJ</a>",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "imageImportedAt": "2026-09-17T07:08:15.191Z",
-    "imageProtected": false
-  },
-  {
-    "name": "Jal Mahal",
-    "city": "Jaipur",
-    "description": "Beautiful palace located in the middle of Man Sagar Lake.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789617021/explorely/spots/jaipur-rajasthan/jal-mahal.webp",
-    "mapLink": "https://www.google.com/maps?q=Jal+Mahal+Jaipur",
-    "state": "Rajasthan",
-    "category": "Lakes",
-    "rating": 5,
-    "tags": [
-      "Scenic"
-    ],
-    "lat": 26.910727728884808,
-    "lng": 75.78766748596745,
-    "tier": "most famous",
-    "imageSource": "Explorely Image Importer v7.1",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AJal_Mahal_in_Jaipur_in_Rajasthan.jpg",
-    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Abhilaw82&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Abhilaw82 (page does not exist)\">Abhilaw82</a>",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "imageImportedAt": "2026-09-17T03:50:22.711Z",
-    "imageProtected": false
-  },
-  {
-    "name": "Prem Mandir",
-    "city": "Vrindavan",
-    "description": "A magnificent spiritual temple complex dedicated to divine love. Built entirely of pure white Italian Carrara marble, the temple features intricate carvings depicting the pastimes of Radha-Krishna and Ram-Sita. Illuminates beautifully at night.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790404790/explorely/spots/vrindavan-uttar-pradesh/prem-mandir.webp",
-    "mapLink": "https://www.google.com/maps?q=27.5624,77.6864",
-    "state": "Uttar Pradesh",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Must Visit",
-      "Scenic",
-      "Popular"
-    ],
-    "lat": 27.5624,
-    "lng": 77.6864,
-    "featured": true,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3APrem_mandir_Vrindavan_Main_gate.JPG",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "आशीष भटनागर",
-    "imageProtected": false
-  },
-  {
-    "name": "Itkhori Bhadrakali Temple",
-    "city": "Chatra",
-    "description": "A globally unique religious center sacred to Hindus, Buddhists, and Jains, housing a black stone Bhadrakali idol.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789900744/explorely/spots/chatra-jharkhand/itkhori-bhadrakali-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=24.282,85.158",
-    "state": "Jharkhand",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Jharkhand Tourism"
-    ],
-    "lat": 24.282,
-    "lng": 85.158,
-    "tier": "most famous",
-    "imageSource": "Openverse",
-    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=154332966",
-    "imageLicense": "by-sa",
-    "imageAuthor": "कृष्ण कान्त शर्मा"
-  },
-  {
-    "name": "Mata Vaishno Devi Temple (Bhavan Shrine)",
-    "city": "Katra",
-    "state": "Jammu & Kashmir",
-    "category": "Spiritual & Temples",
-    "description": "One of India's most revered Hindu pilgrimage shrines, located in a sacred cave on Trikuta Mountain at 5,200 feet, drawing millions of pilgrims undertaking the 13 km mountain trek from Katra.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433725/explorely/spots/katra-jammu-and-kashmir/mata-vaishno-devi-temple-bhavan-shrine.webp",
-    "mapLink": "https://www.google.com/maps?q=33.0308,74.9490",
-    "rating": 5,
-    "tags": [
-      "Spiritual & Temples",
-      "Pilgrimage",
-      "Trikuta Hills",
-      "Must Visit",
-      "Kashmir Tourism"
-    ],
-    "lat": 33.0308,
-    "lng": 74.949,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=64997813",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Ramanathaswamy Temple",
-    "city": "Rameswaram",
-    "description": "A major Shiva temple featuring the longest temple corridor in the world.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790427928/explorely/spots/rameswaram-tamil-nadu/ramanathaswamy-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=9.288,79.317",
-    "state": "Tamil Nadu",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Top Attraction",
-      "Tamil Nadu Tourism"
-    ],
-    "lat": 9.288,
-    "lng": 79.317,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=7956048",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Shree Jagannath Temple",
-    "city": "Puri",
-    "description": "A famous 12th-century temple dedicated to Jagannath, a key Char Dham pilgrimage site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790426899/explorely/spots/puri-odisha/shree-jagannath-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=19.804,85.818",
-    "state": "Odisha",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Top Attraction",
-      "Odisha Tourism"
-    ],
-    "lat": 19.804,
-    "lng": 85.818,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AJagannath_Temple%2C_Puri_-_Postcard.jpg",
-    "imageLicense": "CC BY 4.0",
-    "imageAuthor": "Wein &amp; Klein, Madras",
-    "imageProtected": false
-  },
-  {
-    "name": "Victoria Memorial",
-    "city": "Kolkata",
-    "description": "Grand marble monument built in memory of Queen Victoria and one of Kolkata’s most iconic landmarks.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789554076/explorely/spots/central-kolkata-india/victoria-memorial.webp",
-    "mapLink": "https://www.google.com/maps?q=Victoria+Memorial+Kolkata",
-    "state": "West Bengal",
-    "category": "Museums & Galleries",
-    "rating": 5,
-    "tags": [
-      "Popular",
-      "Central Kolkata"
-    ],
-    "lat": 22.579831498014002,
-    "lng": 88.36615746320179,
-    "tier": "most famous",
-    "imageSource": "Explorely Image Importer v7.1",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AVictoria_Memorial_-_Sammya_Brata.jpg",
-    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Sammya_Brata&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Sammya Brata (page does not exist)\">Sammya Brata</a>",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "imageImportedAt": "2026-09-16T10:18:19.988Z",
-    "imageProtected": false
-  },
-  {
-    "name": "Qutub Minar",
-    "city": "Mehrauli",
-    "description": "A magnificent 73m high red sandstone victory tower, a UNESCO World Heritage Site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449303/explorely/spots/mehrauli-delhi/qutub-minar.webp",
-    "mapLink": "https://www.google.com/maps?q=28.5244,77.1855",
-    "state": "Delhi",
-    "category": "Historic Monuments",
-    "rating": 5,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Top Attraction",
-      "Delhi Tourism"
-    ],
-    "lat": 28.5244,
-    "lng": 77.1855,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=462318",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "India Gate",
-    "city": "New Delhi",
-    "description": "A colossal 42m high stone war memorial arch dedicated to soldiers of the British Indian Army.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449305/explorely/spots/new-delhi-delhi/india-gate.webp",
-    "mapLink": "https://www.google.com/maps?q=28.6129,77.2295",
-    "state": "Delhi",
-    "category": "Historic Monuments",
-    "rating": 5,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Top Attraction",
-      "Delhi Tourism"
-    ],
-    "lat": 28.6129,
-    "lng": 77.2295,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AIndia_Gate_1_(New_Delhi).jpg",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Subeesh Balan സുഭീഷ് ബാലൻ",
-    "imageProtected": false
-  },
-  {
-    "name": "Amber Fort",
-    "city": "Jaipur",
-    "description": "Magnificent hilltop fort known for Sheesh Mahal and Rajput architecture.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449358/explorely/spots/jaipur-rajasthan/amber-fort.webp",
-    "mapLink": "https://www.google.com/maps?q=Amber+Fort+Jaipur",
-    "state": "Rajasthan",
-    "category": "Mountains / Hills",
-    "rating": 4.9,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 26.909588705510497,
-    "lng": 75.77860747915643,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=97212",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Charminar",
-    "city": "Hyderabad",
-    "description": "A colossal 16th-century mosque with four minarets, the signature landmark of Hyderabad.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449370/explorely/spots/hyderabad-telangana/charminar.webp",
-    "mapLink": "https://www.google.com/maps?q=17.361,78.474",
-    "state": "Telangana",
-    "category": "Historic Monuments",
-    "rating": 5,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Top Attraction",
-      "Telangana Tourism"
-    ],
-    "lat": 17.361,
-    "lng": 78.474,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=903375",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Golconda Fort",
-    "city": "Hyderabad",
-    "description": "A massive medieval fortress complex famous for acoustic effects and royal palaces.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449371/explorely/spots/hyderabad-telangana/golconda-fort.webp",
-    "mapLink": "https://www.google.com/maps?q=17.383,78.401",
-    "state": "Telangana",
-    "category": "Historic Monuments",
-    "rating": 4.9,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Top Attraction",
-      "Telangana Tourism"
-    ],
-    "lat": 17.383,
-    "lng": 78.401,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=2557417",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Kashi Vishwanath Temple",
-    "city": "Varanasi",
-    "description": "One of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, the holiest of Hindu cities, on the western bank of the holy river Ganges. Features a stunning gold-plated spire and a grand temple corridor.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783621714/temple_To4YlfIJ_202308271009080_ed8btc.jpg",
-    "mapLink": "https://www.google.com/maps?q=25.3109,83.0107",
-    "state": "Uttar Pradesh",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Must Visit",
-      "Pilgrimage",
-      "Iconic"
-    ],
-    "lat": 25.3109,
-    "lng": 83.0107,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "City Palace Udaipur",
-    "city": "Udaipur",
-    "description": "Grand palace complex overlooking Lake Pichola.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449360/explorely/spots/udaipur-rajasthan/city-palace-udaipur.webp",
-    "mapLink": "https://www.google.com/maps?q=City+Palace+Udaipur",
-    "state": "Rajasthan",
-    "category": "Lakes",
-    "rating": 5,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 24.591240121913348,
-    "lng": 73.71943464671895,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=17709496",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Mysore Palace",
-    "city": "Mysuru",
-    "description": "Magnificent royal palace illuminated beautifully during festivals.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449328/explorely/spots/mysuru-karnataka/mysore-palace.webp",
-    "mapLink": "https://www.google.com/maps?q=Mysore+Palace",
-    "state": "Karnataka",
-    "category": "Palaces",
-    "rating": 5,
-    "tags": [
-      "Scenic"
-    ],
-    "lat": 12.291420239629273,
-    "lng": 76.63266548593869,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=19169780",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Mahabodhi Temple",
-    "city": "Bodh Gaya",
-    "description": "UNESCO World Heritage Site where Lord Buddha attained enlightenment.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449298/explorely/spots/bodh-gaya-bihar/mahabodhi-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=Mahabodhi+Temple",
-    "state": "Bihar",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "UNESCO"
-    ],
-    "lat": 24.687336783074297,
-    "lng": 84.98862202886018,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=55049152",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Virupaksha Temple",
-    "city": "Hampi",
-    "description": "Ancient temple dedicated to Lord Shiva and UNESCO World Heritage site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789588487/explorely/spots/hampi-karnataka/virupaksha-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=Virupaksha+Temple+Hampi",
-    "state": "Karnataka",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "UNESCO",
-      "Historic"
-    ],
-    "lat": 15.328818369737617,
-    "lng": 76.46815439480726,
-    "tier": "most famous",
-    "imageSource": "Explorely Image Importer v7.1",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AHampi_-_Underground_Shive_Temple_-_Columns.jpg",
-    "imageCreator": "<a href=\"//commons.wikimedia.org/wiki/User:Imehling\" title=\"User:Imehling\">Ingo Mehling</a>",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "imageImportedAt": "2026-09-16T19:51:52.504Z",
-    "imageProtected": false
-  },
-  {
-    "name": "Brihadeeswarar Temple Tanjore",
-    "city": "Thanjavur",
-    "description": "The magnificent 11th-century Chola temple, a UNESCO World Heritage Site.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790427947/explorely/spots/thanjavur-tamil-nadu/brihadeeswarar-temple-tanjore.webp",
-    "mapLink": "https://www.google.com/maps?q=10.782,79.132",
-    "state": "Tamil Nadu",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Top Attraction",
-      "Tamil Nadu Tourism"
-    ],
-    "lat": 10.782,
-    "lng": 79.132,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ABrihadeeswarar_Temple%2C_Tanjore_postcard_(1908).jpg",
-    "imageLicense": "Public domain",
-    "imageAuthor": "Underwood &amp; Underwood Publishers",
-    "imageProtected": false
-  },
-  {
-    "name": "Rock Garden",
-    "city": "Chandigarh",
-    "description": "Unique sculpture garden created by Nek Chand using recycled materials and waste objects.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449351/explorely/spots/chandigarh-punjab/rock-garden.webp",
-    "mapLink": "https://www.google.com/maps?q=Rock+Garden+Chandigarh",
-    "state": "Punjab",
-    "category": "Parks & Gardens",
-    "rating": 5,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 30.723939310543233,
-    "lng": 76.77133875191464,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=23911325",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Sukhna Lake",
-    "city": "Chandigarh",
-    "description": "Popular man-made lake known for boating, walking trails and beautiful sunset views.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449353/explorely/spots/chandigarh-punjab/sukhna-lake.webp",
-    "mapLink": "https://www.google.com/maps?q=Sukhna+Lake+Chandigarh",
-    "state": "Punjab",
-    "category": "Lakes",
-    "rating": 4.9,
-    "tags": [
-      "Popular",
-      "Scenic"
-    ],
-    "lat": 30.72603348400381,
-    "lng": 76.77134934437169,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=2710167",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Dal Lake",
-    "city": "Srinagar",
-    "state": "Jammu & Kashmir",
-    "category": "Lakes & Rivers",
-    "description": "The 'Jewel in the crown of Kashmir', Dal Lake is an iconic urban lake famous for floating flower markets, ornate cedar houseboats, and colorful shikara rides against the Pir Panjal mountains.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433724/explorely/spots/srinagar-jammu-and-kashmir/dal-lake.webp",
-    "mapLink": "https://www.google.com/maps?q=34.1105,74.8698",
-    "rating": 5,
-    "tags": [
-      "Lakes & Rivers",
-      "Shikara",
-      "Houseboats",
-      "Must Visit",
-      "Kashmir Tourism"
-    ],
-    "lat": 34.1105,
-    "lng": 74.8698,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=2002248",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Somnath Temple",
-    "city": "Somnath",
-    "description": "The first of the twelve Jyotirlinga temples, built in Chalukya style on the coast.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449310/explorely/spots/somnath-gujarat/somnath-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=20.888,70.401",
-    "state": "Gujarat",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Gujarat Tourism"
-    ],
-    "lat": 20.888,
-    "lng": 70.401,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AShree_Somnath_Temple.jpg",
-    "imageLicense": "GODL-India",
-    "imageAuthor": "Prime Minister's Office",
-    "imageProtected": false
-  },
-  {
-    "name": "Dwarkadhish Temple",
-    "city": "Dwarka",
-    "description": "Jagat Mandir is a grand 5-story sandstone temple dedicated to Lord Krishna.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449306/explorely/spots/dwarka-gujarat/dwarkadhish-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=22.242,68.968",
-    "state": "Gujarat",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Temple",
-      "Must Visit",
-      "Gujarat Tourism"
-    ],
-    "lat": 22.242,
-    "lng": 68.968,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=21146823",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Mehrangarh Fort",
-    "city": "Jodhpur",
-    "description": "Massive hilltop fort with museums and panoramic views.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449359/explorely/spots/jodhpur-rajasthan/mehrangarh-fort.webp",
-    "mapLink": "https://www.google.com/maps?q=Mehrangarh+Fort",
-    "state": "Rajasthan",
-    "category": "Mountains / Hills",
-    "rating": 5,
-    "tags": [
-      "Scenic"
-    ],
-    "lat": 26.235804246545577,
-    "lng": 73.01788053458486,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=1579676",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Jaisalmer Fort",
-    "city": "Jaisalmer",
-    "description": "Living fort where people still reside inside the walls.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789617184/explorely/spots/jaisalmer-rajasthan/jaisalmer-fort.webp",
-    "mapLink": "https://www.google.com/maps?q=Jaisalmer+Fort",
-    "state": "Rajasthan",
-    "category": "Forts",
-    "rating": 5,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 26.916156121152486,
-    "lng": 70.9002967145744,
-    "tier": "most famous",
-    "imageSource": "Explorely Image Importer v7.1",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ATop_Inside_Battlement_Jaisalmer_Fort_Dec14_DSC_6257.jpg",
-    "imageCreator": "<table class=\"toccolours\" style=\"width:100%; margin-top:10px;\" cellpadding=\"2\">\n\n<tbody><tr class=\"plainlinks\">\n<td><a href=\"https://upload.wikimedia.org/wikipedia/commons/1/15/Top_Inside_Battlement_Jaisalmer_Fort_Dec14_DSC_6257.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=api&amp;utm_content=original\" class=\"internal\" title=\"Top Inside Battlement Jaisalmer Fort Dec14 DSC 6257.jpg\">This Photo</a> was taken by <i><b><a href=\"//commons.wikimedia.org/wiki/User:Tagooty\" title=\"User:Tagooty\">Timothy A. Gonsalves</a></b></i>.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email <a rel=\"nofollow\" class=\"external text\" href=\"mailto:tagooty@yahoo.com\">tagooty@yahoo.com</a> or write on <a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=User_talk:Tagooty&amp;action=edit&amp;section=new\">my talk page</a>, for my information.  Please contact me before commercial use.\n</td></tr></tbody></table>\n<div style=\"clear:both; border:2px solid #00cc00; background-color:#f7f7f7; margin-top:6px;\">\n<table><tbody><tr><td style=\"padding:4px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Upload-problem2.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/120px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"57\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/250px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"159\" data-file-height=\"142\"></a></span>\n</td><td style=\"padding:4px;\"><div style=\"margin-top:0.5em;\">Please do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.<br>Otherwise you may upload an edited image with a new name. Please use one of the templates <a href=\"//commons.wikimedia.org/wiki/Template:Derived_from\" title=\"Template:Derived from\">derivative</a> or <a href=\"//commons.wikimedia.org/wiki/Template:Extracted_from\" title=\"Template:Extracted from\">extract</a>.</div>\n</td></tr></tbody></table></div>",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "imageImportedAt": "2026-09-17T03:53:05.387Z",
-    "imageProtected": false
-  },
-  {
-    "name": "Agra Fort",
-    "city": "Agra",
-    "description": "A grand 16th-century Mughal fort built from red sandstone on the banks of the Yamuna River. Served as the main residence of the emperors of the Mughal Dynasty until 1638. A UNESCO World Heritage Site with stunning courtyards and palaces.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783664548/images_nrhiyg.jpg",
-    "mapLink": "https://www.google.com/maps?q=27.1795,78.0211",
-    "state": "Uttar Pradesh",
-    "category": "Forts",
-    "rating": 4.9,
-    "tags": [
-      "UNESCO",
-      "Historic",
-      "Must Visit"
-    ],
-    "lat": 27.1795,
-    "lng": 78.0211,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Marine Drive",
-    "city": "Mumbai",
-    "description": "Scenic seaside promenade known as the Queen’s Necklace.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449347/explorely/spots/mumbai-maharashtra/marine-drive.webp",
-    "mapLink": "https://www.google.com/maps?q=Marine+Drive+Mumbai",
-    "state": "Maharashtra",
-    "category": "Beaches",
-    "rating": 4.8,
-    "tags": [
-      "Scenic"
-    ],
-    "lat": 18.92092308422362,
-    "lng": 72.82906090710573,
-    "tier": "most famous",
-    "imageSource": "Explorely Curated",
-    "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mumbai_03-2016_46_evening_at_Marine_Drive.jpg",
-    "imageLicense": "Curated WebP",
-    "imageAuthor": "Explorely",
-    "imageProtected": false
-  },
-  {
-    "name": "Howrah Bridge",
-    "city": "Kolkata",
-    "description": "An iconic cantilever bridge spanning the Hooghly River, connecting Kolkata and Howrah.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428860/explorely/spots/kolkata-west-bengal/howrah-bridge.webp",
-    "mapLink": "https://www.google.com/maps?q=22.585,88.347",
-    "state": "West Bengal",
-    "category": "Historic Monuments",
-    "rating": 4.8,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "West Bengal Tourism"
-    ],
-    "lat": 22.585,
-    "lng": 88.347,
-    "tier": "most famous",
-    "imageSource": "Openverse",
-    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=75961890",
-    "imageLicense": "by-sa",
-    "imageAuthor": "Vinayaraj",
-    "imageProtected": false
-  },
-  {
-    "name": "Bangalore Palace",
-    "city": "Bengaluru",
-    "description": "Royal palace inspired by Windsor Castle in England.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449329/explorely/spots/bengaluru-karnataka/bangalore-palace.webp",
-    "mapLink": "https://www.google.com/maps?q=Bangalore+Palace",
-    "state": "Karnataka",
-    "category": "Palaces",
-    "rating": 5,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 12.979468291125375,
-    "lng": 77.60401563148058,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AHigh_Court_of_Karnataka%2C_Bangalore_MMK.jpg",
-    "imageLicense": "GFDL 1.2",
-    "imageAuthor": "Muhammad Mahdi Karim/ Augustus Binu",
-    "imageProtected": false
-  },
-  {
-    "name": "Hadimba Temple",
-    "city": "Manali",
-    "description": "Ancient cave temple surrounded by cedar forest, dedicated to Hidimbi Devi with unique pagoda architecture.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449310/explorely/spots/manali-himachal-pradesh/hadimba-temple.webp",
-    "mapLink": "https://www.google.com/maps?q=Hadimba+Temple+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Historic"
-    ],
-    "lat": 32.24567614254181,
-    "lng": 77.1819310273578,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=6991593",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Solang Valley",
-    "city": "Manali",
-    "description": "Stunning valley for adventure sports — skiing, paragliding, zorbing against snow-capped peaks.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449312/explorely/spots/manali-himachal-pradesh/solang-valley.webp",
-    "mapLink": "https://www.google.com/maps?q=Solang+Valley+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Mountains / Hills",
-    "rating": 4.9,
-    "tags": [
-      "Scenic",
-      "Adventure / Trekking",
-      "Trekking",
-      "Adventure"
-    ],
-    "lat": 32.23921288900499,
-    "lng": 77.19526826084626,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=12419368",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "The Ridge",
-    "city": "Shimla",
-    "description": "Large open space with panoramic Himalayan views and the iconic Christ Church.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449311/explorely/spots/shimla-himachal-pradesh/the-ridge.webp",
-    "mapLink": "https://www.google.com/maps?q=The+Ridge+Shimla",
-    "state": "Himachal Pradesh",
-    "category": "Temple / Religious",
-    "rating": 5,
-    "tags": [
-      "Popular",
-      "Scenic",
-      "Free Entry"
-    ],
-    "lat": 31.0982292404037,
-    "lng": 77.17133942176709,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=5073143",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Laxman Jhula",
-    "city": "Rishikesh",
-    "description": "Famous suspension bridge over the Ganges, a spiritual and adventure hub of Uttarakhand.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449376/explorely/spots/rishikesh-uttarakhand/laxman-jhula.webp",
-    "mapLink": "https://www.google.com/maps?q=Laxman+Jhula+Rishikesh",
-    "state": "Uttarakhand",
-    "category": "Adventure / Trekking",
-    "rating": 5,
-    "tags": [
-      "Popular",
-      "Pilgrimage"
-    ],
-    "lat": 30.079608460667774,
-    "lng": 78.26181129213448,
-    "tier": "most famous",
-    "imageSource": "Wikimedia Commons",
-    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ALaxman_Jhula%2C_Rishikesh.jpg",
-    "imageLicense": "CC BY-SA 4.0",
-    "imageAuthor": "Cbiskartik2002",
-    "imageProtected": false
-  },
-  {
-    "name": "Har Ki Pauri",
-    "city": "Haridwar",
-    "description": "Most sacred Ganges ghat, famous for its spectacular evening Ganga Aarti ceremony.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449379/explorely/spots/haridwar-uttarakhand/har-ki-pauri.webp",
-    "mapLink": "https://www.google.com/maps?q=Har+Ki+Pauri+Haridwar",
-    "state": "Uttarakhand",
-    "category": "Spiritual Sites",
-    "rating": 5,
-    "tags": [
-      "Popular",
-      "Pilgrimage"
-    ],
-    "lat": 29.939391093871578,
-    "lng": 78.16372548673627,
-    "tier": "most famous",
-    "imageSource": "Openverse",
-    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=4084422",
-    "imageLicense": "by",
-    "imageAuthor": "NID chick",
-    "imageProtected": false
-  },
-  {
-    "name": "Chinese Fishing Nets",
-    "city": "Kochi (Cochin)",
-    "description": "Iconic cantilevered fishing nets from 14th-century Chinese traders, an enduring symbol of Kochi.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449330/explorely/spots/kochi-cochin-kerala/chinese-fishing-nets.webp",
-    "mapLink": "https://www.google.com/maps?q=9.9658,76.2404",
-    "state": "Kerala",
-    "category": "Historic Monuments",
-    "rating": 4.9,
-    "tags": [
-      "Historic Monuments",
-      "Must Visit",
-      "Kerala Tourism"
-    ],
-    "lat": 9.9658,
-    "lng": 76.2404,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=20642123",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Naini Lake",
-    "city": "Nainital",
-    "description": "A beautiful crescent-shaped natural freshwater body in the heart of Nainital, offering yacht and row boat rides.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428672/explorely/spots/nainital-uttarakhand/naini-lake.webp",
-    "mapLink": "https://www.google.com/maps?q=29.391,79.458",
-    "state": "Uttarakhand",
-    "category": "Lakes",
-    "rating": 5,
-    "tags": [
-      "Lakes",
-      "Must Visit",
-      "Uttarakhand Tourism"
-    ],
-    "lat": 29.391,
-    "lng": 79.458,
-    "tier": "most famous",
-    "imageSource": "Openverse",
-    "imageSourceUrl": "https://www.flickr.com/photos/10222491@N06/3248327536",
-    "imageLicense": "by-sa",
-    "imageAuthor": "Ashok666",
-    "imageProtected": false
-  },
-  {
-    "name": "Kempty Falls",
-    "city": "Mussoorie",
-    "description": "A world-famous cascading giant waterfall offering rocky bath chambers, located 15 km from Mussoorie.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428673/explorely/spots/mussoorie-uttarakhand/kempty-falls.webp",
-    "mapLink": "https://www.google.com/maps?q=30.492,78.028",
-    "state": "Uttarakhand",
-    "category": "Waterfalls",
-    "rating": 5,
-    "tags": [
-      "Waterfalls",
-      "Must Visit",
-      "Uttarakhand Tourism"
-    ],
-    "lat": 30.492,
-    "lng": 78.028,
-    "tier": "most famous",
-    "imageSource": "Openverse",
-    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=30138702",
-    "imageLicense": "by-sa",
-    "imageAuthor": "KuwarOnline",
-    "imageProtected": false
-  },
-  {
-    "name": "Eravikulam National Park",
-    "city": "Munnar",
-    "description": "Home to the endangered Nilgiri Tahr with rolling grasslands and Western Ghats beauty.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449331/explorely/spots/munnar-kerala/eravikulam-national-park.webp",
-    "mapLink": "https://www.google.com/maps?q=Eravikulam+National+Park+Munnar",
-    "state": "Kerala",
-    "category": "Forests",
-    "rating": 5,
-    "tags": [
-      "Must Visit"
-    ],
-    "lat": 10.091637386749603,
-    "lng": 77.05090564884344,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=3228979",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
-    "name": "Wagah Border",
-    "city": "Amritsar",
-    "description": "Famous India–Pakistan border known for the daily Beating Retreat ceremony.",
-    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449346/explorely/spots/amritsar-punjab/wagah-border.webp",
-    "mapLink": "https://www.google.com/maps?q=Wagah+Border",
-    "state": "Punjab",
-    "category": "Historic Monuments",
-    "rating": 4.9,
-    "tags": [
-      "Popular"
-    ],
-    "lat": 31.631481819556242,
-    "lng": 74.86526630110983,
-    "tier": "most famous",
-    "imageSource": "Wikipedia",
-    "imageSourceUrl": "https://en.wikipedia.org/?curid=2357890",
-    "imageLicense": "CC BY-SA 3.0",
-    "imageAuthor": "Wikipedia Contributors",
-    "imageProtected": false
-  },
-  {
     "name": "Aerial Bay Local Market",
     "city": "Aerial Bay",
     "description": "A market selling local produce and traditional crafts.",
@@ -47958,6 +46907,27 @@
     "imageProtected": false
   },
   {
+    "name": "Mahabodhi Temple",
+    "city": "Bodh Gaya",
+    "description": "UNESCO World Heritage Site where Lord Buddha attained enlightenment.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449298/explorely/spots/bodh-gaya-bihar/mahabodhi-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=Mahabodhi+Temple",
+    "state": "Bihar",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "UNESCO"
+    ],
+    "lat": 24.687336783074297,
+    "lng": 84.98862202886018,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=55049152",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Bodhi Tree",
     "city": "Bodh Gaya",
     "description": "The sacred banyan tree inside the Mahabodhi Temple complex, under which Siddhartha Gautama meditated and attained Enlightenment.",
@@ -94571,6 +93541,30 @@
     "imageProtected": false
   },
   {
+    "name": "Qutub Minar",
+    "city": "Mehrauli",
+    "description": "A magnificent 73m high red sandstone victory tower, a UNESCO World Heritage Site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449303/explorely/spots/mehrauli-delhi/qutub-minar.webp",
+    "mapLink": "https://www.google.com/maps?q=28.5244,77.1855",
+    "state": "Delhi",
+    "category": "Historic Monuments",
+    "rating": 5,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Top Attraction",
+      "Delhi Tourism"
+    ],
+    "lat": 28.5244,
+    "lng": 77.1855,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=462318",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Tomb of Balban",
     "city": "Mehrauli",
     "description": "A historic tomb featuring the first true arch built in India.",
@@ -96252,6 +95246,55 @@
     "imageProtected": false
   },
   {
+    "name": "India Gate",
+    "city": "New Delhi",
+    "description": "A colossal 42m high stone war memorial arch dedicated to soldiers of the British Indian Army.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449305/explorely/spots/new-delhi-delhi/india-gate.webp",
+    "mapLink": "https://www.google.com/maps?q=28.6129,77.2295",
+    "state": "Delhi",
+    "category": "Historic Monuments",
+    "rating": 5,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Top Attraction",
+      "Delhi Tourism"
+    ],
+    "lat": 28.6129,
+    "lng": 77.2295,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AIndia_Gate_1_(New_Delhi).jpg",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Subeesh Balan സുഭീഷ് ബാലൻ",
+    "imageProtected": false
+  },
+  {
+    "name": "Akshardham Temple (Swaminarayan Akshardham)",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "category": "Spiritual & Temples",
+    "description": "A monumental Hindu temple and cultural campus showcasing ten millennia of traditional Indian and Hindu culture, spirituality, and ornate hand-carved sandstone architecture.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433726/explorely/spots/new-delhi-delhi/akshardham-temple-swaminarayan-akshardham.webp",
+    "mapLink": "https://www.google.com/maps?q=28.6127,77.2773",
+    "rating": 4.9,
+    "tags": [
+      "Spiritual & Temples",
+      "Architecture",
+      "Musical Fountain",
+      "Must Visit",
+      "Delhi Tourism"
+    ],
+    "lat": 28.6127,
+    "lng": 77.2773,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AAkshardham_Delhi.jpg",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Swaminarayan Sanstha",
+    "imageProtected": false
+  },
+  {
     "name": "Rashtrapati Bhavan",
     "city": "New Delhi",
     "description": "The official residence of the President of India, featuring spectacular Neo-Classical architecture.",
@@ -97528,6 +96571,30 @@
     "imageLicense": "CC BY-SA 3.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "imageImportedAt": "2026-09-17T22:11:39.937Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Red Fort",
+    "city": "Old Delhi",
+    "description": "The colossal 17th-century Mughal fortress palace constructed in red sandstone, a UNESCO site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449305/explorely/spots/old-delhi-delhi/red-fort.webp",
+    "mapLink": "https://www.google.com/maps?q=28.6562,77.241",
+    "state": "Delhi",
+    "category": "Historic Monuments",
+    "rating": 5,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Top Attraction",
+      "Delhi Tourism"
+    ],
+    "lat": 28.6562,
+    "lng": 77.241,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ARed_Fort%2C_Old_Delhi%2C_India.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageAuthor": "Mr. Debapriya Hore",
     "imageProtected": false
   },
   {
@@ -122005,6 +121072,29 @@
     "imageProtected": false
   },
   {
+    "name": "Dwarkadhish Temple",
+    "city": "Dwarka",
+    "description": "Jagat Mandir is a grand 5-story sandstone temple dedicated to Lord Krishna.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449306/explorely/spots/dwarka-gujarat/dwarkadhish-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=22.242,68.968",
+    "state": "Gujarat",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Gujarat Tourism"
+    ],
+    "lat": 22.242,
+    "lng": 68.968,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=21146823",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Bet Dwarka island",
     "city": "Dwarka",
     "description": "An island temple reachable by local ferry boats, believed to be Krishna's home.",
@@ -122860,8 +121950,8 @@
       "Must Visit",
       "Gujarat Tourism"
     ],
-    "lat": 21.15473842960897,
-    "lng": 70.60500555085574,
+    "lat": 30.794,
+    "lng": 76.914,
     "tier": "most famous",
     "imageSource": "Wikimedia Commons",
     "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AEastern_forest_insects_(1175)_(20947697909).jpg",
@@ -123174,8 +122264,8 @@
       "Popular",
       "Gujarat Tourism"
     ],
-    "lat": 21.151221445205515,
-    "lng": 70.59564839075844,
+    "lat": 30.78405,
+    "lng": 76.90278,
     "tier": "hidden",
     "imageSource": "Wikipedia (Location Fallback)",
     "imageSourceUrl": "https://en.wikipedia.org/?curid=40978347",
@@ -123197,8 +122287,8 @@
       "Popular",
       "Gujarat Tourism"
     ],
-    "lat": 21.159593967258296,
-    "lng": 70.60866797424525,
+    "lat": 30.78416,
+    "lng": 76.9289,
     "tier": "hidden",
     "imageSource": "Explorely Curated",
     "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Gir_lion-Gir_forest%2Cjunagadh%2Cgujarat%2Cindia.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
@@ -123220,8 +122310,8 @@
       "Popular",
       "Gujarat Tourism"
     ],
-    "lat": 21.143445711021485,
-    "lng": 70.60925861336285,
+    "lat": 30.80649,
+    "lng": 76.90537,
     "tier": "hidden",
     "imageSource": "Wikipedia (Location Fallback)",
     "imageSourceUrl": "https://en.wikipedia.org/?curid=40978347",
@@ -129882,6 +128972,29 @@
     "imageLicense": "by-sa",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "imageImportedAt": "2026-09-17T23:16:50.648Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Somnath Temple",
+    "city": "Somnath",
+    "description": "The first of the twelve Jyotirlinga temples, built in Chalukya style on the coast.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449310/explorely/spots/somnath-gujarat/somnath-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=20.888,70.401",
+    "state": "Gujarat",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Gujarat Tourism"
+    ],
+    "lat": 20.888,
+    "lng": 70.401,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AShree_Somnath_Temple.jpg",
+    "imageLicense": "GODL-India",
+    "imageAuthor": "Prime Minister's Office",
     "imageProtected": false
   },
   {
@@ -154313,6 +153426,48 @@
     "imageProtected": false
   },
   {
+    "name": "Hadimba Temple",
+    "city": "Manali",
+    "description": "Ancient cave temple surrounded by cedar forest, dedicated to Hidimbi Devi with unique pagoda architecture.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449310/explorely/spots/manali-himachal-pradesh/hadimba-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=Hadimba+Temple+Manali",
+    "state": "Himachal Pradesh",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Historic"
+    ],
+    "lat": 32.24567614254181,
+    "lng": 77.1819310273578,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=6991593",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Solang Valley",
+    "city": "Manali",
+    "description": "Stunning valley for adventure sports — skiing, paragliding, zorbing against snow-capped peaks.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449312/explorely/spots/manali-himachal-pradesh/solang-valley.webp",
+    "mapLink": "https://www.google.com/maps?q=Solang+Valley+Manali",
+    "state": "Himachal Pradesh",
+    "category": "Mountains / Hills",
+    "rating": 4.9,
+    "tags": [
+      "Scenic"
+    ],
+    "lat": 32.23921288900499,
+    "lng": 77.19526826084626,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=12419368",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Jogini Waterfalls",
     "city": "Manali",
     "description": "A beautiful cascading waterfall reached by a scenic trek from Vashisht village, offering pools for bathing.",
@@ -158821,6 +157976,29 @@
     "imageSourceUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1790430169/explorely/spots/sarahan-himachal-pradesh/sarahan-craft-village-and-art-center.webp",
     "imageLicense": "Curated WebP",
     "imageAuthor": "Explorely",
+    "imageProtected": false
+  },
+  {
+    "name": "The Ridge",
+    "city": "Shimla",
+    "description": "Large open space with panoramic Himalayan views and the iconic Christ Church.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449311/explorely/spots/shimla-himachal-pradesh/the-ridge.webp",
+    "mapLink": "https://www.google.com/maps?q=The+Ridge+Shimla",
+    "state": "Himachal Pradesh",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Popular",
+      "Scenic",
+      "Free Entry"
+    ],
+    "lat": 31.0982292404037,
+    "lng": 77.17133942176709,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=5073143",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -166882,6 +166060,31 @@
     "imageProtected": false
   },
   {
+    "name": "Mata Vaishno Devi Temple (Bhavan Shrine)",
+    "city": "Katra",
+    "state": "Jammu & Kashmir",
+    "category": "Spiritual & Temples",
+    "description": "One of India's most revered Hindu pilgrimage shrines, located in a sacred cave on Trikuta Mountain at 5,200 feet, drawing millions of pilgrims undertaking the 13 km mountain trek from Katra.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433725/explorely/spots/katra-jammu-and-kashmir/mata-vaishno-devi-temple-bhavan-shrine.webp",
+    "mapLink": "https://www.google.com/maps?q=33.0308,74.9490",
+    "rating": 5,
+    "tags": [
+      "Spiritual & Temples",
+      "Pilgrimage",
+      "Trikuta Hills",
+      "Must Visit",
+      "Kashmir Tourism"
+    ],
+    "lat": 33.0308,
+    "lng": 74.949,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=64997813",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Katra Heritage Temple",
     "city": "Katra",
     "state": "Jammu & Kashmir",
@@ -171532,6 +170735,31 @@
     "imageProtected": false
   },
   {
+    "name": "Dal Lake",
+    "city": "Srinagar",
+    "state": "Jammu & Kashmir",
+    "category": "Lakes & Rivers",
+    "description": "The 'Jewel in the crown of Kashmir', Dal Lake is an iconic urban lake famous for floating flower markets, ornate cedar houseboats, and colorful shikara rides against the Pir Panjal mountains.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433724/explorely/spots/srinagar-jammu-and-kashmir/dal-lake.webp",
+    "mapLink": "https://www.google.com/maps?q=34.1105,74.8698",
+    "rating": 5,
+    "tags": [
+      "Lakes & Rivers",
+      "Shikara",
+      "Houseboats",
+      "Must Visit",
+      "Kashmir Tourism"
+    ],
+    "lat": 34.1105,
+    "lng": 74.8698,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=2002248",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Shankaracharya Temple (Gopadri Hill)",
     "city": "Srinagar",
     "state": "Jammu & Kashmir",
@@ -175053,6 +174281,28 @@
     "imageSourceUrl": "https://en.wikipedia.org/?curid=4456032",
     "imageLicense": "CC BY-SA",
     "imageAuthor": "Wikipedia"
+  },
+  {
+    "name": "Itkhori Bhadrakali Temple",
+    "city": "Chatra",
+    "description": "A globally unique religious center sacred to Hindus, Buddhists, and Jains, housing a black stone Bhadrakali idol.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789900744/explorely/spots/chatra-jharkhand/itkhori-bhadrakali-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=24.282,85.158",
+    "state": "Jharkhand",
+    "category": "Temple / Religious",
+    "rating": 4.8,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Jharkhand Tourism"
+    ],
+    "lat": 24.282,
+    "lng": 85.158,
+    "tier": "most famous",
+    "imageSource": "Openverse",
+    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=154332966",
+    "imageLicense": "by-sa",
+    "imageAuthor": "कृष्ण कान्त शर्मा"
   },
   {
     "name": "Dumer Sumer Waterfall",
@@ -190272,6 +189522,27 @@
     "imageProtected": false
   },
   {
+    "name": "Bangalore Palace",
+    "city": "Bengaluru",
+    "description": "Royal palace inspired by Windsor Castle in England.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449329/explorely/spots/bengaluru-karnataka/bangalore-palace.webp",
+    "mapLink": "https://www.google.com/maps?q=Bangalore+Palace",
+    "state": "Karnataka",
+    "category": "Palaces",
+    "rating": 5,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 12.979468291125375,
+    "lng": 77.60401563148058,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AHigh_Court_of_Karnataka%2C_Bangalore_MMK.jpg",
+    "imageLicense": "GFDL 1.2",
+    "imageAuthor": "Muhammad Mahdi Karim/ Augustus Binu",
+    "imageProtected": false
+  },
+  {
     "name": "Lalbagh Botanical Garden",
     "city": "Bengaluru",
     "description": "Historic botanical garden famous for its glass house and flower shows.",
@@ -194810,6 +194081,30 @@
     "imageProtected": false
   },
   {
+    "name": "Virupaksha Temple",
+    "city": "Hampi",
+    "description": "Ancient temple dedicated to Lord Shiva and UNESCO World Heritage site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789588487/explorely/spots/hampi-karnataka/virupaksha-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=Virupaksha+Temple+Hampi",
+    "state": "Karnataka",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "UNESCO",
+      "Historic"
+    ],
+    "lat": 15.328818369737617,
+    "lng": 76.46815439480726,
+    "tier": "most famous",
+    "imageSource": "Explorely Image Importer v7.1",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AHampi_-_Underground_Shive_Temple_-_Columns.jpg",
+    "imageCreator": "<a href=\"//commons.wikimedia.org/wiki/User:Imehling\" title=\"User:Imehling\">Ingo Mehling</a>",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "imageImportedAt": "2026-09-16T19:51:52.504Z",
+    "imageProtected": false
+  },
+  {
     "name": "Lotus Mahal Hampi",
     "city": "Hampi",
     "description": "A beautiful multi-layered zenana enclosure palace built of brick and mortar.",
@@ -198920,6 +198215,27 @@
     "tier": "hidden",
     "imageSource": "Wikipedia (Location Fallback)",
     "imageSourceUrl": "https://en.wikipedia.org/?curid=2354184",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Mysore Palace",
+    "city": "Mysuru",
+    "description": "Magnificent royal palace illuminated beautifully during festivals.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449328/explorely/spots/mysuru-karnataka/mysore-palace.webp",
+    "mapLink": "https://www.google.com/maps?q=Mysore+Palace",
+    "state": "Karnataka",
+    "category": "Palaces",
+    "rating": 5,
+    "tags": [
+      "Scenic"
+    ],
+    "lat": 12.291420239629273,
+    "lng": 76.63266548593869,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=19169780",
     "imageLicense": "CC BY-SA 3.0",
     "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
@@ -205943,6 +205259,29 @@
     "imageProtected": false
   },
   {
+    "name": "Chinese Fishing Nets",
+    "city": "Kochi (Cochin)",
+    "description": "Iconic cantilevered fishing nets from 14th-century Chinese traders, an enduring symbol of Kochi.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449330/explorely/spots/kochi-cochin-kerala/chinese-fishing-nets.webp",
+    "mapLink": "https://www.google.com/maps?q=9.9658,76.2404",
+    "state": "Kerala",
+    "category": "Historic Monuments",
+    "rating": 4.9,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Kerala Tourism"
+    ],
+    "lat": 9.9658,
+    "lng": 76.2404,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=20642123",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Fort Kochi art walk",
     "city": "Kochi (Cochin)",
     "description": "A walking tour through street art murals and galleries in the heritage quarter.",
@@ -209210,6 +208549,27 @@
     "imageSourceUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1790430761/explorely/spots/mararikulam-kerala/mararikulam-craft-village-and-art-center.webp",
     "imageLicense": "Curated WebP",
     "imageAuthor": "Explorely",
+    "imageProtected": false
+  },
+  {
+    "name": "Eravikulam National Park",
+    "city": "Munnar",
+    "description": "Home to the endangered Nilgiri Tahr with rolling grasslands and Western Ghats beauty.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449331/explorely/spots/munnar-kerala/eravikulam-national-park.webp",
+    "mapLink": "https://www.google.com/maps?q=Eravikulam+National+Park+Munnar",
+    "state": "Kerala",
+    "category": "Forests",
+    "rating": 5,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 10.091637386749603,
+    "lng": 77.05090564884344,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=3228979",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -269362,6 +268722,27 @@
     "imageProtected": false
   },
   {
+    "name": "Gateway of India",
+    "city": "Mumbai",
+    "description": "Iconic arch monument overlooking the Arabian Sea built during British rule.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449337/explorely/spots/mumbai-maharashtra/gateway-of-india.webp",
+    "mapLink": "https://www.google.com/maps?q=Gateway+of+India+Mumbai",
+    "state": "Maharashtra",
+    "category": "Beaches",
+    "rating": 5,
+    "tags": [
+      "Popular"
+    ],
+    "lat": 18.91907971607298,
+    "lng": 72.8255240576375,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=494788",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Chhatrapati Shivaji Maharaj Terminus",
     "city": "Mumbai",
     "description": "UNESCO World Heritage railway station known for Victorian Gothic architecture.",
@@ -269380,6 +268761,27 @@
     "imageSourceUrl": "https://en.wikipedia.org/?curid=287628",
     "imageLicense": "CC BY-SA 3.0",
     "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Marine Drive",
+    "city": "Mumbai",
+    "description": "Scenic seaside promenade known as the Queen’s Necklace.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449347/explorely/spots/mumbai-maharashtra/marine-drive.webp",
+    "mapLink": "https://www.google.com/maps?q=Marine+Drive+Mumbai",
+    "state": "Maharashtra",
+    "category": "Beaches",
+    "rating": 4.8,
+    "tags": [
+      "Scenic"
+    ],
+    "lat": 18.92092308422362,
+    "lng": 72.82906090710573,
+    "tier": "most famous",
+    "imageSource": "Explorely Curated",
+    "imageSourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mumbai_03-2016_46_evening_at_Marine_Drive.jpg",
+    "imageLicense": "Curated WebP",
+    "imageAuthor": "Explorely",
     "imageProtected": false
   },
   {
@@ -346749,6 +346151,30 @@
     "imageProtected": false
   },
   {
+    "name": "Shree Jagannath Temple",
+    "city": "Puri",
+    "description": "A famous 12th-century temple dedicated to Jagannath, a key Char Dham pilgrimage site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790426899/explorely/spots/puri-odisha/shree-jagannath-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=19.804,85.818",
+    "state": "Odisha",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Top Attraction",
+      "Odisha Tourism"
+    ],
+    "lat": 19.804,
+    "lng": 85.818,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AJagannath_Temple%2C_Puri_-_Postcard.jpg",
+    "imageLicense": "CC BY 4.0",
+    "imageAuthor": "Wein &amp; Klein, Madras",
+    "imageProtected": false
+  },
+  {
     "name": "Jagannath Temple",
     "city": "Puri",
     "description": "One of the four sacred Char Dhams, famous for its annual Rath Yatra with massive wooden chariots.",
@@ -365105,6 +364531,44 @@
     "imageProtected": false
   },
   {
+    "name": "Golden Temple (Harmandir Sahib)",
+    "city": "Amritsar",
+    "description": "The holiest Sikh shrine known for its golden structure and sacred Amrit Sarovar.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790234491/1280px-The_Golden_Temple_of_Amrithsar_7.jpg_m5pv76.jpg",
+    "mapLink": "https://www.google.com/maps?q=Golden+Temple+Amritsar",
+    "state": "Punjab",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Historic",
+      "Pilgrimage"
+    ],
+    "lat": 31.63826390991755,
+    "lng": 74.8724073870951,
+    "tier": "most famous"
+  },
+  {
+    "name": "Wagah Border",
+    "city": "Amritsar",
+    "description": "Famous India–Pakistan border known for the daily Beating Retreat ceremony.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449346/explorely/spots/amritsar-punjab/wagah-border.webp",
+    "mapLink": "https://www.google.com/maps?q=Wagah+Border",
+    "state": "Punjab",
+    "category": "Historic Monuments",
+    "rating": 4.9,
+    "tags": [
+      "Popular"
+    ],
+    "lat": 31.631481819556242,
+    "lng": 74.86526630110983,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=2357890",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Jallianwala Bagh",
     "city": "Amritsar",
     "description": "Historic memorial garden commemorating the tragic massacre of 1919 during British rule.",
@@ -367622,6 +367086,49 @@
     "imageLicense": "CC BY 3.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
     "imageImportedAt": "2026-09-19T15:34:52.874Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Rock Garden",
+    "city": "Chandigarh",
+    "description": "Unique sculpture garden created by Nek Chand using recycled materials and waste objects.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449351/explorely/spots/chandigarh-punjab/rock-garden.webp",
+    "mapLink": "https://www.google.com/maps?q=Rock+Garden+Chandigarh",
+    "state": "Punjab",
+    "category": "Parks & Gardens",
+    "rating": 5,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 30.723939310543233,
+    "lng": 76.77133875191464,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=23911325",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Sukhna Lake",
+    "city": "Chandigarh",
+    "description": "Popular man-made lake known for boating, walking trails and beautiful sunset views.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449353/explorely/spots/chandigarh-punjab/sukhna-lake.webp",
+    "mapLink": "https://www.google.com/maps?q=Sukhna+Lake+Chandigarh",
+    "state": "Punjab",
+    "category": "Lakes",
+    "rating": 4.9,
+    "tags": [
+      "Popular",
+      "Scenic"
+    ],
+    "lat": 30.72603348400381,
+    "lng": 76.77134934437169,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=2710167",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -384935,6 +384442,48 @@
     "imageProtected": false
   },
   {
+    "name": "Hawa Mahal",
+    "city": "Jaipur",
+    "description": "Iconic palace with 953 small windows built for royal women to observe street festivals.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449358/explorely/spots/jaipur-rajasthan/hawa-mahal.webp",
+    "mapLink": "https://www.google.com/maps?q=Hawa+Mahal+Jaipur",
+    "state": "Rajasthan",
+    "category": "Palaces",
+    "rating": 5,
+    "tags": [
+      "Popular"
+    ],
+    "lat": 26.91174532367054,
+    "lng": 75.78115898628532,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=2072735",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Amber Fort",
+    "city": "Jaipur",
+    "description": "Magnificent hilltop fort known for Sheesh Mahal and Rajput architecture.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449358/explorely/spots/jaipur-rajasthan/amber-fort.webp",
+    "mapLink": "https://www.google.com/maps?q=Amber+Fort+Jaipur",
+    "state": "Rajasthan",
+    "category": "Mountains / Hills",
+    "rating": 4.9,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 26.909588705510497,
+    "lng": 75.77860747915643,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=97212",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "City Palace",
     "city": "Jaipur",
     "description": "Royal palace complex with museums and courtyards.",
@@ -384955,6 +384504,29 @@
     "imageLicense": "CC BY-SA 4.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "imageImportedAt": "2026-09-17T03:49:25.213Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Jal Mahal",
+    "city": "Jaipur",
+    "description": "Beautiful palace located in the middle of Man Sagar Lake.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789617021/explorely/spots/jaipur-rajasthan/jal-mahal.webp",
+    "mapLink": "https://www.google.com/maps?q=Jal+Mahal+Jaipur",
+    "state": "Rajasthan",
+    "category": "Lakes",
+    "rating": 4.8,
+    "tags": [
+      "Scenic"
+    ],
+    "lat": 26.910727728884808,
+    "lng": 75.78766748596745,
+    "tier": "most famous",
+    "imageSource": "Explorely Image Importer v7.1",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AJal_Mahal_in_Jaipur_in_Rajasthan.jpg",
+    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Abhilaw82&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Abhilaw82 (page does not exist)\">Abhilaw82</a>",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "imageImportedAt": "2026-09-17T03:50:22.711Z",
     "imageProtected": false
   },
   {
@@ -385332,6 +384904,29 @@
     "imageLicense": "FAL",
     "imageLicenseUrl": "http://artlibre.org/licence/lal/en",
     "imageImportedAt": "2026-09-19T16:24:35.755Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Jaisalmer Fort",
+    "city": "Jaisalmer",
+    "description": "Living fort where people still reside inside the walls.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789617184/explorely/spots/jaisalmer-rajasthan/jaisalmer-fort.webp",
+    "mapLink": "https://www.google.com/maps?q=Jaisalmer+Fort",
+    "state": "Rajasthan",
+    "category": "Forts",
+    "rating": 5,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 26.916156121152486,
+    "lng": 70.9002967145744,
+    "tier": "most famous",
+    "imageSource": "Explorely Image Importer v7.1",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ATop_Inside_Battlement_Jaisalmer_Fort_Dec14_DSC_6257.jpg",
+    "imageCreator": "<table class=\"toccolours\" style=\"width:100%; margin-top:10px;\" cellpadding=\"2\">\n\n<tbody><tr class=\"plainlinks\">\n<td><a href=\"https://upload.wikimedia.org/wikipedia/commons/1/15/Top_Inside_Battlement_Jaisalmer_Fort_Dec14_DSC_6257.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=api&amp;utm_content=original\" class=\"internal\" title=\"Top Inside Battlement Jaisalmer Fort Dec14 DSC 6257.jpg\">This Photo</a> was taken by <i><b><a href=\"//commons.wikimedia.org/wiki/User:Tagooty\" title=\"User:Tagooty\">Timothy A. Gonsalves</a></b></i>.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email <a rel=\"nofollow\" class=\"external text\" href=\"mailto:tagooty@yahoo.com\">tagooty@yahoo.com</a> or write on <a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=User_talk:Tagooty&amp;action=edit&amp;section=new\">my talk page</a>, for my information.  Please contact me before commercial use.\n</td></tr></tbody></table>\n<div style=\"clear:both; border:2px solid #00cc00; background-color:#f7f7f7; margin-top:6px;\">\n<table><tbody><tr><td style=\"padding:4px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Upload-problem2.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/120px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"57\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Upload-problem2.svg/250px-Upload-problem2.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"159\" data-file-height=\"142\"></a></span>\n</td><td style=\"padding:4px;\"><div style=\"margin-top:0.5em;\">Please do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.<br>Otherwise you may upload an edited image with a new name. Please use one of the templates <a href=\"//commons.wikimedia.org/wiki/Template:Derived_from\" title=\"Template:Derived from\">derivative</a> or <a href=\"//commons.wikimedia.org/wiki/Template:Extracted_from\" title=\"Template:Extracted from\">extract</a>.</div>\n</td></tr></tbody></table></div>",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "imageImportedAt": "2026-09-17T03:53:05.387Z",
     "imageProtected": false
   },
   {
@@ -386624,6 +386219,27 @@
     "imageLicense": "CC BY-SA 4.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "imageImportedAt": "2026-09-19T16:27:17.433Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Mehrangarh Fort",
+    "city": "Jodhpur",
+    "description": "Massive hilltop fort with museums and panoramic views.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449359/explorely/spots/jodhpur-rajasthan/mehrangarh-fort.webp",
+    "mapLink": "https://www.google.com/maps?q=Mehrangarh+Fort",
+    "state": "Rajasthan",
+    "category": "Mountains / Hills",
+    "rating": 5,
+    "tags": [
+      "Scenic"
+    ],
+    "lat": 26.235804246545577,
+    "lng": 73.01788053458486,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=1579676",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -394665,6 +394281,27 @@
     "imageLicense": "by-nd",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-nd/2.0/",
     "imageImportedAt": "2026-09-19T16:46:02.074Z",
+    "imageProtected": false
+  },
+  {
+    "name": "City Palace Udaipur",
+    "city": "Udaipur",
+    "description": "Grand palace complex overlooking Lake Pichola.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449360/explorely/spots/udaipur-rajasthan/city-palace-udaipur.webp",
+    "mapLink": "https://www.google.com/maps?q=City+Palace+Udaipur",
+    "state": "Rajasthan",
+    "category": "Lakes",
+    "rating": 5,
+    "tags": [
+      "Must Visit"
+    ],
+    "lat": 24.591240121913348,
+    "lng": 73.71943464671895,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=17709496",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -417451,6 +417088,32 @@
     "imageProtected": false
   },
   {
+    "name": "Meenakshi Amman Temple",
+    "city": "Madurai",
+    "description": "A colossal temple complex famous for its towering gopurams and thousand-pillared hall.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789628893/explorely/spots/madurai-tamil-nadu/meenakshi-amman-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=9.919,78.119",
+    "state": "Tamil Nadu",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Top Attraction",
+      "Tamil Nadu Tourism"
+    ],
+    "lat": 9.919,
+    "lng": 78.119,
+    "tier": "most famous",
+    "imageSource": "Explorely Image Importer v7.1",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AMeenakshi_Amman_Temple%2C_Madurai.jpg",
+    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:DCSJ&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:DCSJ (page does not exist)\">DCSJ</a>",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "imageImportedAt": "2026-09-17T07:08:15.191Z",
+    "imageProtected": false
+  },
+  {
     "name": "Gandhi Memorial Museum Madurai",
     "city": "Madurai",
     "description": "A museum showcasing the freedom struggle, housing the blood-stained garment of Gandhi.",
@@ -420029,6 +419692,30 @@
     "imageProtected": false
   },
   {
+    "name": "Ramanathaswamy Temple",
+    "city": "Rameswaram",
+    "description": "A major Shiva temple featuring the longest temple corridor in the world.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790427928/explorely/spots/rameswaram-tamil-nadu/ramanathaswamy-temple.webp",
+    "mapLink": "https://www.google.com/maps?q=9.288,79.317",
+    "state": "Tamil Nadu",
+    "category": "Temple / Religious",
+    "rating": 4.9,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Top Attraction",
+      "Tamil Nadu Tourism"
+    ],
+    "lat": 9.288,
+    "lng": 79.317,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=7956048",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
     "name": "Ariyaman Beach",
     "city": "Rameswaram",
     "description": "A quiet, sandy beach bordered by casuarina groves.",
@@ -421264,6 +420951,30 @@
     "imageLicense": "Public domain",
     "imageLicenseUrl": "",
     "imageImportedAt": "2026-09-19T17:38:51.039Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Brihadeeswarar Temple Tanjore",
+    "city": "Thanjavur",
+    "description": "The magnificent 11th-century Chola temple, a UNESCO World Heritage Site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790427947/explorely/spots/thanjavur-tamil-nadu/brihadeeswarar-temple-tanjore.webp",
+    "mapLink": "https://www.google.com/maps?q=10.782,79.132",
+    "state": "Tamil Nadu",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Temple",
+      "Must Visit",
+      "Top Attraction",
+      "Tamil Nadu Tourism"
+    ],
+    "lat": 10.782,
+    "lng": 79.132,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ABrihadeeswarar_Temple%2C_Tanjore_postcard_(1908).jpg",
+    "imageLicense": "Public domain",
+    "imageAuthor": "Underwood &amp; Underwood Publishers",
     "imageProtected": false
   },
   {
@@ -426804,6 +426515,54 @@
     "imageSourceUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1790432939/explorely/spots/bhongir-telangana/bhongir-craft-village-and-art-center.webp",
     "imageLicense": "Curated WebP",
     "imageAuthor": "Explorely",
+    "imageProtected": false
+  },
+  {
+    "name": "Charminar",
+    "city": "Hyderabad",
+    "description": "A colossal 16th-century mosque with four minarets, the signature landmark of Hyderabad.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449370/explorely/spots/hyderabad-telangana/charminar.webp",
+    "mapLink": "https://www.google.com/maps?q=17.361,78.474",
+    "state": "Telangana",
+    "category": "Historic Monuments",
+    "rating": 5,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Top Attraction",
+      "Telangana Tourism"
+    ],
+    "lat": 17.361,
+    "lng": 78.474,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=903375",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
+    "imageProtected": false
+  },
+  {
+    "name": "Golconda Fort",
+    "city": "Hyderabad",
+    "description": "A massive medieval fortress complex famous for acoustic effects and royal palaces.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449371/explorely/spots/hyderabad-telangana/golconda-fort.webp",
+    "mapLink": "https://www.google.com/maps?q=17.383,78.401",
+    "state": "Telangana",
+    "category": "Historic Monuments",
+    "rating": 4.9,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "Top Attraction",
+      "Telangana Tourism"
+    ],
+    "lat": 17.383,
+    "lng": 78.401,
+    "tier": "most famous",
+    "imageSource": "Wikipedia",
+    "imageSourceUrl": "https://en.wikipedia.org/?curid=2557417",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "Wikipedia Contributors",
     "imageProtected": false
   },
   {
@@ -455049,6 +454808,45 @@
     "imageProtected": false
   },
   {
+    "name": "Taj Mahal",
+    "city": "Agra",
+    "description": "An ivory-white marble mausoleum on the south bank of the Yamuna river. Commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal. One of the Seven Wonders of the World and a UNESCO World Heritage Site.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783664494/images_uvizft.jpg",
+    "mapLink": "https://www.google.com/maps?q=27.1751,78.0421",
+    "state": "Uttar Pradesh",
+    "category": "Historic Monuments",
+    "rating": 5,
+    "tags": [
+      "UNESCO",
+      "Must Visit",
+      "Iconic",
+      "Trending"
+    ],
+    "lat": 27.1751,
+    "lng": 78.0421,
+    "featured": true,
+    "tier": "most famous"
+  },
+  {
+    "name": "Agra Fort",
+    "city": "Agra",
+    "description": "A grand 16th-century Mughal fort built from red sandstone on the banks of the Yamuna River. Served as the main residence of the emperors of the Mughal Dynasty until 1638. A UNESCO World Heritage Site with stunning courtyards and palaces.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783664548/images_nrhiyg.jpg",
+    "mapLink": "https://www.google.com/maps?q=27.1795,78.0211",
+    "state": "Uttar Pradesh",
+    "category": "Forts",
+    "rating": 4.9,
+    "tags": [
+      "UNESCO",
+      "Historic",
+      "Must Visit"
+    ],
+    "lat": 27.1795,
+    "lng": 78.0211,
+    "featured": true,
+    "tier": "most famous"
+  },
+  {
     "name": "Akbar's Tomb, Sikandra",
     "city": "Agra",
     "description": "The tomb of the Mughal Emperor Akbar, built in 1605–1613. It is an important Mughal architectural masterpiece located in the suburb of Sikandra.",
@@ -473044,6 +472842,44 @@
     "imageProtected": false
   },
   {
+    "name": "Kashi Vishwanath Temple",
+    "city": "Varanasi",
+    "description": "One of the most famous Hindu temples dedicated to Lord Shiva. It is located in Varanasi, the holiest of Hindu cities, on the western bank of the holy river Ganges. Features a stunning gold-plated spire and a grand temple corridor.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783621714/temple_To4YlfIJ_202308271009080_ed8btc.jpg",
+    "mapLink": "https://www.google.com/maps?q=25.3109,83.0107",
+    "state": "Uttar Pradesh",
+    "category": "Temple / Religious",
+    "rating": 5,
+    "tags": [
+      "Must Visit",
+      "Pilgrimage",
+      "Iconic"
+    ],
+    "lat": 25.3109,
+    "lng": 83.0107,
+    "featured": true,
+    "tier": "most famous"
+  },
+  {
+    "name": "Dashashwamedh Ghat",
+    "city": "Varanasi",
+    "description": "The main and most spectacular ghat in Varanasi, situated close to Vishwanath Temple. Famous for the Ganga Aarti, a daily spiritual ritual of fire and hymns conducted by young priests, creating a deeply spiritual ambiance.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1783621763/1721718932207_31713114937_810651363b_b_ladimt.webp",
+    "mapLink": "https://www.google.com/maps?q=25.3042,83.0107",
+    "state": "Uttar Pradesh",
+    "category": "Spiritual Sites",
+    "rating": 4.9,
+    "tags": [
+      "Iconic",
+      "Must Visit",
+      "Scenic"
+    ],
+    "lat": 25.3042,
+    "lng": 83.0107,
+    "featured": true,
+    "tier": "most famous"
+  },
+  {
     "name": "Assi Ghat",
     "city": "Varanasi",
     "description": "The southernmost ghat in Varanasi, situated at the confluence of the Ganges and Assi rivers. Highly famous for the Subah-e-Banaras morning ritual (yoga, classical music, and morning aarti), boat rides, and local cafes.",
@@ -473865,6 +473701,30 @@
     "imageLicense": "CC BY-SA 4.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "imageImportedAt": "2026-09-16T10:40:07.662Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Prem Mandir",
+    "city": "Vrindavan",
+    "description": "A magnificent spiritual temple complex dedicated to divine love. Built entirely of pure white Italian Carrara marble, the temple features intricate carvings depicting the pastimes of Radha-Krishna and Ram-Sita. Illuminates beautifully at night.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790404790/explorely/spots/vrindavan-uttar-pradesh/prem-mandir.webp",
+    "mapLink": "https://www.google.com/maps?q=27.5624,77.6864",
+    "state": "Uttar Pradesh",
+    "category": "Temple / Religious",
+    "rating": 4.8,
+    "tags": [
+      "Must Visit",
+      "Scenic",
+      "Popular"
+    ],
+    "lat": 27.5624,
+    "lng": 77.6864,
+    "featured": true,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3APrem_mandir_Vrindavan_Main_gate.JPG",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageAuthor": "आशीष भटनागर",
     "imageProtected": false
   },
   {
@@ -480172,6 +480032,28 @@
     "imageProtected": false
   },
   {
+    "name": "Har Ki Pauri",
+    "city": "Haridwar",
+    "description": "Most sacred Ganges ghat, famous for its spectacular evening Ganga Aarti ceremony.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449379/explorely/spots/haridwar-uttarakhand/har-ki-pauri.webp",
+    "mapLink": "https://www.google.com/maps?q=Har+Ki+Pauri+Haridwar",
+    "state": "Uttarakhand",
+    "category": "Spiritual Sites",
+    "rating": 5,
+    "tags": [
+      "Popular",
+      "Pilgrimage"
+    ],
+    "lat": 29.939391093871578,
+    "lng": 78.16372548673627,
+    "tier": "most famous",
+    "imageSource": "Openverse",
+    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=4084422",
+    "imageLicense": "by",
+    "imageAuthor": "NID chick",
+    "imageProtected": false
+  },
+  {
     "name": "Mansa Devi Temple",
     "city": "Haridwar",
     "description": "A highly revered Shakti temple on Bilwa Parvat, accessible by a popular ropeway cable car.",
@@ -484018,6 +483900,29 @@
     "imageProtected": false
   },
   {
+    "name": "Kempty Falls",
+    "city": "Mussoorie",
+    "description": "A world-famous cascading giant waterfall offering rocky bath chambers, located 15 km from Mussoorie.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428673/explorely/spots/mussoorie-uttarakhand/kempty-falls.webp",
+    "mapLink": "https://www.google.com/maps?q=30.492,78.028",
+    "state": "Uttarakhand",
+    "category": "Waterfalls",
+    "rating": 5,
+    "tags": [
+      "Waterfalls",
+      "Must Visit",
+      "Uttarakhand Tourism"
+    ],
+    "lat": 30.492,
+    "lng": 78.028,
+    "tier": "most famous",
+    "imageSource": "Openverse",
+    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=30138702",
+    "imageLicense": "by-sa",
+    "imageAuthor": "KuwarOnline",
+    "imageProtected": false
+  },
+  {
     "name": "Mall Road Mussoorie",
     "city": "Mussoorie",
     "description": "The famous shopping and stroll street of Mussoorie, lined with British-era architecture, cafes, and shops.",
@@ -484416,6 +484321,29 @@
     "imageLicense": "CC BY-SA 4.0",
     "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "imageImportedAt": "2026-09-19T20:31:12.699Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Naini Lake",
+    "city": "Nainital",
+    "description": "A beautiful crescent-shaped natural freshwater body in the heart of Nainital, offering yacht and row boat rides.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428672/explorely/spots/nainital-uttarakhand/naini-lake.webp",
+    "mapLink": "https://www.google.com/maps?q=29.391,79.458",
+    "state": "Uttarakhand",
+    "category": "Lakes",
+    "rating": 5,
+    "tags": [
+      "Lakes",
+      "Must Visit",
+      "Uttarakhand Tourism"
+    ],
+    "lat": 29.391,
+    "lng": 79.458,
+    "tier": "most famous",
+    "imageSource": "Openverse",
+    "imageSourceUrl": "https://www.flickr.com/photos/10222491@N06/3248327536",
+    "imageLicense": "by-sa",
+    "imageAuthor": "Ashok666",
     "imageProtected": false
   },
   {
@@ -486600,6 +486528,28 @@
     "imageSourceUrl": "https://res.cloudinary.com/eayitgbp/image/upload/v1790433601/explorely/spots/ranikhet-uttarakhand/ranikhet-craft-village-and-art-center.webp",
     "imageLicense": "Curated WebP",
     "imageAuthor": "Explorely",
+    "imageProtected": false
+  },
+  {
+    "name": "Laxman Jhula",
+    "city": "Rishikesh",
+    "description": "Famous suspension bridge over the Ganges, a spiritual and adventure hub of Uttarakhand.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449376/explorely/spots/rishikesh-uttarakhand/laxman-jhula.webp",
+    "mapLink": "https://www.google.com/maps?q=Laxman+Jhula+Rishikesh",
+    "state": "Uttarakhand",
+    "category": "Adventure / Trekking",
+    "rating": 5,
+    "tags": [
+      "Popular",
+      "Pilgrimage"
+    ],
+    "lat": 30.079608460667774,
+    "lng": 78.26181129213448,
+    "tier": "most famous",
+    "imageSource": "Wikimedia Commons",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3ALaxman_Jhula%2C_Rishikesh.jpg",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageAuthor": "Cbiskartik2002",
     "imageProtected": false
   },
   {
@@ -497193,6 +497143,30 @@
   {
     "name": "Victoria Memorial",
     "city": "Kolkata",
+    "description": "Grand marble monument built in memory of Queen Victoria and one of Kolkata’s most iconic landmarks.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1789554076/explorely/spots/central-kolkata-india/victoria-memorial.webp",
+    "mapLink": "https://www.google.com/maps?q=Victoria+Memorial+Kolkata",
+    "state": "West Bengal",
+    "category": "Museums & Galleries",
+    "rating": 5,
+    "tags": [
+      "Popular",
+      "Central Kolkata"
+    ],
+    "lat": 22.579831498014002,
+    "lng": 88.36615746320179,
+    "tier": "most famous",
+    "imageSource": "Explorely Image Importer v7.1",
+    "imageSourceUrl": "https://commons.wikimedia.org/wiki/File%3AVictoria_Memorial_-_Sammya_Brata.jpg",
+    "imageCreator": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Sammya_Brata&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Sammya Brata (page does not exist)\">Sammya Brata</a>",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "imageImportedAt": "2026-09-16T10:18:19.988Z",
+    "imageProtected": false
+  },
+  {
+    "name": "Victoria Memorial",
+    "city": "Kolkata",
     "description": "A magnificent white marble palace built in memory of Queen Victoria, now a museum.",
     "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790449379/explorely/spots/kolkata-west-bengal/victoria-memorial.webp",
     "mapLink": "https://www.google.com/maps?q=22.5448,88.3425",
@@ -497211,6 +497185,29 @@
     "imageSourceUrl": "https://www.flickr.com/photos/31518092@N04/7986216626",
     "imageLicense": "by",
     "imageAuthor": "kg.abhi",
+    "imageProtected": false
+  },
+  {
+    "name": "Howrah Bridge",
+    "city": "Kolkata",
+    "description": "An iconic cantilever bridge spanning the Hooghly River, connecting Kolkata and Howrah.",
+    "image": "https://res.cloudinary.com/eayitgbp/image/upload/v1790428860/explorely/spots/kolkata-west-bengal/howrah-bridge.webp",
+    "mapLink": "https://www.google.com/maps?q=22.585,88.347",
+    "state": "West Bengal",
+    "category": "Historic Monuments",
+    "rating": 4.8,
+    "tags": [
+      "Historic Monuments",
+      "Must Visit",
+      "West Bengal Tourism"
+    ],
+    "lat": 22.585,
+    "lng": 88.347,
+    "tier": "most famous",
+    "imageSource": "Openverse",
+    "imageSourceUrl": "https://commons.wikimedia.org/w/index.php?curid=75961890",
+    "imageLicense": "by-sa",
+    "imageAuthor": "Vinayaraj",
     "imageProtected": false
   },
   {
@@ -504206,86 +504203,5 @@
     "imageLicense": "Curated WebP",
     "imageAuthor": "Explorely",
     "imageProtected": false
-  },
-  {
-    "name": "Hampta Pass Trek",
-    "city": "Manali",
-    "description": "One of the most dramatic Himalayan treks connecting the lush green valleys of Kullu with the stark, moon-like landscapes of Lahaul and Chandratal.",
-    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800",
-    "mapLink": "https://www.google.com/maps?q=Hampta+Pass+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Adventure / Trekking",
-    "rating": 4.9,
-    "tags": [
-      "Adventure / Trekking",
-      "Trekking",
-      "Must Visit",
-      "Himalayas",
-      "Trending"
-    ],
-    "lat": 32.29,
-    "lng": 77.36,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Bhrigu Lake Trek",
-    "city": "Manali",
-    "description": "Breathtaking high-altitude alpine lake trek starting near Gulaba, famed for its emerald waters and sprawling alpine meadows with panoramic Pir Panjal views.",
-    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800",
-    "mapLink": "https://www.google.com/maps?q=Bhrigu+Lake+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Adventure / Trekking",
-    "rating": 4.8,
-    "tags": [
-      "Adventure / Trekking",
-      "Trekking",
-      "Alpine Lake",
-      "Scenic"
-    ],
-    "lat": 32.285,
-    "lng": 77.2,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Beas Kund Trek",
-    "city": "Manali",
-    "description": "Classic high-altitude glacial lake trek through Dhundi and Bakarthach to the sacred source of the river Beas, surrounded by Hanuman Tibba and Friendship Peak.",
-    "image": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800",
-    "mapLink": "https://www.google.com/maps?q=Beas+Kund+Trek+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Adventure / Trekking",
-    "rating": 4.8,
-    "tags": [
-      "Adventure / Trekking",
-      "Trekking",
-      "Glacier",
-      "Nature"
-    ],
-    "lat": 32.36,
-    "lng": 77.08,
-    "featured": true,
-    "tier": "most famous"
-  },
-  {
-    "name": "Jogini Waterfall Cliff Trek",
-    "city": "Manali",
-    "description": "Scenic hiking trail leading from Vashisht village through apple orchards, pine forests, and rocky riverbeds to the thundering multi-tiered Jogini falls.",
-    "image": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800",
-    "mapLink": "https://www.google.com/maps?q=Jogini+Waterfalls+Manali",
-    "state": "Himachal Pradesh",
-    "category": "Adventure / Trekking",
-    "rating": 4.7,
-    "tags": [
-      "Adventure / Trekking",
-      "Trekking",
-      "Waterfalls",
-      "Hiking"
-    ],
-    "lat": 32.269,
-    "lng": 77.195,
-    "featured": true,
-    "tier": "most famous"
   }
 ]
